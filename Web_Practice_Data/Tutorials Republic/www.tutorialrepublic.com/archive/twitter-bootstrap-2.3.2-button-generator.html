@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.tutorialrepublic.com/archive/twitter-bootstrap-2.3.2-button-generator.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:27:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Twitter Bootstrap Button Generator</title>
+<meta name="description" content="A simple online tool to create and customize Twitter Bootstrap buttons." />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link type="image/x-icon" href="../favicon.ico" rel="shortcut icon" />
+<link href="../lib/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<link href="../lib/styles/prism.css" type="text/css" media="screen" rel="stylesheet" />
+<link href="../lib/styles/colorpicker-extended.css" type="text/css" media="screen" rel="stylesheet" />
+<link href="../lib/styles/generator-2.3.2.css" type="text/css" media="screen" rel="stylesheet" />
+<script type="text/javascript" src="../lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../lib/js/colorpicker.js"></script>
+<script type="text/javascript" src="../lib/js/eye.js"></script>
+<script type="text/javascript" src="../lib/js/utils.js"></script>
+<script type="text/javascript" src="../lib/js/layout20b9.js?ver=1.0.2"></script>
+<script type="text/javascript" src="../lib/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="../lib/js/generator-2.3.2.js"></script>
+<script type="text/javascript" src="../lib/js/extend-2.3.2.js"></script>
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script><!--End:Google Analytics-->
+</head>
+<body id="top">
+<div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+        <div class="wrapper">
+            <a href="../index.html" class="brand"><img src="../lib/images/logo-small.png" alt="Tutorial Republic" title="Tutorials and references on web development technologies" /></a>
+            <ul class="nav">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../html-tutorial/index.html">HTML</a></li>
+                <li><a href="../css-tutorial/index.html">CSS</a></li>
+                <li><a href="../twitter-bootstrap-tutorial/index.html">BOOTSTRAP</a></li>
+                <li><a href="../references.html">REFERENCES</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle">EXAMPLES <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../html-examples.html">HTML</a></li>
+                        <li><a href="../css-examples.html">CSS</a></li>
+                        <li><a href="../twitter-bootstrap-examples.html">BOOTSTRAP</a></li>
+                    </ul>
+                </li>
+                <li><a href="../faq.html">FAQ</a></li>
+            </ul>
+            <form class="navbar-search pull-right" target="_blank" method="get" action="https://www.google.com/search">
+                <input type="hidden" name="sitesearch" value="www.tutorialrepublic.com" />
+                <input type="text" name="q" placeholder="Search&hellip;" class="search-query input-medium" />
+                <input type="submit" class="search-btn" value="" />
+            </form>
+        </div>
+    </div>
+</div>
+<div class="header">
+    <div class="wrapper">
+        <h1>Twitter Bootstrap Button Generator</h1>
+        <h2>A quick way to create <a href="../twitter-bootstrap-tutorial/index.html">Twitter Bootstrap</a> buttons as well as customizing the existing buttons with a unique style.</h2>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="clearfix">
+        <div class="column-left">
+            <div class="form-horizontal generator">                
+                <div class="control-group">
+                    <label class="control-label">Buttons Text</label>
+                    <div class="controls">   
+                        <input type="text" class="input-xlarge button-text" value="Twitter Bootstrap Button" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Element Type</label>
+                    <div class="controls">   
+                        <div data-toggle="buttons-radio" class="btn-group element-type">
+                            <button value="a" class="btn active" type="button" name="type">Anchor</button>
+                            <button value="button" class="btn" type="button" name="type">Button</button>
+                            <button value="input" class="btn" type="button" name="type">Input</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Button Size</label>
+                    <div class="controls">   
+                        <div data-toggle-name="size" data-toggle="buttons-radio" class="btn-group button-size">
+                            <button value="btn-mini" class="btn" type="button" name="size">Mini</button>
+                            <button value="btn-small" class="btn" type="button" name="size">Small</button>
+                            <button value="" class="btn" type="button" name="size">Default</button>
+                            <button value="btn-large" class="btn active" type="button" name="size">Large</button>
+                        </div>
+                    </div>
+                </div>                
+                <div class="control-group">
+                    <label class="control-label">Button Style</label>
+                    <div class="controls">   
+                        <div class="button-color-option">
+                            <label><input type="radio" name="color-option" checked="checked" value="bootstrap" /> Bootstrap Inbuilt</label>
+                            <label><input type="radio" name="color-option" value="custom" /> Custom</label>
+                        </div>
+                    </div>
+                </div>                
+                <div class="bootstrap-inbuilt-style">
+                    <div class="control-group">
+                        <label class="control-label">Button Type</label>
+                        <div class="controls">   
+                            <div data-toggle="buttons-radio" class="btn-group button-color">
+                                <button value="btn" class="btn" type="button" name="color">Default</button>
+                                <button value="btn btn-primary" class="btn btn-primary" type="button" name="color">Primary</button>
+                                <button value="btn btn-info" class="btn btn-info" type="button" name="color">Info</button>
+                                <button value="btn btn-success" class="btn btn-success active" type="button" name="color">Success</button>
+                                <button value="btn btn-warning" class="btn btn-warning" type="button" name="color">Warning</button>
+                                <button value="btn btn-danger" class="btn btn-danger" type="button" name="color">Danger</button>
+                                <button value="btn btn-inverse" class="btn btn-inverse" type="button" name="color">Inverse</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Button State</label>
+                        <div class="controls">   
+                            <div data-toggle="buttons-radio" class="btn-group button-state">
+                                <button value="normal" class="btn active" type="button" name="state">Normal</button>
+                                <button value="active" class="btn" type="button" name="state">Active</button>
+                                <button value="disabled" class="btn" type="button" name="state">Disabled</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-button-color">
+                    <div class="control-group">
+                        <label class="control-label" for="textColor">Text Color</label>
+                        <div class="controls">   
+                            <input type="text" maxlength="6" size="6" class="input-small pull-left" id="textColor" />
+                            <div id="colorSelector1" class="color-slelector" style="background-color: #00ff00"><div></div></div>   
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="topColor">Gradient Top Color</label>
+                        <div class="controls">   
+                            <input type="text" maxlength="6" size="6" class="input-small pull-left" id="topColor" />
+                            <div id="colorSelector2" class="color-slelector" style="background-color: #00ff00"><div></div></div>   
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="bottomColor">Gradient Bottom Color</label>
+                        <div class="controls">   
+                            <input type="text" maxlength="6" size="6" class="input-small pull-left" id="bottomColor" />
+                            <div id="colorSelector3" class="color-slelector" style="background-color: #00ff00"><div></div></div>   
+                        </div>
+                    </div>
+		      <div class="control-group">
+                        <label class="control-label" for="bgColor">Background Color</label>
+                        <div class="controls">   
+                            <input type="text" maxlength="6" size="6" class="input-small pull-left" id="bgColor" />
+                            <div id="colorSelector4" class="color-slelector" style="background-color: #00ff00"><div></div></div>   
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="borderTopColor">Border Top Color</label>
+                        <div class="controls">   
+                            <input type="text" maxlength="6" size="6" class="input-small pull-left" id="borderTopColor" />
+                            <div id="colorSelector5" class="color-slelector" style="background-color: #00ff00"><div></div></div>
+                            <label class="hint-label border-all"><input type="checkbox" name="border-all" /> Use same color for all sides</label>
+                        </div>
+                    </div>
+                    <div class="border-color-separate">
+                        <div class="control-group">
+                            <label class="control-label" for="borderHrColor">Border Left & Right Color</label>
+                            <div class="controls">   
+                                <input type="text" maxlength="6" size="6" class="input-small pull-left" id="borderHrColor" />
+                                <div id="colorSelector6" class="color-slelector" style="background-color: #00ff00"><div></div></div>   
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="borderBottomColor">Border Bottom Color</label>
+                            <div class="controls">   
+                                <input type="text" maxlength="6" size="6" class="input-small pull-left" id="borderBottomColor" />
+                                <div id="colorSelector7" class="color-slelector" style="background-color: #00ff00"><div></div></div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group" id="iconOption">
+                    <label class="control-label">Icon</label>
+                    <div class="controls">   
+                        <div data-toggle="buttons-radio" class="btn-group include-icon">
+                            <button value="1" class="btn btn-success active" type="button" name="includeicon"><i class="icon-ok icon-white"></i></button>
+                            <button value="0" class="btn" type="button" name="includeicon"><i class="icon-remove"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group toggle">
+                    <label class="control-label">Icon Position</label>
+                    <div class="controls">   
+                        <div data-toggle="buttons-radio" class="btn-group glyph-icon-position">
+                            <button value="left" class="btn active" type="button" name="iconposition"><i class="icon-arrow-left"></i> Left</button>
+                            <button value="right" class="btn" type="button" name="iconposition">Right <i class="icon-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group toggle">
+                    <label class="control-label">Icon Color</label>
+                    <div class="controls">   
+                        <div data-toggle="buttons-radio" class="btn-group glyph-icon-color">
+                            <button class="btn active" type="button" name="iconcolor" value="white" >White</button>
+                            <button class="btn btn-inverse" type="button" name="iconcolor" value="black" >Black</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group toggle">
+                    <label class="control-label">Choose Icon</label>
+                    <div class="controls">
+                        <ul class="the-icons clearfix">
+                            <li><i class="icon-glass"></i> <span>icon-glass</span></li>
+                            <li><i class="icon-music"></i> <span>icon-music</span></li>
+                            <li><i class="icon-search"></i> <span>icon-search</span></li>
+                            <li><i class="icon-envelope"></i> <span>icon-envelope</span></li>
+                            <li><i class="icon-heart"></i> <span>icon-heart</span></li>
+                            <li><i class="icon-star"></i> <span>icon-star</span></li>
+                            <li><i class="icon-star-empty"></i> <span>icon-star-empty</span></li>
+                            <li><i class="icon-user"></i> <span>icon-user</span></li>
+                            <li><i class="icon-film"></i> <span>icon-film</span></li>
+                            <li><i class="icon-th-large"></i> <span>icon-th-large</span></li>
+                            <li><i class="icon-th"></i> <span>icon-th</span></li>
+                            <li><i class="icon-th-list"></i> <span>icon-th-list</span></li>
+                            <li><i class="icon-ok"></i> <span>icon-ok</span></li>
+                            <li><i class="icon-remove"></i> <span>icon-remove</span></li>
+                            <li><i class="icon-zoom-in"></i> <span>icon-zoom-in</span></li>
+                            <li><i class="icon-zoom-out"></i> <span>icon-zoom-out</span></li>
+                            <li><i class="icon-off"></i> <span>icon-off</span></li>
+                            <li><i class="icon-signal"></i> <span>icon-signal</span></li>
+                            <li><i class="icon-cog"></i> <span>icon-cog</span></li>
+                            <li><i class="icon-trash"></i> <span>icon-trash</span></li>
+                            <li><i class="icon-home"></i> <span>icon-home</span></li>
+                            <li><i class="icon-file"></i> <span>icon-file</span></li>
+                            <li><i class="icon-time"></i> <span>icon-time</span></li>
+                            <li><i class="icon-road"></i> <span>icon-road</span></li>
+                            <li><i class="icon-download-alt"></i> <span>icon-download-alt</span></li>
+                            <li><i class="icon-download"></i> <span>icon-download</span></li>
+                            <li><i class="icon-upload"></i> <span>icon-upload</span></li>
+                            <li><i class="icon-inbox"></i> <span>icon-inbox</span></li>
+                        
+                            <li><i class="icon-play-circle"></i> <span>icon-play-circle</span></li>
+                            <li><i class="icon-repeat"></i> <span>icon-repeat</span></li>
+                            <li><i class="icon-refresh"></i> <span>icon-refresh</span></li>
+                            <li><i class="icon-list-alt"></i> <span>icon-list-alt</span></li>
+                            <li><i class="icon-lock"></i> <span>icon-lock</span></li>
+                            <li><i class="icon-flag"></i> <span>icon-flag</span></li>
+                            <li><i class="icon-headphones"></i> <span>icon-headphones</span></li>
+                            <li><i class="icon-volume-off"></i> <span>icon-volume-off</span></li>
+                            <li><i class="icon-volume-down"></i> <span>icon-volume-down</span></li>
+                            <li><i class="icon-volume-up"></i> <span>icon-volume-up</span></li>
+                            <li><i class="icon-qrcode"></i> <span>icon-qrcode</span></li>
+                            <li><i class="icon-barcode"></i> <span>icon-barcode</span></li>
+                            <li><i class="icon-tag"></i> <span>icon-tag</span></li>
+                            <li><i class="icon-tags"></i> <span>icon-tags</span></li>
+                            <li><i class="icon-book"></i> <span>icon-book</span></li>
+                            <li><i class="icon-bookmark"></i> <span>icon-bookmark</span></li>
+                            <li><i class="icon-print"></i> <span>icon-print</span></li>
+                            <li><i class="icon-camera"></i> <span>icon-camera</span></li>
+                            <li><i class="icon-font"></i> <span>icon-font</span></li>
+                            <li><i class="icon-bold"></i> <span>icon-bold</span></li>
+                            <li><i class="icon-italic"></i> <span>icon-italic</span></li>
+                            <li><i class="icon-text-height"></i> <span>icon-text-height</span></li>
+                            <li><i class="icon-text-width"></i> <span>icon-text-width</span></li>
+                            <li><i class="icon-align-left"></i> <span>icon-align-left</span></li>
+                            <li><i class="icon-align-center"></i> <span>icon-align-center</span></li>
+                            <li><i class="icon-align-right"></i> <span>icon-align-right</span></li>
+                            <li><i class="icon-align-justify"></i> <span>icon-align-justify</span></li>
+                            <li><i class="icon-list"></i> <span>icon-list</span></li>
+                        
+                            <li><i class="icon-indent-left"></i> <span>icon-indent-left</span></li>
+                            <li><i class="icon-indent-right"></i> <span>icon-indent-right</span></li>
+                            <li><i class="icon-facetime-video"></i> <span>icon-facetime-video</span></li>
+                            <li><i class="icon-picture"></i> <span>icon-picture</span></li>
+                            <li><i class="icon-pencil"></i> <span>icon-pencil</span></li>
+                            <li><i class="icon-map-marker"></i> <span>icon-map-marker</span></li>
+                            <li><i class="icon-adjust"></i> <span>icon-adjust</span></li>
+                            <li><i class="icon-tint"></i> <span>icon-tint</span></li>
+                            <li class="active"><i class="icon-edit"></i> <span>icon-edit</span></li>
+                            <li><i class="icon-share"></i> <span>icon-share</span></li>
+                            <li><i class="icon-check"></i> <span>icon-check</span></li>
+                            <li><i class="icon-move"></i> <span>icon-move</span></li>
+                            <li><i class="icon-step-backward"></i> <span>icon-step-backward</span></li>
+                            <li><i class="icon-fast-backward"></i> <span>icon-fast-backward</span></li>
+                            <li><i class="icon-backward"></i> <span>icon-backward</span></li>
+                            <li><i class="icon-play"></i> <span>icon-play</span></li>
+                            <li><i class="icon-pause"></i> <span>icon-pause</span></li>
+                            <li><i class="icon-stop"></i> <span>icon-stop</span></li>
+                            <li><i class="icon-forward"></i> <span>icon-forward</span></li>
+                            <li><i class="icon-fast-forward"></i> <span>icon-fast-forward</span></li>
+                            <li><i class="icon-step-forward"></i> <span>icon-step-forward</span></li>
+                            <li><i class="icon-eject"></i> <span>icon-eject</span></li>
+                            <li><i class="icon-chevron-left"></i> <span>icon-chevron-left</span></li>
+                            <li><i class="icon-chevron-right"></i> <span>icon-chevron-right</span></li>
+                            <li><i class="icon-plus-sign"></i> <span>icon-plus-sign</span></li>
+                            <li><i class="icon-minus-sign"></i> <span>icon-minus-sign</span></li>
+                            <li><i class="icon-remove-sign"></i> <span>icon-remove-sign</span></li>
+                            <li><i class="icon-ok-sign"></i> <span>icon-ok-sign</span></li>
+                        
+                            <li><i class="icon-question-sign"></i> <span>icon-question-sign</span></li>
+                            <li><i class="icon-info-sign"></i> <span>icon-info-sign</span></li>
+                            <li><i class="icon-screenshot"></i> <span>icon-screenshot</span></li>
+                            <li><i class="icon-remove-circle"></i> <span>icon-remove-circle</span></li>
+                            <li><i class="icon-ok-circle"></i> <span>icon-ok-circle</span></li>
+                            <li><i class="icon-ban-circle"></i> <span>icon-ban-circle</span></li>
+                            <li><i class="icon-arrow-left"></i> <span>icon-arrow-left</span></li>
+                            <li><i class="icon-arrow-right"></i> <span>icon-arrow-right</span></li>
+                            <li><i class="icon-arrow-up"></i> <span>icon-arrow-up</span></li>
+                            <li><i class="icon-arrow-down"></i> <span>icon-arrow-down</span></li>
+                            <li><i class="icon-share-alt"></i> <span>icon-share-alt</span></li>
+                            <li><i class="icon-resize-full"></i> <span>icon-resize-full</span></li>
+                            <li><i class="icon-resize-small"></i> <span>icon-resize-small</span></li>
+                            <li><i class="icon-plus"></i> <span>icon-plus</span></li>
+                            <li><i class="icon-minus"></i> <span>icon-minus</span></li>
+                            <li><i class="icon-asterisk"></i> <span>icon-asterisk</span></li>
+                            <li><i class="icon-exclamation-sign"></i> <span>icon-exclamation-sign</span></li>
+                            <li><i class="icon-gift"></i> <span>icon-gift</span></li>
+                            <li><i class="icon-leaf"></i> <span>icon-leaf</span></li>
+                            <li><i class="icon-fire"></i> <span>icon-fire</span></li>
+                            <li><i class="icon-eye-open"></i> <span>icon-eye-open</span></li>
+                            <li><i class="icon-eye-close"></i> <span>icon-eye-close</span></li>
+                            <li><i class="icon-warning-sign"></i> <span>icon-warning-sign</span></li>
+                            <li><i class="icon-plane"></i> <span>icon-plane</span></li>
+                            <li><i class="icon-calendar"></i> <span>icon-calendar</span></li>
+                            <li><i class="icon-random"></i> <span>icon-random</span></li>
+                            <li><i class="icon-comment"></i> <span>icon-comment</span></li>
+                            <li><i class="icon-magnet"></i> <span>icon-magnet</span></li>
+                        
+                            <li><i class="icon-chevron-up"></i> <span>icon-chevron-up</span></li>
+                            <li><i class="icon-chevron-down"></i> <span>icon-chevron-down</span></li>
+                            <li><i class="icon-retweet"></i> <span>icon-retweet</span></li>
+                            <li><i class="icon-shopping-cart"></i> <span>icon-shopping-cart</span></li>
+                            <li><i class="icon-folder-close"></i> <span>icon-folder-close</span></li>
+                            <li><i class="icon-folder-open"></i> <span>icon-folder-open</span></li>
+                            <li><i class="icon-resize-vertical"></i> <span>icon-resize-vertical</span></li>
+                            <li><i class="icon-resize-horizontal"></i> <span>icon-resize-horizontal</span></li>
+                            <li><i class="icon-hdd"></i> <span>icon-hdd</span></li>
+                            <li><i class="icon-bullhorn"></i> <span>icon-bullhorn</span></li>
+                            <li><i class="icon-bell"></i> <span>icon-bell</span></li>
+                            <li><i class="icon-certificate"></i> <span>icon-certificate</span></li>
+                            <li><i class="icon-thumbs-up"></i> <span>icon-thumbs-up</span></li>
+                            <li><i class="icon-thumbs-down"></i> <span>icon-thumbs-down</span></li>
+                            <li><i class="icon-hand-right"></i> <span>icon-hand-right</span></li>
+                            <li><i class="icon-hand-left"></i> <span>icon-hand-left</span></li>
+                            <li><i class="icon-hand-up"></i> <span>icon-hand-up</span></li>
+                            <li><i class="icon-hand-down"></i> <span>icon-hand-down</span></li>
+                            <li><i class="icon-circle-arrow-right"></i> <span>icon-circle-arrow-right</span></li>
+                            <li><i class="icon-circle-arrow-left"></i> <span>icon-circle-arrow-left</span></li>
+                            <li><i class="icon-circle-arrow-up"></i> <span>icon-circle-arrow-up</span></li>
+                            <li><i class="icon-circle-arrow-down"></i> <span>icon-circle-arrow-down</span></li>
+                            <li><i class="icon-globe"></i> <span>icon-globe</span></li>
+                            <li><i class="icon-wrench"></i> <span>icon-wrench</span></li>
+                            <li><i class="icon-tasks"></i> <span>icon-tasks</span></li>
+                            <li><i class="icon-filter"></i> <span>icon-filter</span></li>
+                            <li><i class="icon-briefcase"></i> <span>icon-briefcase</span></li>
+                            <li><i class="icon-fullscreen"></i> <span>icon-fullscreen</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="column-right">
+            
+<!--Button Preview Box-->           
+<div class="box button-preview">
+    <h2>Twitter Bootstrap Button Preview</h2>
+    <div id="result"><a href="#" class="btn btn-success btn-large"><i class="icon-edit icon-white"></i> Twitter Bootstrap Button</a></div>
+</div>
+<!--End:Button Preview Box-->
+
+<!--HTML Code Box-->
+<div class="box" id="htmlBox">
+<div class="code-wrapper">
+<pre class="well"><code class="language-markup button-html" id="htmlCode" style="width: 415px; word-wrap: break-word; white-space: normal;">&lt;a href="#" class="btn btn-success btn-large"&gt;&lt;i class="icon-edit icon-white"&gt;&lt;/i&gt; Bootstrap Button Generator&lt;/a&gt;</code></pre>
+<div class="copy" style="display: none;">
+    <a id="copyHTML" href="javascript:void(0);">Click Here to Copy HTML</a>
+</div>
+<p id="htmlAlert" class="sucess-msg"><em>Copied to clipboard...</em></p>
+</div>
+</div>
+<!--End:HTML Code Box-->
+
+<!--CSS Code Box-->         
+<div id="cssBox">
+<div class="box">
+<div class="code-wrapper">
+<pre class="well"><code class="language-css button-css" id="cssCode" style="width: 415px; word-wrap: break-word; white-space: pre-wrap;">.btn.btn-success{
+    color: #ffffff;
+    background-color: #5BB75B;
+    background-image: linear-gradient(to bottom, #ff0303, #51A351);
+    border-color: #52a452 #4e9c4e #448944;
+}
+.btn.btn-success:hover{
+    color: #ffffff;
+    background-color: #51A351;
+    background-image: linear-gradient(to bottom, #51A351, #51A351);
+    border-color: #52a452 #4e9c4e #448944;
+}</code></pre>
+<div class="copy" style="display: none;">
+    <a id="copyCSS" href="javascript:void(0);">Click Here to Copy CSS</a>
+</div>
+<p id="cssAlert" class="sucess-msg"><em>Copied to clipboard...</em></p>
+</div>
+</div>
+<h2>How to Customize Twitter Bootstrap Buttons</h2>
+<p>Just copy and paste the generated CSS in your custom <a href="../html-tutorial/html-styles.html">style sheet</a> and include in your document after the Bootstrap style sheet.</p>
+<p>These style rules will override the default Bootstrap styles for buttons and give them a unique look and feel. <a href="../twitter-bootstrap-tutorial/bootstrap-buttons.html">Learn more.</a></p>
+</div>
+<!--End:CSS Code Box-->
+
+        </div>
+    </div>
+</div>
+<div class="footer clearfix">
+	<div class="wrapper" style="border:none; padding: 0 0 20px;">
+		
+<div class="ad-label">Advertisements</div>
+<div class="ad-container">
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <!-- Responsive Leaderboard -->
+    <ins class="adsbygoogle"
+            style="display:inline-block;max-width:728px;width:100%;height:90px"
+            data-ad-client="ca-pub-9107540490929984"
+            data-ad-slot="4302666817"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>	</div>
+    <div class="wrapper">
+        <p>Version 2.0, Copyright &copy; 2019 <a href="../index.html">Tutorial Republic</a>. All rights reserved.</p>
+        <ul class="unstyled">
+        	<li><a href="../twitter-bootstrap-button-generator.html">Latest Version</a></li>
+            <li><a href="../contact-us.html">Report Error</a></li>
+            <li><a href="../terms-of-use.html">Terms of Use</a></li>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a class="back-to-top" target="_top" href="#top">Top</a></li>
+        </ul>
+    </div>
+</div>
+<script src="../lib/js/prism.js"></script>
+<script>
+    // Sending Code to Server
+    $(document).ready(function(){
+        $('button, .colorpicker_submit, ul.the-icons li, input[value="custom"], .border-all input[type="checkbox"]').click(function(){
+            Prism.highlightElement($('#htmlCode')[0]);
+            Prism.highlightElement($('#cssCode')[0]);
+        });
+        $(".button-text").keyup(function(){
+            Prism.highlightElement($('#htmlCode')[0]);
+            Prism.highlightElement($('#cssCode')[0]);
+        });
+    });
+</script>
+</body>
+
+<!-- Mirrored from www.tutorialrepublic.com/archive/twitter-bootstrap-2.3.2-button-generator.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:28:00 GMT -->
+</html>

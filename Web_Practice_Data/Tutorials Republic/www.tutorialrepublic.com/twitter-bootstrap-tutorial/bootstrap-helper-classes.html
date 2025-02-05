@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/bootstrap.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-helper-classes.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:20:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<!-- InstanceBeginEditable name="doctitle" -->
+    <title>Bootstrap 4 Helper Classes - Tutorial Republic</title>
+    <meta name="description" content="Learn how to use Bootstrap helper classes to quickly perform common tasks like coloring text and backgrounds, moving elements to left or right, showing and hiding content, etc." />
+    <!-- InstanceEndEditable -->
+    	<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="fb:admins" content="100001054961582" />
+<meta property="fb:app_id" content="1404574483159557" />
+<meta property="og:image" content="../lib/images/signature.png" />
+<link type="image/x-icon" href="../favicon.ico" rel="shortcut icon" />
+<style>
+html,body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,img{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+html,body{min-height:100%}
+p{margin:0 0 12px}
+ol,ul{margin:0 0 12px}
+a,a:active,a:visited{outline:none;color:#1db79f;text-decoration:none}
+a img{border:none;outline:none}
+a code{color:inherit;background:none}
+p code,table td:last-child code,.content ul li code,code.mark{padding:2px 4px;color:#333;background-color:#f1f1f1;border-radius:4px}
+table{border-collapse:collapse;border-spacing:0}
+table td{vertical-align:top}
+body{min-width:1300px;color:#414141;background:#fafafa;font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.7}
+input,select,textarea,button,div,span,a{box-sizing:border-box}
+h1,h2,h3,h4{color:#262626;font-weight:500;margin:20px 0 10px;line-height:1.5;font-weight:600}
+h1{font-size:34px;margin-top:17px}
+h2{font-size:28px}
+h3{font-size:22px}
+.space{margin-bottom:25px!important}
+.break{margin-bottom:15px!important}
+.text-center{text-align:center!important}
+.scroll{height:195px;overflow-y:scroll}
+.scroll.large{height:245px}
+.scroll.xlarge{height:290px}
+.scroll.xxlarge{height:340px}
+sup{font-size:13px}
+.leaderboard{padding-top:8px;position:relative}
+.ad-container{height:90px;overflow:hidden}
+.intro-image img{display:block;padding:10px 0 25px;max-width:100%}
+.clearfix::after{content:".";display:block;height:0;clear:both;visibility:hidden}
+code,.code,.syntax,.green-box,.sky-box,.gray-box,.pink-box,.red-box,.at-rule,.codebox pre,.console-output{font-size:16px;font-family:Consolas,Monaco,Courier,monospace}
+.console-output{margin:15px 0}
+hr{border:none;border-bottom:1px solid #e7e9ed;height:1px;margin:30px 0}
+.summary,.topic{border:1px solid #eaeaea;border-width:1px 0;margin:20px 0;padding:10px 0;color:#8e9aa6;line-height:1.5}
+h2.section-title span{display:inline-block;border-bottom:4px solid #c9d7e0;padding:0 50px 12px 0}
+.wrapper{width:1300px;padding:0 15px;margin:0 auto}
+.header{background:#23384e;padding:16px 0}
+input.search{background:#fff;border:0 none;color:#807E7E;float:left;height:38px;line-height:26px;font-size:14px;margin:0 0 0 12px;outline:medium none;padding:6px 14px;width:500px;border-radius:2px;box-shadow:0 0 1px rgba(0,0,0,0.6);font-family:inherit}
+.search-btn{color:rgba(0,0,0,.6);background:#ebebeb;border:none;outline:none;cursor:pointer;float:left;height:38px;line-height:46px;width:44px;display:block;margin-left:-2px;border-radius:0 2px 2px 0;box-shadow:0 0 1px rgba(0,0,0,0.7)}
+.logo{width:304px}
+.logo img{height:44px;margin:-3px 0;display:block}
+.site-search{float:left;margin-left:100px}
+.menu{background-color:#f5f5f5;box-shadow:0 1px 1px rgba(0,0,0,.15);position:relative;z-index:9}
+.menu a{color:#666;display:inline-block;padding:0 10px;text-decoration:none;font-size:14px;font-weight:600;height:48px;line-height:48px}
+.menu a:first-child{margin-left:-10px}
+.menu a.tool-link{float:right;display:inline-block;border-radius:30px;line-height:28px;position:relative;height:auto;top:9px;padding:0 12px;color:#1ebba3;border:1px double #1ebba3}
+.fl,.logo{float:left}
+.leftcolumn{width:240px;float:left;font-size:16px;color:#4f4f4f}
+.centercolumn{width:850px;float:left}
+.content{background:#fff;padding:20px 40px;border:1px solid #dedede;border-top:none;border-radius:1px}
+.sidebar{width:160px;float:left;padding-top:28px;margin-left:20px;position:relative}
+.leftcolumn .segment{margin:16px 0 12px;position:relative;font-size:18px;font-weight:600;line-height:normal}
+.leftcolumn a{color:#4f4f4f;font-size:16px;line-height:26px;display:block;border-bottom:1px solid transparent}
+.leftcolumn ul{list-style:none;padding:0}
+.segment,.chapters,.chapters a{float:left;clear:both}
+h1 code,h2 code,h3 code{font:inherit}
+.color-box{margin:15px 0;padding-left:20px}
+.note-box,.warning-box,.tip-box{padding:8px 8px 3px 26px}
+.info-tab{float:left;margin-left:-23px}
+.content ul li{margin-top:7px}
+.extra{padding-top:5px}
+.green-box,.sky-box,.gray-box,.red-box,.pink-box{color:#000;margin-top:15px;padding:10px;background-color:#f6f8fa;border:1px solid #d7e2ec}
+.example{background:#f4f5f6;padding:3px;margin:15px 0}
+.codebox{background:#fff;border:1px solid #ddd}
+.codebox-title{height:41px;padding-left:12px;border-bottom:1px solid #ddd;background:#f5f5f5}
+.codebox-title h4{margin:0;font-size:18px;line-height:40px;float:left;display:inline;font-weight:500}
+a.try-btn,a.download-btn{width:140px;height:40px;color:#333;font-size:15px;line-height:41px;font-weight:600;text-align:center;text-decoration:none;float:right;display:block;border-left:1px solid #ddd;background:rgba(27,31,35,0.08);box-sizing:border-box;font-family:Arial,sans-serif}
+a.try-btn span{font-size:18px;line-height:normal}
+.hide,.code-style,.box-size,.bottom-link,.footer,.code-style,.snippets,.report-error,.badge,.social,.ad-label,.mobile-only{display:none}
+.skyscraper{width:160px;height:600px;overflow:hidden;margin-bottom:20px;background:#ebecf0}
+.bottom-ad{margin-top:46px;padding:24px;position:relative;background:url(../lib/images/smooth-line.png) no-repeat center #f9f9f9}
+.rectangle-left,.rectangle-right{min-width:336px;min-height:280px;overflow:hidden}
+.fr,a.previous-page,a.next-page,.rectangle-right,.topic-nav{float:right}
+a.previous-page,a.next-page{width:32px;height:32px;line-height:30px}
+.shadow{background:#F7F8F9;padding:3px;margin:10px 0}
+.syntax{color:#2f4959;padding:13px 18px;background:#F9F9FA;border:1px solid #ddd;font-size:15px}
+code[class*="language-"],pre[class*="language-"]{color:#000;background:none;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;text-align:left;white-space:pre;word-break:normal;word-wrap:normal;line-height:1.5;tab-size:4;hyphens:none}
+pre[class*="language-"]{position:relative;margin:.5em 0;overflow:visible;padding:0}
+pre[class*="language-"]>code{position:relative;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:linear-gradient(transparent 50%,rgba(69,142,209,0.04) 50%);background-size:3em 3em;background-origin:content-box;background-attachment:local}
+code[class*="language"]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}
+:not(pre) > code[class*="language-"]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,0.1);display:inline;white-space:normal}
+pre[class*="language-"].line-numbers{padding-left:0}
+pre[class*="language-"].line-numbers code{padding-left:3.8em}
+pre[class*="language-"].line-numbers .line-numbers-rows{left:0}
+pre[class*="language-"][data-line]{padding-top:0;padding-bottom:0;padding-left:0}
+pre[data-line] code{position:relative;padding-left:4em}
+pre .line-highlight{margin-top:0}
+pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber;white-space:pre-wrap!important}
+pre.line-numbers > code{position:relative;white-space:inherit}
+.line-numbers-rows,.codebox pre.inactive{display:none}
+.codebox pre.syntax-highlighter{margin:0;padding:0;overflow:auto}
+pre.line-numbers .line-numbers-rows{border-right:3px solid #6CE26C}
+.codebox pre.syntax-highlighter > code{box-shadow:none!important;padding-left:3.8em;background-image:linear-gradient(transparent 50%,#F8F8F8 50%);font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace!important;font-size:16px;line-height:1.5}
+.codebox pre.syntax-highlighter,.codebox pre.syntax-highlighter code{border:none;width:100%;box-sizing:border-box}
+pre.line-numbers code,pre.line-numbers .line-numbers-rows{padding-top:2px;padding-bottom:2px}
+.preview-box{padding:15px;text-align:center;cursor:pointer;overflow:hidden;background:#FFF;border:1px solid #e6e6e6}
+.preview-box a,.preview-box img{display:block;margin:0 auto}
+.download-box{text-align:center;padding:20px 0;margin:20px 0 10px}
+.output-box{border-color:#d4d4d4;border-style:solid;border-width:1px 0;padding:5px 15px;overflow:hidden;background:#fff;margin:10px 0}
+.demo-box{margin-top:15px}
+.subhead{border-bottom:3px solid #DCE3EB;margin-bottom:15px;padding-bottom:10px}
+table.data,table.description{width:100%;font-size:92%}
+table.data th{color:#000;padding:8px 7px;text-align:left;font-size:15px;background:#F8F8F8}
+table.data td{color:#484848;padding:5px 7px;background:#fff}
+table.data th,table.data td{vertical-align:top;border:1px solid #DCE3EB}
+table.data tr.section th,table.data td.section{font-size:15px;background:#f0f4f7}
+table.no-wrap tr td:first-child{white-space:nowrap}
+@media screen and (max-width: 1280px) {
+body{min-width:1260px}
+.wrapper{width:1260px}
+.leftcolumn{width:230px}
+.centercolumn{width:820px}
+}
+@media screen and (max-width: 800px) {
+body{min-width:100%;max-width:100%;padding-top:46px}
+.wrapper{width:100%;padding:0}
+.header{height:46px;padding:5px 0;position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
+.logo{width:auto;display:block;padding:6px 0 0 60px;position:absolute;left:0;z-index:100}
+.logo img{height:30px}
+.menu{width:100%;padding-left:12px;padding-right:12px;overflow-x:auto;white-space:nowrap}
+.centercolumn{width:100%;float:none}
+.content{padding:10px;border-width:0 0 1px 0}
+.content img{max-width:100%;height:auto}
+.content pre{max-width:100%;overflow:hidden}
+.skyscraper{display:inline-block}
+.shadow,.example,.console-output{max-width:100%;overflow-x:auto}
+.codebox-title{position:relative}
+.codebox.multi-style-mode pre{padding-top:7px;margin-top:36px;border-top:1px solid #ddd}
+.bottom-ad{height:auto;background:none;padding:30px 0 0;margin:40px 0 0;text-align:center;position:relative}
+.rectangle-left,.rectangle-right{float:none;display:inline-block;margin:10px auto;background:#EDEEF2}
+.leftcolumn,.footer,.social,.site-search,.code-style,.menu a.tool-link,.backdrop{display:none}
+.summary,.topic{padding:5px 0;margin:10px 0}
+.leftcolumn,.centercolumn,.sidebar{float:none}
+.header,.menu,.centercolumn,.footer,.appeal-text{width:100%}
+a.try-btn,a.download-btn{width:130px}
+.native-unit{margin-bottom:30px}
+.sidebar{margin: 25px auto 0}
+.overview{padding-right:0}
+.scroll-pane{overflow-x:auto}
+table.data{min-width:480px}
+table.data pre{display:inline;white-space:normal}
+table tr th,table tr td{width:auto!important}
+.preview-box{padding:6px}
+.leaderboard{margin:20px 0}
+h1{font-size:30px}
+h2{font-size:24px}
+h3{font-size:20px}
+.codebox pre.syntax-highlighter{overflow-x:auto}
+.codebox pre.syntax-highlighter > code{width:614px;height:auto;overflow-x:hidden}
+}
+@media screen and (min-width: 801px) {
+.site-search,.leftcolumn,.social{display:block!important}
+.backdrop{display:none!important}
+.hide-scroll{overflow-x:hidden!important}
+}</style>    
+    <!-- InstanceBeginEditable name="head" -->
+	<style>
+        .color-code{
+            margin: 0 2px;
+            font-family: monospace;
+        }
+        .color-code i{
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            border: 1px solid #6a6a6a;
+            margin-right: 2px;
+        }
+		table td:last-child{
+			width: 65px;
+		}
+    </style>
+    <!-- InstanceEndEditable -->
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script></head>
+<body>
+    <!--Header-->
+    
+<div class="header">
+    <div class="wrapper clearfix">
+        <button type="button" class="open-menu mobile-only"><i class="icon-menu"></i></button>
+        <div class="logo">
+            <a href="../index.html"><img src="../lib/images/logo.svg" alt="TutorialRepublic" /></a>
+        </div>
+        <div class="site-search">
+            <form action="https://www.google.com/search" method="get" target="_blank" class="clearfix">
+                <input type="hidden" value="www.tutorialrepublic.com" name="sitesearch" />
+                <input type="text" name="q" placeholder="Search topics, tutorials, questions and answers..." id="searchInput" class="search" />
+                <button type="submit" class="search-btn"><span class="icon-search"></span></button>
+            </form>
+        </div>
+        <div class="social">                
+            <a href="https://www.facebook.com/tutorialrepublic" target="_blank" title="Join us on Facebook"><i class="icon-facebook"></i></a>
+            <a href="https://twitter.com/tutrepublic" target="_blank" title="Follow us on Twitter"><i class="icon-twitter"></i></a>
+            <a href="../contact-us.html" target="_blank" title="Send us an Email"><i class="icon-mail"></i></a>
+        </div>
+        <button type="button" class="open-search mobile-only">
+            <i class="icon-search"></i>
+        </button>
+    </div>    
+</div>
+<div class="menu">
+    <div class="wrapper">
+        <a href="../index.html" title="Home Page">HOME</a>
+        <a href="../html-tutorial/index.html" title="HTML Tutorial">HTML5</a>            
+        <a href="../css-tutorial/index.html" title="CSS Tutorial">CSS3</a>
+        <a href="../javascript-tutorial/index.html" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="../jquery-tutorial/index.html" title="jQuery Tutorial">JQUERY</a>
+        <a href="index.html" title="Bootstrap Tutorial">BOOTSTRAP4</a>
+        <a href="../php-tutorial/index.html" title="PHP Tutorial">PHP7</a> 
+        <a href="../sql-tutorial/index.html" title="SQL Tutorial">SQL</a>
+        <a href="../references.html" title="Web References">REFERENCES</a>
+        <a href="../practice-examples.html" title="Practice Examples and Demos">EXAMPLES</a>
+        <a href="../faq.html" title="Frequently Asked Questions and Answers">FAQ</a>
+        <a href="../snippets/gallery.html" title="Bootstrap Code Snippets" target="_blank">SNIPPETS</a>
+        <a href="../codelab.html" class="tool-link" target="_blank">Online HTML Editor</a>
+    </div>        
+</div>    <!--End:Header-->
+    <div class="wrapper clearfix">
+        <div class="leftcolumn" id="myNav">
+		
+        <div class="segment"><span>BOOTSTRAP</span> BASIC</div>
+<div class="chapters">
+    <a href="index.html">Bootstrap Introduction</a>
+    <a href="bootstrap-get-started.html">Bootstrap Getting Started</a>
+    <a href="bootstrap-grid-system.html">Bootstrap Grid System</a>
+    <a href="bootstrap-fixed-layout.html">Bootstrap Fixed Layout</a>
+    <a href="bootstrap-fluid-layout.html">Bootstrap Fluid Layout</a>
+    <a href="bootstrap-responsive-layout.html">Bootstrap Responsive Layout</a>
+    <a href="bootstrap-typography.html">Bootstrap Typography</a>
+    <a href="bootstrap-tables.html">Bootstrap Tables</a>
+    <a href="bootstrap-lists.html">Bootstrap Lists</a>
+	<a href="bootstrap-list-groups.html">Bootstrap List Groups</a>
+    <a href="bootstrap-forms.html">Bootstrap Forms</a>
+	<a href="bootstrap-custom-forms.html">Bootstrap Custom Forms</a>
+	<a href="bootstrap-input-groups.html">Bootstrap Input Groups</a>
+	<a href="bootstrap-buttons.html">Bootstrap Buttons</a>
+	<a href="bootstrap-button-groups.html">Bootstrap Button Groups</a>
+    <a href="bootstrap-images.html">Bootstrap Images</a>
+	<a href="bootstrap-cards.html">Bootstrap Cards</a>
+	<a href="bootstrap-media-objects.html">Bootstrap Media Objects</a>
+    <a href="bootstrap-icons.html">Bootstrap Icons</a>
+    <a href="bootstrap-navs.html">Bootstrap Navs</a>
+    <a href="bootstrap-navbar.html">Bootstrap Navbar</a>
+    <a href="bootstrap-breadcrumbs.html">Bootstrap Breadcrumbs</a>
+    <a href="bootstrap-pagination.html">Bootstrap Pagination</a>
+    <a href="bootstrap-badges.html">Bootstrap Badges</a>
+    <a href="bootstrap-progress-bars.html">Bootstrap Progress Bars</a>
+	<a href="bootstrap-spinners.html">Bootstrap Spinners</a>
+	<a href="bootstrap-jumbotron.html">Bootstrap Jumbotron</a>
+	<a href="bootstrap-helper-classes.html">Bootstrap Helper Classes</a>
+</div>
+<div class="segment"><span>BOOTSTRAP</span> ADVANCED</div>
+<div class="chapters">
+	<a href="bootstrap-modals.html">Bootstrap Modals</a>
+    <a href="bootstrap-dropdowns.html">Bootstrap Dropdowns</a>
+	<a href="bootstrap-tabs.html">Bootstrap Tabs</a>
+    <a href="bootstrap-tooltips.html">Bootstrap Tooltips</a>
+    <a href="bootstrap-popovers.html">Bootstrap Popovers</a>
+    <a href="bootstrap-alerts.html">Bootstrap Alerts</a>
+	<a href="bootstrap-stateful-buttons.html">Bootstrap Stateful Buttons</a>
+    <a href="bootstrap-accordion.html">Bootstrap Accordion</a>
+    <a href="bootstrap-carousel.html">Bootstrap Carousel</a>
+    <a href="bootstrap-typeahead.html">Bootstrap Typeahead</a>
+    <a href="bootstrap-scrollspy.html">Bootstrap ScrollSpy</a>
+	<a href="bootstrap-toasts.html">Bootstrap Toasts</a>
+</div>
+<div class="segment"><span>BOOTSTRAP</span> EXAMPLES</div>
+<div class="chapters">
+    <a href="../twitter-bootstrap-examples.html">Bootstrap Practice Examples</a>
+	<a href="../faq.html#bootstrap-less">Bootstrap FAQ's Answers</a>
+</div>
+<div class="segment"><span>BOOTSTRAP</span> ARCHIVE</div>
+<div class="chapters">
+    <a href="../twitter-bootstrap-3-tutorial/index.html">Bootstrap 3 Tutorial</a>
+	<a href="../twitter-bootstrap-3-examples.html">Bootstrap 3 Practice Examples</a>
+</div>        
+                </div>
+        <div class="centercolumn">
+            <!--Text Content-->
+            <div class="content">
+                <div class="leaderboard">
+                    
+<div class="ad-label">Advertisements</div>
+<div class="ad-container">
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <!-- Responsive Leaderboard -->
+    <ins class="adsbygoogle"
+            style="display:inline-block;max-width:728px;width:100%;height:90px"
+            data-ad-client="ca-pub-9107540490929984"
+            data-ad-slot="4302666817"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>                </div>
+                <!-- InstanceBeginEditable name="main_content" -->
+                <a href="bootstrap-jumbotron.html" class="previous-page" title="Go to Previous Page"></a>
+            	<a href="bootstrap-modals.html" class="next-page" title="Go to Next Page"></a>
+                <h1>Bootstrap <span>Helper Classes</span></h1>
+                <p class="summary">In this tutorial you will learn about the Bootstrap helper/utility classes.</p>
+                <h2 id="color-classes">Color Classes</h2>
+                <p>You can use the contextual color classes to emphasize the text and convey meaning through color. Here's the complete list of available contextual color classes.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>
+                        <tr>
+                            <td><code>.text-primary</code></td>
+                            <td>Apply blue color (<span class="color-code"><i style="background:#007bff;"></i>#007bff</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-secondary</code></td>
+                            <td>Apply grey color (<span class="color-code"><i style="background:#6c757d;"></i>#6c757d</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-success</code></td>
+                            <td>Apply green color (<span class="color-code"><i style="background:#28a745;"></i>#28a745</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-danger</code></td>
+                            <td>Apply red color (<span class="color-code"><i style="background:#dc3545;"></i>#dc3545</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-warning</code></td>
+                            <td>Apply yellow color (<span class="color-code"><i style="background:#ffc107;"></i>#ffc107</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-info</code></td>
+                            <td>Apply teal color (<span class="color-code"><i style="background:#17a2b8;"></i>#17a2b8</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-light</code></td>
+                            <td>Apply very light grey color (<span class="color-code"><i style="background:#f8f9fa;"></i>#f8f9fa</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-dark</code></td>
+                            <td>Apply dark grey color (<span class="color-code"><i style="background:#343a40;"></i>#343a40</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-body</code></td>
+                            <td>Apply Bootstrap's default body text color (<span class="color-code"><i style="background:#212529;"></i>#212529</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-muted</code></td>
+                            <td>Apply light grey color (<span class="color-code"><i style="background:#6c757d;"></i>#6c757d</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-white</code></td>
+                            <td>Apply white color (<span class="color-code"><i style="background:#fff;"></i>#fff</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-black-50</code></td>
+                            <td>Apply 50% transparent black color (<span class="color-code"><i style="background:rgba(0,0,0,.5);"></i>rgba(0,0,0,.5)</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-white-50</code></td>
+                            <td>Apply 50% transparent white color (<span class="color-code"><i style="background:rgba(255,255,255,.5);"></i>rgba(255,255,255,.5)</span>) on text.</td>
+                            <td><a href="../codelab0b74.html?topic=bootstrap&amp;file=color-classes" target="_blank">Example</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <hr />
+                <h2 id="background-color-classes">Background Color Classes</h2>
+                <p>Similar to the contextual color classes, you can use the contextual background color classes to set the <a href="../css-tutorial/css-background.html"><code>background-color</code></a> of an element to apply extra emphasis on them.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-primary</code></td>
+                            <td>Apply blue background-color (<span class="color-code"><i style="background:#007bff;"></i>#007bff</span>) on an element.</td>
+                            <td><a href="../codelaba3a9.html?topic=bootstrap&amp;file=background-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-secondary</code></td>
+                            <td>Apply grey background-color (<span class="color-code"><i style="background:#6c757d;"></i>#6c757d</span>) on an element.</td>
+                            <td><a href="../codelaba3a9.html?topic=bootstrap&amp;file=background-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-success</code></td>
+                            <td>Apply green background-color (<span class="color-code"><i style="background:#28a745;"></i>#28a745</span>) on an element.</td>
+                            <td><a href="../codelaba3a9.html?topic=bootstrap&amp;file=background-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-danger</code></td>
+                            <td>Apply red background-color (<span class="color-code"><i style="background:#dc3545;"></i>#dc3545</span>) on an element.</td>
+                            <td><a href="../codelaba3a9.html?topic=bootstrap&amp;file=background-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-warning</code></td>
+                            <td>Apply yellow background-color (<span class="color-code"><i style="background:#ffc107;"></i>#ffc107</span>) on an element.</td>
+                            <td><a href="../codelaba3a9.html?topic=bootstrap&amp;file=background-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-info</code></td>
+                            <td>Apply teal background-color (<span class="color-code"><i style="background:#17a2b8;"></i>#17a2b8</span>) on an element.</td>
+                            <td><a href="../codelaba3a9.html?topic=bootstrap&amp;file=background-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-light</code></td>
+                            <td>Apply very light grey background-color (<span class="color-code"><i style="background:#f8f9fa;"></i>#f8f9fa</span>) on an element.</td>
+                            <td><a href="../codelaba3a9.html?topic=bootstrap&amp;file=background-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-dark</code></td>
+                            <td>Apply dark grey background-color (<span class="color-code"><i style="background:#343a40;"></i>#343a40</span>) on an element.</td>
+                            <td><a href="../codelaba3a9.html?topic=bootstrap&amp;file=background-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-white</code></td>
+                            <td>Apply white background-color (<span class="color-code"><i style="background:#fff;"></i>#fff</span>) on an element.</td>
+                            <td><a href="../codelaba3a9.html?topic=bootstrap&amp;file=background-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-transparent</code></td>
+                            <td>Apply transparent background-color (<span class="color-code"><i style="background:transparent;"></i>transparent</span>) on an element.</td>
+                            <td><a href="../codelaba3a9.html?topic=bootstrap&amp;file=background-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <hr />
+                <h2 id="text-alignment-classes">Text Alignment Classes</h2>
+                <p>You can use these text alignment classes to align and format your text content.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>
+                        <tr>
+                            <td><code>.text-left</code></td>
+                            <td>Align the text to the left.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-center</code></td>
+                            <td>Align the text to the center.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>     
+                        <tr>
+                            <td><code>.text-right</code></td>
+                            <td>Align the text to the right.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr> 
+                        <tr>
+                            <td><code>.text-justify</code></td>
+                            <td>Justify the text content.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr> 
+                        <tr>
+                            <td><code>.text-wrap</code></td>
+                            <td>Wrap the overflowing text.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>     
+                        <tr>
+                            <td><code>.text-nowrap</code></td>
+                            <td>Prevent text from wrapping.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr> 
+                        <tr>
+                            <td><code>.text-truncate</code></td>
+                            <td>Truncate the text with an ellipsis.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-break</code></td>
+                            <td>Break the long words to prevent overflow.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr> 
+                        <tr>
+                            <td><code>.text-lowercase</code></td>
+                            <td>Transform the text to lowercase.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>     
+                        <tr>
+                            <td><code>.text-uppercase</code></td>
+                            <td>Transform the text to uppercase.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr> 
+                        <tr>
+                            <td><code>.text-capitalize</code></td>
+                            <td>Capitalize the first letter of each word.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.font-weight-bold</code></td>
+                            <td>Set the font-weight of an element to <span style="font-weight: 700;">bold</span>.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.font-weight-bolder</code></td>
+                            <td>Set the font-weight of an element to <span style="font-weight: bolder">bolder</span> (relative to the parent).</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr> 
+                        <tr>
+                            <td><code>.font-weight-normal</code></td>
+                            <td>Set the font-weight of an element to <span style="font-weight: 400;">normal</span>.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>     
+                        <tr>
+                            <td><code>.font-weight-light</code></td>
+                            <td>Set the <span style="font-weight: 300;">light</span> font-weight for an element.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr> 
+                        <tr>
+                            <td><code>.font-weight-lighter</code></td>
+                            <td>Set the <span style="font-weight: lighter;">lighter</span> font-weight for an element (relative to the parent).</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>  
+                        <tr>
+                            <td><code>.font-italic</code></td>
+                            <td>Set the font-style of an element to <span style="font-style: italic;">italic</span>.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-monospace</code></td>
+                            <td>Set the font-family of an element to monospace font (fixed-width)</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr> 
+                        <tr>
+                            <td><code>.text-reset</code></td>
+                            <td>Reset the color of a text or link (inherits the color from its parent).</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr>     
+                        <tr>
+                            <td><code>.text-decoration-none</code></td>
+                            <td>Remove the text decoration such as underline from a text.</td>
+                            <td><a href="../codelabdc18.html?topic=bootstrap&amp;file=text-classes" target="_blank">Example</a></td>
+                        </tr> 
+                    </table>
+                </div>
+                <hr />
+                <h2 id="border-classes">Border Classes</h2>
+                <p>You can use the border utility classes to quickly style the border and border-radius of an element. They are very useful for images, buttons, or any other element.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>
+                        <tr>
+                            <td><code>.border</code></td>
+                            <td>Add a border on all sides of an element.</td>
+                            <td><a href="../codelabed31.html?topic=bootstrap&amp;file=border-additive-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-top</code></td>
+                            <td>Add a border on the top side of an element.</td>
+                            <td><a href="../codelabed31.html?topic=bootstrap&amp;file=border-additive-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-right</code></td>
+                            <td>Add a border on the right side of an element.</td>
+                            <td><a href="../codelabed31.html?topic=bootstrap&amp;file=border-additive-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-bottom</code></td>
+                            <td>Add a border on the bottom side of an element.</td>
+                            <td><a href="../codelabed31.html?topic=bootstrap&amp;file=border-additive-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-left</code></td>
+                            <td>Add a border on the left side of an element.</td>
+                            <td><a href="../codelabed31.html?topic=bootstrap&amp;file=border-additive-classes" target="_blank">Example</a></td>
+                        </tr>  
+                        <tr>
+                            <td><code>.border-0</code></td>
+                            <td>Remove the border from all sides of an element.</td>
+                            <td><a href="../codelab4041.html?topic=bootstrap&amp;file=border-subtractive-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-top-0</code></td>
+                            <td>Remove the border from top side of an element.</td>
+                            <td><a href="../codelab4041.html?topic=bootstrap&amp;file=border-subtractive-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-right-0</code></td>
+                            <td>Remove the border from right side of an element.</td>
+                            <td><a href="../codelab4041.html?topic=bootstrap&amp;file=border-subtractive-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-bottom-0</code></td>
+                            <td>Remove the border from bottom side of an element.</td>
+                            <td><a href="../codelab4041.html?topic=bootstrap&amp;file=border-subtractive-classes" target="_blank">Example</a></td>
+                        </tr>   
+                        <tr>
+                            <td><code>.border-left-0</code></td>
+                            <td>Remove the border from left side of an element.</td>
+                            <td><a href="../codelab4041.html?topic=bootstrap&amp;file=border-subtractive-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-primary</code></td>
+                            <td>Change the border-color of an element to blue (<span class="color-code"><i style="background:#007bff;"></i>#007bff</span>).</td>
+                            <td><a href="../codelab4c1a.html?topic=bootstrap&amp;file=border-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-secondary</code></td>
+                            <td>Change the border-color of an element to grey (<span class="color-code"><i style="background:#6c757d;"></i>#6c757d</span>).</td>
+                            <td><a href="../codelab4c1a.html?topic=bootstrap&amp;file=border-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-success</code></td>
+                            <td>Change the border-color of an element to green (<span class="color-code"><i style="background:#28a745;"></i>#28a745</span>).</td>
+                            <td><a href="../codelab4c1a.html?topic=bootstrap&amp;file=border-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-danger</code></td>
+                            <td>Change the border-color of an element to red (<span class="color-code"><i style="background:#dc3545;"></i>#dc3545</span>).</td>
+                            <td><a href="../codelab4c1a.html?topic=bootstrap&amp;file=border-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-warning</code></td>
+                            <td>Change the border-color of an element to yellow (<span class="color-code"><i style="background:#ffc107;"></i>#ffc107</span>).</td>
+                            <td><a href="../codelab4c1a.html?topic=bootstrap&amp;file=border-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-info</code></td>
+                            <td>Change the border-color of an element to teal (<span class="color-code"><i style="background:#17a2b8;"></i>#17a2b8</span>).</td>
+                            <td><a href="../codelab4c1a.html?topic=bootstrap&amp;file=border-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-light</code></td>
+                            <td>Change the border-color of an element to very light grey (<span class="color-code"><i style="background:#f8f9fa;"></i>#f8f9fa</span>).</td>
+                            <td><a href="../codelab4c1a.html?topic=bootstrap&amp;file=border-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-dark</code></td>
+                            <td>Change the border-color of an element to dark grey (<span class="color-code"><i style="background:#343a40;"></i>#343a40</span>).</td>
+                            <td><a href="../codelab4c1a.html?topic=bootstrap&amp;file=border-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border-white</code></td>
+                            <td>Change the border-color of an element to white (<span class="color-code"><i style="background:#fff;"></i>#fff</span>).</td>
+                            <td><a href="../codelab4c1a.html?topic=bootstrap&amp;file=border-color-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded</code></td>
+                            <td>Round all corners of an element.</td>
+                            <td><a href="../codelab513d.html?topic=bootstrap&amp;file=border-radius-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded-top</code></td>
+                            <td>Round top-left and top-right corners of an element.</td>
+                            <td><a href="../codelab513d.html?topic=bootstrap&amp;file=border-radius-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded-right</code></td>
+                            <td>Round top-right and bottom-right corners of an element.</td>
+                            <td><a href="../codelab513d.html?topic=bootstrap&amp;file=border-radius-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded-bottom</code></td>
+                            <td>Round bottom-left and bottom-right corners of an element.</td>
+                            <td><a href="../codelab513d.html?topic=bootstrap&amp;file=border-radius-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded-left</code></td>
+                            <td>Round top-left and bottom-left corners of an element.</td>
+                            <td><a href="../codelab513d.html?topic=bootstrap&amp;file=border-radius-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded-circle</code></td>
+                            <td>Round an element into circle shape.</td>
+                            <td><a href="../codelab513d.html?topic=bootstrap&amp;file=border-radius-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded-pill</code></td>
+                            <td>Round an element into pill shape.</td>
+                            <td><a href="../codelab513d.html?topic=bootstrap&amp;file=border-radius-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded-0</code></td>
+                            <td>Remove round corners from an element.</td>
+                            <td><a href="../codelab513d.html?topic=bootstrap&amp;file=border-radius-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded-sm</code></td>
+                            <td>Set smaller border-radius (0.2rem) for an element.</td>
+                            <td><a href="../codelab513d.html?topic=bootstrap&amp;file=border-radius-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded-lg</code></td>
+                            <td>Set larger border-radius (0.2rem) for an element.</td>
+                            <td><a href="../codelab513d.html?topic=bootstrap&amp;file=border-radius-classes" target="_blank">Example</a></td>
+                        </tr>             
+                    </table>
+                </div>
+                <hr />
+                <h2 id="spacing-classes">Spacing Classes</h2>
+                <p>You can use the spacing utility classes to quickly adjust the margin and padding of an element.</p>
+                <p>The <code>#</code> character in the classes <code>.mt-#</code>, <code>.pt-#</code>, etc. represents the size of the margin or padding. The value of the size can be an integer from <code>0</code> to <code>5</code>, or <code>auto</code>.</p>
+                <p>The size <code>0</code> completely removes the margin or padding by setting it to 0, whereas the value <code>auto</code> sets the margin to auto. The integer numbers from <code>1</code> to <code>5</code> sets the margin or padding incrementally (ranging from 0.25rem to 3rem). Try out the examples to see how it works:</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>                        
+                        <tr>
+                            <td><code>.mt-#</code></td>
+                            <td>Set the top margin of an element.</td>
+                            <td><a href="../codelab24f4.html?topic=bootstrap&amp;file=margin-top-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.mb-#</code></td>
+                            <td>Set the bottom margin of an element.</td>
+                            <td><a href="../codelab57b2.html?topic=bootstrap&amp;file=margin-bottom-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.ml-#</code></td>
+                            <td>Set the left margin of an element.</td>
+                            <td><a href="../codelab5222.html?topic=bootstrap&amp;file=margin-left-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.mr-#</code></td>
+                            <td>Set the right margin of an element.</td>
+                            <td><a href="../codelab6594.html?topic=bootstrap&amp;file=margin-right-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.mx-#</code></td>
+                            <td>Set the left and right margin of an element.</td>
+                            <td><a href="../codelabc1b4.html?topic=bootstrap&amp;file=horizontal-margin-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.my-#</code></td>
+                            <td>Set the top and bottom margin of an element.</td>
+                            <td><a href="../codelab0341.html?topic=bootstrap&amp;file=vertical-margin-classes" target="_blank">Example</a></td>
+                        </tr>  
+                        <tr>
+                            <td><code>.pt-#</code></td>
+                            <td>Set the top padding of an element.</td>
+                            <td><a href="../codelaba16d.html?topic=bootstrap&amp;file=padding-top-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.pb-#</code></td>
+                            <td>Set the bottom padding of an element.</td>
+                            <td><a href="../codelab753d.html?topic=bootstrap&amp;file=padding-bottom-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.pl-#</code></td>
+                            <td>Set the left padding of an element.</td>
+                            <td><a href="../codelab7fc6.html?topic=bootstrap&amp;file=padding-left-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.pr-#</code></td>
+                            <td>Set the right padding of an element.</td>
+                            <td><a href="../codelaba5fe.html?topic=bootstrap&amp;file=padding-right-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.px-#</code></td>
+                            <td>Set the left and right padding of an element.</td>
+                            <td><a href="../codelab5de3.html?topic=bootstrap&amp;file=horizontal-padding-classes" target="_blank">Example</a></td>
+                        </tr> 
+                        <tr>
+                            <td><code>.py-#</code></td>
+                            <td>Set the top and bottom padding of an element.</td>
+                            <td><a href="../codelab26c0.html?topic=bootstrap&amp;file=vertical-padding-classes" target="_blank">Example</a></td>
+                        </tr> 
+                    </table>
+                </div>           
+                <!--Tip Box-->
+				<div class="color-box">
+                    <div class="shadow">
+                        <div class="info-tab tip-icon" title="Useful Tips"><i></i></div>
+                        <div class="tip-box">
+                            <p><strong>Tip:</strong> You can also apply negative margins using the margin utility classes. Just append the size number with the character <code>n</code>, like <code>.mt-n1</code>, <code>.mb-n2</code>, and so on.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End:Tip Box-->   
+                <hr />
+                <h2 id="float-classes">Float Classes</h2>    
+                <p>You can use the float utility classes to quickly float an element to the left or right or remove float from an element altogether. Here's the list of available float classes.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>                        
+                        <tr>
+                            <td><code>.float-left</code></td>
+                            <td>Float an element to the left.</td>
+                            <td><a href="../codelab8a3d.html?topic=bootstrap&amp;file=float-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.float-right</code></td>
+                            <td>Float an element to the right.</td>
+                            <td><a href="../codelab8a3d.html?topic=bootstrap&amp;file=float-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.float-none</code></td>
+                            <td>Disable floating from an element.</td>
+                            <td><a href="../codelab8a3d.html?topic=bootstrap&amp;file=float-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.clearfix</code></td>
+                            <td>Clear floats to prevent parent element from collapsing.</td>
+                            <td><a href="../codelab8a3d.html?topic=bootstrap&amp;file=float-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.float-*-left</code></td>
+                            <td>Float an element to the left on based on the viewport size.</td>
+                            <td><a href="../codelabce17.html?topic=bootstrap&amp;file=responsive-float-left-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.float-*-right</code></td>
+                            <td>Float an element to the right on based on the viewport size.</td>
+                            <td><a href="../codelabc788.html?topic=bootstrap&amp;file=responsive-float-right-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.float-*-none</code></td>
+                            <td>Disable floating from an element on based on the viewport size.</td>
+                            <td><a href="../codelab9857.html?topic=bootstrap&amp;file=responsive-float-none-classes" target="_blank">Example</a></td>
+                        </tr>                        
+                    </table>
+                </div>   
+                <!--Tip Box-->
+				<div class="color-box">
+                    <div class="shadow">
+                        <div class="info-tab tip-icon" title="Useful Tips"><i></i></div>
+                        <div class="tip-box">
+                            <p><strong>Tip:</strong> The <code>*</code> character in the classes  <code>.float-*-left</code> and <code>.float-*-right</code> represents responsive breakpoint which can be <code>sm</code>, <code>md</code>, <code>lg</code>, or <code>xl</code>. See <a href="bootstrap-grid-system.html">Bootstrap grid system</a> for more detail.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End:Tip Box--> 
+                <hr />
+                <h2 id="shadow-classes">Shadow Classes</h2>    
+                <p>You can use the shadow utility classes to quickly add or remove shadows to elements.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>                        
+                        <tr>
+                            <td><code>.shadow</code></td>
+                            <td>Add a shadow to an element.</td>
+                            <td><a href="../codelab5b6f.html?topic=bootstrap&amp;file=shadow-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.shadow-sm</code></td>
+                            <td>Add a small shadow to an element.</td>
+                            <td><a href="../codelab5b6f.html?topic=bootstrap&amp;file=shadow-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.shadow-lg</code></td>
+                            <td>Add a larger shadow to an element.</td>
+                            <td><a href="../codelab5b6f.html?topic=bootstrap&amp;file=shadow-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.shadow-none</code></td>
+                            <td>Remove shadow from an element.</td>
+                            <td><a href="../codelab5b6f.html?topic=bootstrap&amp;file=shadow-classes" target="_blank">Example</a></td>
+                        </tr>
+                    </table>
+                </div>  
+				<hr />
+                <h2 id="sizing-classes">Sizing Classes</h2>    
+                <p>You can use the sizing utility classes to easily make an element as wide or as tall.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th style="width: 110px;">Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>                        
+                        <tr>
+                            <td><code>.w-25</code></td>
+                            <td>Set the width of an element to 25% of its parent element.</td>
+                            <td><a href="../codelabdbef.html?topic=bootstrap&amp;file=width-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.w-50</code></td>
+                            <td>Set the width of an element to 50% of its parent element.</td>
+                            <td><a href="../codelabdbef.html?topic=bootstrap&amp;file=width-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.w-75</code></td>
+                            <td>Set the width of an element to 75% of its parent element.</td>
+                            <td><a href="../codelabdbef.html?topic=bootstrap&amp;file=width-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.w-100</code></td>
+                            <td>Set the width of an element to 100% of its parent element.</td>
+                            <td><a href="../codelabdbef.html?topic=bootstrap&amp;file=width-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.w-auto</code></td>
+                            <td>Set the width of an element to auto, i.e. the browser will calculate and select a width for the specified element.</td>
+                            <td><a href="../codelabdbef.html?topic=bootstrap&amp;file=width-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.mw-100</code></td>
+                            <td>Set the max-width of an element to 100%.</td>
+                            <td><a href="../codelabbfe4.html?topic=bootstrap&amp;file=max-width-and-height-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.h-25</code></td>
+                            <td>Set the height of an element to 25% of its parent element.</td>
+                            <td><a href="../codelabaff6.html?topic=bootstrap&amp;file=height-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.h-50</code></td>
+                            <td>Set the height of an element to 50% of its parent element.</td>
+                            <td><a href="../codelabaff6.html?topic=bootstrap&amp;file=height-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.h-75</code></td>
+                            <td>Set the height of an element to 75% of its parent element.</td>
+                            <td><a href="../codelabaff6.html?topic=bootstrap&amp;file=height-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.h-100</code></td>
+                            <td>Set the height of an element to 100% of its parent element.</td>
+                            <td><a href="../codelabaff6.html?topic=bootstrap&amp;file=height-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.h-auto</code></td>
+                            <td>Set the height of an element to auto, i.e. the browser will calculate and select a height for the specified element.</td>
+                            <td><a href="../codelabaff6.html?topic=bootstrap&amp;file=height-classes" target="_blank">Example</a></td>
+                        </tr>                        
+                        <tr>
+                            <td><code>.mh-100</code></td>
+                            <td>Set the max-height of an element to 100%.</td>
+                            <td><a href="../codelabbfe4.html?topic=bootstrap&amp;file=max-width-and-height-classes" target="_blank">Example</a></td>
+                        </tr>                        
+                        <tr>
+                            <td><code>.vw-100</code></td>
+                            <td>Set the width of an element to 100% of the width of the viewport.</td>
+                            <td><a href="../codelabce29.html?topic=bootstrap&amp;file=viewport-width-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.min-vw-100</code></td>
+                            <td>Set the min-width of an element to 100% of the width of the viewport.</td>
+                            <td><a href="../codelabce29.html?topic=bootstrap&amp;file=viewport-width-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.vh-100</code></td>
+                            <td>Set the height of an element to 100% of the height of the viewport.</td>
+                            <td><a href="../codelabf75d.html?topic=bootstrap&amp;file=viewport-height-classes" target="_blank">Example</a></td>
+                        </tr>                        
+                        <tr>
+                            <td><code>.min-vh-100</code></td>
+                            <td>Set the min-height of an element to 100% of the height of the viewport.</td>
+                            <td><a href="../codelabf75d.html?topic=bootstrap&amp;file=viewport-height-classes" target="_blank">Example</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <hr />
+                <h2 id="vertical-alignment-classes">Vertical Alignment Classes</h2>    
+                <p>You can use the vertical alignment utility classes to quickly change the vertical alignment of inline, inline-block, inline-table, and table cell elements.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>                        
+                        <tr>
+                            <td><code>.align-baseline</code></td>
+                            <td>Align the baseline of the element with the baseline of its parent.</td>
+                            <td><a href="../codelab6af3.html?topic=bootstrap&amp;file=vertical-align-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.align-top</code></td>
+                            <td>Align the top of the element with the top of the entire line.</td>
+                            <td><a href="../codelab6af3.html?topic=bootstrap&amp;file=vertical-align-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.align-middle</code></td>
+                            <td>Align the element in the middle of the parent element.</td>
+                            <td><a href="../codelab6af3.html?topic=bootstrap&amp;file=vertical-align-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.align-bottom</code></td>
+                            <td>Align the bottom of the element with the bottom of the entire line.</td>
+                            <td><a href="../codelab6af3.html?topic=bootstrap&amp;file=vertical-align-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.align-text-top</code></td>
+                            <td>Align the top of the element with the top of the parent element's font.</td>
+                            <td><a href="../codelab6af3.html?topic=bootstrap&amp;file=vertical-align-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.align-text-bottom</code></td>
+                            <td>Align the bottom of the element with the bottom of the parent element's font.</td>
+                            <td><a href="../codelab6af3.html?topic=bootstrap&amp;file=vertical-align-classes" target="_blank">Example</a></td>
+                        </tr>
+                    </table>
+                </div>
+				<hr />
+                <h2>Position Classes</h2>    
+                <p>You can use the position utility classes to quickly configuring the position of an element.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>                        
+                        <tr>
+                            <td><code>.position-static</code></td>
+                            <td>Set the position of element to static.</td>
+                            <td><a href="../codelabf099.html?topic=bootstrap&amp;file=position-static-class" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.position-relative</code></td>
+                            <td>Set the position of element to relative.</td>
+                            <td><a href="../codelabbf0c.html?topic=bootstrap&amp;file=position-relative-class" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.position-absolute</code></td>
+                            <td>Set the position of element to absolute.</td>
+                            <td><a href="../codelab26d0.html?topic=bootstrap&amp;file=position-absolute-class" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.position-fixed</code></td>
+                            <td>Set the position of element to fixed.</td>
+                            <td><a href="../codelab578e.html?topic=bootstrap&amp;file=position-fixed-class" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.position-sticky</code></td>
+                            <td>Set the position of element to sticky.</td>
+                            <td><a href="../codelab0d13.html?topic=bootstrap&amp;file=position-sticky-class" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.fixed-top</code></td>
+                            <td>Position an element at the top of the viewport, from edge to edge.</td>
+                            <td><a href="../codelabad98.html?topic=bootstrap&amp;file=fixed-top-class" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.fixed-bottom</code></td>
+                            <td>Position an element at the bottom of the viewport, from edge to edge.</td>
+                            <td><a href="../codelab6626.html?topic=bootstrap&amp;file=fixed-bottom-class" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.sticky-top</code></td>
+                            <td>Position an element at the top of the viewport, from edge to edge, but that will only happen after you scroll past it.</td>
+                            <td><a href="../codelabfba6.html?topic=bootstrap&amp;file=sticky-top-class" target="_blank">Example</a></td>
+                        </tr>
+                    </table>
+                </div>
+				<hr />
+                <h2>Display Classes</h2>    
+                <p>You can use the display utility classes to quickly and responsively toggle the display value of an element. You can also control an element's display when printing the page.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>                        
+                        <tr>
+                            <td><code>.d-none</code></td>
+                            <td>Hide an element. It does not take up any space in the layout.</td>
+                            <td><a href="../codelab4de5.html?topic=bootstrap&amp;file=display-none-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.d-inline</code></td>
+                            <td>Force an element to generate an inline-level box.</td>
+                            <td><a href="../codelab7394.html?topic=bootstrap&amp;file=display-inline-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.d-inline-block</code></td>
+                            <td>Force an element to generate a block box that will be flowed with surrounding content i.e. in the same line as adjacent content like inline box.</td>
+                            <td><a href="../codelab735a.html?topic=bootstrap&amp;file=display-inline-block-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.d-block</code></td>
+                            <td>Force an element to generate a block-level box.</td>
+                            <td><a href="../codelab11ba.html?topic=bootstrap&amp;file=display-block-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.d-table</code></td>
+                            <td>Force an element to behave like a <a href="../html-reference/html-table-tag.html"><code>&lt;table&gt;</code></a> element.</td>
+                            <td><a href="../codelab9ecc.html?topic=bootstrap&amp;file=display-table-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.d-table-row</code></td>
+                            <td>Force an element to behave like a <a href="../html-reference/html-tr-tag.html"><code>&lt;tr&gt;</code></a> element.</td>
+                            <td><a href="../codelab9ecc.html?topic=bootstrap&amp;file=display-table-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.d-table-cell</code></td>
+                            <td>Force an element to behave like a <a href="../html-reference/html-td-tag.html"><code>&lt;td&gt;</code></a> element.</td>
+                            <td><a href="../codelab9ecc.html?topic=bootstrap&amp;file=display-table-classes" target="_blank">Example</a></td>
+                        </tr>                        
+                        <tr>
+                            <td><code>.d-flex</code></td>
+                            <td>Force an element to generate a block-level <a href="../css-tutorial/css3-flexible-box-layouts.html">flex container box</a>.</td>
+                            <td><a href="../codelab6028.html?topic=bootstrap&amp;file=display-flex-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.d-inline-flex</code></td>
+                            <td>Force an element to generate an inline-level flex container box.</td>
+                            <td><a href="../codelab2a1b.html?topic=bootstrap&amp;file=display-inline-flex-classes" target="_blank">Example</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <p>You can also use the responsive breakpoints (<code>sm</code>, <code>md</code>, <code>lg</code>, and <code>xl</code>.) with these display utility classes to show or hide elements depending on viewport width using the format <code>.d-{breakpoint}-{value}</code>, for example, <code>.d-sm-none</code>, <code>.d-md-block</code>, <code>.d-xl-block</code>, and so on.</p>
+				<p>For a complete set of flex utility classes, please check out the <a rel="nofollow" href="https://getbootstrap.com/docs/4.3/utilities/flex/" target="_blank">Bootstrap flex reference page</a>.</p>
+                <!--Tip Box-->
+				<div class="color-box">
+                    <div class="shadow">
+                        <div class="info-tab tip-icon" title="Useful Tips"><i></i></div>
+                        <div class="tip-box">
+                            <p><strong>Tip:</strong> You can create print variant of the display classes to change the display value of elements when printing by simply inserting the string <code>print-</code> after <code>.d-</code>, for example, <code>.d-print-none</code>, <code>.d-print-inline</code>, <code>.d-print-block</code>, <code>.d-print-table</code>, and so on.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End:Tip Box--> 
+				<hr />
+                <h2>Miscellaneous Classes</h2>    
+                <p>Here's the list some more utility classes that can used for various purposes.</p>
+                <div class="shadow">
+                    <table class="data no-wrap">
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                            <th>Test</th>
+                        </tr>                        
+                        <tr>
+                            <td><code>.close</code></td>
+                            <td>Create generic close icon for dismissing content like modals and alerts.</td>
+                            <td><a href="../codelab33f0.html?topic=bootstrap&amp;file=close-class" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.overflow-auto</code></td>
+                            <td>Provide scrollbars to view overflowed content of an element if required.</td>
+                            <td><a href="../codelab09b1.html?topic=bootstrap&amp;file=overflow-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.overflow-hidden</code></td>
+                            <td>Hide overflowed content of an element.</td>
+                            <td><a href="../codelab09b1.html?topic=bootstrap&amp;file=overflow-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.stretched-link</code></td>
+                            <td>Make an element clickable by stretching a nested link.</td>
+                            <td><a href="../codelabb037.html?topic=bootstrap&amp;file=stretched-link-class" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.visible</code></td>
+                            <td>Make an element visible, without modifying the display.</td>
+                            <td><a href="../codelabe9a2.html?topic=bootstrap&amp;file=visibility-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.invisible</code></td>
+                            <td>Make an element invisible, but it still take up space in the page.</td>
+                            <td><a href="../codelabe9a2.html?topic=bootstrap&amp;file=visibility-classes" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.sr-only</code></td>
+                            <td>Hide an element to all devices except screen readers.</td>
+                            <td><a href="../codelabfd4a.html?topic=bootstrap&amp;file=sr-only-class" target="_blank">Example</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-hide</code></td>
+                            <td>Replace an element's text content with a background image.</td>
+                            <td><a href="../codelabbd4d.html?topic=bootstrap&amp;file=text-hide-class" target="_blank">Example</a></td>
+                        </tr>
+                    </table>
+                </div>        
+                <!--Bottom Navigation-->
+                <div class="bottom-link clearfix">
+                    <a href="bootstrap-jumbotron.html" class="previous-page-bottom">Previous Page</a>
+                    <a href="bootstrap-modals.html" class="next-page-bottom">Next Page</a>
+                </div>
+                <!--End:Bottom Navigation--> 
+                <!-- InstanceEndEditable -->
+                <!--Bottom Ads-->
+                <div class="bottom-ad clearfix">
+                    <div class="ad-label">Advertisements</div>
+
+<!--Rectangle Left-->
+<div class="rectangle-left fl">
+    
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Large Rectangle Left -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="8162953958"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<!--End:Rectangle Left-->
+
+
+<!--Rectangle Right-->
+<div class="rectangle-right fr">
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Large Rectangle Right -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="3324015654"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<!--End:Rectangle Right-->                </div>
+                <!--End:Bottom Ads-->
+            </div>
+            <!--End:Text Content-->
+            <!--Feedback Form-->
+			<div class="snippets">
+	<a href="../snippets/gallery.html" target="_blank">
+    	<img src="../lib/images/bootstrap-code-snippets.png" alt="Bootstrap UI Design Templates" />
+	</a>
+</div>
+
+<div class="report-error" id="feedback">
+    <div class="contact-form clearfix">
+        <div class="close"><span class="icon-close"></span></div>
+        <form id="feedback-form">
+            <h3>Your Feedback:</h3>
+            <div class="clearfix">
+                <div class="name fl"><label>Your Name (optional) <input type="text" name="user-name" id="user-name" /></label></div>
+                <div class="email fr"><label>Your E-mail (optional) <input type="text" name="user-email" id="user-email" /></label></div>
+            </div>
+            <div><label>Page address <input type="text" name="page-url" id="page-url" class="disabled" disabled="disabled" /></label></div>
+            <div><label>Description <textarea name="description" id="description" rows="6"></textarea></label></div>
+            <p id="feedback-error">We would love to hear from you, please drop us a line.</p>
+            <div><button type="button" class="action-btn" onclick="sendFeedback()"><span class="icon-send"></span> Send</button></div>
+        </form>
+        <div id="response"></div>
+    </div>           
+</div>            <!--End:Feedback Form-->
+        </div>        
+        <div class="sidebar">
+            <div class="ad-label">Advertisements</div>
+
+<div class="skyscraper primary">
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Premium Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4376141825"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+<div class="skyscraper">
+    
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Bottom Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="3387984471"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>        </div>
+    </div>
+    <!--Footer-->
+	<!--Footer-->
+<div class="footer">
+    <div class="appeal">
+        <div class="wrapper">
+            <p>Is this website helpful to you? Please give us a
+            <a href="../like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">like</a>,
+            or share your <a href="#feedback" class="feedback">feedback</a><em> to help us improve</em>.
+            Connect with us on <a href="https://www.facebook.com/tutorialrepublic" target="_blank">Facebook</a> and <a href="https://twitter.com/tutrepublic" target="_blank">Twitter</a> for the latest updates.</p>               
+        </div>
+    </div>
+    <div class="footer-inner">
+        <div class="wrapper clearfix">                
+            <div class="link-box">
+                <h4>About Us</h4>
+                <div class="clearfix">
+                    <a href="../about-us.html">Our Story</a>                    
+                    <a href="../terms-of-use.html">Terms of Use</a>
+                    <a href="../privacy-policy.html">Privacy Policy</a>                    
+                </div>
+            </div>
+            <div class="link-box">
+                <h4>Contact</h4>
+                <div class="clearfix">
+                    <a href="../contact-us.html">Contact Us</a>                    
+                    <a href="#feedback" class="feedback">Report Error</a>
+                    <a href="../advertise-with-us.html">Advertise</a>                    
+                </div>
+            </div>
+            <div class="tool-box">
+                <h4>Interactive Tools</h4>
+                <div class="tools-list clearfix" id="tools">
+                    <a href="../faq/what-is-the-maximum-length-of-title-and-meta-description-tag.html">Title &amp; Meta Length Calculator</a>                           
+                    <a href="../html-formatter.html" target="_blank">HTML Formatter</a>                        
+                    <a href="../twitter-bootstrap-button-generator.html" target="_blank">Bootstrap Button Generator</a>
+                    <a href="../html-reference/html-color-picker.html">HTML Color Picker</a>
+                    <a href="../codelab1284.html?topic=sql&amp;file=select-all" target="_blank">SQL Playground</a>
+                    <a href="../codelab07f7.html?topic=html&amp;file=hello-world" target="_blank">HTML Editor</a>                    
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="../lib/images/logo.svg" alt="TutorialRepublic" />
+            </div>
+        </div>
+    </div>           
+        <div class="bottom-strip">
+        <div class="wrapper">
+            <div class="notice">Copyright &copy; 2019 Tutorial Republic. All Rights Reserved.</div>
+            <div class="social-media">
+                <em>Share This:</em>
+                <a href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-helper-classes.php" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" title="Facebook"><i class="icon-facebook"></i></a>
+                <a href="#" id="tweet-btn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" title="Twitter"><i class="icon-twitter"></i></a>
+                <a href="#" id="email-btn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" rel="noreferrer" title="Gmail"><i class="icon-mail"></i></a>
+            </div>
+        </div>            
+    </div>
+    <script>
+        var title = document.title.replace('- Tutorial Republic', '');
+        document.getElementById('tweet-btn').href = 'https://twitter.com/share?text=' + title + '- &url=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-helper-classes.php';
+        document.getElementById('email-btn').href = 'https://mail.google.com/mail/?view=cm&fs=1&su=' + title + '&body=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-helper-classes.php';
+    </script>
+</div>
+<!--End:Footer-->
+    
+<div class="backdrop mobile-only"></div>
+
+<!-- TutorialRepublic base script -->
+<script>
+// Adding CSS files
+[
+	'/lib/styles/extended.new-3.7.css',
+	'../lib/icomoon/style.css'
+].forEach(function(href) {
+	var link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.href = href;
+	(document.getElementsByTagName('head')[0]).appendChild(link);
+});
+
+// Adding JS files
+[
+	'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+	'../lib/js/prism.js',
+	'../lib/js/default.new-2.9.min.js'
+].forEach(function(src) {
+	var script = document.createElement('script');
+	script.async = false; // important
+	script.src = src;
+	(document.getElementsByTagName('body')[0]).appendChild(script);
+});
+</script>
+
+
+    <!--End:Footer-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-helper-classes.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:20:20 GMT -->
+</html>

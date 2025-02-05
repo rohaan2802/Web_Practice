@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        #wrapper {
+            width: 100%;
+        }
+
+        .box {
+            height: 300px;
+            float: left;
+            width: 50%;
+            padding: 2rem 3rem;
+        }
+
+        .box1 {
+            background: coral;
+        }
+        .box2 {
+            background: #333;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+
+        /* max-width
+        min-width  */
+        /* Media Queries  */
+        @media(max-width: 838px) {
+          .box {
+              float: none;
+              width: 100%;
+          }
+        }
+
+        @media (max-width: 1142px) {
+            h1 {
+                font-size: 29px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="wrapper">
+        <div class="box box1">
+            <h1>Lorem ipsum dolor sit</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, saepe quod eligendi ad alias amet asperiores quasi voluptates, eum minima corrupti recusandae, aperiam illo cupiditate aliquid laboriosam qui repellat molestiae!</p>
+        </div>
+        <div class="box box2">
+            <h1>Lorem ipsum dolor sit</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, saepe quod eligendi ad alias amet asperiores quasi voluptates, eum minima corrupti recusandae, aperiam illo cupiditate aliquid laboriosam qui repellat molestiae!</p>
+        </div>
+    </div>
+
+</body>
+</html>

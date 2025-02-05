@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=flat-modal-login-form-with-icons by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:32:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Live Demo: Bootstrap Flat Modal Login Modal Form</title>
+	<meta name="description" content="Try and test HTML code online in a simple and easy way using our free HTML editor and see the results in real-time." />
+			    <meta charset="UTF-8" />
+	<meta property="og:title" content="Bootstrap Flat Modal Login Modal Form" />
+    <meta property="og:description" content="View the live example as well as try and test it using the online HTML editor." />
+	<meta property="fb:admins" content="100001054961582" />
+	<meta property="fb:app_id" content="1404574483159557" />
+	<meta property="og:image" content="lib/images/signature.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+	<link rel="stylesheet" href="lib/bin/css/codemirror.css" />
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+	<link rel="stylesheet" href="lib/bin/css/html-mode-2.3.css" />
+	<script src="../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bin/js/codemirror.js"></script>
+	<script type="text/javascript" src="lib/bin/js/html-mode-1.1.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/xml.js"></script>    
+	<script type="text/javascript" src="lib/bin/mode/javascript.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/css.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/htmlmixed.js"></script>
+	<script type="text/javascript" src="lib/bin/js/active-line.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        	updatePreview();
+    	});    
+	</script>
+	<style type="text/css">
+		.CodeMirror{font-size: 15px;line-height: normal;font-family: consolas,monospace;background: url("lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;}
+		.CodeMirror-activeline-background {background: #e8f2ff !important;}
+		.CodeMirror-scroll{overflow:auto;}
+	</style>
+	<!--Google Analytics-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script>	<!--End:Google Analytics-->
+</head>
+<body>
+
+    <form name="myForm" id="myForm" class="codelab">
+        <div class="header-wrapper">
+            <div class="header clearfix">				
+                <div class="logo">
+					<img src="lib/images/codelab-logo.svg" alt="CodeLab" />
+				</div>
+                <div class="control-bar">
+                    <div class="buttons">
+                        <a onClick="updatePreview();" class="show-output">Show Output</a>
+                        <a onClick="newWindow();" class="new-window" title="Show Output in Blank Tab"><span class="icon-new-window"></span></a>
+                        <a onClick="downloadCode();" class="download-code" title="Download Source Code"><span class="icon-download"></span></a>
+						<a onClick="toggleView();" class="toggle-view" title="Change Editor Layout"><span class="icon-screen-rotation"></span></a>
+                    </div>                            
+                </div>
+                <div class="top-ad-box">
+                    <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Responsive Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:block;width:100%;height:90px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4302666817"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>                                        
+                </div>                
+            </div>
+        </div>
+        <div class="frame-box vr">
+            <div class="pane-wrapper">
+                <div class="pane" id="code-pane">
+                    <div class="outer-area">
+                        <span class="show-preview-pane">&nbsp;</span>
+                        <div class="inner-area">
+                            <input type="hidden" id="current-code" name="current-code" />
+                            <textarea id="code" name="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Bootstrap Flat Modal Login Modal Form&lt;/title&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Roboto|Varela+Round&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    body {
+		font-family: 'Varela Round', sans-serif;
+	}
+	.modal-login {
+		width: 350px;
+	}
+	.modal-login .modal-content {
+		padding: 20px;
+		border-radius: 5px;
+		border: none;
+	}
+	.modal-login .modal-header {
+		border-bottom: none;
+        position: relative;
+		justify-content: center;
+	}
+	.modal-login .close {
+        position: absolute;
+		top: -10px;
+		right: -10px;
+	}
+	.modal-login h4 {
+		color: #636363;
+		text-align: center;
+		font-size: 26px;
+		margin-top: 0;
+	}
+	.modal-login .modal-content {
+		color: #999;
+		border-radius: 1px;
+    	margin-bottom: 15px;
+        background: #fff;
+		border: 1px solid #f3f3f3;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 25px;
+    }
+	.modal-login .form-group {
+		margin-bottom: 20px;
+	}
+	.modal-login label {
+		font-weight: normal;
+		font-size: 13px;
+	}
+	.modal-login .form-control {
+		min-height: 38px;
+		padding-left: 5px;
+		box-shadow: none !important;
+		border-width: 0 0 1px 0;
+		border-radius: 0;
+	}
+	.modal-login .form-control:focus {
+		border-color: #ccc;
+	}
+	.modal-login .input-group-addon {
+		max-width: 42px;
+		text-align: center;
+		background: none;
+		border-width: 0 0 1px 0;
+		padding-left: 5px;
+		border-radius: 0;
+	}
+    .modal-login .btn {        
+        font-size: 16px;
+        font-weight: bold;
+		background: #19aa8d;
+        border-radius: 3px;
+		border: none;
+		min-width: 140px;
+        outline: none !important;
+    }
+	.modal-login .btn:hover, .modal-login .btn:focus {
+		background: #179b81;
+	}
+	.modal-login .hint-text {
+		text-align: center;
+		padding-top: 5px;
+		font-size: 13px;
+	}
+	.modal-login .modal-footer {
+		color: #999;
+		border-color: #dee4e7;
+		text-align: center;
+		margin: 0 -25px -25px;
+		font-size: 13px;
+		justify-content: center;
+	}
+	.modal-login a {
+		color: #fff;
+		text-decoration: underline;
+	}
+	.modal-login a:hover {
+		text-decoration: none;
+	}
+	.modal-login a {
+		color: #19aa8d;
+		text-decoration: none;
+	}	
+	.modal-login a:hover {
+		text-decoration: underline;
+	}
+	.modal-login .fa {
+		font-size: 21px;
+	}
+	.trigger-btn {
+		display: inline-block;
+		margin: 100px auto;
+	}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;text-center&quot;&gt;
+	&lt;!-- Button HTML (to Trigger Modal) --&gt;
+	&lt;a href=&quot;#myModal&quot; class=&quot;trigger-btn&quot; data-toggle=&quot;modal&quot;&gt;Click to Open Login Modal&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal HTML --&gt;
+&lt;div id=&quot;myModal&quot; class=&quot;modal fade&quot;&gt;
+	&lt;div class=&quot;modal-dialog modal-login&quot;&gt;
+		&lt;div class=&quot;modal-content&quot;&gt;
+			&lt;div class=&quot;modal-header&quot;&gt;				
+				&lt;h4 class=&quot;modal-title&quot;&gt;Sign In&lt;/h4&gt;
+                &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-body&quot;&gt;
+				&lt;form action=&quot;/examples/actions/confirmation.php&quot; method=&quot;post&quot;&gt;
+					&lt;div class=&quot;form-group&quot;&gt;
+						&lt;div class=&quot;input-group&quot;&gt;
+							&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+							&lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;username&quot; placeholder=&quot;Username&quot; required=&quot;required&quot;&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;form-group&quot;&gt;
+						&lt;div class=&quot;input-group&quot;&gt;
+							&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-lock&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+							&lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;password&quot; placeholder=&quot;Password&quot; required=&quot;required&quot;&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;form-group&quot;&gt;
+						&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block btn-lg&quot;&gt;Sign In&lt;/button&gt;
+					&lt;/div&gt;
+					&lt;p class=&quot;hint-text&quot;&gt;&lt;a href=&quot;#&quot;&gt;Forgot Password?&lt;/a&gt;&lt;/p&gt;
+				&lt;/form&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-footer&quot;&gt;Don't have an account? &lt;a href=&quot;#&quot;&gt;Create one&lt;/a&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;     
+&lt;/body&gt;
+&lt;/html&gt;                            </textarea>	
+                            <script>
+                                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                    mode: "text/html",
+                                    tabMode: "indent",
+                                    styleActiveLine: true,
+                                    lineNumbers: true,
+                                    lineWrapping: true
+                                });
+                            </script>									
+                        </div>
+                    </div>
+                </div>
+                <div class="pane" id="preview-pane">
+                    <div class="outer-wrapper">
+                        <span class="hide-preview-pane">&nbsp;</span>
+                        <div class="output-area">
+                            <iframe id="preview" name="preview"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="codelab-footer clearfix">		
+            <a href="codelab1284.html?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+            <label class="auto-update"><input type="checkbox" id="check" /> Auto update</label>
+            <script>
+                var delay;
+                var checkbox = document.getElementById("check");
+                editor.on("change", function(){
+					editor.refresh();
+                    if(checkbox.checked==true){            
+                        clearTimeout(delay);
+                        delay = setTimeout(updatePreview, 300); // Don't use parenthesis 
+                    }
+                });
+                //setTimeout(updatePreview, 300);
+            </script>
+            <div class="social-widget-wrapper">
+                <!-- Social widget -->
+                                <p class="social-link">Share this example with 
+                    <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Dflat-modal-login-form-with-icons" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
+                    <a id="twitter-share-btn" href="https://twitter.com/share?text=Bootstrap+Flat+Modal+Login+Modal+Form+-+&amp;url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Dflat-modal-login-form-with-icons" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>, 
+                    <a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Dflat-modal-login-form-with-icons" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Google +</a>. Please give us a 
+                    <a id="facebook-like-btn" href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">Like</a>, if you find it helpful.
+                </p>
+                <!-- End:Social widget -->
+            </div>
+        </div>
+    </form>
+        
+    <form id="download-form" action="https://www.tutorialrepublic.com/examples/bin/download.php" method="post" class="hidden-form">
+    	<input type="hidden" id="download-value" name="download-value" />
+    </form>
+    <form id="new-form" action="https://www.tutorialrepublic.com/examples/fullscreen/output.php" method="post" target="_blank" class="hidden-form">
+    	<input type="hidden" id="code-value" name="code-value" />
+    </form>
+
+</body>
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=flat-modal-login-form-with-icons by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:32:34 GMT -->
+</html>
+

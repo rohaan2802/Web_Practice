@@ -1,0 +1,23 @@
+=================
+   Frontend
+=================
+=> Html
+=> Css -- (Sass,Scss)
+=> Bootstrap 
+=> Javascript -- (Ecma Script 6,7) + (React / Vue)
+=> Photoshop / Adobe Xd
+=> 20 Static Projects
+
+=====================
+      Backend
+==================== 
+=> PHP 
+=> MySQL
+=> Laravel / Codeigniter
+=> Python
+
+=> BlogWebsite
+=> Ecommerce Website 
+=> Movie Website 
+
+=> Domain 

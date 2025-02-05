@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/basic.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.tutorialrepublic.com/html-examples.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:12:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<!-- InstanceBeginEditable name="doctitle" -->
+    <title>HTML5 Examples - Tutorial Republic</title>
+    <meta name="description" content="A collection of HTML5 examples covering topics like paragraph, images, forms, tables etc. to help you understand how HTML elements are used to create web pages." />
+    <!-- InstanceEndEditable -->
+    	<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="fb:admins" content="100001054961582" />
+<meta property="fb:app_id" content="1404574483159557" />
+<meta property="og:image" content="lib/images/signature.png" />
+<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+<style>
+html,body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,img{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+html,body{min-height:100%}
+p{margin:0 0 12px}
+ol,ul{margin:0 0 12px}
+a,a:active,a:visited{outline:none;color:#1db79f;text-decoration:none}
+a code{color:inherit}
+a img{border:none;outline:none}
+code{color:#000}
+table{border-collapse:collapse;border-spacing:0}
+table td{vertical-align:top}
+body{min-width:1300px;color:#414141;background:#fafafa;font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.7}
+input,select,textarea,button,div,span,a{box-sizing:border-box}
+h1,h2,h3,h4{color:#262626;font-weight:500;margin:20px 0 10px;line-height:1.5;font-weight:600}
+h1{font-size:34px;margin-top:17px}
+h2{font-size:28px}
+h3{font-size:22px}
+.space{margin-bottom:25px!important}
+.break{margin-bottom:15px!important}
+.text-center{text-align:center!important}
+.scroll{height:195px;overflow-y:scroll}
+.scroll.large{height:245px}
+.scroll.xlarge{height:290px}
+.scroll.xxlarge{height:340px}
+sup{font-size:13px}
+pre{background:none;border-radius:0}
+.leaderboard{padding-top:8px;position:relative}
+.ad-container{height:90px;overflow:hidden}
+.intro-image img{display:block;padding:10px 0 25px;max-width:100%}
+.clearfix::after{content:".";display:block;height:0;clear:both;visibility:hidden}
+code,.code,.syntax,.green-box,.sky-box,.gray-box,.pink-box,.red-box,.at-rule,.codebox ul,.console-output{font-size:16px;font-family:Consolas,Monaco,Courier,monospace}
+p code,table.data td:last-child code,.content ul li code,code.mark{padding:2px 4px;color:#333;background-color:#f1f1f1;border-radius:4px}
+p code a,table.data td:last-child code a, .content ul li code a{padding:2px 0;background:#fff;margin:0 -4px;font-size:16px}
+.console-output{margin:15px 0}
+hr{border:none;border-bottom:1px solid #e7e9ed;height:1px;margin:30px 0}
+.summary,.topic{border:1px solid #eaeaea;border-width:1px 0;margin:20px 0;padding:10px 0;color:#8e9aa6;line-height:1.5}
+h2.section-title span{display:inline-block;border-bottom:4px solid #c9d7e0;padding:0 50px 12px 0}
+.wrapper{width:1300px;padding:0 15px;margin:0 auto}
+.header{background:#23384e;padding:16px 0}
+input.search{background:#fff;border:0 none;color:#807E7E;float:left;height:38px;line-height:26px;font-size:14px;margin:0 0 0 12px;outline:medium none;padding:6px 14px;width:500px;border-radius:2px;box-shadow:0 0 1px rgba(0,0,0,0.6);font-family:inherit}
+.search-btn{color:rgba(0,0,0,.6);background:#ebebeb;border:none;outline:none;cursor:pointer;float:left;height:38px;line-height:46px;width:44px;display:block;margin-left:-2px;border-radius:0 2px 2px 0;box-shadow:0 0 1px rgba(0,0,0,0.7)}
+.logo{width:304px}
+.logo img{height:44px;margin:-3px 0;display:block}
+.site-search{float:left;margin-left:100px}
+.menu{background-color:#f5f5f5;box-shadow:0 1px 1px rgba(0,0,0,.15);position:relative;z-index:9}
+.menu a{color:#666;display:inline-block;padding:0 10px;text-decoration:none;font-size:14px;font-weight:600;height:48px;line-height:48px}
+.menu a:first-child{margin-left:-10px}
+.menu a.tool-link{float:right;display:inline-block;border-radius:30px;line-height:28px;position:relative;height:auto;top:9px;padding:0 12px;color:#1ebba3;border:1px double #1ebba3}
+.fl,.logo{float:left}
+.leftcolumn{width:240px;float:left;font-size:16px;color:#4f4f4f}
+.centercolumn{width:850px;float:left}
+.content{background:#fff;padding:20px 40px;border:1px solid #dedede;border-top:none;border-radius:1px}
+.sidebar{float:left;padding-top:28px;width:160px;margin-left:20px;position:relative}
+.leftcolumn .segment{margin:16px 0 12px;position:relative;font-size:18px;font-weight:600;display:inline-block;line-height:normal}
+.leftcolumn a{color:#4f4f4f;font-size:16px;line-height:26px;display:block;border-bottom:1px solid transparent}
+.leftcolumn ul{list-style:none;padding:0}
+.segment,.chapters,.chapters a,.toggle-tree-menu{float:left;clear:both}
+ul.tree-menu li.tree{margin-left:-12px;float:left;width:100%}
+ul.tree-menu li a,ul.tree-menu li code{color:#4f4f4f;font-size:15.4px}
+ul.chapters.tree-menu li a{font-size:16px}
+h1 code,h2 code,h3 code{font:inherit}
+.color-box{margin:15px 0;padding-left:20px}
+.note-box,.warning-box,.tip-box{padding:8px 8px 3px 26px}
+.info-tab{float:left;margin-left:-23px}
+.content ul li{margin-top:7px}
+.extra{padding-top:5px}
+.green-box,.sky-box,.gray-box,.red-box,.pink-box{color:#000;margin-top:15px;padding:10px;background-color:#f6f8fa;border:1px solid #d7e2ec}
+.example{background:#f4f5f6;padding:3px;margin:15px 0}
+.codebox{background:#fff;border:1px solid #ddd}
+.codebox-title{height:41px;padding-left:12px;border-bottom:1px solid #ddd;background:#f5f5f5}
+.codebox-title h4{margin:0;font-size:18px;line-height:38px;float:left;display:inline;font-weight:500}
+a.try-btn,a.download-btn{width:140px;height:40px;color:#333;font-size:15px;line-height:41px;font-weight:600;text-align:center;text-decoration:none;float:right;display:block;border-left:1px solid #ddd;background:rgba(27,31,35,0.08);box-sizing:border-box;font-family:Arial,sans-serif}
+a.try-btn span{font-size:18px;line-height:normal}
+.hide,.code-style,.box-size,.bottom-link,.footer,.code-style,.snippets,.report-error,.badge,.social,.ad-label,.mobile-only{display:none}
+.skyscraper{width:160px;height:600px;overflow:hidden;margin-bottom:20px;background:#ebecf0}
+.bottom-ad{margin-top:46px;padding:24px;position:relative;background:url(lib/images/smooth-line.png) no-repeat center #f9f9f9}
+.rectangle-left,.rectangle-right{min-width:336px;min-height:280px;overflow:hidden}
+.fr,a.previous-page,a.next-page,.topic-nav{float:right}
+a.previous-page,a.next-page{width:32px;height:32px;line-height:30px}
+.shadow{background:#F7F8F9;padding:3px;margin:10px 0}
+.syntax{color:#2f4959;padding:13px 18px;background:#F9F9FA;border:1px solid #ddd;font-size:15px}
+.codebox ul{font-size:14px;padding:7px;list-style:decimal inside none}
+.codebox ul.lead-zero,.codebox ul.lead-double-zero{list-style-type:decimal-leading-zero}
+.codebox ul li{padding:0 9px;color:#AFAFAF;background-image:none;margin:0}
+.codebox ul pre,.codebox ul li,.codebox ul li code{line-height:1.6;vertical-align:top}
+.codebox ul pre,.codebox ul code{width:90%;font-size:16px;color:#222;display:inline-block;padding-left:10px;border-left:3px solid #6CE26C;white-space:pre-wrap;word-break:normal}
+.codebox ul.lead-double-zero li{text-align:right}
+.codebox ul.lead-double-zero li pre{text-align:left}
+.codebox ul.sql.single-line pre{line-height:26px}
+.content .codebox ul li code{color:#222;padding:0 0 0 10px}
+.preview-box{padding:15px;text-align:center;cursor:pointer;overflow:hidden;background:#FFF;border:1px solid #e6e6e6}
+.preview-box a,.preview-box img{display:block;margin:0 auto}
+.topic a:first-of-type{margin-left:2px}
+.topic-nav{padding-right:5px;color:#d0d0d0}
+.topic-nav a{padding:0 15px;margin:0 0 0 5px;position:relative;display:inline-block}
+.topic-nav a::after{font-size:24px;position:absolute;line-height:normal;top:-6px}
+.topic-nav a:first-child{margin:0 5px 0 0}
+.topic-nav a:first-child::after{content:'\00AB';left:-5px}
+.topic-nav a:last-child::after{content:'\00BB';right:-5px}
+.download-box{text-align:center;padding:20px 0;margin:20px 0 10px}
+.output-box{border-color:#d4d4d4;border-style:solid;border-width:1px 0;padding:5px 15px;overflow:hidden;background:#fff;margin:10px 0}
+.demo-box{margin-top:15px}
+.subhead{border-bottom:3px solid #DCE3EB;margin-bottom:15px;padding-bottom:10px}
+table.data,table.description{width:100%;font-size:92%}
+table.data th{color:#000;padding:8px 7px;text-align:left;font-size:15px;background:#F8F8F8}
+table.data td{color:#484848;padding:5px 7px;background:#fff}
+table.data th,table.data td{vertical-align:top;border:1px solid #DCE3EB}
+table.data tr.section th,table.data td.section{font-size:15px;background:#f0f4f7}
+table.description th{width:150px;padding:7px;vertical-align: middle}
+table.no-wrap tr td:first-child{white-space:nowrap}
+.overview{padding-right:202px}
+.overview .intro-image{float:right;margin-right:-202px;text-align:right}
+.overview .intro-image + p{padding-top:0}
+.support{background:#F8F8F8;border:1px solid #ccc;color:#2F4959;padding:15px}
+.support table td:first-child{width:200px;padding:0 25px 0 10px;border-right:1px dashed #D0D0D0}
+.support h2{color:#2F4959;font-size:16px;padding:0 0 0 30px;margin-top:0}
+.support ul{margin-left:10px}
+.support ul li{margin-top:4px}
+h1 sup{background:#ec0000;border-radius:3px;padding:5px 10px;font-size:15px;color:#fff;position:relative;top:5px}
+@media screen and (max-width: 1280px) {
+body{min-width:1260px}
+.wrapper{width:1260px}
+.leftcolumn{width:230px}
+.centercolumn{width:820px}
+}
+@media screen and (max-width: 800px) {
+body{min-width:100%;max-width:100%;padding-top:46px}
+.wrapper{width:100%;padding:0}
+.header{height:46px;padding:5px 0;position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
+.logo{width:auto;display:block;padding:6px 0 0 60px;position:absolute;left:0;z-index:100}
+.logo img{height:30px}
+.menu{width:100%;padding-left:12px;padding-right:12px;overflow-x:auto;white-space:nowrap}
+.centercolumn{width:100%;float:none}
+.content{padding:10px;border-width:0 0 1px 0}
+.sidebar{margin: 25px auto 0}
+.skyscraper{display:inline-block}
+.shadow,.example{max-width:100%;overflow-x:auto}
+.codebox-title{position:relative}
+.codebox.multi-style-mode ul{padding-top:7px;margin-top:36px;border-top:1px solid #ddd}
+.codebox ul,.codebox ul.scroll{overflow-x:auto}
+.rectangle-left,.rectangle-right{float:none;display:inline-block;margin:10px auto;background:#EDEEF2}
+.leftcolumn,.footer,.header .social,.header .site-search,.overview .intro-image,.toggle-tree-menu,.code-style,.support table td:first-child,ul.tree-menu code.shorthand,.menu a.tool-link,.backdrop{display:none}
+.summary,.topic{padding:5px 0;margin:10px 0}
+.leftcolumn,.centercolumn,.sidebar{float:none}
+.header,.menu,.container,.footer,.appeal-text{width:100%;box-sizing:border-box}
+.centercolumn{width:100%}
+.content img{max-width:100%;height:auto}
+.codebox ul li{width:614px}
+.codebox ul.scroll li{width:597px}
+.codebox ul,.codebox ul.scroll{overflow-x:auto}
+a.try-btn,a.download-btn{width:130px}
+.bottom-ad{height:auto;background:none;padding:30px 0 0;margin:40px 0 0;text-align:center;position:relative}
+.native-unit{margin-bottom:30px}
+.overview{padding-right:0}
+.scroll-pane{overflow-x:auto}
+table.data{min-width:480px}
+table.data pre{display:inline;white-space:normal}
+table tr th,table tr td{width:auto!important}
+.support h2,.support ul{padding-left:0}
+p.topic{vertical-align:top}
+p.topic > a{word-wrap:break-word;display:inline-block}
+.example-list ul li,ul.faq-list li{padding-bottom:3px}
+.preview-box{padding:6px}
+.topic-nav{float:none;display:block;padding:6px 0 0 5px}
+.codebox.multi-style-mode ul{padding-top:7px;margin-top:34px;border-top:1px solid #ccc}
+.content pre{max-width:100%;overflow:hidden}
+.shadow,.content pre.console-output{max-width:100%;overflow-x:auto}
+ul.tree-menu li.tree{margin-left:0}
+.support ul{margin-left:20px}
+.leaderboard{margin:20px 0}
+h1{font-size:28px}
+h2{font-size:24px}
+h3{font-size:20px}
+}
+@media screen and (min-width: 801px) {
+.site-search,.leftcolumn,.social{display:block!important}
+.backdrop{display:none!important}
+}</style>    
+    <!-- InstanceBeginEditable name="head" -->
+	<style>
+	.example-list a{color:#4f4f4f}
+	.example-list a:hover{color:#222;text-decoration:underline}
+	</style>
+    <!-- InstanceEndEditable -->
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script></head>
+<body>
+    <!--Header-->
+    
+<div class="header">
+    <div class="wrapper clearfix">
+        <button type="button" class="open-menu mobile-only"><i class="icon-menu"></i></button>
+        <div class="logo">
+            <a href="index.html"><img src="lib/images/logo.svg" alt="TutorialRepublic" /></a>
+        </div>
+        <div class="site-search">
+            <form action="https://www.google.com/search" method="get" target="_blank" class="clearfix">
+                <input type="hidden" value="www.tutorialrepublic.com" name="sitesearch" />
+                <input type="text" name="q" placeholder="Search topics, tutorials, questions and answers..." id="searchInput" class="search" />
+                <button type="submit" class="search-btn"><span class="icon-search"></span></button>
+            </form>
+        </div>
+        <div class="social">                
+            <a href="https://www.facebook.com/tutorialrepublic" target="_blank" title="Join us on Facebook"><i class="icon-facebook"></i></a>
+            <a href="https://twitter.com/tutrepublic" target="_blank" title="Follow us on Twitter"><i class="icon-twitter"></i></a>
+            <a href="contact-us.html" target="_blank" title="Send us an Email"><i class="icon-mail"></i></a>
+        </div>
+        <button type="button" class="open-search mobile-only">
+            <i class="icon-search"></i>
+        </button>
+    </div>    
+</div>
+<div class="menu">
+    <div class="wrapper">
+        <a href="index.html" title="Home Page">HOME</a>
+        <a href="html-tutorial/index.html" title="HTML Tutorial">HTML5</a>            
+        <a href="css-tutorial/index.html" title="CSS Tutorial">CSS3</a>
+        <a href="javascript-tutorial/index.html" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="jquery-tutorial/index.html" title="jQuery Tutorial">JQUERY</a>
+        <a href="twitter-bootstrap-tutorial/index.html" title="Bootstrap Tutorial">BOOTSTRAP4</a>
+        <a href="php-tutorial/index.html" title="PHP Tutorial">PHP7</a> 
+        <a href="sql-tutorial/index.html" title="SQL Tutorial">SQL</a>
+        <a href="references.html" title="Web References">REFERENCES</a>
+        <a href="practice-examples.html" title="Practice Examples and Demos">EXAMPLES</a>
+        <a href="faq.html" title="Frequently Asked Questions and Answers">FAQ</a>
+        <a href="snippets/gallery.html" title="Bootstrap Code Snippets" target="_blank">SNIPPETS</a>
+        <a href="codelab.html" class="tool-link" target="_blank">Online HTML Editor</a>
+    </div>        
+</div>    <!--End:Header-->
+    <div class="wrapper clearfix">
+        <div class="leftcolumn" id="myNav">
+		
+        <div class="segment"><span>WEB</span> TUTORIALS</div>
+<div class="chapters">
+    <a href="html-tutorial/index.html">HTML Tutorial</a>    
+    <a href="css-tutorial/index.html">CSS Tutorial</a>
+	<a href="javascript-tutorial/index.html">JavaScript Tutorial</a>
+	<a href="jquery-tutorial/index.html">jQuery Tutorial</a>
+    <a href="twitter-bootstrap-tutorial/index.html">Bootstrap Tutorial</a>
+	<a href="php-tutorial/index.html">PHP Tutorial</a>
+	<a href="sql-tutorial/index.html">SQL Tutorial</a>
+</div>
+<div class="segment"><span>PRACTICE</span>&thinsp;EXAMPLES</div>
+<div class="chapters">
+    <a href="html-examples.html">HTML Examples</a>
+    <a href="css-examples.html">CSS Examples</a>
+	<a href="javascript-examples.html">JavaScript Examples</a>
+	<a href="jquery-examples.html">jQuery Examples</a>
+    <a href="twitter-bootstrap-examples.html">Bootstrap Examples</a>
+	<a href="php-examples.html">PHP Examples</a>
+</div>
+<div class="segment"><span>HTML</span> REFERENCES</div>
+<div class="chapters">
+    <a href="html-reference/html5-tags.html">HTML Tags/Elements</a>
+	<a href="html-reference/html5-global-attributes.html">HTML Global Attributes</a>
+    <a href="html-reference/html5-event-attributes.html">HTML Event Attributes</a>             
+    <a href="html-reference/html-color-picker.html">HTML Color Picker</a>
+    <a href="html-reference/html-language-codes.html">HTML Language Codes</a>
+    <a href="html-reference/html-character-entities.html">HTML Character Entities</a>
+    <a href="html-reference/http-status-codes.html">HTTP Status Codes</a>
+</div>
+<div class="segment"><span>CSS</span> REFERENCES</div>
+<div class="chapters">
+    <a href="css-reference/css-at-rules.html">CSS At-rules</a>
+    <a href="css-reference/css3-properties.html">CSS Properties</a>
+	<a href="css-reference/css-animatable-properties.html">CSS Animatable Properties</a>
+    <a href="css-reference/css-color-values.html">CSS Color Values</a>
+    <a href="css-reference/css-color-names.html">CSS Color Names</a>
+    <a href="css-reference/css-web-safe-fonts.html">CSS Web Safe Fonts</a>
+    <a href="css-reference/css-aural-properties.html">CSS Aural Properties</a>
+</div>
+<div class="segment"><span>PHP</span> REFERENCES</div>
+<div class="chapters">
+	<a href="php-reference/php-string-functions.html">PHP String Functions</a>
+    <a href="php-reference/php-array-functions.html">PHP Array Functions</a>
+    <a href="php-reference/php-file-system-functions.html">PHP File System Functions</a>
+    <a href="php-reference/php-date-and-time-functions.html">PHP Date/Time Functions</a>
+    <a href="php-reference/php-calendar-functions.html">PHP Calendar Functions</a>
+    <a href="php-reference/php-mysqli-functions.html">PHP MySQLi Functions</a>
+    <a href="php-reference/php-filters.html">PHP Filters</a>
+    <a href="php-reference/php-error-levels.html">PHP Error Levels</a>
+</div>        
+                </div>
+        <div class="centercolumn">
+            <!--Text Content-->
+            <div class="content">
+                <div class="leaderboard">
+                    
+<div class="ad-label">Advertisements</div>
+<div class="ad-container">
+    <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <!-- Responsive Leaderboard -->
+    <ins class="adsbygoogle"
+            style="display:inline-block;max-width:728px;width:100%;height:90px"
+            data-ad-client="ca-pub-9107540490929984"
+            data-ad-slot="4302666817"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>                </div>
+                <!-- InstanceBeginEditable name="main_content" -->
+                <a href="javascript:void(0);" class="previous-page disabled" title="Go to Previous Page : Disabled"></a>
+                <a href="css-examples.html" class="next-page" title="Go to Next Page"></a>
+                <h1>HTML5 <span>Examples</span></h1>
+                <p class="summary">This section contains a whole bunch of examples demonstrating the various HTML elements and its features in real action.</p>
+                <div class="example-list">
+                    <h2>HTML Basic</h2>
+                    <ul>
+                        <li><a href="codelab50aa.html?topic=html&amp;file=simple-document" target="_blank">A simple HTML document</a></li>
+                        <li><a href="codelab3f70.html?topic=html&amp;file=headings" target="_blank">Specify headings for the content</a></li>
+                        <li><a href="codelabf37e.html?topic=html&amp;file=paragraphs" target="_blank">Inserting paragraphs of text content</a></li>
+                        <li><a href="codelabc0e4.html?topic=html&amp;file=hyperlinks" target="_blank">Creating links to other HTML documents or Web resources</a></li>
+                        <li><a href="codelab47c9.html?topic=html&amp;file=images" target="_blank">Inserting images into the HTML document</a></li>
+                    </ul>
+                    <h2>HTML Text</h2>
+                    <ul>
+                        <li><a href="codelab3f70.html?topic=html&amp;file=headings" target="_blank">Headings - h1 to h6</a></li>
+                        <li><a href="codelabe374.html?topic=html&amp;file=insert-line-breaks" target="_blank">Paragraph and line breaks</a></li>
+                        <li><a href="codelabbcd9.html?topic=html&amp;file=text-formatting" target="_blank">Text formatting</a></li>
+                        <li><a href="codelab4d05.html?topic=html&amp;file=pre-tag" target="_blank">Preformatted text (Preserve line breaks and spaces)</a></li>
+                        <li><a href="codelabae0c.html?topic=html&amp;file=subscript-and-superscript" target="_blank">Sub and Superscript text</a></li>
+                        <li><a href="codelab551c.html?topic=html&amp;file=quotations" target="_blank">Long and short quotations</a></li>
+                        <li><a href="codelab2ed5.html?topic=html&amp;file=abbreviations" target="_blank">Abbreviations and acronyms</a></li>
+                        <li><a href="codelabae01.html?topic=html&amp;file=deleted-and-inserted" target="_blank">Marking deleted and inserted text</a></li>
+                        <li><a href="codelab7826.html?topic=html&amp;file=bdo-tag" target="_blank">Setting text direction of an element</a></li>
+                        <li><a href="codelabc564.html?topic=html&amp;file=address-tag" target="_blank">Insert contact information</a></li>
+                        <li><a href="codelab3efd.html?topic=html&amp;file=html-comments" target="_blank">Inserting comments</a></li>
+                        <li><a href="codelab7a42.html?topic=html&amp;file=hr-tag" target="_blank">Inserting horizontal lines</a></li>
+                        <li><a href="codelabd640.html?topic=html&amp;file=output-tags" target="_blank">Computer output tags</a></li>
+                    </ul>
+                    <h2>HTML Links</h2>
+                    <ul>
+                        <li><a href="codelab5adb.html?topic=html&amp;file=a-tag" target="_blank">Create hyperlink</a></li>
+                        <li><a href="codelabf621.html?topic=html&amp;file=linking-images" target="_blank">Using image as a link</a></li>
+                        <li><a href="codelab6453.html?topic=html&amp;file=target-blank" target="_blank">Open link in a new browser window</a></li>
+                        <li><a href="codelab63fa.html?topic=html&amp;file=jump-link" target="_blank">Navigate inside page - Jump link</a></li>
+                        <li><a href="codelab2095.html?topic=html&amp;file=target-top" target="_blank">Move outside of an iframe</a></li>
+                        <li><a href="codelab1733.html?topic=html&amp;file=mail-to" target="_blank">Creating a mailto link -  A link that sends an e-mail</a></li>
+                    </ul>
+                    <h2>HTML Images</h2>
+                    <ul>
+                        <li><a href="codelabbb66.html?topic=html&amp;file=specify-dimensions-for-images" target="_blank">Setting width and height of the images</a></li>
+                        <li><a href="codelabe5ea.html?topic=html&amp;file=images-alignment" target="_blank">Aligning images</a></li>
+                        <li><a href="codelabf621.html?topic=html&amp;file=linking-images" target="_blank">Make a hyperlink of an image</a></li>
+                        <li><a href="codelabe89c.html?topic=html&amp;file=image-map" target="_blank">Creating an image-map - An image with clickable regions</a></li>
+                    </ul>
+                    <h2>HTML Tables</h2>
+                    <ul>
+                        <li><a href="codelab3c3c.html?topic=html&amp;file=table" target="_blank">Making a simple table - The most basic form of a table</a></li>
+                        <li><a href="codelab14bb.html?topic=html&amp;file=table-dimension" target="_blank">Setting the dimension of a table</a></li>
+                        <li><a href="codelabeeab.html?topic=html&amp;file=caption-tag" target="_blank">Specify the table caption</a></li>
+                        <li><a href="codelab6db3.html?topic=html&amp;file=tables-border" target="_blank">Tables with borders - Adding the default table borders</a></li>        
+                        <li><a href="codelabfe25.html?topic=html&amp;file=table-cellpadding" target="_blank">Sets the padding of table cells - The cellpadding attribute</a></li>
+                        <li><a href="codelabd6ac.html?topic=html&amp;file=table-cellspacing" target="_blank">Sets the distance between table cells - The cellspacing attribute</a></li>
+                        <li><a href="codelabfcc7.html?topic=html&amp;file=table-rowspan-and-colspan" target="_blank">Table cells that span more than one row/column - The rowspan/colspan attribute</a></li>
+                        <li><a href="codelaba2a8.html?topic=html&amp;file=table-column-groups" target="_blank">Column groups - The col and colgroup elements</a></li>    
+                    </ul>
+                    <h2>HTML Lists</h2>
+                    <ul>
+                        <li><a href="codelab1f7d.html?topic=html&amp;file=unordered-list" target="_blank">Creating an unordered list</a></li>
+                        <li><a href="codelab57d7.html?topic=html&amp;file=ordered-list" target="_blank">Creating an ordered list</a></li>
+                        <li><a href="codelabe5df.html?topic=html&amp;file=definition-list" target="_blank">Creating a definition list</a></li>
+                        <li><a href="codelabdbf4.html?topic=html&amp;file=nested-list-01" target="_blank">Creating a nested list - Single level</a></li>
+                        <li><a href="codelab8665.html?topic=html&amp;file=nested-list-02" target="_blank">Creating a nested list - Multi level</a></li>
+                    </ul>
+                    <h2>HTML Forms</h2>
+                    <ul>
+                        <li><a href="codelab0ddd.html?topic=html&amp;file=text-field" target="_blank">Creating text input fields</a></li>
+                        <li><a href="codelabab90.html?topic=html&amp;file=password-field" target="_blank">Creating password input fields</a></li>
+						<li><a href="#html5-inputs">Creating HTML5 new input fields</a></li>
+                        <li><a href="codelabec83.html?topic=html&amp;file=checkboxes-and-radio" target="_blank">Checkboxes and radio buttons</a></li>
+                        <li><a href="codelabfa47.html?topic=html&amp;file=select-box-01" target="_blank">Select boxes - A drop-down list</a></li>
+                        <li><a href="codelabdaf1.html?topic=html&amp;file=select-box-02" target="_blank">Select box with a pre-selected value</a></li>
+                        <li><a href="codelab72ca.html?topic=html&amp;file=optgroup-tag" target="_blank">Grouping of options inside a select box</a></li>
+                        <li><a href="codelab6f9e.html?topic=html&amp;file=select-box-03" target="_blank">Enable multiple selection inside a select box</a></li>
+                        <li><a href="codelabacf8.html?topic=html&amp;file=textarea-01" target="_blank">Textarea - A multi-line text input field</a></li>
+                        <li><a href="codelab8598.html?topic=html&amp;file=simple-button" target="_blank">Creating buttons</a></li>
+                        <li><a href="codelab111d.html?topic=html&amp;file=file-select" target="_blank">File select field</a></li>
+                        <li><a href="codelab8fb6.html?topic=html&amp;file=fieldset-tag" target="_blank">Grouping similar form fields</a></li>
+                        <li><a href="codelab8361.html?topic=html&amp;file=submit-and-reset-button" target="_blank">Submit or reset a form - The use of submit and reset button</a></li>
+                    </ul>
+                    <h2>HTML Styles</h2>
+                    <ul>
+                        <li><a href="codelab5370.html?topic=html&amp;file=inline-styles" target="_blank">Style HTML elements using inline styles - The style attribute</a></li>
+                        <li><a href="codelab3abf.html?topic=html&amp;file=embedded-style-sheet" target="_blank">Style HTML elements using embedded styles - The style element</a></li>
+                        <li><a href="codelab27b7.html?topic=html&amp;file=linking-external-style-sheet" target="_blank">Link to an external style sheet - The link element</a></li>
+                        <li><a href="css-tutorial/index.html" target="_blank">Learn more about styling of HTML elements</a></li>
+                    </ul>
+                    <h2>HTML iFrame</h2>
+                    <ul>
+                        <li><a href="codelab5856.html?topic=html&amp;file=specify-dimensions-for-an-iframe" target="_blank">Using an iframe to embed a web page inside another HTML document</a></li>
+                        <li><a href="codelaba52a.html?topic=html&amp;file=iframe-without-border" target="_blank">Removing the default frameborder from an iframe</a></li>
+                        <li><a href="codelab01c3.html?topic=html&amp;file=open-links-in-an-iframe" target="_blank">Opening linked web pages inside an iframe</a></li>
+                    </ul>
+                    <h2>HTML Scripts</h2>
+                    <ul>
+                        <li><a href="codelabeac0.html?topic=html&amp;file=embedded-javascript" target="_blank">Insert JavaScript inside the HTML pages to add interactivity - The script element</a></li>
+						<li><a href="codelabc8ae.html?topic=html&amp;file=external-javascript" target="_blank">Include external JavaScript file inside the HTML pages</a></li>
+                        <li><a href="codelab23b8.html?topic=html&amp;file=noscript-element" target="_blank">Provide alternative content if script isn't supported or disabled - The noscript element</a></li>
+                    </ul>
+					<h2 id="html5-inputs">HTML5 New Input Types</h2>
+                    <ul>
+                        <li><a href="codelab725b.html?topic=html5&amp;file=color-input-type" target="_blank">Creating HTML5 color input type</a></li>
+                        <li><a href="codelab7a4b.html?topic=html5&amp;file=date-input-type" target="_blank">Creating HTML5 date input type</a></li>
+                        <li><a href="codelab41f0.html?topic=html5&amp;file=datetime-input-type" target="_blank">Creating HTML5 datetime input type</a></li>
+                        <li><a href="codelab861e.html?topic=html5&amp;file=datetime-local-input-type" target="_blank">Creating HTML5 datetime-local input type</a></li>
+                        <li><a href="codelab798e.html?topic=html5&amp;file=email-input-type" target="_blank">Creating HTML5 email input type</a></li>
+                        <li><a href="codelabbd9b.html?topic=html5&amp;file=month-input-type" target="_blank">Creating HTML5 month input type</a></li>
+                        <li><a href="codelab67dc.html?topic=html5&amp;file=number-input-type" target="_blank">Creating HTML5 number input type</a></li>
+                        <li><a href="codelab3942.html?topic=html5&amp;file=range-input-type" target="_blank">Creating HTML5 range input type</a></li>
+                        <li><a href="codelabf9bc.html?topic=html5&amp;file=search-input-type" target="_blank">Creating HTML5 search input type</a></li>
+                        <li><a href="codelab3608.html?topic=html5&amp;file=tel-input-type" target="_blank">Creating HTML5 tel input type</a></li>
+                        <li><a href="codelab8b54.html?topic=html5&amp;file=time-input-type" target="_blank">Creating HTML5 time input type</a></li>
+                        <li><a href="codelab85e4.html?topic=html5&amp;file=url-input-type" target="_blank">Creating HTML5 url input type</a></li>
+                        <li><a href="codelab07da.html?topic=html5&amp;file=week-input-type" target="_blank">Creating HTML5 week input type</a></li>
+                    </ul>
+					<h2>HTML5 Canvas</h2>
+                    <ul>
+                        <li><a href="codelab61ce.html?topic=html5&amp;file=embed-canvas-into-html-pages" target="_blank">Embedding canvas into HTML documents</a></li>
+                        <li><a href="codelab946a.html?topic=html5&amp;file=draw-a-line-onto-the-canvas" target="_blank">Drawing a line onto the canvas</a></li>
+                        <li><a href="codelab317f.html?topic=html5&amp;file=draw-an-arc-onto-the-canvas" target="_blank">Drawing an arc onto the canvas</a></li>
+                        <li><a href="codelab111f.html?topic=html5&amp;file=draw-a-rectangle-onto-the-canvas" target="_blank">Drawing a rectangle onto the canvas</a></li>
+                        <li><a href="codelab39ed.html?topic=html5&amp;file=draw-a-circle-onto-the-canvas" target="_blank">Drawing a circle onto the canvas</a></li>
+                        <li><a href="codelab78fb.html?topic=html5&amp;file=set-stroke-color-and-width-on-canvas" target="_blank">Setting the stroke color and width on canvas</a></li>
+                        <li><a href="codelab5217.html?topic=html5&amp;file=set-stroke-cap-style-on-canvas" target="_blank">Setting the cap style for the stroke on canvas</a></li>
+                        <li><a href="codelabb90a.html?topic=html5&amp;file=fill-color-inside-a-rectangle-on-canvas" target="_blank">Filling color inside a rectangle shape on canvas</a></li>
+                        <li><a href="codelab5d68.html?topic=html5&amp;file=fill-color-inside-a-circle-on-canvas" target="_blank">Filling color inside a circular shape on canvas</a></li>
+                        <li><a href="codelabf8be.html?topic=html5&amp;file=fill-linear-gradient-inside-canvas-shapes" target="_blank">Filling linear gradient inside canvas shapes</a></li>
+                        <li><a href="codelab42bb.html?topic=html5&amp;file=fill-radial-gradient-inside-canvas-shapes" target="_blank">Filling radial gradient inside canvas shapes</a></li>
+                    </ul>
+					<h2>HTML5 SVG</h2>
+                    <ul>
+                        <li><a href="codelab7694.html?topic=html5&amp;file=embed-svg-into-html-pages" target="_blank">Embedding SVG into HTML documents</a></li>
+                        <li><a href="codelabbd5c.html?topic=html5&amp;file=create-a-line-with-svg" target="_blank">Creating a line using SVG</a></li>
+                        <li><a href="codelabcb51.html?topic=html5&amp;file=create-a-rectangle-with-svg" target="_blank">Creating a rectangle using SVG</a></li>
+                        <li><a href="codelab2dfd.html?topic=html5&amp;file=create-a-circle-with-svg" target="_blank">Creating a circle using SVG</a></li>
+                        <li><a href="codelabde4d.html?topic=html5&amp;file=render-text-with-svg" target="_blank">Rendering text on web pages using SVG</a></li>
+                        <li><a href="codelabbb4a.html?topic=html5&amp;file=rotate-and-render-text-with-svg" target="_blank">Apply transformation while rendering text on web pages using SVG</a></li>
+                    </ul>
+					<h2>HTML5 Audio</h2>
+                    <ul>
+                        <li><a href="codelab9834.html?topic=html5&amp;file=audio-element" target="_blank">Embedding audio in HTML documents</a></li>
+                        <li><a href="codelab8a1b.html?topic=html5&amp;file=audio-element-with-alternative-sources" target="_blank">Defining alternative sources for audio element</a></li>
+                        <li><a href="codelabd720.html?topic=html5&amp;file=audio-links" target="_blank">Linking the audio files</a></li>
+                        <li><a href="codelab20d0.html?topic=html5&amp;file=insert-audio-using-object-element" target="_blank">Inserting audio in HTML documents using the object element</a></li>
+                        <li><a href="codelab37ae.html?topic=html5&amp;file=insert-audio-using-embed-element" target="_blank">Inserting audio in HTML documents using the embed element</a></li>
+                    </ul>
+                    <h2>HTML5 Video</h2>
+                    <ul>
+                        <li><a href="codelab97bb.html?topic=html5&amp;file=video-element" target="_blank">Embedding video in HTML documents</a></li>
+                        <li><a href="codelab983d.html?topic=html5&amp;file=video-element-with-alternative-sources" target="_blank">Defining alternative sources for video element</a></li>
+                        <li><a href="codelab9051.html?topic=html5&amp;file=insert-video-using-object-element" target="_blank">Inserting video in HTML documents using the object element</a></li>
+                        <li><a href="codelab60ca.html?topic=html5&amp;file=insert-video-using-embed-element" target="_blank">Inserting video in HTML documents using the embed element</a></li>
+                        <li><a href="codelabd953.html?topic=html5&amp;file=embed-youtube-video" target="_blank">Embedding the YouTube video in HTML documents</a></li>
+                    </ul>
+					<h2>HTML5 Web Storage</h2>
+                    <ul>
+                        <li><a href="codelab5ad3.html?topic=html5&amp;file=local-storage" target="_blank">Storing data with HTML5 local storage</a></li>
+                        <li><a href="codelab989a.html?topic=html5&amp;file=session-storage" target="_blank">Storing data with HTML5 session storage</a></li>
+                    </ul>
+					<h2>HTML5 Web Workers</h2>
+                    <ul>
+                        <li><a href="codelabc266.html?topic=html5&amp;file=using-web-worker-file" target="_blank">Doing JavaScript works in the background with HTML5 web worker</a></li>
+                        <li><a href="codelab999c.html?topic=html5&amp;file=stop-web-worker" target="_blank">Terminating a running web worker</a></li>
+                    </ul>
+					<h2>HTML5 Geolocation</h2>
+                    <ul>
+                        <li><a href="codelab6a65.html?topic=html5&amp;file=geolocation" target="_blank">Getting visitor's coordinates with HTML5 geolocation</a></li>
+                        <li><a href="codelabfb38.html?topic=html5&amp;file=handing-geolocation-errors-and-rejections" target="_blank">Handing errors and rejections while working with HTML5 geolocation</a></li>
+                        <li><a href="codelaba5fb.html?topic=html5&amp;file=show-geolocation-on-google-map-image" target="_blank">Showing location on Google map in image format</a></li>
+                        <li><a href="codelab967c.html?topic=html5&amp;file=show-location-on-google-map" target="_blank">Showing location on interactive Google map</a></li>
+                        <li><a href="codelabecce.html?topic=html5&amp;file=get-current-geolocation-data" target="_blank">Getting current location of a visitor using HTML5 geolocation</a></li>
+                    </ul>                
+				</div>
+                <!--Bottom Navigation-->
+                <div class="bottom-link clearfix">
+                    <a href="javascript:void(0);" class="previous-page-bottom disabled" title="Disabled">Previous Page</a>
+                    <a href="css-examples.html" class="next-page-bottom">Next Page</a>
+                </div>
+                <!--End:Bottom Navigation--> 
+                <!-- InstanceEndEditable -->
+                <!--Bottom Ads-->
+                <div class="bottom-ad clearfix">
+                    <div class="ad-label">Advertisements</div>
+
+<!--Rectangle Left-->
+<div class="rectangle-left fl">
+    
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Large Rectangle Left -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="8162953958"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<!--End:Rectangle Left-->
+
+
+<!--Rectangle Right-->
+<div class="rectangle-right fr">
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Large Rectangle Right -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="3324015654"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<!--End:Rectangle Right-->                </div>
+                <!--End:Bottom Ads-->
+            </div>
+            <!--End:Text Content-->
+            <!--Feedback Form-->
+			<div class="snippets">
+	<a href="snippets/gallery.html" target="_blank">
+    	<img src="lib/images/bootstrap-code-snippets.png" alt="Bootstrap UI Design Templates" />
+	</a>
+</div>
+
+<div class="report-error" id="feedback">
+    <div class="contact-form clearfix">
+        <div class="close"><span class="icon-close"></span></div>
+        <form id="feedback-form">
+            <h3>Your Feedback:</h3>
+            <div class="clearfix">
+                <div class="name fl"><label>Your Name (optional) <input type="text" name="user-name" id="user-name" /></label></div>
+                <div class="email fr"><label>Your E-mail (optional) <input type="text" name="user-email" id="user-email" /></label></div>
+            </div>
+            <div><label>Page address <input type="text" name="page-url" id="page-url" class="disabled" disabled="disabled" /></label></div>
+            <div><label>Description <textarea name="description" id="description" rows="6"></textarea></label></div>
+            <p id="feedback-error">We would love to hear from you, please drop us a line.</p>
+            <div><button type="button" class="action-btn" onclick="sendFeedback()"><span class="icon-send"></span> Send</button></div>
+        </form>
+        <div id="response"></div>
+    </div>           
+</div>            <!--End:Feedback Form-->
+        </div>        
+        <div class="sidebar">
+            <div class="ad-label">Advertisements</div>
+
+<div class="skyscraper primary">
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Premium Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4376141825"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+        </div>
+    </div>
+    <!--Footer-->
+	<!--Footer-->
+<div class="footer">
+    <div class="appeal">
+        <div class="wrapper">
+            <p>Is this website helpful to you? Please give us a
+            <a href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">like</a>,
+            or share your <a href="#feedback" class="feedback">feedback</a><em> to help us improve</em>.
+            Connect with us on <a href="https://www.facebook.com/tutorialrepublic" target="_blank">Facebook</a> and <a href="https://twitter.com/tutrepublic" target="_blank">Twitter</a> for the latest updates.</p>               
+        </div>
+    </div>
+    <div class="footer-inner">
+        <div class="wrapper clearfix">                
+            <div class="link-box">
+                <h4>About Us</h4>
+                <div class="clearfix">
+                    <a href="about-us.html">Our Story</a>                    
+                    <a href="terms-of-use.html">Terms of Use</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>                    
+                </div>
+            </div>
+            <div class="link-box">
+                <h4>Contact</h4>
+                <div class="clearfix">
+                    <a href="contact-us.html">Contact Us</a>                    
+                    <a href="#feedback" class="feedback">Report Error</a>
+                    <a href="advertise-with-us.html">Advertise</a>                    
+                </div>
+            </div>
+            <div class="tool-box">
+                <h4>Interactive Tools</h4>
+                <div class="tools-list clearfix" id="tools">
+                    <a href="faq/what-is-the-maximum-length-of-title-and-meta-description-tag.html">Title &amp; Meta Length Calculator</a>                           
+                    <a href="html-formatter.html" target="_blank">HTML Formatter</a>                        
+                    <a href="twitter-bootstrap-button-generator.html" target="_blank">Bootstrap Button Generator</a>
+                    <a href="html-reference/html-color-picker.html">HTML Color Picker</a>
+                    <a href="codelab1284.html?topic=sql&amp;file=select-all" target="_blank">SQL Playground</a>
+                    <a href="codelab07f7.html?topic=html&amp;file=hello-world" target="_blank">HTML Editor</a>                    
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="lib/images/logo.svg" alt="TutorialRepublic" />
+            </div>
+        </div>
+    </div>           
+        <div class="bottom-strip">
+        <div class="wrapper">
+            <div class="notice">Copyright &copy; 2019 Tutorial Republic. All Rights Reserved.</div>
+            <div class="social-media">
+                <em>Share This:</em>
+                <a href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fhtml-examples.php" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" title="Facebook"><i class="icon-facebook"></i></a>
+                <a href="#" id="tweet-btn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" title="Twitter"><i class="icon-twitter"></i></a>
+                <a href="#" id="email-btn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" rel="noreferrer" title="Gmail"><i class="icon-mail"></i></a>
+            </div>
+        </div>            
+    </div>
+    <script>
+        var title = document.title.replace('- Tutorial Republic', '');
+        document.getElementById('tweet-btn').href = 'https://twitter.com/share?text=' + title + '- &url=https://www.tutorialrepublic.com%2Fhtml-examples.php';
+        document.getElementById('email-btn').href = 'https://mail.google.com/mail/?view=cm&fs=1&su=' + title + '&body=https://www.tutorialrepublic.com%2Fhtml-examples.php';
+    </script>
+</div>
+<!--End:Footer-->
+    
+<div class="backdrop mobile-only"></div>
+
+<!-- TutorialRepublic base script -->
+<script>
+// Adding CSS files
+[
+	'/lib/styles/extended-3.7.css',
+	'lib/icomoon/style.css'
+].forEach(function(href) {
+	var link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.href = href;
+	(document.getElementsByTagName('head')[0]).appendChild(link);
+});
+
+// Adding JS files
+[
+	'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+	'lib/js/prism.js',
+	'lib/js/default-2.9.min.js'
+].forEach(function(src) {
+	var script = document.createElement('script');
+	script.async = false; // important
+	script.src = src;
+	(document.getElementsByTagName('body')[0]).appendChild(script);
+});
+</script>
+
+
+    <!--End:Footer-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.tutorialrepublic.com/html-examples.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:12:55 GMT -->
+</html>

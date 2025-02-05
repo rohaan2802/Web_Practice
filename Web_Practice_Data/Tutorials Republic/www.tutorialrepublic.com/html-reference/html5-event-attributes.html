@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/html.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.tutorialrepublic.com/html-reference/html5-event-attributes.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:16:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<!-- InstanceBeginEditable name="doctitle" -->
+    <title>HTML5 Event Attributes - Tutorial Republic</title>
+    <!-- InstanceEndEditable -->
+    	<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="fb:admins" content="100001054961582" />
+<meta property="fb:app_id" content="1404574483159557" />
+<meta property="og:image" content="../lib/images/signature.png" />
+<link type="image/x-icon" href="../favicon.ico" rel="shortcut icon" />
+<style>
+html,body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,img{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+html,body{min-height:100%}
+p{margin:0 0 12px}
+ol,ul{margin:0 0 12px}
+a,a:active,a:visited{outline:none;color:#1db79f;text-decoration:none}
+a code{color:inherit}
+a img{border:none;outline:none}
+code{color:#000}
+table{border-collapse:collapse;border-spacing:0}
+table td{vertical-align:top}
+body{min-width:1300px;color:#414141;background:#fafafa;font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.7}
+input,select,textarea,button,div,span,a{box-sizing:border-box}
+h1,h2,h3,h4{color:#262626;font-weight:500;margin:20px 0 10px;line-height:1.5;font-weight:600}
+h1{font-size:34px;margin-top:17px}
+h2{font-size:28px}
+h3{font-size:22px}
+.space{margin-bottom:25px!important}
+.break{margin-bottom:15px!important}
+.text-center{text-align:center!important}
+.scroll{height:195px;overflow-y:scroll}
+.scroll.large{height:245px}
+.scroll.xlarge{height:290px}
+.scroll.xxlarge{height:340px}
+sup{font-size:13px}
+pre{background:none;border-radius:0}
+.leaderboard{padding-top:8px;position:relative}
+.ad-container{height:90px;overflow:hidden}
+.intro-image img{display:block;padding:10px 0 25px;max-width:100%}
+.clearfix::after{content:".";display:block;height:0;clear:both;visibility:hidden}
+code,.code,.syntax,.green-box,.sky-box,.gray-box,.pink-box,.red-box,.at-rule,.codebox ul,.console-output{font-size:16px;font-family:Consolas,Monaco,Courier,monospace}
+p code,table.data td:last-child code,.content ul li code,code.mark{padding:2px 4px;color:#333;background-color:#f1f1f1;border-radius:4px}
+p code a,table.data td:last-child code a, .content ul li code a{padding:2px 0;background:#fff;margin:0 -4px;font-size:16px}
+.console-output{margin:15px 0}
+hr{border:none;border-bottom:1px solid #e7e9ed;height:1px;margin:30px 0}
+.summary,.topic{border:1px solid #eaeaea;border-width:1px 0;margin:20px 0;padding:10px 0;color:#8e9aa6;line-height:1.5}
+h2.section-title span{display:inline-block;border-bottom:4px solid #c9d7e0;padding:0 50px 12px 0}
+.wrapper{width:1300px;padding:0 15px;margin:0 auto}
+.header{background:#23384e;padding:16px 0}
+input.search{background:#fff;border:0 none;color:#807E7E;float:left;height:38px;line-height:26px;font-size:14px;margin:0 0 0 12px;outline:medium none;padding:6px 14px;width:500px;border-radius:2px;box-shadow:0 0 1px rgba(0,0,0,0.6);font-family:inherit}
+.search-btn{color:rgba(0,0,0,.6);background:#ebebeb;border:none;outline:none;cursor:pointer;float:left;height:38px;line-height:46px;width:44px;display:block;margin-left:-2px;border-radius:0 2px 2px 0;box-shadow:0 0 1px rgba(0,0,0,0.7)}
+.logo{width:304px}
+.logo img{height:44px;margin:-3px 0;display:block}
+.site-search{float:left;margin-left:100px}
+.menu{background-color:#f5f5f5;box-shadow:0 1px 1px rgba(0,0,0,.15);position:relative;z-index:9}
+.menu a{color:#666;display:inline-block;padding:0 10px;text-decoration:none;font-size:14px;font-weight:600;height:48px;line-height:48px}
+.menu a:first-child{margin-left:-10px}
+.menu a.tool-link{float:right;display:inline-block;border-radius:30px;line-height:28px;position:relative;height:auto;top:9px;padding:0 12px;color:#1ebba3;border:1px double #1ebba3}
+.fl,.logo{float:left}
+.leftcolumn{width:240px;float:left;font-size:16px;color:#4f4f4f}
+.centercolumn{width:850px;float:left}
+.content{background:#fff;padding:20px 40px;border:1px solid #dedede;border-top:none;border-radius:1px}
+.sidebar{float:left;padding-top:28px;width:160px;margin-left:20px;position:relative}
+.leftcolumn .segment{margin:16px 0 12px;position:relative;font-size:18px;font-weight:600;display:inline-block;line-height:normal}
+.leftcolumn a{color:#4f4f4f;font-size:16px;line-height:26px;display:block;border-bottom:1px solid transparent}
+.leftcolumn ul{list-style:none;padding:0}
+.segment,.chapters,.chapters a,.toggle-tree-menu{float:left;clear:both}
+ul.tree-menu li.tree{margin-left:-12px;float:left;width:100%}
+ul.tree-menu li a,ul.tree-menu li code{color:#4f4f4f;font-size:15.4px}
+ul.chapters.tree-menu li a{font-size:16px}
+h1 code,h2 code,h3 code{font:inherit}
+.color-box{margin:15px 0;padding-left:20px}
+.note-box,.warning-box,.tip-box{padding:8px 8px 3px 26px}
+.info-tab{float:left;margin-left:-23px}
+.content ul li{margin-top:7px}
+.extra{padding-top:5px}
+.green-box,.sky-box,.gray-box,.red-box,.pink-box{color:#000;margin-top:15px;padding:10px;background-color:#f6f8fa;border:1px solid #d7e2ec}
+.example{background:#f4f5f6;padding:3px;margin:15px 0}
+.codebox{background:#fff;border:1px solid #ddd}
+.codebox-title{height:41px;padding-left:12px;border-bottom:1px solid #ddd;background:#f5f5f5}
+.codebox-title h4{margin:0;font-size:18px;line-height:38px;float:left;display:inline;font-weight:500}
+a.try-btn,a.download-btn{width:140px;height:40px;color:#333;font-size:15px;line-height:41px;font-weight:600;text-align:center;text-decoration:none;float:right;display:block;border-left:1px solid #ddd;background:rgba(27,31,35,0.08);box-sizing:border-box;font-family:Arial,sans-serif}
+a.try-btn span{font-size:18px;line-height:normal}
+.hide,.code-style,.box-size,.bottom-link,.footer,.code-style,.snippets,.report-error,.badge,.social,.ad-label,.mobile-only{display:none}
+.skyscraper{width:160px;height:600px;overflow:hidden;margin-bottom:20px;background:#ebecf0}
+.bottom-ad{margin-top:46px;padding:24px;position:relative;background:url(../lib/images/smooth-line.png) no-repeat center #f9f9f9}
+.rectangle-left,.rectangle-right{min-width:336px;min-height:280px;overflow:hidden}
+.fr,a.previous-page,a.next-page,.topic-nav{float:right}
+a.previous-page,a.next-page{width:32px;height:32px;line-height:30px}
+.shadow{background:#F7F8F9;padding:3px;margin:10px 0}
+.syntax{color:#2f4959;padding:13px 18px;background:#F9F9FA;border:1px solid #ddd;font-size:15px}
+.codebox ul{font-size:14px;padding:7px;list-style:decimal inside none}
+.codebox ul.lead-zero,.codebox ul.lead-double-zero{list-style-type:decimal-leading-zero}
+.codebox ul li{padding:0 9px;color:#AFAFAF;background-image:none;margin:0}
+.codebox ul pre,.codebox ul li,.codebox ul li code{line-height:1.6;vertical-align:top}
+.codebox ul pre,.codebox ul code{width:90%;font-size:16px;color:#222;display:inline-block;padding-left:10px;border-left:3px solid #6CE26C;white-space:pre-wrap;word-break:normal}
+.codebox ul.lead-double-zero li{text-align:right}
+.codebox ul.lead-double-zero li pre{text-align:left}
+.codebox ul.sql.single-line pre{line-height:26px}
+.content .codebox ul li code{color:#222;padding:0 0 0 10px}
+.preview-box{padding:15px;text-align:center;cursor:pointer;overflow:hidden;background:#FFF;border:1px solid #e6e6e6}
+.preview-box a,.preview-box img{display:block;margin:0 auto}
+.topic a:first-of-type{margin-left:2px}
+.topic-nav{padding-right:5px;color:#d0d0d0}
+.topic-nav a{padding:0 15px;margin:0 0 0 5px;position:relative;display:inline-block}
+.topic-nav a::after{font-size:24px;position:absolute;line-height:normal;top:-6px}
+.topic-nav a:first-child{margin:0 5px 0 0}
+.topic-nav a:first-child::after{content:'\00AB';left:-5px}
+.topic-nav a:last-child::after{content:'\00BB';right:-5px}
+.download-box{text-align:center;padding:20px 0;margin:20px 0 10px}
+.output-box{border-color:#d4d4d4;border-style:solid;border-width:1px 0;padding:5px 15px;overflow:hidden;background:#fff;margin:10px 0}
+.demo-box{margin-top:15px}
+.subhead{border-bottom:3px solid #DCE3EB;margin-bottom:15px;padding-bottom:10px}
+table.data,table.description{width:100%;font-size:92%}
+table.data th{color:#000;padding:8px 7px;text-align:left;font-size:15px;background:#F8F8F8}
+table.data td{color:#484848;padding:5px 7px;background:#fff}
+table.data th,table.data td{vertical-align:top;border:1px solid #DCE3EB}
+table.data tr.section th,table.data td.section{font-size:15px;background:#f0f4f7}
+table.description th{width:150px;padding:7px;vertical-align: middle}
+table.no-wrap tr td:first-child{white-space:nowrap}
+.overview{padding-right:202px}
+.overview .intro-image{float:right;margin-right:-202px;text-align:right}
+.overview .intro-image + p{padding-top:0}
+.support{background:#F8F8F8;border:1px solid #ccc;color:#2F4959;padding:15px}
+.support table td:first-child{width:200px;padding:0 25px 0 10px;border-right:1px dashed #D0D0D0}
+.support h2{color:#2F4959;font-size:16px;padding:0 0 0 30px;margin-top:0}
+.support ul{margin-left:10px}
+.support ul li{margin-top:4px}
+h1 sup{background:#ec0000;border-radius:3px;padding:5px 10px;font-size:15px;color:#fff;position:relative;top:5px}
+@media screen and (max-width: 1280px) {
+body{min-width:1260px}
+.wrapper{width:1260px}
+.leftcolumn{width:230px}
+.centercolumn{width:820px}
+}
+@media screen and (max-width: 800px) {
+body{min-width:100%;max-width:100%;padding-top:46px}
+.wrapper{width:100%;padding:0}
+.header{height:46px;padding:5px 0;position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
+.logo{width:auto;display:block;padding:6px 0 0 60px;position:absolute;left:0;z-index:100}
+.logo img{height:30px}
+.menu{width:100%;padding-left:12px;padding-right:12px;overflow-x:auto;white-space:nowrap}
+.centercolumn{width:100%;float:none}
+.content{padding:10px;border-width:0 0 1px 0}
+.sidebar{margin: 25px auto 0}
+.skyscraper{display:inline-block}
+.shadow,.example{max-width:100%;overflow-x:auto}
+.codebox-title{position:relative}
+.codebox.multi-style-mode ul{padding-top:7px;margin-top:36px;border-top:1px solid #ddd}
+.codebox ul,.codebox ul.scroll{overflow-x:auto}
+.rectangle-left,.rectangle-right{float:none;display:inline-block;margin:10px auto;background:#EDEEF2}
+.leftcolumn,.footer,.header .social,.header .site-search,.overview .intro-image,.toggle-tree-menu,.code-style,.support table td:first-child,ul.tree-menu code.shorthand,.menu a.tool-link,.backdrop{display:none}
+.summary,.topic{padding:5px 0;margin:10px 0}
+.leftcolumn,.centercolumn,.sidebar{float:none}
+.header,.menu,.container,.footer,.appeal-text{width:100%;box-sizing:border-box}
+.centercolumn{width:100%}
+.content img{max-width:100%;height:auto}
+.codebox ul li{width:614px}
+.codebox ul.scroll li{width:597px}
+.codebox ul,.codebox ul.scroll{overflow-x:auto}
+a.try-btn,a.download-btn{width:130px}
+.bottom-ad{height:auto;background:none;padding:30px 0 0;margin:40px 0 0;text-align:center;position:relative}
+.native-unit{margin-bottom:30px}
+.overview{padding-right:0}
+.scroll-pane{overflow-x:auto}
+table.data{min-width:480px}
+table.data pre{display:inline;white-space:normal}
+table tr th,table tr td{width:auto!important}
+.support h2,.support ul{padding-left:0}
+p.topic{vertical-align:top}
+p.topic > a{word-wrap:break-word;display:inline-block}
+.example-list ul li,ul.faq-list li{padding-bottom:3px}
+.preview-box{padding:6px}
+.topic-nav{float:none;display:block;padding:6px 0 0 5px}
+.codebox.multi-style-mode ul{padding-top:7px;margin-top:34px;border-top:1px solid #ccc}
+.content pre{max-width:100%;overflow:hidden}
+.shadow,.content pre.console-output{max-width:100%;overflow-x:auto}
+ul.tree-menu li.tree{margin-left:0}
+.support ul{margin-left:20px}
+.leaderboard{margin:20px 0}
+h1{font-size:28px}
+h2{font-size:24px}
+h3{font-size:20px}
+}
+@media screen and (min-width: 801px) {
+.site-search,.leftcolumn,.social{display:block!important}
+.backdrop{display:none!important}
+}</style>    
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script></head>
+<body>
+    <!--Header-->
+    
+<div class="header">
+    <div class="wrapper clearfix">
+        <button type="button" class="open-menu mobile-only"><i class="icon-menu"></i></button>
+        <div class="logo">
+            <a href="../index.html"><img src="../lib/images/logo.svg" alt="TutorialRepublic" /></a>
+        </div>
+        <div class="site-search">
+            <form action="https://www.google.com/search" method="get" target="_blank" class="clearfix">
+                <input type="hidden" value="www.tutorialrepublic.com" name="sitesearch" />
+                <input type="text" name="q" placeholder="Search topics, tutorials, questions and answers..." id="searchInput" class="search" />
+                <button type="submit" class="search-btn"><span class="icon-search"></span></button>
+            </form>
+        </div>
+        <div class="social">                
+            <a href="https://www.facebook.com/tutorialrepublic" target="_blank" title="Join us on Facebook"><i class="icon-facebook"></i></a>
+            <a href="https://twitter.com/tutrepublic" target="_blank" title="Follow us on Twitter"><i class="icon-twitter"></i></a>
+            <a href="../contact-us.html" target="_blank" title="Send us an Email"><i class="icon-mail"></i></a>
+        </div>
+        <button type="button" class="open-search mobile-only">
+            <i class="icon-search"></i>
+        </button>
+    </div>    
+</div>
+<div class="menu">
+    <div class="wrapper">
+        <a href="../index.html" title="Home Page">HOME</a>
+        <a href="../html-tutorial/index.html" title="HTML Tutorial">HTML5</a>            
+        <a href="../css-tutorial/index.html" title="CSS Tutorial">CSS3</a>
+        <a href="../javascript-tutorial/index.html" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="../jquery-tutorial/index.html" title="jQuery Tutorial">JQUERY</a>
+        <a href="../twitter-bootstrap-tutorial/index.html" title="Bootstrap Tutorial">BOOTSTRAP4</a>
+        <a href="../php-tutorial/index.html" title="PHP Tutorial">PHP7</a> 
+        <a href="../sql-tutorial/index.html" title="SQL Tutorial">SQL</a>
+        <a href="../references.html" title="Web References">REFERENCES</a>
+        <a href="../practice-examples.html" title="Practice Examples and Demos">EXAMPLES</a>
+        <a href="../faq.html" title="Frequently Asked Questions and Answers">FAQ</a>
+        <a href="../snippets/gallery.html" title="Bootstrap Code Snippets" target="_blank">SNIPPETS</a>
+        <a href="../codelab.html" class="tool-link" target="_blank">Online HTML Editor</a>
+    </div>        
+</div>    <!--End:Header-->
+    <div class="wrapper clearfix">
+        <div class="leftcolumn" id="myNav">
+		
+        <div class="segment"><span>HTML</span> BASIC</div>
+<div class="chapters">
+    <a href="../html-tutorial/index.html">HTML Introduction</a>
+    <a href="../html-tutorial/html-get-started.html">HTML Getting Started</a>
+    <a href="../html-tutorial/html-elements.html">HTML Elements</a>
+    <a href="../html-tutorial/html-attributes.html">HTML Attributes</a>
+    <a href="../html-tutorial/html-headings.html">HTML Headings</a>
+    <a href="../html-tutorial/html-paragraphs.html">HTML Paragraphs</a>
+    <a href="../html-tutorial/html-links.html">HTML Links</a>
+    <a href="../html-tutorial/html-text-formatting.html">HTML Text Formatting</a>
+    <a href="../html-tutorial/html-styles.html">HTML Styles</a>
+    <a href="../html-tutorial/html-images.html">HTML Images</a>
+    <a href="../html-tutorial/html-tables.html">HTML Tables</a>
+    <a href="../html-tutorial/html-lists.html">HTML Lists</a>
+    <a href="../html-tutorial/html-forms.html">HTML Forms</a>
+    <a href="../html-tutorial/html-iframes.html">HTML Iframes</a>
+</div>
+<div class="segment"><span>HTML</span> ADVANCED</div>
+<div class="chapters">
+    <a href="../html-tutorial/html-doctypes.html">HTML Doctypes</a>
+    <a href="../html-tutorial/html-layout.html">HTML Layout</a>
+    <a href="../html-tutorial/html-head.html">HTML Head</a>
+    <a href="../html-tutorial/html-meta.html">HTML Meta</a>
+    <a href="../html-tutorial/html-scripts.html">HTML Scripts</a>
+    <a href="../html-tutorial/html-entities.html">HTML Entities</a>
+    <a href="../html-tutorial/html-url.html">HTML URL</a>
+    <a href="../html-tutorial/html-url-encode.html">HTML URL Encode</a>
+    <a href="../html-tutorial/html-validation.html">HTML Validation</a>
+</div>
+<div class="segment"><span>HTML5</span> FEATURES</div>
+<div class="chapters">
+	<a href="../html-tutorial/html5-new-input-types.html">HTML5 New Input Types</a>
+    <a href="../html-tutorial/html5-canvas.html">HTML5 Canvas</a>
+    <a href="../html-tutorial/html5-svg.html">HTML5 SVG</a>
+    <a href="../html-tutorial/html5-audio.html">HTML5 Audio</a>
+    <a href="../html-tutorial/html5-video.html">HTML5 Video</a>
+    <a href="../html-tutorial/html5-web-storage.html">HTML5 Web Storage</a>
+    <a href="../html-tutorial/html5-application-cache.html">HTML5 Application Cache</a>
+    <a href="../html-tutorial/html5-web-workers.html">HTML5 Web Workers</a>
+    <a href="../html-tutorial/html5-server-sent-events.html">HTML5 SSE</a>
+    <a href="../html-tutorial/html5-geolocation.html">HTML5 Geolocation</a>
+    <a href="../html-tutorial/html5-drag-and-drop.html">HTML5 Drag &amp; Drop</a>
+</div>
+<div class="segment"><span>HTML5</span> EXAMPLES</div>
+<div class="chapters">
+    <a href="../html-examples.html">HTML5 Practice Examples</a>
+	<a href="../faq.html#html-css">HTML5 FAQ's Answers</a>
+</div>
+<div class="segment"><span>HTML5</span> REFERENCE</div>
+<div class="chapters">
+    <a href="html5-tags.html">HTML5 Tags/Elements</a>
+	<a href="html5-global-attributes.html">HTML5 Global Attributes</a>
+    <a href="html5-event-attributes.html">HTML5 Event Attributes</a>
+    <a href="html-color-picker.html">HTML5 Color Picker</a>
+    <a href="html-language-codes.html">HTML5 Language Codes</a>
+    <a href="html-character-entities.html">HTML5 Character Entities</a>
+    <a href="http-status-codes.html">HTTP Status Codes</a>
+    <a href="../references.html" class="more">More References</a>
+</div>        
+                </div>
+        <div class="centercolumn">
+            <!--Text Content-->
+            <div class="content">
+                <div class="leaderboard">
+                    
+<div class="ad-label">Advertisements</div>
+<div class="ad-container">
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <!-- Responsive Leaderboard -->
+    <ins class="adsbygoogle"
+            style="display:inline-block;max-width:728px;width:100%;height:90px"
+            data-ad-client="ca-pub-9107540490929984"
+            data-ad-slot="4302666817"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>                </div>
+                <!-- InstanceBeginEditable name="main_content" -->
+            	<a href="html-color-picker.html" class="previous-page" title="Go to Previous Page"></a>
+				<a href="html-language-codes.html" class="next-page" title="Go to Next Page"></a>
+				<h1>HTML5 <span>Event</span> Attributes</h1>
+				<p class="summary">The HTML5 event attributes are global and can be applied to most of the elements.</p>
+				<h2 id="global-attributes">Event Attributes in HTML5</h2>
+				<p class="break">The following event attributes can be applied to the most of the elements for the execution of JavaScript when certain events occur, with some exceptions where it is not relevant such as elements found inside the <code><a href="html-head-tag.html">&lt;head&gt;</a></code> section, e.g. <code><a href="html-title-tag.html">&lt;title&gt;</a></code>, <code><a href="html-base-tag.html">&lt;base&gt;</a></code>, <code><a href="html-link-tag.html">&lt;link&gt;</a></code> etc.</p>
+				<h2>Window Events</h2>
+				<p>Events related to the <code>window</code> object (applies to the <code><a href="html-body-tag.html">&lt;body&gt;</a></code> tag):</p>
+				<div class="shadow">
+					<table class="data">
+						<thead>
+							<tr>
+								<th style="width: 125px;">Attribute</th>
+								<th>Value</th>
+								<th>Description</th>
+							</tr>
+						</thead>					
+						<tbody>
+							<tr>
+								<td>onafterprint</td>
+								<td><i>script</i></td>
+								<td>Fires after the associated document is printed.</td>
+							</tr>
+							<tr>
+								<td>onbeforeprint</td>
+								<td><i>script</i></td>
+								<td>Fires before the associated document is printed.</td>
+							</tr>
+							<tr>
+								<td>onbeforeunload</td>
+								<td><i>script</i></td>
+								<td>Fires before a document being unloaded.</td>
+							</tr>
+							<tr>
+								<td>onerror</td>
+								<td><i>script</i></td>
+								<td>Fires when document errors occur.</td>
+							</tr>
+							<tr>
+								<td>onhashchange</td>
+								<td><i>script</i></td>
+								<td>Fires when the fragment identifier part of the document's URL i.e. the portion of a URL that follows the sign (#) changes.</td>
+							</tr>
+							<tr>
+								<td>onload</td>
+								<td><i>script</i></td>
+								<td>Fires when the document has finished loading.</td>
+							</tr>
+							<tr>
+								<td>onmessage</td>
+								<td><i>script</i></td>
+								<td>Fires when the message event occurs i.e. when user sends a cross-document message or a message is sent from a worker with <code>postMessage()</code> method. See <a href="../html-tutorial/html5-web-workers.html">HTML5 Web Workers</a>.</td>
+							</tr>
+							<tr>
+								<td>onoffline</td>
+								<td><i>script</i></td>
+								<td>Fires when the network connection fails and the browser starts working offline.</td>
+							</tr>
+							<tr>
+								<td>ononline</td>
+								<td><i>script</i></td>
+								<td>Fires when the network connections returns and the browser starts working online.</td>
+							</tr>
+							<tr>
+								<td>onpagehide</td>
+								<td><i>script</i></td>
+								<td>Fires when the page is hidden, such as when a user is moving to another webpage.</td>
+							</tr>
+							<tr>
+								<td>onpageshow</td>
+								<td><i>script</i></td>
+								<td>Fires when the page is shown, such as when a user navigates to a webpage.</td>
+							</tr>
+							<tr>
+								<td>onpopstate</td>
+								<td><i>script</i></td>
+								<td>Fires when changes are made to the active history.</td>
+							</tr>
+							<tr>
+								<td>onresize</td>
+								<td><i>script</i></td>
+								<td>Fires when the browser window is resized.</td>
+							</tr>
+							<tr>
+								<td>onstorage</td>
+								<td><i>script</i></td>
+								<td>Fires when a <a href="../html-tutorial/html5-web-storage.html">Web Storage</a> area is updated.</td>
+							</tr>
+							<tr>
+								<td>onunload</td>
+								<td><i>script</i></td>
+								<td>Fires immediately before the document is unloaded or the browser window is closed.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<hr />
+				<h2>Form Events</h2>
+				<p>Events that occur due to the user interacting with the HTML form controls.</p>
+				<div class="shadow">
+					<table class="data">
+						<thead>
+							<tr>
+								<th style="width: 125px;">Attribute</th>
+								<th>Value</th>
+								<th>Description</th>
+							</tr>
+						</thead>        
+						<tbody>
+							<tr>
+								<td>onblur</td>
+								<td><i>script</i></td>
+								<td>Fires when an element loses focus.</td>
+							</tr>
+							<tr>
+								<td>onchange</td>
+								<td><i>script</i></td>
+								<td>Fires when the value or state of the element is changed.</td>
+							</tr>						
+							<tr>
+								<td>onfocus</td>
+								<td><i>script</i></td>
+								<td>Fires when the element receives focus.</td>
+							</tr>
+							<tr>
+								<td>oninput</td>
+								<td><i>script</i></td>
+								<td>Fires when the value of an element is changed by the user.</td>
+							</tr>
+							<tr>
+								<td>oninvalid</td>
+								<td><i>script</i></td>
+								<td>Fires when a submittable element do not satisfy their constraints during form validation.</td>
+							</tr>
+							<tr>
+								<td>onreset</td>
+								<td><i>script</i></td>
+								<td>Fires when the user resets a form.</td>
+							</tr>
+							<tr>
+								<td>onselect</td>
+								<td><i>script</i></td>
+								<td>Fires when some text is being selected or the current selection is changed by the user.</td>
+							</tr>
+							<tr>
+								<td>onsearch</td>
+								<td><i>script</i></td>
+								<td>Fires when the user writes something in a <a href="../html-tutorial/html5-new-input-types.html#search-input">search input</a> field.</td>
+							</tr>
+							<tr>
+								<td>onsubmit</td>
+								<td><i>script</i></td>
+								<td>Fires when a form is submitted.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<hr />
+				<h2>Mouse Events</h2>
+				<p>Events that occur due to the user interacting with a pointing device such as a mouse:</p>
+				<div class="shadow">
+					<table class="data">
+						<thead>
+							<tr>
+								<th style="width: 125px;">Attribute</th>
+								<th>Value</th>
+								<th>Description</th>
+							</tr>  
+						</thead>
+						<tbody>
+							<tr>
+								<td>onclick</td>
+								<td><i>script</i></td>
+								<td>Fires when the user clicks the left mouse button on the element.</td>
+							</tr>
+							<tr>
+								<td>ondblclick</td>
+								<td><i>script</i></td>
+								<td>Fires when the user double-clicks on the element.</td>
+							</tr>
+							<tr id="contextmenu">
+								<td>oncontextmenu</td>
+								<td><i>script</i></td>
+								<td>Fires when a context menu is triggered by the user through right-click on the element.</td>
+							</tr>
+							<tr>
+								<td>ondrag</td>
+								<td><i>script</i></td>
+								<td>Fires when the user drags an element. The <code>ondrag</code> event fires throughout the drag operation.</td>
+							</tr>
+							<tr>
+								<td>ondragend</td>
+								<td><i>script</i></td>
+								<td>Fires when the user releases the mouse button at the end of a drag operation.</td>
+							</tr>
+							<tr>
+								<td>ondragenter</td>
+								<td><i>script</i></td>
+								<td>Fires when the user drags an element to a valid drop target.</td>
+							</tr>
+							<tr>
+								<td>ondragleave</td>
+								<td><i>script</i></td>
+								<td>Fires when an element leaves a valid drop target during a drag operation.</td>
+							</tr>
+							<tr>
+								<td>ondragover</td>
+								<td><i>script</i></td>
+								<td>Fires when an element is being dragged over a valid drop target.</td>
+							</tr>
+							<tr>
+								<td>ondragstart</td>
+								<td><i>script</i></td>
+								<td>Fires when the user starts to drag a text selection or selected element.</td>
+							</tr>
+							<tr>
+								<td>ondrop</td>
+								<td><i>script</i></td>
+								<td>Fires when the mouse button is released during a drag-and-drop operation i.e. when dragged element is being dropped.</td>
+							</tr>
+							<tr>
+								<td>onmousedown</td>
+								<td><i>script</i></td>
+								<td>Fires when the mouse button is pressed over an element.</td>
+							</tr>
+							<tr>
+								<td>onmousemove</td>
+								<td><i>script</i></td>
+								<td>Fires when the user moves the mouse pointer over an element.</td>
+							</tr>
+							<tr>
+								<td>onmouseout</td>
+								<td><i>script</i></td>
+								<td>Fires when the user moves the mouse pointer outside the boundaries of an element.</td>
+							</tr>
+							<tr>
+								<td>onmouseover</td>
+								<td><i>script</i></td>
+								<td>Fires when the user moves the mouse pointer onto an element.</td>
+							</tr>
+							<tr>
+								<td>onmouseup</td>
+								<td><i>script</i></td>
+								<td>Fires when the user releases the mouse button while the mouse is over an element.</td>
+							</tr>
+							<tr>
+								<td>onmousewheel</td>
+								<td><i>script</i></td>
+								<td><a class="deprecated" href="../definitions.html#deprecated">Deprecated</a> Use the <code>onwheel</code> attribute instead.</td>
+							</tr>
+							<tr>
+								<td>onscroll</td>
+								<td><i>script</i></td>
+								<td>Fires when the user scrolls the contents of an element by scrolling the element's scrollbar.</td>
+							</tr>
+							<tr>
+								<td>onshow</td>
+								<td><i>script</i></td>
+								<td>Fires when a <code><a href="#contextmenu">contextmenu</a></code> event was fired onto an element that has a <code>contextmenu</code> attribute.</td>
+							</tr>
+							<tr>
+								<td>ontoggle</td>
+								<td><i>script</i></td>
+								<td>Fires when the user opens or closes the <code><a href="html5-details-tag.html">&lt;details&gt;</a></code> element.</td>
+							</tr>
+							<tr>
+								<td>onwheel</td>
+								<td><i>script</i></td>
+								<td>Fires when the user scrolls the contents of an element by rolling the mouse wheel up or down over an element.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<hr />
+				<h2>Keyboard Events</h2>
+				<p>Events that occur by the user interaction with the keyboard:</p>
+				<div class="shadow">
+					<table class="data">
+						<thead>
+							<tr>
+								<th style="width: 125px;">Attribute</th>
+								<th>Value</th>
+								<th>Description</th>
+							</tr>
+						</thead>        
+						<tbody>
+							<tr>
+								<td>onkeydown</td>
+								<td><i>script</i></td>
+								<td>Fires when the user presses a key.</td>
+							</tr>
+							<tr>
+								<td>onkeypress</td>
+								<td><i>script</i></td>
+								<td>Fires when the user presses an alphanumeric key.</td>
+							</tr>
+							<tr>
+								<td>onkeyup</td>
+								<td><i>script</i></td>
+								<td>Fires when the user releases a key.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<hr />
+				<h2>Clipboard Events</h2>
+				<p>Events related to modification of the clipboard, that is copy, cut and paste:</p>
+				<div class="shadow">
+					<table class="data">
+						<thead>
+							<tr>
+								<th style="width: 125px;">Attribute</th>
+								<th>Value</th>
+								<th>Description</th>
+							</tr>
+						</thead>    
+						<tbody>
+							<tr>
+								<td>oncopy</td>
+								<td><i>script</i></td>
+								<td>Fires when the user copies the element or selection, adding it to the system clipboard.</td>
+							</tr>
+							<tr>
+								<td>oncut</td>
+								<td><i>script</i></td>
+								<td>Fires when the element or selection is removed from the document and added to the system clipboard.</td>
+							</tr>
+							<tr>
+								<td>onpaste</td>
+								<td><i>script</i></td>
+								<td>Fires when the user pastes data, transferring the data from the system clipboard to the document.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<hr />
+				<h2>Media Events</h2>
+				<p>Events that occur when handling media elements that are embedded inside the HTML documents, such as <code><a href="html5-audio-tag.html">&lt;audio&gt;</a></code> and <code><a href="html5-video-tag.html">&lt;video&gt;</a></code> elements:</p>
+				<div class="shadow">
+					<table class="data">
+						<thead>
+							<tr>
+								<th style="width: 125px;">Attribute</th>
+								<th>Value</th>
+								<th>Description</th>
+							</tr>
+						</thead>        
+						<tbody>
+							<tr>
+								<td>onabort</td>
+								<td><i>script</i></td>
+								<td>Fires when playback is aborted, but not due to an error.</td>
+							</tr>
+							<tr>
+								<td>oncanplay</td>
+								<td><i>script</i></td>
+								<td>Fires when enough data is available to play the media, at least for a couple of frames, but would require further buffering.</td>
+							</tr>
+							<tr>
+								<td>oncanplaythrough</td>
+								<td><i>script</i></td>
+								<td>Fires when entire media can be played to the end without requiring to stop for further buffering.</td>
+							</tr>
+							<tr>
+								<td>oncuechange</td>
+								<td><i>script</i></td>
+								<td>Fires when the text track cue in a <code><a href="html5-track-tag.html">&lt;track&gt;</a></code> element changes.</td>
+							</tr>
+							<tr>
+								<td>ondurationchange</td>
+								<td><i>script</i></td>
+								<td>Fires when the duration of the media changes.</td>
+							</tr>
+							<tr>
+								<td>onemptied</td>
+								<td><i>script</i></td>
+								<td>Fires when the media element is reset to its initial state, either because of a fatal error during load, or because the <code>load()</code> method is called to reload it.</td>
+							</tr>
+							<tr>
+								<td>onended</td>
+								<td><i>script</i></td>
+								<td>Fires when the end of playback is reached.</td>
+							</tr>
+							<tr>
+								<td>onerror</td>
+								<td><i>script</i></td>
+								<td>Fires when an error occurs while fetching the media data.</td>
+							</tr>
+							<tr>
+								<td>onloadeddata</td>
+								<td><i>script</i></td>
+								<td>Fires when media data is loaded at the current playback position.</td>
+							</tr>
+							<tr>
+								<td>onloadedmetadata</td>
+								<td><i>script</i></td>
+								<td>Fires when metadata of the media (like duration and dimensions) has finished loading.</td>
+							</tr>
+							<tr>
+								<td>onloadstart</td>
+								<td><i>script</i></td>
+								<td>Fires when loading of the media begins.</td>
+							</tr>
+							<tr>
+								<td>onpause</td>
+								<td><i>script</i></td>
+								<td>Fires when playback is paused, either by the user or programmatically.</td>
+							</tr>
+							<tr>
+								<td>onplay</td>
+								<td><i>script</i></td>
+								<td>Fires when playback of the media starts after having been paused i.e. when the <code>play()</code> method is requested.</td>
+							</tr>
+							<tr>
+								<td>onplaying</td>
+								<td><i>script</i></td>
+								<td>Fires when the audio or video has started playing.</td>
+							</tr>
+							<tr>
+								<td>onprogress</td>
+								<td><i>script</i></td>
+								<td>Fires periodically to indicate the progress while downloading the media data.</td>
+							</tr>
+							<tr>
+								<td>onratechange</td>
+								<td><i>script</i></td>
+								<td>Fires when the playback rate or speed is increased or decreased, like slow motion or fast forward mode.</td>
+							</tr>
+							<tr>
+								<td>onseeked</td>
+								<td><i>script</i></td>
+								<td>Fires when the seek operation ends.</td>
+							</tr>
+							<tr>
+								<td>onseeking</td>
+								<td><i>script</i></td>
+								<td>Fires when the current playback position is moved.</td>
+							</tr>
+							<tr>
+								<td>onstalled</td>
+								<td><i>script</i></td>
+								<td>Fires when the download has stopped unexpectedly.</td>
+							</tr>
+							<tr>
+								<td>onsuspend</td>
+								<td><i>script</i></td>
+								<td>Fires when the loading of the media is intentionally stopped.</td>
+							</tr>
+							<tr>
+								<td>ontimeupdate</td>
+								<td><i>script</i></td>
+								<td>Fires when the playback position changed, like when the user fast forwards to a different playback position.</td>
+							</tr>
+							<tr>
+								<td>onvolumechange</td>
+								<td><i>script</i></td>
+								<td>Fires when the volume is changed, or playback is muted or unmuted.</td>
+							</tr>
+							<tr>
+								<td>onwaiting</td>
+								<td><i>script</i></td>
+								<td>Fires when playback stops because the next frame of a video resource is not available.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--Note box-->
+				<div class="color-box">
+					<div class="shadow">
+						<div class="info-tab note-icon" title="Important Notes"><i></i></div>
+						<div class="note-box">
+							<p><strong>Note:</strong> The event attributes described above, however applied to all the HTML elements, though they are not useful for all elements. For example, only media elements will receive a volumechange event fired by the browser.</p>
+						</div>
+					</div>
+				</div>
+				<!--End:Note box-->
+				<!--Bottom Navigation-->
+				<div class="bottom-link clearfix">
+					<a href="html-color-picker.html" class="previous-page-bottom">Previous Page</a>
+					<a href="html-language-codes.html" class="next-page-bottom">Next Page</a>
+				</div>
+				<!--End:Bottom Navigation--> 
+          		<!-- InstanceEndEditable -->
+                <!--Bottom Ads-->
+                <div class="bottom-ad clearfix">
+                    <div class="ad-label">Advertisements</div>
+
+<!--Rectangle Left-->
+<div class="rectangle-left fl">
+    
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Large Rectangle Left -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="8162953958"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<!--End:Rectangle Left-->
+
+
+<!--Rectangle Right-->
+<div class="rectangle-right fr">
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Large Rectangle Right -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="3324015654"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<!--End:Rectangle Right-->                </div>
+                <!--End:Bottom Ads-->
+            </div>
+            <!--End:Text Content-->
+            <!--Feedback Form-->
+			<div class="snippets">
+	<a href="../snippets/gallery.html" target="_blank">
+    	<img src="../lib/images/bootstrap-code-snippets.png" alt="Bootstrap UI Design Templates" />
+	</a>
+</div>
+
+<div class="report-error" id="feedback">
+    <div class="contact-form clearfix">
+        <div class="close"><span class="icon-close"></span></div>
+        <form id="feedback-form">
+            <h3>Your Feedback:</h3>
+            <div class="clearfix">
+                <div class="name fl"><label>Your Name (optional) <input type="text" name="user-name" id="user-name" /></label></div>
+                <div class="email fr"><label>Your E-mail (optional) <input type="text" name="user-email" id="user-email" /></label></div>
+            </div>
+            <div><label>Page address <input type="text" name="page-url" id="page-url" class="disabled" disabled="disabled" /></label></div>
+            <div><label>Description <textarea name="description" id="description" rows="6"></textarea></label></div>
+            <p id="feedback-error">We would love to hear from you, please drop us a line.</p>
+            <div><button type="button" class="action-btn" onclick="sendFeedback()"><span class="icon-send"></span> Send</button></div>
+        </form>
+        <div id="response"></div>
+    </div>           
+</div>            <!--End:Feedback Form-->
+        </div>        
+        <div class="sidebar">
+            <div class="ad-label">Advertisements</div>
+
+<div class="skyscraper primary">
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Premium Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4376141825"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+<div class="skyscraper">
+    
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Bottom Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="3387984471"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>        </div>
+    </div>
+    <!--Footer-->
+	<!--Footer-->
+<div class="footer">
+    <div class="appeal">
+        <div class="wrapper">
+            <p>Is this website helpful to you? Please give us a
+            <a href="../like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">like</a>,
+            or share your <a href="#feedback" class="feedback">feedback</a><em> to help us improve</em>.
+            Connect with us on <a href="https://www.facebook.com/tutorialrepublic" target="_blank">Facebook</a> and <a href="https://twitter.com/tutrepublic" target="_blank">Twitter</a> for the latest updates.</p>               
+        </div>
+    </div>
+    <div class="footer-inner">
+        <div class="wrapper clearfix">                
+            <div class="link-box">
+                <h4>About Us</h4>
+                <div class="clearfix">
+                    <a href="../about-us.html">Our Story</a>                    
+                    <a href="../terms-of-use.html">Terms of Use</a>
+                    <a href="../privacy-policy.html">Privacy Policy</a>                    
+                </div>
+            </div>
+            <div class="link-box">
+                <h4>Contact</h4>
+                <div class="clearfix">
+                    <a href="../contact-us.html">Contact Us</a>                    
+                    <a href="#feedback" class="feedback">Report Error</a>
+                    <a href="../advertise-with-us.html">Advertise</a>                    
+                </div>
+            </div>
+            <div class="tool-box">
+                <h4>Interactive Tools</h4>
+                <div class="tools-list clearfix" id="tools">
+                    <a href="../faq/what-is-the-maximum-length-of-title-and-meta-description-tag.html">Title &amp; Meta Length Calculator</a>                           
+                    <a href="../html-formatter.html" target="_blank">HTML Formatter</a>                        
+                    <a href="../twitter-bootstrap-button-generator.html" target="_blank">Bootstrap Button Generator</a>
+                    <a href="html-color-picker.html">HTML Color Picker</a>
+                    <a href="../codelab1284.html?topic=sql&amp;file=select-all" target="_blank">SQL Playground</a>
+                    <a href="../codelab07f7.html?topic=html&amp;file=hello-world" target="_blank">HTML Editor</a>                    
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="../lib/images/logo.svg" alt="TutorialRepublic" />
+            </div>
+        </div>
+    </div>           
+        <div class="bottom-strip">
+        <div class="wrapper">
+            <div class="notice">Copyright &copy; 2019 Tutorial Republic. All Rights Reserved.</div>
+            <div class="social-media">
+                <em>Share This:</em>
+                <a href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fhtml-reference%2Fhtml5-event-attributes.php" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" title="Facebook"><i class="icon-facebook"></i></a>
+                <a href="#" id="tweet-btn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" title="Twitter"><i class="icon-twitter"></i></a>
+                <a href="#" id="email-btn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" rel="noreferrer" title="Gmail"><i class="icon-mail"></i></a>
+            </div>
+        </div>            
+    </div>
+    <script>
+        var title = document.title.replace('- Tutorial Republic', '');
+        document.getElementById('tweet-btn').href = 'https://twitter.com/share?text=' + title + '- &url=https://www.tutorialrepublic.com%2Fhtml-reference%2Fhtml5-event-attributes.php';
+        document.getElementById('email-btn').href = 'https://mail.google.com/mail/?view=cm&fs=1&su=' + title + '&body=https://www.tutorialrepublic.com%2Fhtml-reference%2Fhtml5-event-attributes.php';
+    </script>
+</div>
+<!--End:Footer-->
+    
+<div class="backdrop mobile-only"></div>
+
+<!-- TutorialRepublic base script -->
+<script>
+// Adding CSS files
+[
+	'/lib/styles/extended-3.7.css',
+	'../lib/icomoon/style.css'
+].forEach(function(href) {
+	var link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.href = href;
+	(document.getElementsByTagName('head')[0]).appendChild(link);
+});
+
+// Adding JS files
+[
+	'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+	'../lib/js/prism.js',
+	'../lib/js/default-2.9.min.js'
+].forEach(function(src) {
+	var script = document.createElement('script');
+	script.async = false; // important
+	script.src = src;
+	(document.getElementsByTagName('body')[0]).appendChild(script);
+});
+</script>
+
+
+    <!--End:Footer-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.tutorialrepublic.com/html-reference/html5-event-attributes.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:16:44 GMT -->
+</html>

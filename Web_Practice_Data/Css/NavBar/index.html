@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Navbar</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        nav {
+            background: #333;
+            height: 70px;
+            padding: 0 4rem;
+            line-height: 70px;
+            border-bottom: 4px solid red;
+        }
+
+        ul {
+            float: right;
+            list-style: none;
+            margin-top: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        li {
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        nav > a {
+            font-family: cursive;
+            font-size: 22px;
+        }
+
+        li > a {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+        } 
+
+        .active > a {
+            color: red;
+            font-weight: bolder;
+        }
+
+        .image img {
+            width: 200px
+        }
+
+        .image {
+             float: left;
+             width: 33.33%;
+             text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar  -->
+    <nav>
+        <a href="#">GamerSpot</a>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- box  -->
+    <div class="wrapper">
+        <div class="image">
+            <img src="./logo_brush.png" alt="">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+        <div class="image">
+            <img src="./logo_css.png" alt="">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+        <div class="image">
+            <img src="./logo_html.png" alt="">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+    </div>
+
+</body>
+</html>

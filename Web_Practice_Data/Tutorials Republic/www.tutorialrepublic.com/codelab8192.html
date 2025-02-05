@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=css&file=page-break-inside-property by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:30:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Live Demo: Example of page-break-inside property</title>
+	<meta name="description" content="Try and test HTML code online in a simple and easy way using our free HTML editor and see the results in real-time." />
+			    <meta charset="UTF-8" />
+	<meta property="og:title" content="Example of page-break-inside property" />
+    <meta property="og:description" content="View the live example as well as try and test it using the online HTML editor." />
+	<meta property="fb:admins" content="100001054961582" />
+	<meta property="fb:app_id" content="1404574483159557" />
+	<meta property="og:image" content="lib/images/signature.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+	<link rel="stylesheet" href="lib/bin/css/codemirror.css" />
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+	<link rel="stylesheet" href="lib/bin/css/html-mode-2.3.css" />
+	<script src="../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bin/js/codemirror.js"></script>
+	<script type="text/javascript" src="lib/bin/js/html-mode-1.1.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/xml.js"></script>    
+	<script type="text/javascript" src="lib/bin/mode/javascript.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/css.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/htmlmixed.js"></script>
+	<script type="text/javascript" src="lib/bin/js/active-line.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        	updatePreview();
+    	});    
+	</script>
+	<style type="text/css">
+		.CodeMirror{font-size: 15px;line-height: normal;font-family: consolas,monospace;background: url("lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;}
+		.CodeMirror-activeline-background {background: #e8f2ff !important;}
+		.CodeMirror-scroll{overflow:auto;}
+	</style>
+	<!--Google Analytics-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script>	<!--End:Google Analytics-->
+</head>
+<body>
+
+    <form name="myForm" id="myForm" class="codelab">
+        <div class="header-wrapper">
+            <div class="header clearfix">				
+                <div class="logo">
+					<img src="lib/images/codelab-logo.svg" alt="CodeLab" />
+				</div>
+                <div class="control-bar">
+                    <div class="buttons">
+                        <a onClick="updatePreview();" class="show-output">Show Output</a>
+                        <a onClick="newWindow();" class="new-window" title="Show Output in Blank Tab"><span class="icon-new-window"></span></a>
+                        <a onClick="downloadCode();" class="download-code" title="Download Source Code"><span class="icon-download"></span></a>
+						<a onClick="toggleView();" class="toggle-view" title="Change Editor Layout"><span class="icon-screen-rotation"></span></a>
+                    </div>                            
+                </div>
+                <div class="top-ad-box">
+                    <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Responsive Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:block;width:100%;height:90px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4302666817"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>                                        
+                </div>                
+            </div>
+        </div>
+        <div class="frame-box vr">
+            <div class="pane-wrapper">
+                <div class="pane" id="code-pane">
+                    <div class="outer-area">
+                        <span class="show-preview-pane">&nbsp;</span>
+                        <div class="inner-area">
+                            <input type="hidden" id="current-code" name="current-code" />
+                            <textarea id="code" name="code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Example of page-break-inside property&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    @media print{
+        ul {
+          page-break-inside: avoid;
+        }
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you open the output in a new window and print (or print preview) the page, you will see unordered list doesn't splitting over two pages even if there is plenty of space on the bottom of first page to accommodate some list element.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas lacinia dolor vel semper. Curabitur auctor pulvinar erat, et sollicitudin augue cursus ut. Fusce eget erat at sem fermentum mattis porta id dui. Donec accumsan ligula sit amet diam ultrices iaculis sagittis felis vulputate. Vestibulum eget magna ut libero adipiscing congue vel quis quam. In dui dolor, placerat imperdiet molestie ut, tristique a dui. Duis consectetur nunc id lectus interdum imperdiet. Sed sit amet nulla tempus erat suscipit dictum. Morbi vitae fringilla sapien. Morbi ac leo quis nisl volutpat rhoncus. Donec adipiscing neque ut lectus congue imperdiet sit amet sed mauris.&lt;/p&gt;
+    &lt;p&gt;Proin lectus lacus, feugiat sed pharetra molestie, iaculis nec leo. Integer vulputate scelerisque dui, vel tincidunt purus pharetra nec. Donec quis sapien nisl. Ut interdum lobortis tempus. Aenean dictum suscipit risus. Aliquam ac consequat neque. Suspendisse et sapien ac leo vestibulum ornare. Mauris mattis cursus nibh, euismod vestibulum ipsum lobortis sit amet. Sed sagittis tellus ac tellus suscipit commodo. Integer molestie, orci id gravida mollis, ante lectus bibendum enim, dictum fermentum ipsum arcu et tellus.&lt;/p&gt;
+    &lt;p&gt;Aliquam vel ligula turpis, in faucibus nulla. Nunc auctor ornare sem. Cras odio dui, dictum eget pharetra ut, volutpat nec turpis. In nisl risus, venenatis varius pulvinar id, blandit vitae sem. Donec viverra sapien mi, eget porta arcu. Nullam scelerisque ultrices convallis. In sed est nec justo ultrices tempor. Pellentesque sem felis, faucibus non elementum non, feugiat et risus. Etiam elementum sem ac tellus consequat tempus. Nunc nunc odio, gravida a fermentum nec, eleifend eget lectus. Etiam at nulla dolor. Nunc risus erat, commodo sit amet vulputate at, interdum et diam.&lt;/p&gt;
+    &lt;p&gt;Morbi tempor vulputate massa a pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras felis augue, molestie sit amet egestas non, feugiat ac arcu. Duis orci elit, adipiscing porttitor euismod et, sodales sodales enim. Fusce venenatis bibendum venenatis. Nulla bibendum turpis in dui imperdiet tincidunt. Sed quam urna, vulputate ac venenatis at, luctus sit amet urna. Fusce pellentesque accumsan augue vitae adipiscing. In felis nibh, viverra eget pellentesque a, ultricies et dui. Phasellus consectetur volutpat ullamcorper. Curabitur a sagittis turpis. Sed congue mollis purus, luctus tempus est consectetur nec.&lt;/p&gt;
+    &lt;p&gt;Proin lectus lacus, feugiat sed pharetra molestie, iaculis nec leo. Integer vulputate scelerisque dui, vel tincidunt purus pharetra nec. Donec quis sapien nisl. Ut interdum lobortis tempus. Aenean dictum suscipit risus. Aliquam ac consequat neque. Suspendisse et sapien ac leo vestibulum ornare. Mauris mattis cursus nibh, euismod vestibulum ipsum lobortis sit amet. Sed sagittis tellus ac tellus suscipit commodo. Integer molestie, orci id gravida mollis, ante lectus bibendum enim.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Quisque in mauris vitae lectus.&lt;/li&gt;
+        &lt;li&gt;Integer porttitor, lorem et dignissim sagittis.&lt;/li&gt;
+        &lt;li&gt;Suspendisse eu nisi sit amet ligula vehicula laoreet.&lt;/li&gt;
+        &lt;li&gt;Aenean et mi eget ipsum vestibulum vestibulum&lt;/li&gt;
+        &lt;li&gt;Cras odio dui, dictum eget pharetra ut, volutpat nec turpis.&lt;/li&gt;
+        &lt;li&gt;Aliquam vel ligula turpis, in faucibus nulla. Nunc auctor ornare sem.&lt;/li&gt;
+        &lt;li&gt;Etiam elementum sem ac tellus consequat tempus.&lt;/li&gt;
+        &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/li&gt;
+        &lt;li&gt;Cras felis augue, molestie sit amet egestas non, feugiat ac arcu.&lt;/li&gt;
+        &lt;li&gt;Vivamus sodales suscipit pulvinar. Praesent id lorem libero, ac suscipit dui.&lt;/li&gt;
+        &lt;li&gt;Morbi tempor vulputate massa a pretium.&lt;/li&gt;
+        &lt;li&gt;Duis orci elit, adipiscing porttitor euismod et, sodales sodales enim.&lt;/li&gt;
+        &lt;li&gt;Phasellus consectetur volutpat ullamcorper.&lt;/li&gt;
+        &lt;li&gt;Praesent id lorem libero, ac suscipit dui. Curabitur auctor, erat ac vehicula posuere.&lt;/li&gt;
+        &lt;li&gt;Integer vulputate scelerisque dui, vel tincidunt purus pharetra nec.&lt;/li&gt;
+        &lt;li&gt;Sed sagittis tellus ac tellus suscipit commodo. Integer molestie, orci id gravida mollis.&lt;/li&gt;
+        &lt;li&gt;Curabitur auctor pulvinar erat, et sollicitudin augue cursus ut.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                            </textarea>	
+                            <script>
+                                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                    mode: "text/html",
+                                    tabMode: "indent",
+                                    styleActiveLine: true,
+                                    lineNumbers: true,
+                                    lineWrapping: true
+                                });
+                            </script>									
+                        </div>
+                    </div>
+                </div>
+                <div class="pane" id="preview-pane">
+                    <div class="outer-wrapper">
+                        <span class="hide-preview-pane">&nbsp;</span>
+                        <div class="output-area">
+                            <iframe id="preview" name="preview"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="codelab-footer clearfix">		
+            <a href="codelab1284.html?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+            <label class="auto-update"><input type="checkbox" id="check" /> Auto update</label>
+            <script>
+                var delay;
+                var checkbox = document.getElementById("check");
+                editor.on("change", function(){
+					editor.refresh();
+                    if(checkbox.checked==true){            
+                        clearTimeout(delay);
+                        delay = setTimeout(updatePreview, 300); // Don't use parenthesis 
+                    }
+                });
+                //setTimeout(updatePreview, 300);
+            </script>
+            <div class="social-widget-wrapper">
+                <!-- Social widget -->
+                                <p class="social-link">Share this example with 
+                    <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dcss%26file%3Dpage-break-inside-property" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
+                    <a id="twitter-share-btn" href="https://twitter.com/share?text=Example+of+page-break-inside+property+-+&amp;url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dcss%26file%3Dpage-break-inside-property" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>, 
+                    <a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dcss%26file%3Dpage-break-inside-property" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Google +</a>. Please give us a 
+                    <a id="facebook-like-btn" href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">Like</a>, if you find it helpful.
+                </p>
+                <!-- End:Social widget -->
+            </div>
+        </div>
+    </form>
+        
+    <form id="download-form" action="https://www.tutorialrepublic.com/examples/bin/download.php" method="post" class="hidden-form">
+    	<input type="hidden" id="download-value" name="download-value" />
+    </form>
+    <form id="new-form" action="https://www.tutorialrepublic.com/examples/fullscreen/output.php" method="post" target="_blank" class="hidden-form">
+    	<input type="hidden" id="code-value" name="code-value" />
+    </form>
+
+</body>
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=css&file=page-break-inside-property by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:30:32 GMT -->
+</html>
+

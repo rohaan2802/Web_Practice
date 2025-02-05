@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyFrames</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            background: crimson;
+            height: 500px;
+        }
+
+        .box {
+            height: 200px;
+            width: 250px;
+            background: coral;
+        }
+
+        .box {
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+            position: absolute;
+            animation-name: rohaan;
+            animation-duration: 3s;
+            /* animation-delay:  ; */
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.77, 0.13, 0, 0.7);
+            /* animation-fill-mode: backwards; */
+            
+        }
+      
+        /* @keyframes rohaan {
+            from {
+                width: 250px;
+            }
+            to {
+                width: 800px;
+            }
+        } */
+        @keyframes rohaan {
+          0% {
+              background: orangered;
+              top: 0;
+              left: 0;
+              transform: scale(1);
+          }
+
+          25% {
+              left:0;
+              top: 30%;
+              background: black;
+              transform: scale(0.5);
+          }
+
+          50% {
+              top: 30%;
+              left: 70%;
+              transform: scale(2);
+              background: yellow;
+          }
+
+          75% {
+              left: 70%;
+              transform: scale(0.1);
+              top: 0%;
+              background: indigo;
+              width: 400px;
+          }
+
+          100% {
+              transform: scale(1);
+              top: 0;
+              left: 0;
+              background: lightseagreen;
+              width: 140px;
+          }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box item1"></div>
+    </div>
+</body>
+</html>

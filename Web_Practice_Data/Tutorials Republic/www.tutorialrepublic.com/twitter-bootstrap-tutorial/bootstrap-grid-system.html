@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/bootstrap.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-grid-system.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:19:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<!-- InstanceBeginEditable name="doctitle" -->
+    <title>Understanding the Bootstrap 4 Grid System - Tutorial Republic</title>
+    <meta name="description" content="Learn how to use the Bootstrap new flexbox grid system which is the fastest way to create responsive website or layout for desktops, tablets, mobile phones, etc." />
+    <!-- InstanceEndEditable -->
+    	<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="fb:admins" content="100001054961582" />
+<meta property="fb:app_id" content="1404574483159557" />
+<meta property="og:image" content="../lib/images/signature.png" />
+<link type="image/x-icon" href="../favicon.ico" rel="shortcut icon" />
+<style>
+html,body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,img{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+html,body{min-height:100%}
+p{margin:0 0 12px}
+ol,ul{margin:0 0 12px}
+a,a:active,a:visited{outline:none;color:#1db79f;text-decoration:none}
+a img{border:none;outline:none}
+a code{color:inherit;background:none}
+p code,table td:last-child code,.content ul li code,code.mark{padding:2px 4px;color:#333;background-color:#f1f1f1;border-radius:4px}
+table{border-collapse:collapse;border-spacing:0}
+table td{vertical-align:top}
+body{min-width:1300px;color:#414141;background:#fafafa;font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.7}
+input,select,textarea,button,div,span,a{box-sizing:border-box}
+h1,h2,h3,h4{color:#262626;font-weight:500;margin:20px 0 10px;line-height:1.5;font-weight:600}
+h1{font-size:34px;margin-top:17px}
+h2{font-size:28px}
+h3{font-size:22px}
+.space{margin-bottom:25px!important}
+.break{margin-bottom:15px!important}
+.text-center{text-align:center!important}
+.scroll{height:195px;overflow-y:scroll}
+.scroll.large{height:245px}
+.scroll.xlarge{height:290px}
+.scroll.xxlarge{height:340px}
+sup{font-size:13px}
+.leaderboard{padding-top:8px;position:relative}
+.ad-container{height:90px;overflow:hidden}
+.intro-image img{display:block;padding:10px 0 25px;max-width:100%}
+.clearfix::after{content:".";display:block;height:0;clear:both;visibility:hidden}
+code,.code,.syntax,.green-box,.sky-box,.gray-box,.pink-box,.red-box,.at-rule,.codebox pre,.console-output{font-size:16px;font-family:Consolas,Monaco,Courier,monospace}
+.console-output{margin:15px 0}
+hr{border:none;border-bottom:1px solid #e7e9ed;height:1px;margin:30px 0}
+.summary,.topic{border:1px solid #eaeaea;border-width:1px 0;margin:20px 0;padding:10px 0;color:#8e9aa6;line-height:1.5}
+h2.section-title span{display:inline-block;border-bottom:4px solid #c9d7e0;padding:0 50px 12px 0}
+.wrapper{width:1300px;padding:0 15px;margin:0 auto}
+.header{background:#23384e;padding:16px 0}
+input.search{background:#fff;border:0 none;color:#807E7E;float:left;height:38px;line-height:26px;font-size:14px;margin:0 0 0 12px;outline:medium none;padding:6px 14px;width:500px;border-radius:2px;box-shadow:0 0 1px rgba(0,0,0,0.6);font-family:inherit}
+.search-btn{color:rgba(0,0,0,.6);background:#ebebeb;border:none;outline:none;cursor:pointer;float:left;height:38px;line-height:46px;width:44px;display:block;margin-left:-2px;border-radius:0 2px 2px 0;box-shadow:0 0 1px rgba(0,0,0,0.7)}
+.logo{width:304px}
+.logo img{height:44px;margin:-3px 0;display:block}
+.site-search{float:left;margin-left:100px}
+.menu{background-color:#f5f5f5;box-shadow:0 1px 1px rgba(0,0,0,.15);position:relative;z-index:9}
+.menu a{color:#666;display:inline-block;padding:0 10px;text-decoration:none;font-size:14px;font-weight:600;height:48px;line-height:48px}
+.menu a:first-child{margin-left:-10px}
+.menu a.tool-link{float:right;display:inline-block;border-radius:30px;line-height:28px;position:relative;height:auto;top:9px;padding:0 12px;color:#1ebba3;border:1px double #1ebba3}
+.fl,.logo{float:left}
+.leftcolumn{width:240px;float:left;font-size:16px;color:#4f4f4f}
+.centercolumn{width:850px;float:left}
+.content{background:#fff;padding:20px 40px;border:1px solid #dedede;border-top:none;border-radius:1px}
+.sidebar{width:160px;float:left;padding-top:28px;margin-left:20px;position:relative}
+.leftcolumn .segment{margin:16px 0 12px;position:relative;font-size:18px;font-weight:600;line-height:normal}
+.leftcolumn a{color:#4f4f4f;font-size:16px;line-height:26px;display:block;border-bottom:1px solid transparent}
+.leftcolumn ul{list-style:none;padding:0}
+.segment,.chapters,.chapters a{float:left;clear:both}
+h1 code,h2 code,h3 code{font:inherit}
+.color-box{margin:15px 0;padding-left:20px}
+.note-box,.warning-box,.tip-box{padding:8px 8px 3px 26px}
+.info-tab{float:left;margin-left:-23px}
+.content ul li{margin-top:7px}
+.extra{padding-top:5px}
+.green-box,.sky-box,.gray-box,.red-box,.pink-box{color:#000;margin-top:15px;padding:10px;background-color:#f6f8fa;border:1px solid #d7e2ec}
+.example{background:#f4f5f6;padding:3px;margin:15px 0}
+.codebox{background:#fff;border:1px solid #ddd}
+.codebox-title{height:41px;padding-left:12px;border-bottom:1px solid #ddd;background:#f5f5f5}
+.codebox-title h4{margin:0;font-size:18px;line-height:40px;float:left;display:inline;font-weight:500}
+a.try-btn,a.download-btn{width:140px;height:40px;color:#333;font-size:15px;line-height:41px;font-weight:600;text-align:center;text-decoration:none;float:right;display:block;border-left:1px solid #ddd;background:rgba(27,31,35,0.08);box-sizing:border-box;font-family:Arial,sans-serif}
+a.try-btn span{font-size:18px;line-height:normal}
+.hide,.code-style,.box-size,.bottom-link,.footer,.code-style,.snippets,.report-error,.badge,.social,.ad-label,.mobile-only{display:none}
+.skyscraper{width:160px;height:600px;overflow:hidden;margin-bottom:20px;background:#ebecf0}
+.bottom-ad{margin-top:46px;padding:24px;position:relative;background:url(../lib/images/smooth-line.png) no-repeat center #f9f9f9}
+.rectangle-left,.rectangle-right{min-width:336px;min-height:280px;overflow:hidden}
+.fr,a.previous-page,a.next-page,.rectangle-right,.topic-nav{float:right}
+a.previous-page,a.next-page{width:32px;height:32px;line-height:30px}
+.shadow{background:#F7F8F9;padding:3px;margin:10px 0}
+.syntax{color:#2f4959;padding:13px 18px;background:#F9F9FA;border:1px solid #ddd;font-size:15px}
+code[class*="language-"],pre[class*="language-"]{color:#000;background:none;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;text-align:left;white-space:pre;word-break:normal;word-wrap:normal;line-height:1.5;tab-size:4;hyphens:none}
+pre[class*="language-"]{position:relative;margin:.5em 0;overflow:visible;padding:0}
+pre[class*="language-"]>code{position:relative;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:linear-gradient(transparent 50%,rgba(69,142,209,0.04) 50%);background-size:3em 3em;background-origin:content-box;background-attachment:local}
+code[class*="language"]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}
+:not(pre) > code[class*="language-"]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,0.1);display:inline;white-space:normal}
+pre[class*="language-"].line-numbers{padding-left:0}
+pre[class*="language-"].line-numbers code{padding-left:3.8em}
+pre[class*="language-"].line-numbers .line-numbers-rows{left:0}
+pre[class*="language-"][data-line]{padding-top:0;padding-bottom:0;padding-left:0}
+pre[data-line] code{position:relative;padding-left:4em}
+pre .line-highlight{margin-top:0}
+pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber;white-space:pre-wrap!important}
+pre.line-numbers > code{position:relative;white-space:inherit}
+.line-numbers-rows,.codebox pre.inactive{display:none}
+.codebox pre.syntax-highlighter{margin:0;padding:0;overflow:auto}
+pre.line-numbers .line-numbers-rows{border-right:3px solid #6CE26C}
+.codebox pre.syntax-highlighter > code{box-shadow:none!important;padding-left:3.8em;background-image:linear-gradient(transparent 50%,#F8F8F8 50%);font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace!important;font-size:16px;line-height:1.5}
+.codebox pre.syntax-highlighter,.codebox pre.syntax-highlighter code{border:none;width:100%;box-sizing:border-box}
+pre.line-numbers code,pre.line-numbers .line-numbers-rows{padding-top:2px;padding-bottom:2px}
+.preview-box{padding:15px;text-align:center;cursor:pointer;overflow:hidden;background:#FFF;border:1px solid #e6e6e6}
+.preview-box a,.preview-box img{display:block;margin:0 auto}
+.download-box{text-align:center;padding:20px 0;margin:20px 0 10px}
+.output-box{border-color:#d4d4d4;border-style:solid;border-width:1px 0;padding:5px 15px;overflow:hidden;background:#fff;margin:10px 0}
+.demo-box{margin-top:15px}
+.subhead{border-bottom:3px solid #DCE3EB;margin-bottom:15px;padding-bottom:10px}
+table.data,table.description{width:100%;font-size:92%}
+table.data th{color:#000;padding:8px 7px;text-align:left;font-size:15px;background:#F8F8F8}
+table.data td{color:#484848;padding:5px 7px;background:#fff}
+table.data th,table.data td{vertical-align:top;border:1px solid #DCE3EB}
+table.data tr.section th,table.data td.section{font-size:15px;background:#f0f4f7}
+table.no-wrap tr td:first-child{white-space:nowrap}
+@media screen and (max-width: 1280px) {
+body{min-width:1260px}
+.wrapper{width:1260px}
+.leftcolumn{width:230px}
+.centercolumn{width:820px}
+}
+@media screen and (max-width: 800px) {
+body{min-width:100%;max-width:100%;padding-top:46px}
+.wrapper{width:100%;padding:0}
+.header{height:46px;padding:5px 0;position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
+.logo{width:auto;display:block;padding:6px 0 0 60px;position:absolute;left:0;z-index:100}
+.logo img{height:30px}
+.menu{width:100%;padding-left:12px;padding-right:12px;overflow-x:auto;white-space:nowrap}
+.centercolumn{width:100%;float:none}
+.content{padding:10px;border-width:0 0 1px 0}
+.content img{max-width:100%;height:auto}
+.content pre{max-width:100%;overflow:hidden}
+.skyscraper{display:inline-block}
+.shadow,.example,.console-output{max-width:100%;overflow-x:auto}
+.codebox-title{position:relative}
+.codebox.multi-style-mode pre{padding-top:7px;margin-top:36px;border-top:1px solid #ddd}
+.bottom-ad{height:auto;background:none;padding:30px 0 0;margin:40px 0 0;text-align:center;position:relative}
+.rectangle-left,.rectangle-right{float:none;display:inline-block;margin:10px auto;background:#EDEEF2}
+.leftcolumn,.footer,.social,.site-search,.code-style,.menu a.tool-link,.backdrop{display:none}
+.summary,.topic{padding:5px 0;margin:10px 0}
+.leftcolumn,.centercolumn,.sidebar{float:none}
+.header,.menu,.centercolumn,.footer,.appeal-text{width:100%}
+a.try-btn,a.download-btn{width:130px}
+.native-unit{margin-bottom:30px}
+.sidebar{margin: 25px auto 0}
+.overview{padding-right:0}
+.scroll-pane{overflow-x:auto}
+table.data{min-width:480px}
+table.data pre{display:inline;white-space:normal}
+table tr th,table tr td{width:auto!important}
+.preview-box{padding:6px}
+.leaderboard{margin:20px 0}
+h1{font-size:30px}
+h2{font-size:24px}
+h3{font-size:20px}
+.codebox pre.syntax-highlighter{overflow-x:auto}
+.codebox pre.syntax-highlighter > code{width:614px;height:auto;overflow-x:hidden}
+}
+@media screen and (min-width: 801px) {
+.site-search,.leftcolumn,.social{display:block!important}
+.backdrop{display:none!important}
+.hide-scroll{overflow-x:hidden!important}
+}</style>    
+    <!-- InstanceBeginEditable name="head" -->
+<style>
+.grid-system-illustration{padding:25px 0;text-align:center}
+.device{display:block;padding-top:5px;font-size:11px;color:#666}
+</style>
+    <!-- InstanceEndEditable -->
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script></head>
+<body>
+    <!--Header-->
+    
+<div class="header">
+    <div class="wrapper clearfix">
+        <button type="button" class="open-menu mobile-only"><i class="icon-menu"></i></button>
+        <div class="logo">
+            <a href="../index.html"><img src="../lib/images/logo.svg" alt="TutorialRepublic" /></a>
+        </div>
+        <div class="site-search">
+            <form action="https://www.google.com/search" method="get" target="_blank" class="clearfix">
+                <input type="hidden" value="www.tutorialrepublic.com" name="sitesearch" />
+                <input type="text" name="q" placeholder="Search topics, tutorials, questions and answers..." id="searchInput" class="search" />
+                <button type="submit" class="search-btn"><span class="icon-search"></span></button>
+            </form>
+        </div>
+        <div class="social">                
+            <a href="https://www.facebook.com/tutorialrepublic" target="_blank" title="Join us on Facebook"><i class="icon-facebook"></i></a>
+            <a href="https://twitter.com/tutrepublic" target="_blank" title="Follow us on Twitter"><i class="icon-twitter"></i></a>
+            <a href="../contact-us.html" target="_blank" title="Send us an Email"><i class="icon-mail"></i></a>
+        </div>
+        <button type="button" class="open-search mobile-only">
+            <i class="icon-search"></i>
+        </button>
+    </div>    
+</div>
+<div class="menu">
+    <div class="wrapper">
+        <a href="../index.html" title="Home Page">HOME</a>
+        <a href="../html-tutorial/index.html" title="HTML Tutorial">HTML5</a>            
+        <a href="../css-tutorial/index.html" title="CSS Tutorial">CSS3</a>
+        <a href="../javascript-tutorial/index.html" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="../jquery-tutorial/index.html" title="jQuery Tutorial">JQUERY</a>
+        <a href="index.html" title="Bootstrap Tutorial">BOOTSTRAP4</a>
+        <a href="../php-tutorial/index.html" title="PHP Tutorial">PHP7</a> 
+        <a href="../sql-tutorial/index.html" title="SQL Tutorial">SQL</a>
+        <a href="../references.html" title="Web References">REFERENCES</a>
+        <a href="../practice-examples.html" title="Practice Examples and Demos">EXAMPLES</a>
+        <a href="../faq.html" title="Frequently Asked Questions and Answers">FAQ</a>
+        <a href="../snippets/gallery.html" title="Bootstrap Code Snippets" target="_blank">SNIPPETS</a>
+        <a href="../codelab.html" class="tool-link" target="_blank">Online HTML Editor</a>
+    </div>        
+</div>    <!--End:Header-->
+    <div class="wrapper clearfix">
+        <div class="leftcolumn" id="myNav">
+		
+        <div class="segment"><span>BOOTSTRAP</span> BASIC</div>
+<div class="chapters">
+    <a href="index.html">Bootstrap Introduction</a>
+    <a href="bootstrap-get-started.html">Bootstrap Getting Started</a>
+    <a href="bootstrap-grid-system.html">Bootstrap Grid System</a>
+    <a href="bootstrap-fixed-layout.html">Bootstrap Fixed Layout</a>
+    <a href="bootstrap-fluid-layout.html">Bootstrap Fluid Layout</a>
+    <a href="bootstrap-responsive-layout.html">Bootstrap Responsive Layout</a>
+    <a href="bootstrap-typography.html">Bootstrap Typography</a>
+    <a href="bootstrap-tables.html">Bootstrap Tables</a>
+    <a href="bootstrap-lists.html">Bootstrap Lists</a>
+	<a href="bootstrap-list-groups.html">Bootstrap List Groups</a>
+    <a href="bootstrap-forms.html">Bootstrap Forms</a>
+	<a href="bootstrap-custom-forms.html">Bootstrap Custom Forms</a>
+	<a href="bootstrap-input-groups.html">Bootstrap Input Groups</a>
+	<a href="bootstrap-buttons.html">Bootstrap Buttons</a>
+	<a href="bootstrap-button-groups.html">Bootstrap Button Groups</a>
+    <a href="bootstrap-images.html">Bootstrap Images</a>
+	<a href="bootstrap-cards.html">Bootstrap Cards</a>
+	<a href="bootstrap-media-objects.html">Bootstrap Media Objects</a>
+    <a href="bootstrap-icons.html">Bootstrap Icons</a>
+    <a href="bootstrap-navs.html">Bootstrap Navs</a>
+    <a href="bootstrap-navbar.html">Bootstrap Navbar</a>
+    <a href="bootstrap-breadcrumbs.html">Bootstrap Breadcrumbs</a>
+    <a href="bootstrap-pagination.html">Bootstrap Pagination</a>
+    <a href="bootstrap-badges.html">Bootstrap Badges</a>
+    <a href="bootstrap-progress-bars.html">Bootstrap Progress Bars</a>
+	<a href="bootstrap-spinners.html">Bootstrap Spinners</a>
+	<a href="bootstrap-jumbotron.html">Bootstrap Jumbotron</a>
+	<a href="bootstrap-helper-classes.html">Bootstrap Helper Classes</a>
+</div>
+<div class="segment"><span>BOOTSTRAP</span> ADVANCED</div>
+<div class="chapters">
+	<a href="bootstrap-modals.html">Bootstrap Modals</a>
+    <a href="bootstrap-dropdowns.html">Bootstrap Dropdowns</a>
+	<a href="bootstrap-tabs.html">Bootstrap Tabs</a>
+    <a href="bootstrap-tooltips.html">Bootstrap Tooltips</a>
+    <a href="bootstrap-popovers.html">Bootstrap Popovers</a>
+    <a href="bootstrap-alerts.html">Bootstrap Alerts</a>
+	<a href="bootstrap-stateful-buttons.html">Bootstrap Stateful Buttons</a>
+    <a href="bootstrap-accordion.html">Bootstrap Accordion</a>
+    <a href="bootstrap-carousel.html">Bootstrap Carousel</a>
+    <a href="bootstrap-typeahead.html">Bootstrap Typeahead</a>
+    <a href="bootstrap-scrollspy.html">Bootstrap ScrollSpy</a>
+	<a href="bootstrap-toasts.html">Bootstrap Toasts</a>
+</div>
+<div class="segment"><span>BOOTSTRAP</span> EXAMPLES</div>
+<div class="chapters">
+    <a href="../twitter-bootstrap-examples.html">Bootstrap Practice Examples</a>
+	<a href="../faq.html#bootstrap-less">Bootstrap FAQ's Answers</a>
+</div>
+<div class="segment"><span>BOOTSTRAP</span> ARCHIVE</div>
+<div class="chapters">
+    <a href="../twitter-bootstrap-3-tutorial/index.html">Bootstrap 3 Tutorial</a>
+	<a href="../twitter-bootstrap-3-examples.html">Bootstrap 3 Practice Examples</a>
+</div>        
+                </div>
+        <div class="centercolumn">
+            <!--Text Content-->
+            <div class="content">
+                <div class="leaderboard">
+                    
+<div class="ad-label">Advertisements</div>
+<div class="ad-container">
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <!-- Responsive Leaderboard -->
+    <ins class="adsbygoogle"
+            style="display:inline-block;max-width:728px;width:100%;height:90px"
+            data-ad-client="ca-pub-9107540490929984"
+            data-ad-slot="4302666817"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>                </div>
+                <!-- InstanceBeginEditable name="main_content" -->
+                <a href="bootstrap-get-started.html" class="previous-page" title="Go to Previous Page"></a>
+            	<a href="bootstrap-fixed-layout.html" class="next-page" title="Go to Next Page"></a>
+                <h1>Bootstrap <span>Grid System</span></h1>
+                <p class="summary">The Bootstrap grid system is the fastest and easy way to create responsive web page layout.</p>
+                <h2>What is Bootstrap Grid System</h2>
+                <p>Bootstrap grid system provides the quick and convenient way to create responsive website layouts. The latest Bootstrap 4 version introduces the new mobile-first <a href="../css-tutorial/css3-flexible-box-layouts.html">flexbox</a> grid system that appropriately scales up to 12 columns as the device or viewport size increases.</p>
+                <p>Bootstrap 4 includes predefined grid classes for quickly making grid layouts for different types of devices like cell phones, tablets, laptops and desktops, etc. For example, you can use the <code>.col-*</code> classes to create grid columns for extra small devices mobile phones in portrait mode, similarly you can use the <code>.col-sm-*</code> classes to create grid columns for small screen devices like mobile phone in landscape mode, the <code>.col-md-*</code> classes for medium screen devices like tablets, the <code>.col-lg-*</code> classes for large devices like desktops, and the <code>.col-xl-*</code> classes for extra large desktop screens.</p>
+				<p class="space">The following table summarizes some of the key features of the new grid system.</p>
+                <div class="shadow break" id="grid-features">
+                    <table class="data">
+                        <tr>
+                            <th>Features <div class="device">Bootstrap&nbsp;4&nbsp;Grid&nbsp;System</div></th>
+                            <th>Extra&nbsp;small <div class="device">&lt;576px</div></th>
+                            <th>Small <div class="device">&ge;576px</div></th>
+                            <th>Medium <div class="device">&ge;768px</div></th>
+                            <th>Large <div class="device">&ge;992px</div></th>
+                            <th>Extra large <div class="device">&ge;1200px</div></th>
+                        </tr>
+                        <tr>
+                            <td><pre>Max&nbsp;container&nbsp;width</pre></td>
+                            <td>None (auto)</td>
+                            <td>540px</td>
+                            <td>720px</td>
+                            <td>960px</td>
+                            <td>1140px</td>
+                        </tr>
+                        <tr>
+                            <td><pre>Ideal&nbsp;for</pre></td>
+                            <td>Mobile&nbsp;<small>(Portrait)</small></td>
+                            <td>Mobile&nbsp;<small>(Landscape)</small></td>
+                            <td>Tablets</td>
+                            <td>Laptops</td>
+                            <td>Laptops &amp; Desktops</td>
+                        </tr>
+                        <tr>
+                            <td>Class prefix</td>
+                            <td><code class="mark">.col-</code></td>
+                            <td><code class="mark">.col-sm-</code></td>
+                            <td><code class="mark">.col-md-</code></td>
+                            <td><code class="mark">.col-lg-</code></td>
+                            <td><code class="mark">.col-xl-</code></td>
+                        </tr>
+                        <tr>
+                            <td>Number of columns</td>
+                            <td colspan="5">12</td>
+                        </tr>
+                        <tr>
+                            <td>Gutter width</td>
+                            <td colspan="5">30px (15px on each side of a column)</td>
+                        </tr>
+                        <tr>
+                            <td>Nestable</td>
+                            <td colspan="5">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Column ordering</td>
+                            <td colspan="5">Yes</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>Above table demonstrates one important thing, applying any <code>.col-sm-*</code> class to an element will not only affect its styling on small devices, but also on medium, large and extra large devices having screen width greater than or equal to 540px, if a <code>.col-md-*</code>, <code>.col-lg-*</code> or <code>.col-xl-*</code> class is not present. Similarly, the <code>.col-md-*</code> class will not only affect the styling of elements on medium devices, but also on large and extra large devices if a <code>.col-lg-*</code> or <code>.col-xl-</code> class is not present.</p>
+				<p class="space">Now the question arises how to create rows and columns using this 12 column responsive grid system. The answer is pretty simple, at first create a container that acts as a wrapper for your rows and columns using the <code>.container</code> class, after that create rows inside the container using the <code>.row</code> class, and to create columns inside any row you can use the <code>.col-*</code>, <code>.col-sm-*</code>, <code>.col-md-*</code>, <code>.col-lg-*</code> and <code>.col-xl-*</code> classes. The columns are actual content area where we will place our contents. Let's put all these things into real action. Let's see how it actually works:</p>
+				<h2>Creating Two Column Layouts</h2>
+				<p>The following example will show you how to create two column layouts for medium, large and extra large devices like tables, laptops and desktops etc. However, on mobile phones (screen width less than 768px), the columns will automatically become horizontal.</p>
+				<!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab8682.html?topic=bootstrap&amp;file=two-column-grid-layouts-for-tablets-and-desktops" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;!--Row with two equal columns--&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-6"&gt;Column left&lt;/div&gt;
+        &lt;div class="col-md-6"&gt;Column right&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!--Row with two columns divided in 1:2 ratio--&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-4"&gt;Column left&lt;/div&gt;
+        &lt;div class="col-md-8"&gt;Column right&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!--Row with two columns divided in 1:3 ratio--&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-3"&gt;Column left&lt;/div&gt;
+        &lt;div class="col-md-9"&gt;Column right&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<!--Note box-->
+				<div class="color-box">
+                    <div class="shadow">
+                        <div class="info-tab note-icon" title="Important Notes"><i></i></div>
+                        <div class="note-box">
+                            <p><strong>Note:</strong> In a grid layout, content must be placed inside columns (<code>.col</code> and <code>.col-*</code>) and only columns may be the immediate children of rows (<code>.row</code>). Rows should be placed inside a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper padding and alignment.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End:Note box-->	
+                <!--Tip Box-->
+                <div class="color-box break">
+                    <div class="shadow">
+                        <div class="info-tab tip-icon" title="Useful Tips"><i></i></div>
+                        <div class="tip-box">
+                            <p><strong>Tip:</strong> Grid column widths are set in percentages, so they're always fluid and sized relative to their parent element. In addition, each column has horizontal padding (called a gutter) for controlling the space between individual columns.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End:Tip Box-->
+				<p class="space">Since the Bootstrap grid system is based on 12 columns, therefore to keep the columns in a one line (i.e. side by side), the sum of the grid column numbers within a single row should not be greater than 12. If you go through the above example code carefully you will find the numbers of grid columns (i.e. <code>col-md-*</code>) add up to twelve (6+6, 4+8 and 3+9) for every row.</p>
+				<h2>Creating Three Column Layouts</h2>
+				<p>Similarly, you can create other layouts based on the above principle. For instance, the following example will typically create three column layouts for laptops and desktops screens. It also works in tablets in landscape mode if screen resolution is more than or equal to 992 pixels (e.g. Apple iPad). However, in portrait mode the grid columns will be horizontal as usual.</p>
+				<!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab3e69.html?topic=bootstrap&amp;file=three-column-grid-layouts-for-tablets-in-landscape-mode-and-desktops" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;!--Row with three equal columns--&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-lg-4"&gt;Column left&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;Column middle&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;Column right&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!--Row with three columns divided in 1:4:1 ratio--&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-lg-2"&gt;Column left&lt;/div&gt;
+        &lt;div class="col-lg-8"&gt;Column middle&lt;/div&gt;
+        &lt;div class="col-lg-2"&gt;Column right&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!--Row with three columns divided unevenly--&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-lg-3"&gt;Column left&lt;/div&gt;
+        &lt;div class="col-lg-7"&gt;Column middle&lt;/div&gt;
+        &lt;div class="col-lg-2"&gt;Column right&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<!--Note box-->
+				<div class="color-box space">
+					<div class="shadow">
+						<div class="info-tab note-icon" title="Important Notes"><i></i></div>
+						<div class="note-box">
+							<p><strong>Note:</strong> If more than 12 grid columns are placed within a single row, then each group of extra columns, as a whole, will wrap onto a new line. See <a href="#column-wrapping">column wrapping behavior</a>.</p>
+						</div>
+					</div>
+				</div>
+                <!--End:Note box-->
+                <hr />
+                <h2>Bootstrap Auto-layout Columns</h2>
+                <p>You can also create <em>equal width columns</em> for all devices (extra small, small, medium, large, and extra large) through simply using the class <code>.col</code>, without specifying any column number.</p>
+                <p>Let's try out the following example to understand how it exactly works:</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab01b5.html?topic=bootstrap&amp;file=auto-layout-columns" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;!--Row with two equal columns--&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;Column one&lt;/div&gt;
+        &lt;div class="col"&gt;Column two&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!--Row with three equal columns--&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;Column one&lt;/div&gt;
+        &lt;div class="col"&gt;Column two&lt;/div&gt;
+        &lt;div class="col"&gt;Column three&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>Additionally, you can also set the width of one column and let the sibling columns automatically resize around it equally. You may use the predefined grid classes or inline widths.</p>
+                <p>If you try the following example you'll find columns in a row with class <code>.col</code> has equal width.</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab9128.html?topic=bootstrap&amp;file=auto-resize-columns" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;!--Row with two equal columns--&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;Column one&lt;/div&gt;
+        &lt;div class="col"&gt;Column two&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!--Row with three columns divided in 1:2:1 ratio--&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;Column one&lt;/div&gt;
+        &lt;div class="col-sm-6"&gt;Column two&lt;/div&gt;
+        &lt;div class="col"&gt;Column three&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <hr />
+				<h2 id="column-wrapping">Column Wrapping Behavior</h2>
+				<p>Now we are going to create more flexible layouts that changes the column orientation based on the viewport size. The following example will create a three column layout on large devices like laptops and desktops, as well as on tablets (e.g. Apple iPad) in landscape mode, but on medium devices like tablets in portrait mode (768px &le; screen width &lt; 992px), it will change into a two column layout where the third column moves at the bottom of the first two columns.</p>
+				<!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab8065.html?topic=bootstrap&amp;file=column-wrapping" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-4 col-lg-3"&gt;Column one&lt;/div&gt;
+        &lt;div class="col-md-8 col-lg-6"&gt;Column two&lt;/div&gt;
+        &lt;div class="col-md-12 col-lg-3"&gt;Column three&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<p>As you can see in the example above the sum of the medium grid column numbers (i.e. <code>col-md-*</code>) is <code>3&thinsp;+&thinsp;9&thinsp;+&thinsp;12&thinsp;=&thinsp;24&thinsp;&gt;&thinsp;12</code>, therefore the third <a href="../html-reference/html-div-tag.html"><code>&lt;div&gt;</code></a> element with the class <code>.col-md-12</code> that is adding the extra columns beyond the maximum 12 columns in a <code>.row</code>, gets wrapped onto a new line as one contiguous unit on the medium screen size devices.</p>
+				<p>Similarly, you can create even more adaptable layouts for your websites using the Bootstrap's grid column wrapping feature. In the next section, we'll discuss the other aspect of this feature.</p>
+				<hr />
+                <h2>Creating Multi-Column Layouts with Bootstrap</h2>
+                <p>With the new Bootstrap 4 mobile first flexbox grid system you can easily control how your website layout will render on different types of devices that have different screen or viewport sizes like mobile phones, tablets, desktops, etc. Let's consider the following illustration.</p>
+                <div class="grid-system-illustration"><img src="../lib/images/grid-system-illustration.jpg" width="530" height="148" alt="Bootstrap Grid System Illustration" /></div>
+                <p>In the above illustration there are total 12 content boxes in all devices, but its placement varies according to the device screen size, like in mobile device the layout is rendered as one column grid layout which has 1 column and 12 rows placed above one another, whereas in tablet it is rendered as two column grid layout which has 2 columns and 6 rows.</p>
+                <p>Further, in large screen size devices like laptops and desktops it is rendered as three column grid layout which has 3 columns and 4 rows and finally in extra large screen devices like large desktops it is rendered as four column grid layout which has 4 columns and 3 rows.</p>
+                <p>Now the question is how we can create such responsive layouts using this Bootstrap new grid system. Let's start with the primary target device. Suppose our primary target device is laptop or normal desktop. Since our laptop layout has 3 columns and 4 rows i.e. 3x4 grid layout, so the HTML code for making such grid structure would look something like this.</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab754c.html?topic=bootstrap&amp;file=grid-layout-for-large-devices" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 1&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 2&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 3&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 4&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 5&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 6&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 7&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 8&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 9&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 10&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 11&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4"&gt;&lt;p&gt;Box 12&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>If you see the output of the above example in a laptop or desktop which has screen or viewport width greater than or equal to 992px but less than 1200px, you will find the layout has 4 rows where each row has 3 equal columns resulting in 3x4 grid layout.</p>
+                <p>Now it's time to customize our layout for other devices. Let's first start by customizing it for tablet device. Since inside the tablet our layout rendered as 2x6 grids (i.e. 2 columns and 6 rows). So, go ahead and add the class <code>.col-md-6</code> on every column.</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab9534.html?topic=bootstrap&amp;file=grid-layout-for-large-and-medium-devices" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 1&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 2&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 3&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 4&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 5&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 6&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 7&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 8&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 9&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 10&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 11&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6"&gt;&lt;p&gt;Box 12&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->                
+				<!--Tip Box-->
+				<div class="color-box break">
+					<div class="shadow">
+						<div class="info-tab tip-icon" title="Useful Tips"><i></i></div>
+						<div class="tip-box">
+							<p><strong>Tip:</strong> For convenience choose your primary target device and create layout for that device first after that add classes to make it responsive for other devices.</p>
+						</div>
+					</div>
+				</div>
+				<!--End:Tip Box-->
+                <p>Similarly, you can customize the layout for extra large devices like a large desktop screen by adding the class <code>.col-xl-3</code> on each column, as every row in our extra large device layout contains 4 columns. Here's the final code after combining the whole process.</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab0a2f.html?topic=bootstrap&amp;file=grid-layout-for-all-devices" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 1&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 2&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 3&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 4&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 5&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 6&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 7&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 8&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 9&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 10&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 11&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="col-lg-4 col-md-6 col-xl-3"&gt;&lt;p&gt;Box 12&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->    
+                <!--Tip Box-->
+				<div class="color-box break">
+					<div class="shadow">
+						<div class="info-tab tip-icon" title="Useful Tips"><i></i></div>
+						<div class="tip-box">
+							<p><strong>Tip:</strong> According to the above illustration there is no need to customize the layout for mobile phones; since columns on extra small devices will automatically become horizontal and rendered as 1x12 column grid layout in absence of <code>.col-*</code> or <code>.col-sm-*</code> classes.</p>
+						</div>
+					</div>
+				</div>
+				<!--End:Tip Box-->
+				<hr />
+				<h2>Nesting of Grid Columns</h2>
+				<p>The Bootstrap grid columns are also nestable, that means you can put rows and columns inside an existing column. However, the formula for placing the columns will be the same, i.e. the sum of column numbers should be equal to 12 or less within a single row.</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelabe305.html?topic=bootstrap&amp;file=nested-columns" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-sm-8"&gt;Column left&lt;/div&gt;
+        &lt;div class="col-sm-4"&gt;
+            &lt;!--Column right with nested rows and columns--&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-12"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-6"&gt;&lt;/div&gt;
+                &lt;div class="col-6"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<hr />
+                <h2>Creating Variable Width Columns</h2>
+                <p>You can use the <code>col-{breakpoint}-auto</code> classes to size columns based on the natural width of their content. Try out the following example to see how it works:</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelabeb24.html?topic=bootstrap&amp;file=size-columns-based-on-the-width-of-their-content" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row justify-content-md-center"&gt;
+        &lt;div class="col-md-3"&gt;Column left&lt;/div&gt;
+        &lt;div class="col-md-auto"&gt;Variable width column&lt;/div&gt;
+        &lt;div class="col-md-3"&gt;Column right&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;Column left&lt;/div&gt;
+        &lt;div class="col-auto"&gt;Variable width column&lt;/div&gt;
+        &lt;div class="col"&gt;Column right&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->                
+				<hr />
+                <h2>Alignment of Grid Columns</h2>
+                <p>You can use the flexbox alignment utilities to vertically and horizontally align grid columns inside a container. Try out the following examples to understand how it works:</p>
+                <h3>Vertical Alignment of Grid Columns</h3>
+                <p>You can use the classes <code>.align-items-start</code>, <code>.align-items-center</code>, and <code>.align-items-end</code> to align the grid columns vertically at the top, middle and bottom of a container, respectively.</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelaba5b0.html?topic=bootstrap&amp;file=vertical-alignment-of-columns" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row align-items-start"&gt;
+        &lt;div class="col"&gt;Column one&lt;/div&gt;
+        &lt;div class="col"&gt;Column two&lt;/div&gt;
+        &lt;div class="col"&gt;Column three&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row align-items-center"&gt;
+        &lt;div class="col"&gt;Column one&lt;/div&gt;
+        &lt;div class="col"&gt;Column two&lt;/div&gt;
+        &lt;div class="col"&gt;Column three&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row align-items-end"&gt;
+        &lt;div class="col"&gt;Column one&lt;/div&gt;
+        &lt;div class="col"&gt;Column two&lt;/div&gt;
+        &lt;div class="col"&gt;Column three&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>Individual columns inside a row can also be aligned vertically. Here's an example:</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab0c05.html?topic=bootstrap&amp;file=vertical-alignment-of-individual-columns" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col align-self-start"&gt;Column one&lt;/div&gt;
+        &lt;div class="col align-self-center"&gt;Column two&lt;/div&gt;
+        &lt;div class="col align-self-end"&gt;Column three&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <!--Note box-->
+				<div class="color-box space">
+                    <div class="shadow">
+                        <div class="info-tab note-icon" title="Important Notes"><i></i></div>
+                        <div class="note-box">
+                            <p><strong>Note:</strong> You can skip the number in <code>.col-*</code> grid class and just use the <code>.col</code> class to create equal size columns for all devices (extra small, small, medium, large, and extra large).</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End:Note box-->
+                <h3>Horizontal Alignment of Grid Columns</h3>
+                <p>You can use the classes <code>.justify-content-start</code>, <code>.justify-content-center</code>, and <code>.justify-content-end</code> to align the grid columns horizontally at the left, center and right of a container, respectively. Let's check out the following example to see how it works:</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelabd8e1.html?topic=bootstrap&amp;file=horizontal-alignment-of-columns" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row justify-content-start"&gt;
+        &lt;div class="col-4"&gt;Column one&lt;/div&gt;
+        &lt;div class="col-4"&gt;Column two&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row justify-content-center"&gt;
+        &lt;div class="col-4"&gt;Column one&lt;/div&gt;
+        &lt;div class="col-4"&gt;Column two&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row justify-content-end"&gt;
+        &lt;div class="col-4"&gt;Column one&lt;/div&gt;
+        &lt;div class="col-4"&gt;Column two&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>Alternatively, you can use the class <code>.justify-content-around</code> to distribute grid columns evenly with half-size spaces on either end, whereas you can use the class <code>.justify-content-between</code> to distribute the grid columns evenly where the first column placed at the start and the last column placed at the end. Try out the following example to see how it actually works:</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelaba011.html?topic=bootstrap&amp;file=justify-columns" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row justify-content-around"&gt;
+        &lt;div class="col-4"&gt;Column one&lt;/div&gt;
+        &lt;div class="col-4"&gt;Column two&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row justify-content-between"&gt;
+        &lt;div class="col-4"&gt;Column one&lt;/div&gt;
+        &lt;div class="col-4"&gt;Column two&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>Please check out the tutoiral on <a href="../css-tutorial/css3-flexible-box-layouts.html">css3 flexbox</a> to learn more about flex items alignment.</p>
+                <hr />
+                <h2>Reordering of Grid Columns</h2>
+                <p>You can even change the visual order of your grid columns without changing their order in actual markup. Use the class <code>.order-last</code> to order the column in last, whereas use the class <code>.order-first</code> to order the column at first place. Let's checkout an example:</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelabb53d.html?topic=bootstrap&amp;file=reordering-columns" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col order-last"&gt;First, but ordered at last&lt;/div&gt;
+        &lt;div class="col"&gt;Second, but unordered&lt;/div&gt;
+        &lt;div class="col order-first"&gt;Last, but ordered at first&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>You can also use the <code>.order-*</code> classes to order the grid columns depending on the order numbers. Grid column with higher order number comes after the grid column with lower order number or grid column with no order classes. It includes support for 1 through 12 across all five grid tiers.</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelaba54d.html?topic=bootstrap&amp;file=order-columns-using-order-number" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col order-4"&gt;First, but ordered at last&lt;/div&gt;
+        &lt;div class="col"&gt;Second, but ordered at first&lt;/div&gt;
+        &lt;div class="col order-1"&gt;Last, but ordered at second&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<hr />
+				<h2>Offsetting the Grid Columns</h2>
+				<p>You can also move grid columns to the right for alignment purpose using the column offset classes like <code>.offset-sm-*</code>, <code>.offset-md-*</code>, <code>.offset-lg-*</code>, and so on.</p>
+				<p>These classes offset the columns by simply increasing its left margin by specified number of columns. For example, the class <code>.offset-md-4</code> on column <code>.col-md-8</code> moves it to the right over four columns from its original position. Try out the following example to see how it works:</p>
+				<!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelabb064.html?topic=bootstrap&amp;file=column-offset" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-sm-4"&gt;&lt;/div&gt;
+        &lt;div class="col-sm-8"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;        
+        &lt;div class="col-sm-8 col-sm-offset-4"&gt;&lt;!--Column with 4 columns offset--&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->  
+                <p>You can also offset columns using the margin utility classes. These classes are useful in the situations where the width of the offset is not fixed. Here's an example:</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelabb36c.html?topic=bootstrap&amp;file=offset-columns-using-margin" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-4"&gt;&lt;/div&gt;
+        &lt;div class="col-md-4 ml-auto"&gt;&lt;!--Offset this column to right--&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-auto mr-auto"&gt;&lt;/div&gt;
+        &lt;div class="col-auto"&gt;&lt;!--Move this column away from previous column--&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <!--Note box-->
+				<div class="color-box space">
+                    <div class="shadow">
+                        <div class="info-tab note-icon" title="Important Notes"><i></i></div>
+                        <div class="note-box">
+                            <p><strong>Note:</strong> You can use the class <code>.col-auto</code> to create columns that only take up as much space as needed, i.e. the column sizes itself based on the contents.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End:Note box-->
+                <hr />
+                <h2>Creating Compact Columns</h2>
+                <p>You can remove the default gutters between columns to create compact layouts by adding the class <code>.no-gutters</code> on <code>.row</code>. This class removes the negative margins from row and the horizontal padding from all immediate children columns. Here's an example:</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab7ec9.html?topic=bootstrap&amp;file=compact-columns" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="row no-gutters"&gt;
+    &lt;div class="col-4"&gt;Column one&lt;/div&gt;
+    &lt;div class="col-4"&gt;Column two&lt;/div&gt;
+    &lt;div class="col-4"&gt;Column three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<hr />
+                <h2>Breaking Columns to a New Line</h2>
+                <p>You can also create equal-width columns that span multiple rows by inserting a <code>&lt;div&gt;</code> with <code>.w-100</code> class where you want the columns to break to a new line. Additionally, you can make these breaks responsive by combining the <code>.w-100</code> class with <a href="#">responsive display utility classes</a>.</p>
+                <!--Code box-->
+                <div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="../codelab5ba6.html?topic=bootstrap&amp;file=break-columns-to-a-new-line" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>&raquo;</span></a></div>
+                        <pre class="syntax-highlighter line-numbers"><code class="language-markup">&lt;div class="container"&gt;
+    &lt;!-- Break columns on all devices --&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;.col&lt;/div&gt;
+        &lt;div class="col"&gt;.col&lt;/div&gt;
+        &lt;div class="w-100"&gt;&lt;/div&gt;
+        &lt;div class="col"&gt;.col&lt;/div&gt;
+        &lt;div class="col"&gt;.col&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Break columns on all devices except extra large devices --&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;.col&lt;/div&gt;
+        &lt;div class="col"&gt;.col&lt;/div&gt;
+        &lt;div class="w-100 d-xl-none"&gt;&lt;/div&gt;
+        &lt;div class="col"&gt;.col&lt;/div&gt;
+        &lt;div class="col"&gt;.col&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>We hope you've understood the basics of new Bootstrap 4 grid system. In next few chapters you'll learn how to create basic web page layouts using this flexbox grid system.</p>
+                <!--Bottom Navigation-->
+                <div class="bottom-link clearfix">
+                    <a href="bootstrap-get-started.html" class="previous-page-bottom">Previous Page</a>
+                    <a href="bootstrap-fixed-layout.html" class="next-page-bottom">Next Page</a>
+                </div>
+                <!--End:Bottom Navigation-->
+                <!-- InstanceEndEditable -->
+                <!--Bottom Ads-->
+                <div class="bottom-ad clearfix">
+                    <div class="ad-label">Advertisements</div>
+
+<!--Rectangle Left-->
+<div class="rectangle-left fl">
+    
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Large Rectangle Left -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="8162953958"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<!--End:Rectangle Left-->
+
+
+<!--Rectangle Right-->
+<div class="rectangle-right fr">
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Large Rectangle Right -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="3324015654"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<!--End:Rectangle Right-->                </div>
+                <!--End:Bottom Ads-->
+            </div>
+            <!--End:Text Content-->
+            <!--Feedback Form-->
+			<div class="snippets">
+	<a href="../snippets/gallery.html" target="_blank">
+    	<img src="../lib/images/bootstrap-code-snippets.png" alt="Bootstrap UI Design Templates" />
+	</a>
+</div>
+
+<div class="report-error" id="feedback">
+    <div class="contact-form clearfix">
+        <div class="close"><span class="icon-close"></span></div>
+        <form id="feedback-form">
+            <h3>Your Feedback:</h3>
+            <div class="clearfix">
+                <div class="name fl"><label>Your Name (optional) <input type="text" name="user-name" id="user-name" /></label></div>
+                <div class="email fr"><label>Your E-mail (optional) <input type="text" name="user-email" id="user-email" /></label></div>
+            </div>
+            <div><label>Page address <input type="text" name="page-url" id="page-url" class="disabled" disabled="disabled" /></label></div>
+            <div><label>Description <textarea name="description" id="description" rows="6"></textarea></label></div>
+            <p id="feedback-error">We would love to hear from you, please drop us a line.</p>
+            <div><button type="button" class="action-btn" onclick="sendFeedback()"><span class="icon-send"></span> Send</button></div>
+        </form>
+        <div id="response"></div>
+    </div>           
+</div>            <!--End:Feedback Form-->
+        </div>        
+        <div class="sidebar">
+            <div class="ad-label">Advertisements</div>
+
+<div class="skyscraper primary">
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Premium Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4376141825"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+<div class="skyscraper">
+    
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Bottom Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="3387984471"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>        </div>
+    </div>
+    <!--Footer-->
+	<!--Footer-->
+<div class="footer">
+    <div class="appeal">
+        <div class="wrapper">
+            <p>Is this website helpful to you? Please give us a
+            <a href="../like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">like</a>,
+            or share your <a href="#feedback" class="feedback">feedback</a><em> to help us improve</em>.
+            Connect with us on <a href="https://www.facebook.com/tutorialrepublic" target="_blank">Facebook</a> and <a href="https://twitter.com/tutrepublic" target="_blank">Twitter</a> for the latest updates.</p>               
+        </div>
+    </div>
+    <div class="footer-inner">
+        <div class="wrapper clearfix">                
+            <div class="link-box">
+                <h4>About Us</h4>
+                <div class="clearfix">
+                    <a href="../about-us.html">Our Story</a>                    
+                    <a href="../terms-of-use.html">Terms of Use</a>
+                    <a href="../privacy-policy.html">Privacy Policy</a>                    
+                </div>
+            </div>
+            <div class="link-box">
+                <h4>Contact</h4>
+                <div class="clearfix">
+                    <a href="../contact-us.html">Contact Us</a>                    
+                    <a href="#feedback" class="feedback">Report Error</a>
+                    <a href="../advertise-with-us.html">Advertise</a>                    
+                </div>
+            </div>
+            <div class="tool-box">
+                <h4>Interactive Tools</h4>
+                <div class="tools-list clearfix" id="tools">
+                    <a href="../faq/what-is-the-maximum-length-of-title-and-meta-description-tag.html">Title &amp; Meta Length Calculator</a>                           
+                    <a href="../html-formatter.html" target="_blank">HTML Formatter</a>                        
+                    <a href="../twitter-bootstrap-button-generator.html" target="_blank">Bootstrap Button Generator</a>
+                    <a href="../html-reference/html-color-picker.html">HTML Color Picker</a>
+                    <a href="../codelab1284.html?topic=sql&amp;file=select-all" target="_blank">SQL Playground</a>
+                    <a href="../codelab07f7.html?topic=html&amp;file=hello-world" target="_blank">HTML Editor</a>                    
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="../lib/images/logo.svg" alt="TutorialRepublic" />
+            </div>
+        </div>
+    </div>           
+        <div class="bottom-strip">
+        <div class="wrapper">
+            <div class="notice">Copyright &copy; 2019 Tutorial Republic. All Rights Reserved.</div>
+            <div class="social-media">
+                <em>Share This:</em>
+                <a href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-grid-system.php" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" title="Facebook"><i class="icon-facebook"></i></a>
+                <a href="#" id="tweet-btn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" title="Twitter"><i class="icon-twitter"></i></a>
+                <a href="#" id="email-btn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" rel="noreferrer" title="Gmail"><i class="icon-mail"></i></a>
+            </div>
+        </div>            
+    </div>
+    <script>
+        var title = document.title.replace('- Tutorial Republic', '');
+        document.getElementById('tweet-btn').href = 'https://twitter.com/share?text=' + title + '- &url=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-grid-system.php';
+        document.getElementById('email-btn').href = 'https://mail.google.com/mail/?view=cm&fs=1&su=' + title + '&body=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-grid-system.php';
+    </script>
+</div>
+<!--End:Footer-->
+    
+<div class="backdrop mobile-only"></div>
+
+<!-- TutorialRepublic base script -->
+<script>
+// Adding CSS files
+[
+	'/lib/styles/extended.new-3.7.css',
+	'../lib/icomoon/style.css'
+].forEach(function(href) {
+	var link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.href = href;
+	(document.getElementsByTagName('head')[0]).appendChild(link);
+});
+
+// Adding JS files
+[
+	'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+	'../lib/js/prism.js',
+	'../lib/js/default.new-2.9.min.js'
+].forEach(function(src) {
+	var script = document.createElement('script');
+	script.async = false; // important
+	script.src = src;
+	(document.getElementsByTagName('body')[0]).appendChild(script);
+});
+</script>
+
+
+    <!--End:Footer-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-grid-system.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:19:31 GMT -->
+</html>

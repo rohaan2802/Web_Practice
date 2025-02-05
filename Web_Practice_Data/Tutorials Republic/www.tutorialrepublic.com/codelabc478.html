@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=beautiful-navbar-with-menu-icons by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:32:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Live Demo: Beautiful Bootstrap Navbar with Menu Icons</title>
+	<meta name="description" content="Try and test HTML code online in a simple and easy way using our free HTML editor and see the results in real-time." />
+			    <meta charset="UTF-8" />
+	<meta property="og:title" content="Beautiful Bootstrap Navbar with Menu Icons" />
+    <meta property="og:description" content="View the live example as well as try and test it using the online HTML editor." />
+	<meta property="fb:admins" content="100001054961582" />
+	<meta property="fb:app_id" content="1404574483159557" />
+	<meta property="og:image" content="lib/images/signature.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+	<link rel="stylesheet" href="lib/bin/css/codemirror.css" />
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+	<link rel="stylesheet" href="lib/bin/css/html-mode-2.3.css" />
+	<script src="../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bin/js/codemirror.js"></script>
+	<script type="text/javascript" src="lib/bin/js/html-mode-1.1.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/xml.js"></script>    
+	<script type="text/javascript" src="lib/bin/mode/javascript.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/css.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/htmlmixed.js"></script>
+	<script type="text/javascript" src="lib/bin/js/active-line.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        	updatePreview();
+    	});    
+	</script>
+	<style type="text/css">
+		.CodeMirror{font-size: 15px;line-height: normal;font-family: consolas,monospace;background: url("lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;}
+		.CodeMirror-activeline-background {background: #e8f2ff !important;}
+		.CodeMirror-scroll{overflow:auto;}
+	</style>
+	<!--Google Analytics-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script>	<!--End:Google Analytics-->
+</head>
+<body>
+
+    <form name="myForm" id="myForm" class="codelab">
+        <div class="header-wrapper">
+            <div class="header clearfix">				
+                <div class="logo">
+					<img src="lib/images/codelab-logo.svg" alt="CodeLab" />
+				</div>
+                <div class="control-bar">
+                    <div class="buttons">
+                        <a onClick="updatePreview();" class="show-output">Show Output</a>
+                        <a onClick="newWindow();" class="new-window" title="Show Output in Blank Tab"><span class="icon-new-window"></span></a>
+                        <a onClick="downloadCode();" class="download-code" title="Download Source Code"><span class="icon-download"></span></a>
+						<a onClick="toggleView();" class="toggle-view" title="Change Editor Layout"><span class="icon-screen-rotation"></span></a>
+                    </div>                            
+                </div>
+                <div class="top-ad-box">
+                    <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Responsive Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:block;width:100%;height:90px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4302666817"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>                                        
+                </div>                
+            </div>
+        </div>
+        <div class="frame-box hr">
+            <div class="pane-wrapper">
+                <div class="pane" id="code-pane">
+                    <div class="outer-area">
+                        <span class="show-preview-pane">&nbsp;</span>
+                        <div class="inner-area">
+                            <input type="hidden" id="current-code" name="current-code" />
+                            <textarea id="code" name="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Beautiful Bootstrap Navbar with Menu Icons&lt;/title&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Roboto|Varela+Round&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+	body{
+		background: #eeeeee;
+		font-family: 'Varela Round', sans-serif;
+	}
+    .form-inline {
+        display: inline-block;
+    }
+	.navbar-header.col {
+		padding: 0 !important;
+	}	
+	.navbar {
+		color: #fff;
+		background: #926dde;
+		padding: 5px 16px;
+		border-radius: 0;
+		border: none;
+		box-shadow: 0 0 4px rgba(0,0,0,.1);
+	}
+	.navbar img {
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		margin-right: 10px;
+	}
+	.navbar .navbar-brand {
+		color: #efe5ff;
+		padding-left: 0;
+		padding-right: 50px;
+		font-size: 24px;		
+	}
+	.navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+		color: #fff;
+	}
+	.navbar .navbar-brand i {
+		font-size: 25px;
+		margin-right: 5px;
+	}
+	.search-box {
+        position: relative;
+    }	
+    .search-box input {
+        padding-right: 35px;
+		min-height: 38px;
+		border: none;
+		background: #faf7fd;
+        border-radius: 3px !important;
+    }
+	.search-box input:focus {		
+		background: #fff;
+		box-shadow: none;
+	}
+	.search-box .input-group-addon {
+        min-width: 35px;
+        border: none;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+        padding: 10px 7px;
+		height: 100%;
+    }
+    .search-box i {
+        color: #a0a5b1;
+		font-size: 19px;
+    }
+	.navbar .nav-item i {
+		font-size: 18px;
+	}
+	.navbar .nav-item span {
+		position: relative;
+		top: 3px;
+	}
+	.navbar .nav &gt; li a {
+		color: #efe5ff;
+		padding: 8px 15px;
+		font-size: 14px;		
+	}
+	.navbar .nav &gt; li a:hover, .navbar .nav &gt; li a:focus {
+		color: #fff;
+		text-shadow: 0 0 4px rgba(255,255,255,0.3);
+	}
+	.navbar .nav &gt; li &gt; a &gt; i {
+		display: block;
+		text-align: center;
+	}
+	.navbar .dropdown-item i {
+		font-size: 16px;
+		min-width: 22px;
+	}
+    .navbar .dropdown-item .material-icons {
+        font-size: 21px;
+        line-height: 16px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+	.navbar .nav-item.open &gt; a, .navbar .nav-item.open &gt; a:hover, .navbar .nav-item.open &gt; a:focus {
+		color: #fff;
+		background: none !important;
+	}
+	.navbar .dropdown-menu {
+		border-radius: 1px;
+		border-color: #e5e5e5;
+		box-shadow: 0 2px 8px rgba(0,0,0,.05);
+	}
+	.navbar .dropdown-menu li a {
+		color: #777 !important;
+		padding: 8px 20px;
+		line-height: normal;
+	}
+	.navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:focus {
+		color: #333 !important;
+		background: transparent !important;
+	}
+	.navbar .nav .active a, .navbar .nav .active a:hover, .navbar .nav .active a:focus {
+		color: #fff;
+		text-shadow: 0 0 4px rgba(255,255,255,0.2);
+		background: transparent !important;
+	}
+	.navbar .nav .user-action {
+		padding: 9px 15px;
+	}
+	.navbar .navbar-toggle {
+		border-color: #fff;
+	}
+	.navbar .navbar-toggle .icon-bar {
+		background: #fff;
+	}
+	.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
+		background: transparent;
+	}
+	.navbar .navbar-nav .open .dropdown-menu {
+		background: #faf7fd;
+		border-radius: 1px;
+		border-color: #faf7fd;
+		box-shadow: 0 2px 8px rgba(0,0,0,.05);
+	}
+	.navbar .divider {
+		background-color: #e9ecef !important;
+	}
+	@media (min-width: 1200px){
+		.form-inline .input-group {
+			width: 350px;
+			margin-left: 30px;
+		}
+	}
+	@media (max-width: 1199px){
+		.navbar .nav &gt; li &gt; a &gt; i {
+			display: inline-block;			
+			text-align: left;
+			min-width: 30px;
+			position: relative;
+			top: 4px;
+		}
+		.navbar .navbar-collapse {
+			border: none;
+			box-shadow: none;
+			padding: 0;
+		}
+		.navbar .navbar-form {
+			border: none;			
+			display: block;
+			margin: 10px 0;
+			padding: 0;
+		}
+		.navbar .navbar-nav {
+			margin: 8px 0;
+		}
+		.navbar .navbar-toggle {
+			margin-right: 0;
+		}
+		.input-group {
+			width: 100%;
+		}
+	}
+&lt;/style&gt;
+&lt;/head&gt; 
+&lt;body&gt;
+&lt;nav class=&quot;navbar navbar-inverse navbar-expand-xl navbar-dark&quot;&gt;
+	&lt;div class=&quot;navbar-header d-flex col&quot;&gt;
+		&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-cube&quot;&gt;&lt;/i&gt;Brand&lt;b&gt;Name&lt;/b&gt;&lt;/a&gt;  		
+		&lt;button type=&quot;button&quot; data-target=&quot;#navbarCollapse&quot; data-toggle=&quot;collapse&quot; class=&quot;navbar-toggle navbar-toggler ml-auto&quot;&gt;
+			&lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+		&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;!-- Collection of nav links, forms, and other content for toggling --&gt;
+	&lt;div id=&quot;navbarCollapse&quot; class=&quot;collapse navbar-collapse justify-content-start&quot;&gt;		
+		&lt;form class=&quot;navbar-form form-inline&quot;&gt;
+			&lt;div class=&quot;input-group search-box&quot;&gt;								
+				&lt;input type=&quot;text&quot; id=&quot;search&quot; class=&quot;form-control&quot; placeholder=&quot;Search here...&quot;&gt;
+				&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE8B6;&lt;/i&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+		&lt;ul class=&quot;nav navbar-nav navbar-right ml-auto&quot;&gt;
+			&lt;li class=&quot;nav-item active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-gears&quot;&gt;&lt;/i&gt;&lt;span&gt;Projects&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt;&lt;span&gt;Team&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-pie-chart&quot;&gt;&lt;/i&gt;&lt;span&gt;Reports&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-briefcase&quot;&gt;&lt;/i&gt;&lt;span&gt;Careers&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;span&gt;Messages&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;		
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-bell&quot;&gt;&lt;/i&gt;&lt;span&gt;Notifications&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item dropdown&quot;&gt;
+				&lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; class=&quot;nav-link dropdown-toggle user-action&quot;&gt;&lt;img src=&quot;https://www.tutorialrepublic.com/examples/images/avatar/3.jpg&quot; class=&quot;avatar&quot; alt=&quot;Avatar&quot;&gt; Antonio Moreno &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+				&lt;ul class=&quot;dropdown-menu&quot;&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;&lt;i class=&quot;fa fa-user-o&quot;&gt;&lt;/i&gt; Profile&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;&lt;i class=&quot;fa fa-calendar-o&quot;&gt;&lt;/i&gt; Calendar&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;&lt;i class=&quot;fa fa-sliders&quot;&gt;&lt;/i&gt; Settings&lt;/a&gt;&lt;/li&gt;
+					&lt;li class=&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE8AC;&lt;/i&gt; Logout&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/nav&gt;
+&lt;/body&gt;
+&lt;/html&gt;                                                        </textarea>	
+                            <script>
+                                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                    mode: "text/html",
+                                    tabMode: "indent",
+                                    styleActiveLine: true,
+                                    lineNumbers: true,
+                                    lineWrapping: true
+                                });
+                            </script>									
+                        </div>
+                    </div>
+                </div>
+                <div class="pane" id="preview-pane">
+                    <div class="outer-wrapper">
+                        <span class="hide-preview-pane">&nbsp;</span>
+                        <div class="output-area">
+                            <iframe id="preview" name="preview"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="codelab-footer clearfix">		
+            <a href="codelab1284.html?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+            <label class="auto-update"><input type="checkbox" id="check" /> Auto update</label>
+            <script>
+                var delay;
+                var checkbox = document.getElementById("check");
+                editor.on("change", function(){
+					editor.refresh();
+                    if(checkbox.checked==true){            
+                        clearTimeout(delay);
+                        delay = setTimeout(updatePreview, 300); // Don't use parenthesis 
+                    }
+                });
+                //setTimeout(updatePreview, 300);
+            </script>
+            <div class="social-widget-wrapper">
+                <!-- Social widget -->
+                                <p class="social-link">Share this example with 
+                    <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Dbeautiful-navbar-with-menu-icons" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
+                    <a id="twitter-share-btn" href="https://twitter.com/share?text=Beautiful+Bootstrap+Navbar+with+Menu+Icons+-+&amp;url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Dbeautiful-navbar-with-menu-icons" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>, 
+                    <a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Dbeautiful-navbar-with-menu-icons" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Google +</a>. Please give us a 
+                    <a id="facebook-like-btn" href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">Like</a>, if you find it helpful.
+                </p>
+                <!-- End:Social widget -->
+            </div>
+        </div>
+    </form>
+        
+    <form id="download-form" action="https://www.tutorialrepublic.com/examples/bin/download.php" method="post" class="hidden-form">
+    	<input type="hidden" id="download-value" name="download-value" />
+    </form>
+    <form id="new-form" action="https://www.tutorialrepublic.com/examples/fullscreen/output.php" method="post" target="_blank" class="hidden-form">
+    	<input type="hidden" id="code-value" name="code-value" />
+    </form>
+
+</body>
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=beautiful-navbar-with-menu-icons by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:32:34 GMT -->
+</html>
+

@@ -1,0 +1,16 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 29 Jul 2019 17:08:03 at https://www.tutorialrepublic.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.tutorialrepublic.com/ -O1 "F:\tutrioal" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:20:40	Warning: 	Link https://www.tutorialrepublic.com/twitter-bootstrap-3-examples.php not scanned (follow robots meta tag)
+17:28:05	Warning: 	File not parsed, looks like binary: https://www.tutorialrepublic.com/lib/images/cursors/custom.cur
+17:32:06	Warning: 	File not parsed, looks like binary: https://www.tutorialrepublic.com/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2
+17:32:07	Warning: 	File not parsed, looks like binary: https://www.tutorialrepublic.com/lib/fonts/glyphicons-halflings-regular.woff2
+17:32:15	Error: 	"Not Found" (404) at link https://www.tutorialrepublic.com/examples/images/' . $image . ' (from https://www.tutorialrepublic.com/codelab.php?topic=php&file=image-gallery)
+
+HTTrack Website Copier/3.49-2 mirror complete in 24 minutes 34 seconds : 5061 links scanned, 5059 files written (86447213 bytes overall) [30896085 bytes received at 20960 bytes/sec], 77329089 bytes transferred using HTTP compression in 4136 files, ratio 25%, 46.1 requests per connection
+(1 errors, 4 warnings, 0 messages)
