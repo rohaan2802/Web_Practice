@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java assign...</title>
+</head>
+<body>
+    <script>
+        let firstdigit
+        let seconddigit
+        let operator
+       let confirmbox = confirm('Do you want calculation ?...');
+        if (confirmbox == true) {
+            firstdigit =parseInt(prompt('Enter first digit...'))
+            seconddigit =parseInt(prompt('Enter second digit...'))
+            operator =prompt('Choose your operator...')
+
+            if(operator == '+'){
+                alert(`total:- ${firstdigit} + ${seconddigit} = ${firstdigit + seconddigit}`)
+            }
+          else if(operator == '-'){
+
+                alert(`total:- ${firstdigit} - ${seconddigit} = ${firstdigit - seconddigit}`)
+          }
+          else if(operator == '%'){
+
+                alert(`total:- ${firstdigit} % ${seconddigit} = ${firstdigit % seconddigit}`)
+          }
+          else if(operator == '/'){
+
+                alert(`total:- ${firstdigit} / ${seconddigit} = ${firstdigit / seconddigit}`)
+          }
+          else if(operator == '*'){
+
+                alert(`total:- ${firstdigit} * ${seconddigit} = ${firstdigit * seconddigit}`)
+          }
+        } else {
+            alert('Thanks for visiting our site...')
+        }
+    </script>
+</body>
+</html>

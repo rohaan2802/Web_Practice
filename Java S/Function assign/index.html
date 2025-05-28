@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Function...</title>
+</head>
+<body>
+    <script>
+        let tableDigit;
+        function table() {
+        //   for (let a =1; a<= 20 ; a++){  
+        //       document.write(`${tableDigit} x ${a} = ${tableDigit * a} <br>`)
+        //   }
+        // let a =1
+        // while (a <= 20) {
+        //     document.write(`${tableDigit} x ${a} = ${tableDigit * a} <br>`);
+        //     a++;
+        let a =1
+        do {
+            document.write(`${tableDigit} x ${a} = ${tableDigit * a} <br>`)
+            a++;
+        } while (a <= 100);
+        }
+       if ( confirm('Do you want to create table ?')) {
+           tableDigit = parseInt(prompt('Enter Table Digit'))
+           table()
+       } else {
+           alert('Thanks for visiting our site...')
+       }
+    </script>
+</body>
+</html>

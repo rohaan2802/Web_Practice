@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a
+        let b
+        let operator
+        confirmbox = confirm('Do you want calculation...?')
+        if (confirmbox == true) {
+            a = parseInt(prompt('Enter first digit...'))
+            b = parseInt(prompt('Enter second digit...'))
+            operator = prompt('Choose your operator...')
+            switch (operator) {
+                case '+':
+                    alert(`total:- ${a} + ${b} = ${a + b}`)
+                    break;
+                case '-':
+                    alert(`total:- ${a} - ${b} = ${a - b}`)
+                    break;
+                case '*':
+                    alert(`total:- ${a} * ${b} = ${a * b}`)
+                    break;
+                case '%':
+                    alert(`total:- ${a} % ${b} = ${a % b}`)
+                    break;
+                case '/':
+                    alert(`total:- ${a} / ${b} = ${a / b}`)
+                    break;
+                default:
+                    alert('It is not valid')
+                    break;
+            }
+        } else {
+            alert('Thanks for visiting our site...')
+        }        
+    </script>
+</body>
+
+</html>

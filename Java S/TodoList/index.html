@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="/js/main.js">
+
+  </script>
+</head>
+
+<body>
+
+  <nav>
+      <h4>ToDo Application</h4>
+  </nav>
+
+ <div class="wrapper">
+
+  <div class="addnewItem">
+    <h4>Let's ADD New Task.. 😎</h4>
+    <form action="">
+      <input type="text" id="newItem" placeholder="Enter New Task..">
+      <select>
+          <option selected disabled>Choose priority</option>
+          <option value="low">Low</option>
+          <option value="high">High</option>
+      </select>
+      <input type="date" id="date">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+    <!-- main section -->
+  <main>
+    <!-- Header -->
+    <input type="text" id="search" placeholder="Search Tasks..">
+    <header>
+      <span><i class="fa fa-arrow-left"></i><span class="sr-only">Back</span></span>
+      <h3 style="margin-top: 0;">Today</h3>
+      <div class="task-indicators">
+        <span>5</span>
+        <span><i class="fa fa-check"></i>12</span>
+      </div>
+    </header> <!-- End Header -->
+
+    <!-- High Priority -->
+    <section class="task-list current">
+      <h1>High Priority</h1>
+      <ul>
+        <li>
+          <div class="checkbox">
+            <div class="check">
+              <input type="checkbox" name="task_00">
+              <div class="ripple-container">
+                <div class="check-off"></div>
+                <div class="check-on"><i class="fa fa-check"></i></div>
+                <div class="check-ripple"></div>
+              </div>
+            </div>
+            <div class="label">
+              <mark>Cool task</mark>
+              <br>
+              <time datetime="05-12-2016">12 March 2016 - h 9:30 am</time>
+            </div>
+          </div>
+          <span class="task-msg">Well done!</span>
+        </li>
+      </ul>
+    </section> <!-- // End High Propity-->
+
+    <!-- Low Priority  -->
+    <section class="task-list notcurrent">
+      <h1>Low Priority</h1>
+      <ul>
+        <li>
+          <div class="checkbox">
+            <div class="check">
+              <input type="checkbox" name="task_03">
+              <div class="ripple-container">
+                <div class="check-off"></div>
+                <div class="check-on"><i class="fa fa-check"></i></div>
+                <div class="check-ripple"></div>
+              </div>
+            </div>
+            <div class="label">
+              <mark>Cool task</mark>
+              <br>
+              <time datetime="05-12-2016">12 March 2016</time>
+            </div>
+          </div>
+          <span class="task-msg">Well done!</span>
+        </li>
+      </ul>
+    </section> <!-- // End Low Priority-->
+
+  </main> <!-- // End Main Section-->
+ </div>
+
+</body>
+
+</html>

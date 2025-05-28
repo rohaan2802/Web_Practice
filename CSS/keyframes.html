@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Key Frame </title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 800px;
+            width: 100%;
+            background-color: aqua;
+        }
+        .box{
+            width: 250px;
+            height: 150px;
+            background-color: chartreuse;
+            box-shadow: 5px 5px 10px #3333;
+            animation: rohaan 3s infinite cubic-bezier(1, 0.22, 0.11, 1.19);
+            position: absolute;
+        }
+        /* @keyframes rohaan{
+            from{
+                width: 250px;
+            }
+            to{
+                width: 850px;
+            }
+        } */
+        @keyframes rohaan{
+            0% {
+              background: orangered;
+              top: 0;
+              left: 0;
+              transform: scale(1);
+          }
+
+          25% {
+              left:0;
+              top: 30%;
+              background: black;
+              transform: scale(0.4);
+          }
+
+          50% {
+              top: 30%;
+              left: 70%;
+              transform: scale(2);
+              background: yellow;
+          }
+
+          75% {
+              left: 70%;
+              transform: scale(1.5);
+              top: 0%;
+              background: indigo;
+              width: 190px;
+          }
+
+          100% {
+              transform: scale(1);
+              top: 0;
+              left: 0;
+              background: lightseagreen;
+              width: 140px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>

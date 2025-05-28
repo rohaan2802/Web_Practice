@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            /* margin-right: 10px; */
+            /* margin: 40px; */
+            border: 3px solid black;
+            /* margin: 10px; */
+            margin-left: 5px;
+            width: 99%;
+            height: 500px;
+            display: flex;
+            /* flex-direction: ; */
+            /* flex-direction: row; */
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: inherit; */
+
+            /* flex-wrap: ; */
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: initial; */
+
+            /* margin: 10px; */
+            
+            /* to combine flex direction and wrap */
+            /* flex-flow: column wrap; */
+
+            /* justify-content:space-evenly; */
+            /* justify-content: space-around; */
+            /* justify-content: space-evenly; */
+            /* justify-content: flex-start; */
+            /* justify-content: stretch; */
+            /* align-items: flex-start; */
+            /* align-items: center; */
+            /* align-items: flex-end; */
+        }
+        #box{
+            background-color: chartreuse;
+            color: black;
+            width: 150px;
+            height: 150px;
+            margin:  10px;
+            padding: 20px;
+            font-size: 25px;
+        }
+        .item11{
+            background-color: lightcoral !important;
+            /* order: 3; */
+            flex-shrink: 2;
+            /* flex-grow: 2; */
+            /* align-self: stretch; */
+        }
+        .item12{
+            /* order: 2; */
+            background-color: aqua !important;
+        }
+        .item13{
+            /* order: 1; */
+            background-color: cornflowerblue !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item11" id="box">Item 1</div>
+        <div class="item12" id="box">Item 2</div>
+        <div class="item13" id="box">Item 3</div>
+        <!-- <div class="item14" id="box">Item 4</div>
+        <div class="item15" id="box">Item 5</div>
+        <div class="item16" id="box">Item 6</div> -->
+    </div>
+</body>
+</html>

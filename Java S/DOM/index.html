@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> DOM - Document Object Model </title>
+
+    <!-- custom StyleSheet  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    
+    <!-- Start Navigation  -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="border-radius: 0;">
+       <div class="container">
+
+            <a class="navbar-brand" href="#" id="heading">Document object Model</a>
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+           
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <input class="form-control mr-sm-2" type="search" id="searchfilter" placeholder="Search Items.." >
+                </ul>
+            </div>
+       </div>
+      </nav> <!-- End Navigation -->
+
+      <main class="container">
+          <div class="card shadow mt-5">
+              <div class="card-header">
+                  <form class="form-inline" id="form">
+                      <input type="text" id="input" placeholder="Enter New One?" class="form-control">
+                      <input type="submit" value="Add New Item" class="btn btn-outline-dark ml-3">
+                  </form>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Recently Added Items</h5>
+                  <p class="card-text">
+                      <ul class="list-group" id="unOrderedList">
+                          <strong class="text-center" id="output"></strong>
+                          <li class="list-group-item">
+                              Item 1
+                              <button class="float-right btn btn-sm btn-danger">X</button>
+                          </li>
+                          <li class="list-group-item">
+                              Item 2
+                              <button class="float-right btn btn-sm btn-danger">X</button>
+                          </li>
+                          <li class="list-group-item">
+                              Item 3
+                              <button class="float-right btn btn-sm btn-danger">X</button>
+                          </li>
+                          <li class="list-group-item">
+                              Item 4
+                              <button class="float-right btn btn-sm btn-danger">X</button>
+                          </li>
+                      </ul>
+                  </p>
+              </div>
+              <div class="card-footer">
+                  &copy; 1990 - 2019 designed & developed by <a href="#">Faisal TariQ</a>
+              </div>
+          </div>
+      </main>
+
+    <!-- JavaScript Goes Here  -->
+    <script src="js/main.js"></script>
+</body>
+</html>

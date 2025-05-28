@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        figure{
+            position: relative;
+            transition: all 0.5s ease-in-out;
+        }
+        figcaption > img {
+             margin-top: 130px;
+            margin-left: 400px; 
+            transition: all 0.5s ease-in-out;
+            opacity: 0.8;
+            
+        }
+        
+        .dot{
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            top: 360px;
+            padding-left: 440px;
+            font-size: 25px;
+        }
+        .das{
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            top: 420px;
+            padding-left: 440px;
+            font-size: 17px;
+            opacity: 0;
+        }
+       
+        .dab{
+            font-weight: bolder;
+        }
+         figure:hover img{
+            opacity: 1;
+        }
+        figure:hover p{
+            transform: translate(-30px,-30px);
+        }
+        figcaption:hover div {
+            opacity: 1;
+            transform: translate(-30px,-30px);
+        }  
+    </style>
+</head>
+<body>
+    <figure>
+        <figcaption>
+            <img src="img/1.jpg" alt="image not found">
+            <p class="dot">  Lorem <span class="dab"> ipsum <div class="das">Lorem ipsum dolor sit amet consectetur Lorem, 
+            </div> </span> </p>
+            
+        </figcaption>
+    </figure>
+</body>
+</html>
