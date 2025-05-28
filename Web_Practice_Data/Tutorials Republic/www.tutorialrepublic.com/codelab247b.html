@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=navbar-with-search-box-in-dropdown by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:32:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Live Demo: Bootstrap Navbar with Search Box in Dropdown</title>
+	<meta name="description" content="Try and test HTML code online in a simple and easy way using our free HTML editor and see the results in real-time." />
+			    <meta charset="UTF-8" />
+	<meta property="og:title" content="Bootstrap Navbar with Search Box in Dropdown" />
+    <meta property="og:description" content="View the live example as well as try and test it using the online HTML editor." />
+	<meta property="fb:admins" content="100001054961582" />
+	<meta property="fb:app_id" content="1404574483159557" />
+	<meta property="og:image" content="lib/images/signature.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+	<link rel="stylesheet" href="lib/bin/css/codemirror.css" />
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+	<link rel="stylesheet" href="lib/bin/css/html-mode-2.3.css" />
+	<script src="../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bin/js/codemirror.js"></script>
+	<script type="text/javascript" src="lib/bin/js/html-mode-1.1.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/xml.js"></script>    
+	<script type="text/javascript" src="lib/bin/mode/javascript.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/css.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/htmlmixed.js"></script>
+	<script type="text/javascript" src="lib/bin/js/active-line.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        	updatePreview();
+    	});    
+	</script>
+	<style type="text/css">
+		.CodeMirror{font-size: 15px;line-height: normal;font-family: consolas,monospace;background: url("lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;}
+		.CodeMirror-activeline-background {background: #e8f2ff !important;}
+		.CodeMirror-scroll{overflow:auto;}
+	</style>
+	<!--Google Analytics-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script>	<!--End:Google Analytics-->
+</head>
+<body>
+
+    <form name="myForm" id="myForm" class="codelab">
+        <div class="header-wrapper">
+            <div class="header clearfix">				
+                <div class="logo">
+					<img src="lib/images/codelab-logo.svg" alt="CodeLab" />
+				</div>
+                <div class="control-bar">
+                    <div class="buttons">
+                        <a onClick="updatePreview();" class="show-output">Show Output</a>
+                        <a onClick="newWindow();" class="new-window" title="Show Output in Blank Tab"><span class="icon-new-window"></span></a>
+                        <a onClick="downloadCode();" class="download-code" title="Download Source Code"><span class="icon-download"></span></a>
+						<a onClick="toggleView();" class="toggle-view" title="Change Editor Layout"><span class="icon-screen-rotation"></span></a>
+                    </div>                            
+                </div>
+                <div class="top-ad-box">
+                    <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Responsive Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:block;width:100%;height:90px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4302666817"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>                                        
+                </div>                
+            </div>
+        </div>
+        <div class="frame-box hr">
+            <div class="pane-wrapper">
+                <div class="pane" id="code-pane">
+                    <div class="outer-area">
+                        <span class="show-preview-pane">&nbsp;</span>
+                        <div class="inner-area">
+                            <input type="hidden" id="current-code" name="current-code" />
+                            <textarea id="code" name="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Bootstrap Navbar with Search Box in Dropdown&lt;/title&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Varela+Round&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+	body{
+		font-family: 'Varela Round', sans-serif;
+	}
+	.form-control {
+		box-shadow: none;
+		border-radius: 4px;
+	}
+	.form-control:focus {
+		border-color: #f08373;
+		box-shadow: 0 0 8px rgba(0,0,0,0.1);
+	}
+	.navbar-header.col {
+		padding: 0 !important;
+	}	
+	.navbar {
+		background: #fff;
+		padding-left: 16px;
+		padding-right: 16px;
+		border-bottom: 1px solid #dfe3e8;
+		border-radius: 0;
+	}
+	.navbar .navbar-brand, .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+		padding-left: 0;
+		font-size: 20px;
+		padding-right: 50px;
+	}
+	.navbar .navbar-brand b {
+		font-weight: bold;
+		color: #eb5844;		
+	}
+	.navbar ul.nav li a {
+		color: #888;
+	}
+	.navbar ul.nav li a:hover, .navbar ul.nav li a:focus {
+		color: #f08373 !important;
+	}
+	.navbar ul.nav li.active &gt; a, .navbar ul.nav li.open &gt; a {
+		color: #eb5844 !important;
+		background: transparent !important;
+	}
+	.search-box {
+		width: 100%;
+        position: relative;
+    }	
+    .search-box input {		
+		border-color: #dfe3e8;        
+		box-shadow: none
+    }
+	.search-box input, .search-box .btn {
+		min-height: 38px;
+		border-radius: 2px;
+	}
+	.search-box .input-group-btn .btn {
+		border-color: #eb5844;
+		background: #eb5844;
+		outline: none;
+	}
+	.navbar .nav-item i {
+		font-size: 18px;
+		line-height: 16px;
+	}
+	.navbar .navbar-right .dropdown-toggle::after {
+		display: none;
+	}
+	.navbar .dropdown-menu {
+		border-radius: 1px;
+		border-color: #e5e5e5;
+		box-shadow: 0 2px 8px rgba(0,0,0,.05);
+	}
+	.navbar .dropdown-menu li a {
+		padding: 6px 20px;
+	}
+	.navbar .navbar-right .dropdown-menu {
+		width: 400px;
+		padding: 20px;
+		left: auto;
+		right: 0;
+        font-size: 14px;
+	}
+	.hide {
+		display: none !important;
+	}
+	@media (max-width: 768px){
+		.navbar .navbar-right .dropdown-menu {
+			width: 100%;
+			background: transparent;
+			padding: 10px 20px;
+		}
+		.navbar .input-group {
+			width: 100%;
+		}
+	}
+&lt;/style&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	$(document).ready(function(){
+		var dropdown = $(&quot;.navbar-right .dropdown&quot;);
+		var toogleBtn = $(&quot;.navbar-right .dropdown-toggle&quot;);
+		
+		// Toggle search and close icon for search dropdown
+		dropdown.on(&quot;show.bs.dropdown&quot;, function(e){
+			toogleBtn.toggleClass(&quot;hide&quot;);
+		});
+		dropdown.on(&quot;hide.bs.dropdown&quot;, function(e){
+			toogleBtn.addClass(&quot;hide&quot;);
+			toogleBtn.first().removeClass(&quot;hide&quot;);
+		});
+	});
+&lt;/script&gt;
+&lt;/head&gt; 
+&lt;body&gt;
+&lt;nav class=&quot;navbar navbar-default navbar-expand-lg navbar-light&quot;&gt;
+	&lt;div class=&quot;navbar-header d-flex col&quot;&gt;
+		&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Brand&lt;b&gt;Name&lt;/b&gt;&lt;/a&gt;  		
+		&lt;button type=&quot;button&quot; data-target=&quot;#navbarCollapse&quot; data-toggle=&quot;collapse&quot; class=&quot;navbar-toggle navbar-toggler ml-auto&quot;&gt;
+			&lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+		&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;!-- Collection of nav links, forms, and other content for toggling --&gt;
+	&lt;div id=&quot;navbarCollapse&quot; class=&quot;collapse navbar-collapse justify-content-start&quot;&gt;
+		&lt;ul class=&quot;nav navbar-nav&quot;&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;About&lt;/a&gt;&lt;/li&gt;			
+			&lt;li class=&quot;nav-item dropdown&quot;&gt;
+				&lt;a data-toggle=&quot;dropdown&quot; class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot;&gt;Services &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+				&lt;ul class=&quot;dropdown-menu&quot;&gt;					
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Web Design&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Web Development&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Graphic Design&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Digital Marketing&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;nav-item active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;		
+		&lt;ul class=&quot;nav navbar-nav navbar-right ml-auto&quot;&gt;			
+			&lt;li class=&quot;nav-item dropdown&quot;&gt;
+				&lt;a data-toggle=&quot;dropdown&quot; class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a data-toggle=&quot;dropdown&quot; class=&quot;nav-link dropdown-toggle hide&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-close&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;ul class=&quot;dropdown-menu&quot;&gt;
+					&lt;li&gt;
+                        &lt;form&gt;
+                            &lt;div class=&quot;input-group search-box&quot;&gt;								
+                                &lt;input type=&quot;text&quot; id=&quot;search&quot; class=&quot;form-control&quot; placeholder=&quot;Search here...&quot;&gt;
+								&lt;span class=&quot;input-group-btn&quot;&gt;
+									&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+								&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;                        
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-google-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;&lt;i class=&quot;fa fa-pinterest-p&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/nav&gt;
+&lt;/body&gt;
+&lt;/html&gt;                                                                                    </textarea>	
+                            <script>
+                                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                    mode: "text/html",
+                                    tabMode: "indent",
+                                    styleActiveLine: true,
+                                    lineNumbers: true,
+                                    lineWrapping: true
+                                });
+                            </script>									
+                        </div>
+                    </div>
+                </div>
+                <div class="pane" id="preview-pane">
+                    <div class="outer-wrapper">
+                        <span class="hide-preview-pane">&nbsp;</span>
+                        <div class="output-area">
+                            <iframe id="preview" name="preview"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="codelab-footer clearfix">		
+            <a href="codelab1284.html?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+            <label class="auto-update"><input type="checkbox" id="check" /> Auto update</label>
+            <script>
+                var delay;
+                var checkbox = document.getElementById("check");
+                editor.on("change", function(){
+					editor.refresh();
+                    if(checkbox.checked==true){            
+                        clearTimeout(delay);
+                        delay = setTimeout(updatePreview, 300); // Don't use parenthesis 
+                    }
+                });
+                //setTimeout(updatePreview, 300);
+            </script>
+            <div class="social-widget-wrapper">
+                <!-- Social widget -->
+                                <p class="social-link">Share this example with 
+                    <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Dnavbar-with-search-box-in-dropdown" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
+                    <a id="twitter-share-btn" href="https://twitter.com/share?text=Bootstrap+Navbar+with+Search+Box+in+Dropdown+-+&amp;url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Dnavbar-with-search-box-in-dropdown" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>, 
+                    <a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Dnavbar-with-search-box-in-dropdown" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Google +</a>. Please give us a 
+                    <a id="facebook-like-btn" href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">Like</a>, if you find it helpful.
+                </p>
+                <!-- End:Social widget -->
+            </div>
+        </div>
+    </form>
+        
+    <form id="download-form" action="https://www.tutorialrepublic.com/examples/bin/download.php" method="post" class="hidden-form">
+    	<input type="hidden" id="download-value" name="download-value" />
+    </form>
+    <form id="new-form" action="https://www.tutorialrepublic.com/examples/fullscreen/output.php" method="post" target="_blank" class="hidden-form">
+    	<input type="hidden" id="code-value" name="code-value" />
+    </form>
+
+</body>
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=navbar-with-search-box-in-dropdown by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:32:34 GMT -->
+</html>
+

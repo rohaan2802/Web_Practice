@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=user-management-data-table by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:31:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Live Demo: Bootstrap User Management Data Table</title>
+	<meta name="description" content="Try and test HTML code online in a simple and easy way using our free HTML editor and see the results in real-time." />
+			    <meta charset="UTF-8" />
+	<meta property="og:title" content="Bootstrap User Management Data Table" />
+    <meta property="og:description" content="View the live example as well as try and test it using the online HTML editor." />
+	<meta property="fb:admins" content="100001054961582" />
+	<meta property="fb:app_id" content="1404574483159557" />
+	<meta property="og:image" content="lib/images/signature.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+	<link rel="stylesheet" href="lib/bin/css/codemirror.css" />
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+	<link rel="stylesheet" href="lib/bin/css/html-mode-2.3.css" />
+	<script src="../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bin/js/codemirror.js"></script>
+	<script type="text/javascript" src="lib/bin/js/html-mode-1.1.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/xml.js"></script>    
+	<script type="text/javascript" src="lib/bin/mode/javascript.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/css.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/htmlmixed.js"></script>
+	<script type="text/javascript" src="lib/bin/js/active-line.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        	updatePreview();
+    	});    
+	</script>
+	<style type="text/css">
+		.CodeMirror{font-size: 15px;line-height: normal;font-family: consolas,monospace;background: url("lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;}
+		.CodeMirror-activeline-background {background: #e8f2ff !important;}
+		.CodeMirror-scroll{overflow:auto;}
+	</style>
+	<!--Google Analytics-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script>	<!--End:Google Analytics-->
+</head>
+<body>
+
+    <form name="myForm" id="myForm" class="codelab">
+        <div class="header-wrapper">
+            <div class="header clearfix">				
+                <div class="logo">
+					<img src="lib/images/codelab-logo.svg" alt="CodeLab" />
+				</div>
+                <div class="control-bar">
+                    <div class="buttons">
+                        <a onClick="updatePreview();" class="show-output">Show Output</a>
+                        <a onClick="newWindow();" class="new-window" title="Show Output in Blank Tab"><span class="icon-new-window"></span></a>
+                        <a onClick="downloadCode();" class="download-code" title="Download Source Code"><span class="icon-download"></span></a>
+						<a onClick="toggleView();" class="toggle-view" title="Change Editor Layout"><span class="icon-screen-rotation"></span></a>
+                    </div>                            
+                </div>
+                <div class="top-ad-box">
+                    <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Responsive Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:block;width:100%;height:90px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4302666817"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>                                        
+                </div>                
+            </div>
+        </div>
+        <div class="frame-box hr">
+            <div class="pane-wrapper">
+                <div class="pane" id="code-pane">
+                    <div class="outer-area">
+                        <span class="show-preview-pane">&nbsp;</span>
+                        <div class="inner-area">
+                            <input type="hidden" id="current-code" name="current-code" />
+                            <textarea id="code" name="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Bootstrap User Management Data Table&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Roboto|Varela+Round&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    body {
+        color: #566787;
+		background: #f5f5f5;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 13px;
+	}
+	.table-wrapper {
+        background: #fff;
+        padding: 20px 25px;
+        margin: 30px 0;
+		border-radius: 3px;
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+	.table-title {
+		padding-bottom: 15px;
+		background: #299be4;
+		color: #fff;
+		padding: 16px 30px;
+		margin: -20px -25px 10px;
+		border-radius: 3px 3px 0 0;
+    }
+    .table-title h2 {
+		margin: 5px 0 0;
+		font-size: 24px;
+	}
+	.table-title .btn {
+		color: #566787;
+		float: right;
+		font-size: 13px;
+		background: #fff;
+		border: none;
+		min-width: 50px;
+		border-radius: 2px;
+		border: none;
+		outline: none !important;
+		margin-left: 10px;
+	}
+	.table-title .btn:hover, .table-title .btn:focus {
+        color: #566787;
+		background: #f2f2f2;
+	}
+	.table-title .btn i {
+		float: left;
+		font-size: 21px;
+		margin-right: 5px;
+	}
+	.table-title .btn span {
+		float: left;
+		margin-top: 2px;
+	}
+    table.table tr th, table.table tr td {
+        border-color: #e9e9e9;
+		padding: 12px 15px;
+		vertical-align: middle;
+    }
+	table.table tr th:first-child {
+		width: 60px;
+	}
+	table.table tr th:last-child {
+		width: 100px;
+	}
+    table.table-striped tbody tr:nth-of-type(odd) {
+    	background-color: #fcfcfc;
+	}
+	table.table-striped.table-hover tbody tr:hover {
+		background: #f5f5f5;
+	}
+    table.table th i {
+        font-size: 13px;
+        margin: 0 5px;
+        cursor: pointer;
+    }	
+    table.table td:last-child i {
+		opacity: 0.9;
+		font-size: 22px;
+        margin: 0 5px;
+    }
+	table.table td a {
+		font-weight: bold;
+		color: #566787;
+		display: inline-block;
+		text-decoration: none;
+	}
+	table.table td a:hover {
+		color: #2196F3;
+	}
+	table.table td a.settings {
+        color: #2196F3;
+    }
+    table.table td a.delete {
+        color: #F44336;
+    }
+    table.table td i {
+        font-size: 19px;
+    }
+	table.table .avatar {
+		border-radius: 50%;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.status {
+		font-size: 30px;
+		margin: 2px 2px 0 0;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 10px;
+	}
+    .text-success {
+        color: #10c469;
+    }
+    .text-info {
+        color: #62c9e8;
+    }
+    .text-warning {
+        color: #FFC107;
+    }
+    .text-danger {
+        color: #ff5b5b;
+    }
+    .pagination {
+        float: right;
+        margin: 0 0 5px;
+    }
+    .pagination li a {
+        border: none;
+        font-size: 13px;
+        min-width: 30px;
+        min-height: 30px;
+        color: #999;
+        margin: 0 2px;
+        line-height: 30px;
+        border-radius: 2px !important;
+        text-align: center;
+        padding: 0 6px;
+    }
+    .pagination li a:hover {
+        color: #666;
+    }	
+    .pagination li.active a, .pagination li.active a.page-link {
+        background: #03A9F4;
+    }
+    .pagination li.active a:hover {        
+        background: #0397d6;
+    }
+	.pagination li.disabled i {
+        color: #ccc;
+    }
+    .pagination li i {
+        font-size: 16px;
+        padding-top: 6px
+    }
+    .hint-text {
+        float: left;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+&lt;/style&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+	$('[data-toggle=&quot;tooltip&quot;]').tooltip();
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;table-wrapper&quot;&gt;
+            &lt;div class=&quot;table-title&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-sm-5&quot;&gt;
+						&lt;h2&gt;User &lt;b&gt;Management&lt;/b&gt;&lt;/h2&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;col-sm-7&quot;&gt;
+						&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE147;&lt;/i&gt; &lt;span&gt;Add New User&lt;/span&gt;&lt;/a&gt;
+						&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE24D;&lt;/i&gt; &lt;span&gt;Export to Excel&lt;/span&gt;&lt;/a&gt;						
+					&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;table class=&quot;table table-striped table-hover&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;#&lt;/th&gt;
+                        &lt;th&gt;Name&lt;/th&gt;						
+						&lt;th&gt;Date Created&lt;/th&gt;
+						&lt;th&gt;Role&lt;/th&gt;
+                        &lt;th&gt;Status&lt;/th&gt;
+						&lt;th&gt;Action&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;1&lt;/td&gt;
+                        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/examples/images/avatar/1.jpg&quot; class=&quot;avatar&quot; alt=&quot;Avatar&quot;&gt; Michael Holz&lt;/a&gt;&lt;/td&gt;
+                        &lt;td&gt;04/10/2013&lt;/td&gt;                        
+                        &lt;td&gt;Admin&lt;/td&gt;
+						&lt;td&gt;&lt;span class=&quot;status text-success&quot;&gt;&amp;bull;&lt;/span&gt; Active&lt;/td&gt;
+						&lt;td&gt;
+							&lt;a href=&quot;#&quot; class=&quot;settings&quot; title=&quot;Settings&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE8B8;&lt;/i&gt;&lt;/a&gt;
+							&lt;a href=&quot;#&quot; class=&quot;delete&quot; title=&quot;Delete&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE5C9;&lt;/i&gt;&lt;/a&gt;
+						&lt;/td&gt;
+                    &lt;/tr&gt;
+					&lt;tr&gt;
+                        &lt;td&gt;2&lt;/td&gt;
+                        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/examples/images/avatar/2.jpg&quot; class=&quot;avatar&quot; alt=&quot;Avatar&quot;&gt; Paula Wilson&lt;/a&gt;&lt;/td&gt;
+                        &lt;td&gt;05/08/2014&lt;/td&gt;                       
+						&lt;td&gt;Publisher&lt;/td&gt;
+						&lt;td&gt;&lt;span class=&quot;status text-success&quot;&gt;&amp;bull;&lt;/span&gt; Active&lt;/td&gt;
+						&lt;td&gt;
+							&lt;a href=&quot;#&quot; class=&quot;settings&quot; title=&quot;Settings&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE8B8;&lt;/i&gt;&lt;/a&gt;
+							&lt;a href=&quot;#&quot; class=&quot;delete&quot; title=&quot;Delete&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE5C9;&lt;/i&gt;&lt;/a&gt;
+						&lt;/td&gt;
+                    &lt;/tr&gt;
+					&lt;tr&gt;
+                        &lt;td&gt;3&lt;/td&gt;
+                        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/examples/images/avatar/3.jpg&quot; class=&quot;avatar&quot; alt=&quot;Avatar&quot;&gt; Antonio Moreno&lt;/a&gt;&lt;/td&gt;
+                        &lt;td&gt;11/05/2015&lt;/td&gt;
+						&lt;td&gt;Publisher&lt;/td&gt;
+                        &lt;td&gt;&lt;span class=&quot;status text-danger&quot;&gt;&amp;bull;&lt;/span&gt; Suspended&lt;/td&gt;                        
+						&lt;td&gt;
+							&lt;a href=&quot;#&quot; class=&quot;settings&quot; title=&quot;Settings&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE8B8;&lt;/i&gt;&lt;/a&gt;
+							&lt;a href=&quot;#&quot; class=&quot;delete&quot; title=&quot;Delete&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE5C9;&lt;/i&gt;&lt;/a&gt;
+						&lt;/td&gt;                        
+                    &lt;/tr&gt;
+					&lt;tr&gt;
+                        &lt;td&gt;4&lt;/td&gt;
+                        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/examples/images/avatar/4.jpg&quot; class=&quot;avatar&quot; alt=&quot;Avatar&quot;&gt; Mary Saveley&lt;/a&gt;&lt;/td&gt;
+                        &lt;td&gt;06/09/2016&lt;/td&gt;
+						&lt;td&gt;Reviewer&lt;/td&gt;
+						&lt;td&gt;&lt;span class=&quot;status text-success&quot;&gt;&amp;bull;&lt;/span&gt; Active&lt;/td&gt;
+						&lt;td&gt;
+							&lt;a href=&quot;#&quot; class=&quot;settings&quot; title=&quot;Settings&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE8B8;&lt;/i&gt;&lt;/a&gt;
+							&lt;a href=&quot;#&quot; class=&quot;delete&quot; title=&quot;Delete&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE5C9;&lt;/i&gt;&lt;/a&gt;
+						&lt;/td&gt;
+                    &lt;/tr&gt;
+					&lt;tr&gt;
+                        &lt;td&gt;5&lt;/td&gt;
+                        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/examples/images/avatar/5.jpg&quot; class=&quot;avatar&quot; alt=&quot;Avatar&quot;&gt; Martin Sommer&lt;/a&gt;&lt;/td&gt;
+                        &lt;td&gt;12/08/2017&lt;/td&gt;                        
+                        &lt;td&gt;Moderator&lt;/td&gt;
+						&lt;td&gt;&lt;span class=&quot;status text-warning&quot;&gt;&amp;bull;&lt;/span&gt; Inactive&lt;/td&gt;
+						&lt;td&gt;
+							&lt;a href=&quot;#&quot; class=&quot;settings&quot; title=&quot;Settings&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE8B8;&lt;/i&gt;&lt;/a&gt;
+							&lt;a href=&quot;#&quot; class=&quot;delete&quot; title=&quot;Delete&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE5C9;&lt;/i&gt;&lt;/a&gt;
+						&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+			&lt;div class=&quot;clearfix&quot;&gt;
+                &lt;div class=&quot;hint-text&quot;&gt;Showing &lt;b&gt;5&lt;/b&gt; out of &lt;b&gt;25&lt;/b&gt; entries&lt;/div&gt;
+                &lt;ul class=&quot;pagination&quot;&gt;
+                    &lt;li class=&quot;page-item disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;page-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;page-link&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;page-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;page-link&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;page-item active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;page-link&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;page-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;page-link&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;page-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;page-link&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;page-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;page-link&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;     
+&lt;/body&gt;
+&lt;/html&gt;                                		                            </textarea>	
+                            <script>
+                                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                    mode: "text/html",
+                                    tabMode: "indent",
+                                    styleActiveLine: true,
+                                    lineNumbers: true,
+                                    lineWrapping: true
+                                });
+                            </script>									
+                        </div>
+                    </div>
+                </div>
+                <div class="pane" id="preview-pane">
+                    <div class="outer-wrapper">
+                        <span class="hide-preview-pane">&nbsp;</span>
+                        <div class="output-area">
+                            <iframe id="preview" name="preview"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="codelab-footer clearfix">		
+            <a href="codelab1284.html?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+            <label class="auto-update"><input type="checkbox" id="check" /> Auto update</label>
+            <script>
+                var delay;
+                var checkbox = document.getElementById("check");
+                editor.on("change", function(){
+					editor.refresh();
+                    if(checkbox.checked==true){            
+                        clearTimeout(delay);
+                        delay = setTimeout(updatePreview, 300); // Don't use parenthesis 
+                    }
+                });
+                //setTimeout(updatePreview, 300);
+            </script>
+            <div class="social-widget-wrapper">
+                <!-- Social widget -->
+                                <p class="social-link">Share this example with 
+                    <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Duser-management-data-table" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
+                    <a id="twitter-share-btn" href="https://twitter.com/share?text=Bootstrap+User+Management+Data+Table+-+&amp;url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Duser-management-data-table" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>, 
+                    <a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap%26file%3Duser-management-data-table" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Google +</a>. Please give us a 
+                    <a id="facebook-like-btn" href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">Like</a>, if you find it helpful.
+                </p>
+                <!-- End:Social widget -->
+            </div>
+        </div>
+    </form>
+        
+    <form id="download-form" action="https://www.tutorialrepublic.com/examples/bin/download.php" method="post" class="hidden-form">
+    	<input type="hidden" id="download-value" name="download-value" />
+    </form>
+    <form id="new-form" action="https://www.tutorialrepublic.com/examples/fullscreen/output.php" method="post" target="_blank" class="hidden-form">
+    	<input type="hidden" id="code-value" name="code-value" />
+    </form>
+
+</body>
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=user-management-data-table by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:31:48 GMT -->
+</html>
+

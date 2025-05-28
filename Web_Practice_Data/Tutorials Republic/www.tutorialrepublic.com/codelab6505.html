@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=faq&file=custom-select-box by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:30:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Live Demo: Custom Select Box with CSS and jQuery</title>
+	<meta name="description" content="Try and test HTML code online in a simple and easy way using our free HTML editor and see the results in real-time." />
+			    <meta charset="UTF-8" />
+	<meta property="og:title" content="Custom Select Box with CSS and jQuery" />
+    <meta property="og:description" content="View the live example as well as try and test it using the online HTML editor." />
+	<meta property="fb:admins" content="100001054961582" />
+	<meta property="fb:app_id" content="1404574483159557" />
+	<meta property="og:image" content="lib/images/signature.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+	<link rel="stylesheet" href="lib/bin/css/codemirror.css" />
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+	<link rel="stylesheet" href="lib/bin/css/html-mode-2.3.css" />
+	<script src="../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bin/js/codemirror.js"></script>
+	<script type="text/javascript" src="lib/bin/js/html-mode-1.1.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/xml.js"></script>    
+	<script type="text/javascript" src="lib/bin/mode/javascript.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/css.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/htmlmixed.js"></script>
+	<script type="text/javascript" src="lib/bin/js/active-line.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        	updatePreview();
+    	});    
+	</script>
+	<style type="text/css">
+		.CodeMirror{font-size: 15px;line-height: normal;font-family: consolas,monospace;background: url("lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;}
+		.CodeMirror-activeline-background {background: #e8f2ff !important;}
+		.CodeMirror-scroll{overflow:auto;}
+	</style>
+	<!--Google Analytics-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script>	<!--End:Google Analytics-->
+</head>
+<body>
+
+    <form name="myForm" id="myForm" class="codelab">
+        <div class="header-wrapper">
+            <div class="header clearfix">				
+                <div class="logo">
+					<img src="lib/images/codelab-logo.svg" alt="CodeLab" />
+				</div>
+                <div class="control-bar">
+                    <div class="buttons">
+                        <a onClick="updatePreview();" class="show-output">Show Output</a>
+                        <a onClick="newWindow();" class="new-window" title="Show Output in Blank Tab"><span class="icon-new-window"></span></a>
+                        <a onClick="downloadCode();" class="download-code" title="Download Source Code"><span class="icon-download"></span></a>
+						<a onClick="toggleView();" class="toggle-view" title="Change Editor Layout"><span class="icon-screen-rotation"></span></a>
+                    </div>                            
+                </div>
+                <div class="top-ad-box">
+                    <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Responsive Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:block;width:100%;height:90px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4302666817"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>                                        
+                </div>                
+            </div>
+        </div>
+        <div class="frame-box vr">
+            <div class="pane-wrapper">
+                <div class="pane" id="code-pane">
+                    <div class="outer-area">
+                        <span class="show-preview-pane">&nbsp;</span>
+                        <div class="inner-area">
+                            <input type="hidden" id="current-code" name="current-code" />
+                            <textarea id="code" name="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Custom Select Box with CSS and jQuery&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+	.select-wrapper{
+		float: left;
+		display: inline-block;
+		border: 1px solid #d8d8d8;            
+		background: url(&quot;/examples/images/dropdown.png&quot;) no-repeat right center;
+		cursor: pointer;
+	}
+	.select-wrapper, .select-wrapper select{
+		width: 200px;
+		height: 26px;
+		line-height: 26px;
+	}
+	.select-wrapper:hover{
+		background: url(&quot;/examples/images/dropdown-hover.png&quot;) no-repeat right center;
+		border-color: #239fdb;
+	}
+	.select-wrapper .holder{
+		display: block;
+		margin: 0 35px 0 5px;
+		white-space: nowrap;            
+		overflow: hidden;
+		cursor: pointer;
+		position: relative;
+		z-index: -1;
+	}
+	.select-wrapper select{
+		margin: 0;
+		position: absolute;
+		z-index: 2;            
+		cursor: pointer;
+		outline: none;
+		opacity: 0;
+		/* CSS hacks for older browsers */
+		_noFocusLine: expression(this.hideFocus=true); 
+		-ms-filter:&quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=0)&quot;;
+		filter: alpha(opacity=0);
+		-khtml-opacity: 0;
+		-moz-opacity: 0;
+	}
+    
+    /* Let's Beautify Our Form */
+	form{
+        margin: 20px;
+    }
+    input[type=&quot;submit&quot;]{
+        float: left;
+        background: #d8d8d8;
+        border: 1px solid #c4c4c4;
+        margin-left: 10px;
+        padding: 4px 10px;
+        cursor: pointer;
+        outline: none;
+    }
+    input[type=&quot;submit&quot;]:hover{
+        color: #fff;
+        border-color: #1b7aa9;
+        background-color: #239fdb;
+    }
+&lt;/style&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-1.12.4.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(document).ready(function(){
+        $(&quot;.custom-select&quot;).each(function(){
+            $(this).wrap(&quot;&lt;span class='select-wrapper'&gt;&lt;/span&gt;&quot;);
+            $(this).after(&quot;&lt;span class='holder'&gt;&lt;/span&gt;&quot;);
+        });
+        $(&quot;.custom-select&quot;).change(function(){
+            var selectedOption = $(this).find(&quot;:selected&quot;).text();
+            $(this).next(&quot;.holder&quot;).text(selectedOption);
+        }).trigger('change');
+    })
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;/examples/faq/select-action.php&quot; method=&quot;post&quot;&gt;
+        &lt;p&gt;What Is Your Favourite Time Pass:&lt;/p&gt;        
+        &lt;select name=&quot;timepass&quot; class=&quot;custom-select&quot;&gt;
+            &lt;option&gt;Select&lt;/option&gt;
+            &lt;option&gt;Driving&lt;/option&gt;
+            &lt;option&gt;Internet&lt;/option&gt;
+            &lt;option&gt;Movie&lt;/option&gt;
+            &lt;option&gt;Music&lt;/option&gt;
+            &lt;option&gt;Reading&lt;/option&gt;
+            &lt;option&gt;Sports&lt;/option&gt;                
+        &lt;/select&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;                            </textarea>	
+                            <script>
+                                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                    mode: "text/html",
+                                    tabMode: "indent",
+                                    styleActiveLine: true,
+                                    lineNumbers: true,
+                                    lineWrapping: true
+                                });
+                            </script>									
+                        </div>
+                    </div>
+                </div>
+                <div class="pane" id="preview-pane">
+                    <div class="outer-wrapper">
+                        <span class="hide-preview-pane">&nbsp;</span>
+                        <div class="output-area">
+                            <iframe id="preview" name="preview"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="codelab-footer clearfix">		
+            <a href="codelab1284.html?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+            <label class="auto-update"><input type="checkbox" id="check" /> Auto update</label>
+            <script>
+                var delay;
+                var checkbox = document.getElementById("check");
+                editor.on("change", function(){
+					editor.refresh();
+                    if(checkbox.checked==true){            
+                        clearTimeout(delay);
+                        delay = setTimeout(updatePreview, 300); // Don't use parenthesis 
+                    }
+                });
+                //setTimeout(updatePreview, 300);
+            </script>
+            <div class="social-widget-wrapper">
+                <!-- Social widget -->
+                                <p class="social-link">Share this example with 
+                    <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dfaq%26file%3Dcustom-select-box" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
+                    <a id="twitter-share-btn" href="https://twitter.com/share?text=Custom+Select+Box+with+CSS+and+jQuery+-+&amp;url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dfaq%26file%3Dcustom-select-box" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>, 
+                    <a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dfaq%26file%3Dcustom-select-box" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Google +</a>. Please give us a 
+                    <a id="facebook-like-btn" href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">Like</a>, if you find it helpful.
+                </p>
+                <!-- End:Social widget -->
+            </div>
+        </div>
+    </form>
+        
+    <form id="download-form" action="https://www.tutorialrepublic.com/examples/bin/download.php" method="post" class="hidden-form">
+    	<input type="hidden" id="download-value" name="download-value" />
+    </form>
+    <form id="new-form" action="https://www.tutorialrepublic.com/examples/fullscreen/output.php" method="post" target="_blank" class="hidden-form">
+    	<input type="hidden" id="code-value" name="code-value" />
+    </form>
+
+</body>
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=faq&file=custom-select-box by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:30:34 GMT -->
+</html>
+

@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=php&file=using-function-variable-outside by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:29:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Live Demo: Using PHP Function Variable Outside</title>
+	<meta name="description" content="The PHP showcase will show you how the output of the example code will look like when you execute it on your server." />
+			<meta charset="UTF-8" />
+	<meta property="og:title" content="Using PHP Function Variable Outside" />
+    <meta property="og:description" content="View the live demo and get the source code of this example." />
+	<meta property="fb:admins" content="100001054961582" />
+	<meta property="fb:app_id" content="1404574483159557" />
+	<meta property="og:image" content="lib/images/signature.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="lib/bin/css/codemirror.css" />
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+    <link rel="stylesheet" href="lib/bin/css/custom-1.6.css" />
+    <script type="text/javascript" src="lib/bin/js/jquery-1.7.js"></script>
+    <script type="text/javascript" src="lib/bin/js/codemirror.js"></script>
+    <script type="text/javascript" src="lib/bin/js/utility-1.2.js"></script>
+    <script type="text/javascript" src="lib/bin/mode/xml.js"></script>    
+    <script type="text/javascript" src="lib/bin/mode/javascript.js"></script>
+    <script type="text/javascript" src="lib/bin/mode/css.js"></script>
+    <script type="text/javascript" src="lib/bin/mode/clike.js"></script>
+    <script type="text/javascript" src="lib/bin/mode/php.js"></script>
+	<style type="text/css">
+		.CodeMirror{font-size: 15px;line-height: normal;font-family: consolas,monospace;background: url("lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;}
+		.CodeMirror-activeline-background {background: #e8f2ff !important;}
+		.CodeMirror-scroll{overflow:auto;}
+		.CodeMirror-focused .CodeMirror-selected {background: #d9d9d9;}
+	</style>
+	<!--Google Analytics-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script>	<!--End:Google Analytics-->
+</head>
+<body>
+
+    <form method="post" name="myForm" class="codelab">
+        <table>
+            <tr>
+                <td class="header-wrapper">
+                    <div class="header clearfix">
+                        <div class="logo">
+							<img src="lib/images/codelab-logo.svg" alt="CodeLab" />
+						</div>
+                        <div class="control-bar">
+                            <div class="buttons">
+                            	<a class="show-output inactive" title="Disabled">Show Output</a>
+                                <a class="new-window inactive" title="Show Output in Blank Tab : Disabled"><span class="icon-new-window"></span></a>
+                                <a href="examples/bin/using-function-variable-outsided76c.php?topic=php&amp;file=using-function-variable-outside" class="download-code" title="Download Source Code"><span class="icon-download"></span></a>
+                            </div>
+                        </div>
+						<div class="top-ad-box">
+            				<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Responsive Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:block;width:100%;height:90px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4302666817"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>                                        
+        				</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="frame-box">
+                        <tr>
+                            <td id="left-pane">
+			      				<div class="outer-area">
+                                	<span class="show-right-pane">&nbsp;</span>
+									<div class="inner-area">
+										<input type="hidden" id="current-code" name="current-code" />
+                                		<textarea id="code" name="code">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Using PHP Function Variable Outside</title>
+</head>
+<body>
+
+<?php
+// Defining function
+function test(){
+    $greet = "Hello World!";
+    echo '<p>$greet inside function is: ' . $greet . '</p>';
+}
+
+test();
+
+// Generate undefined variable error
+echo '<p>$greet outside of function is: ' . $greet . '</p>';
+?>
+
+</body>
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=php&file=using-function-variable-outside by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:29:59 GMT -->
+</html>                                		</textarea>
+                                        <script type="text/javascript">
+											var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+												mode: "application/x-httpd-php",
+												lineNumbers: true,
+												readOnly: true
+											});
+										</script>
+									</div>
+			      				</div>
+                            </td>
+                            <td id="right-pane">                               
+                                <div class="outer-wrapper">
+                                    <span class="hide-right-pane">&nbsp;</span>
+									<div class="output-area">
+                                        <iframe id="preview" src="examples/php/using-function-variable-outside.html"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="codelab-footer clearfix">
+                        <div class="editor-hint" title="Editor Hint"></div>
+                        <div class="social-widget-wrapper">
+                            <!-- Social widget -->
+                                                        <p class="social-link">Share this example with 
+                                <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dphp%26file%3Dusing-function-variable-outside" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
+                                <a id="twitter-share-btn" href="https://twitter.com/share?text=Using+PHP+Function+Variable+Outside+-+&amp;url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dphp%26file%3Dusing-function-variable-outside" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>, 
+                                <a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dphp%26file%3Dusing-function-variable-outside" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Google +</a>. Please give us a 
+                                <a id="facebook-like-btn" href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">Like</a>, if you find it helpful.
+                            </p>
+                            <!-- End:Social widget -->
+                        </div>
+						<a href="codelab1284.html?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+                        <a href="codelab07f7.html?topic=html&amp;file=hello-world" class="switch-mode alt">Switch to HTML Mode</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
+

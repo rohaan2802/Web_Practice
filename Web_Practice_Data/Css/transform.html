@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transform</title>
+    <style>
+
+        div.parent {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+
+        div.box {
+            background: crimson;
+            height: 150px;
+            width: 150px;
+            transition: all 0.5s ease-in-out;
+            margin: 50px;
+            /* transform-origin: top center; */
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+        }
+
+        div.box:hover {
+            /* transform */
+            /* 
+                translate 
+                scale
+                rotate
+                skew
+            */
+
+            /* transform: translateX(200px); */
+            /* transform: translateY(200px); */
+            /* transform: translate(10px,20px); */
+
+            /* transform: scale(1.1); */
+            /* transform: scaleX(1.2); */
+            /* transform: scaleY(1.2); */
+
+            /* transform: scale(1, 0.1); */
+            
+            /* transform: rotate(-180deg); */
+            /* transform: rotateY(90deg); */
+            /* transform: rotateX(50deg); */
+
+            /* transform: skew(-20deg); */
+        }
+    </style>
+</head>
+<body>
+    
+       <div class="parent">
+            <div class="box"></div>
+       </div>
+
+</body>
+</html>

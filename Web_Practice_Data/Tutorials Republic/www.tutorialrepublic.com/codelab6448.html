@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=bootstrap-3&file=navbar-fixed-to-bottom by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:32:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Live Demo: Example of Bootstrap 3 Fixed Navbar</title>
+	<meta name="description" content="Try and test HTML code online in a simple and easy way using our free HTML editor and see the results in real-time." />
+			    <meta charset="UTF-8" />
+	<meta property="og:title" content="Example of Bootstrap 3 Fixed Navbar" />
+    <meta property="og:description" content="View the live example as well as try and test it using the online HTML editor." />
+	<meta property="fb:admins" content="100001054961582" />
+	<meta property="fb:app_id" content="1404574483159557" />
+	<meta property="og:image" content="lib/images/signature.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+	<link rel="stylesheet" href="lib/bin/css/codemirror.css" />
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+	<link rel="stylesheet" href="lib/bin/css/html-mode-2.3.css" />
+	<script src="../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bin/js/codemirror.js"></script>
+	<script type="text/javascript" src="lib/bin/js/html-mode-1.1.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/xml.js"></script>    
+	<script type="text/javascript" src="lib/bin/mode/javascript.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/css.js"></script>
+	<script type="text/javascript" src="lib/bin/mode/htmlmixed.js"></script>
+	<script type="text/javascript" src="lib/bin/js/active-line.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        	updatePreview();
+    	});    
+	</script>
+	<style type="text/css">
+		.CodeMirror{font-size: 15px;line-height: normal;font-family: consolas,monospace;background: url("lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;}
+		.CodeMirror-activeline-background {background: #e8f2ff !important;}
+		.CodeMirror-scroll{overflow:auto;}
+	</style>
+	<!--Google Analytics-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script>	<!--End:Google Analytics-->
+</head>
+<body>
+
+    <form name="myForm" id="myForm" class="codelab">
+        <div class="header-wrapper">
+            <div class="header clearfix">				
+                <div class="logo">
+					<img src="lib/images/codelab-logo.svg" alt="CodeLab" />
+				</div>
+                <div class="control-bar">
+                    <div class="buttons">
+                        <a onClick="updatePreview();" class="show-output">Show Output</a>
+                        <a onClick="newWindow();" class="new-window" title="Show Output in Blank Tab"><span class="icon-new-window"></span></a>
+                        <a onClick="downloadCode();" class="download-code" title="Download Source Code"><span class="icon-download"></span></a>
+						<a onClick="toggleView();" class="toggle-view" title="Change Editor Layout"><span class="icon-screen-rotation"></span></a>
+                    </div>                            
+                </div>
+                <div class="top-ad-box">
+                    <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Responsive Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:block;width:100%;height:90px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4302666817"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>                                        
+                </div>                
+            </div>
+        </div>
+        <div class="frame-box vr">
+            <div class="pane-wrapper">
+                <div class="pane" id="code-pane">
+                    <div class="outer-area">
+                        <span class="show-preview-pane">&nbsp;</span>
+                        <div class="inner-area">
+                            <input type="hidden" id="current-code" name="current-code" />
+                            <textarea id="code" name="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Example of Bootstrap 3 Fixed Navbar&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    body{
+        padding-bottom: 70px;
+    }
+&lt;/style&gt;
+&lt;/head&gt; 
+&lt;body&gt;
+&lt;nav class=&quot;navbar navbar-default navbar-fixed-bottom&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+        &lt;div class=&quot;navbar-header&quot;&gt;
+            &lt;button type=&quot;button&quot; data-target=&quot;#navbarCollapse&quot; data-toggle=&quot;collapse&quot; class=&quot;navbar-toggle&quot;&gt;
+                &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;a href=&quot;#&quot; class=&quot;navbar-brand&quot;&gt;Brand&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;!-- Collection of nav links and other content for toggling --&gt;
+        &lt;div id=&quot;navbarCollapse&quot; class=&quot;collapse navbar-collapse&quot;&gt;
+            &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+                &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Profile&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Messages&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;div class=&quot;jumbotron&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;h1&gt;Fixed Navbar&lt;/h1&gt;
+        &lt;p&gt;The Bootstrap navigation bar is fixed at the bottom of the viewport and does not scroll with the rest of the page.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit at lacus blandit, commodo iaculis justo viverra. Etiam vitae est arcu. Mauris vel congue dolor. Aliquam eget mi mi. Fusce quam tortor, commodo ac dui quis, bibendum viverra erat. Maecenas mattis lectus enim, quis tincidunt dui molestie euismod. Curabitur et diam tristique, accumsan nunc eu, hendrerit tellus. Tibulum consectetur scelerisque lacus, ac fermentum lorem convallis sed.&lt;/p&gt;
+    &lt;p&gt;Orci facilisis, dignissim tortor vitae, ultrices mi. Vestibulum a iaculis lacus. Phasellus vitae convallis ligula, nec volutpat tellus. Vivamus scelerisque mollis nisl, nec vehicula elit egestas a. Sed luctus metus id mi gravida, faucibus convallis neque pretium. Maecenas quis sapien ut leo fringilla tempor vitae sit amet leo. Donec imperdiet tempus placerat. Pellentesque pulvinar ultrices nunc sed ultrices. Morbi vel mi pretium, fermentum lacus et, viverra tellus. Phasellus sodales libero nec dui convallis, sit amet fermentum sapien auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed eu elementum nibh, quis varius libero.Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet. Praesent luctus hendrerit arcu non laoreet. Morbi consequat placerat magna, ac ornare odio sagittis sed. Donec vitae ullamcorper purus. Vivamus non metus ac justo porta volutpat.&lt;/p&gt;
+    &lt;p&gt;Pulvinar leo id risus pellentesque vestibulum. Sed diam libero, sodales eget sapien vel, porttitor bibendum enim. Donec sed nibh vitae lorem porttitor blandit in nec ante. Pellentesque vitae metus ipsum. Phasellus sed nunc ac sem malesuada condimentum. Etiam in aliquam lectus. Nam vel sapien diam. Donec pharetra id arcu eget blandit. Proin imperdiet mattis augue in porttitor. Quisque tempus enim id lobortis feugiat. Suspendisse tincidunt risus quis dolor fringilla blandit. Ut sed sapien at purus lacinia porttitor. Nullam iaculis, felis a pretium ornare, dolor nisl semper tortor, vel sagittis lacus est consequat eros. Sed id pretium nisl. Curabitur dolor nisl, laoreet vitae aliquam id.Nullam hendrerit justo non leo aliquet imperdiet. Etiam in sagittis lectus. Suspendisse ultrices placerat accumsan. Mauris quis dapibus orci. In dapibus velit blandit pharetra tincidunt. Quisque non sapien nec lacus condimentum facilisis ut iaculis enim. Sed viverra interdum bibendum. Donec ac sollicitudin dolor. Sed fringilla vitae lacus at rutrum. Phasellus congue vestibulum ligula sed consequat.&lt;/p&gt;
+    &lt;p&gt;Enim arcu, interdum vel metus dignissim, venenatis feugiat purus. Nulla posuere orci ut leo sodales, sed cursus dolor ornare. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam sit amet quam orci. Nulla sollicitudin lectus eget posuere venenatis. Sed vestibulum elementum sagittis. Quisque tristique tortor quis feugiat sollicitudin. Ut pellentesque luctus vulputate. Ut at odio ac erat blandit vehicula ut eget urna. In hac habitasse platea dictumst. Nullam ut iaculis nibh, eget eleifend elit.Convallis eget pretium eu, bibendum non leo. Proin suscipit purus adipiscing dolor gravida, in fermentum sapien blandit. Praesent pellentesque ligula dui, in gravida turpis vehicula ac. Pellentesque hendrerit nunc ut luctus hendrerit. Aliquam nec tincidunt urna. Ut interdum nec odio non interdum. Curabitur ligula justo, dapibus non ligula tristique, dapibus tristique nulla. Aliquam pulvinar dapibus eros, rutrum pretium urna iaculis ut. Nam est est, tempus id egestas et, viverra in dui. Aliquam gravida orci tortor, sed congue justo ornare vel. Cras in quam consectetur eros varius scelerisque. Ut vel fermentum purus. Nullam interdum blandit turpis, id pellentesque massa feugiat at. Ut sed lectus lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla rutrum, ante quis convallis ultricies, magna quam rhoncus erat, in lacinia libero magna a ipsum.&lt;/p&gt;
+    &lt;p&gt;Fusce enim arcu, interdum vel metus dignissim, venenatis feugiat purus. Nulla posuere orci ut leo sodales, sed cursus dolor ornare. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam sit amet quam orci. Nulla sollicitudin lectus eget posuere venenatis. Sed vestibulum elementum sagittis. Quisque tristique tortor quis feugiat sollicitudin. Ut pellentesque luctus vulputate. Ut at odio ac erat blandit vehicula ut eget urna. In hac habitasse platea dictumst. Nullam ut iaculis nibh, eget eleifend elit.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;                            </textarea>	
+                            <script>
+                                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                    mode: "text/html",
+                                    tabMode: "indent",
+                                    styleActiveLine: true,
+                                    lineNumbers: true,
+                                    lineWrapping: true
+                                });
+                            </script>									
+                        </div>
+                    </div>
+                </div>
+                <div class="pane" id="preview-pane">
+                    <div class="outer-wrapper">
+                        <span class="hide-preview-pane">&nbsp;</span>
+                        <div class="output-area">
+                            <iframe id="preview" name="preview"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="codelab-footer clearfix">		
+            <a href="codelab1284.html?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+            <label class="auto-update"><input type="checkbox" id="check" /> Auto update</label>
+            <script>
+                var delay;
+                var checkbox = document.getElementById("check");
+                editor.on("change", function(){
+					editor.refresh();
+                    if(checkbox.checked==true){            
+                        clearTimeout(delay);
+                        delay = setTimeout(updatePreview, 300); // Don't use parenthesis 
+                    }
+                });
+                //setTimeout(updatePreview, 300);
+            </script>
+            <div class="social-widget-wrapper">
+                <!-- Social widget -->
+                                <p class="social-link">Share this example with 
+                    <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap-3%26file%3Dnavbar-fixed-to-bottom" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
+                    <a id="twitter-share-btn" href="https://twitter.com/share?text=Example+of+Bootstrap+3+Fixed+Navbar+-+&amp;url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap-3%26file%3Dnavbar-fixed-to-bottom" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>, 
+                    <a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Dbootstrap-3%26file%3Dnavbar-fixed-to-bottom" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Google +</a>. Please give us a 
+                    <a id="facebook-like-btn" href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">Like</a>, if you find it helpful.
+                </p>
+                <!-- End:Social widget -->
+            </div>
+        </div>
+    </form>
+        
+    <form id="download-form" action="https://www.tutorialrepublic.com/examples/bin/download.php" method="post" class="hidden-form">
+    	<input type="hidden" id="download-value" name="download-value" />
+    </form>
+    <form id="new-form" action="https://www.tutorialrepublic.com/examples/fullscreen/output.php" method="post" target="_blank" class="hidden-form">
+    	<input type="hidden" id="code-value" name="code-value" />
+    </form>
+
+</body>
+
+<!-- Mirrored from www.tutorialrepublic.com/codelab.php?topic=bootstrap-3&file=navbar-fixed-to-bottom by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:32:12 GMT -->
+</html>
+

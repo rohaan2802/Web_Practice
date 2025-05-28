@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.paypalobjects.com	TRUE	/	FALSE	1999999999	PYPF	CT
+.google.com	TRUE	/	FALSE	1999999999	NID	188=SwghGUcf2C7iN0VKjM7joh3hhFj47reJjdiYhuQpTvmd4qa03wrpGHjj8Nk1gVyzB89bq6bvO0_5aaNeM9Dj0aq2AvwwSl0kAU6jBeKhrxtwDyZ-8hhYU5FSo7wf8NNJHhgD9Syabf9iuSJntrMGlMbOJUW5psQ7QVZWuFcYg88
+

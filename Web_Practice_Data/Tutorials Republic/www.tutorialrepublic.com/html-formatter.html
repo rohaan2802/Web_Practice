@@ -1,0 +1,267 @@
+<html>
+
+<!-- Mirrored from www.tutorialrepublic.com/html-formatter.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:17:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8" />
+	    <title>Online HTML Formatter &amp; Beautifier Tool</title>
+	<meta name="description" content="An elegant and easy to use online HTML formatter tool that's not only beautifies your HTML code but also correct or fix errors if it has any." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta property="fb:admins" content="100001054961582" />
+	<meta property="fb:app_id" content="1404574483159557" />
+	<meta property="og:image" content="lib/images/signature.png" />
+	<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="lib/bin/css/codemirror.css" />
+	<link rel="stylesheet" href="lib/bin/css/formatter-1.1.css" />
+	<script src="lib/bin/js/jquery-1.7.js"></script>
+    <script src="lib/bin/js/jquery.cookie.js"></script>
+	<script src="lib/bin/js/jquery.base64.js"></script>
+	<script src="lib/bin/js/codemirror.js"></script>
+	<script src="lib/bin/mode/xml.js"></script>    
+	<script src="lib/bin/mode/javascript.js"></script>
+	<script src="lib/bin/mode/css.js"></script>
+	<script src="lib/bin/mode/htmlmixed.js"></script>
+	<script src="lib/bin/js/active-line.js"></script>    
+    <script src="../cdnjs.cloudflare.com/ajax/libs/js-beautify/1.7.5/beautify.min.js"></script>
+	<script src="../cdnjs.cloudflare.com/ajax/libs/js-beautify/1.7.5/beautify-css.min.js"></script>
+	<script src="../cdnjs.cloudflare.com/ajax/libs/js-beautify/1.7.5/beautify-html.min.js"></script>
+    <script src="lib/js/clipboard.min.js"></script>
+    <script>
+        var the = {
+            use_codemirror: (!window.location.href.match(/without-codemirror/)),
+            beautify_in_progress: false,
+            editor: null // codemirror editor
+        };
+		
+        function any(a, b) {
+            return a || b;
+        }
+
+        function read_settings_from_cookie() {
+            $('#tabsize').val(any($.cookie('tabsize'), '4'));
+            $('#indent-inner-html').prop('checked', $.cookie('indent-inner-html') === 'on');
+        }
+
+        function store_settings_to_cookie() {
+            var opts = {
+                expires: 360
+            };
+            $.cookie('tabsize', $('#tabsize').val(), opts);
+            $.cookie('indent-inner-html', $('#indent-inner-html').prop('checked') ? 'on' : 'off', opts);
+        }
+
+        function beautify() {
+            if(the.beautify_in_progress) return;
+            //store_settings_to_cookie();            
+			the.beautify_in_progress = true;
+			var source = $('#output').val(), output, opts = {};
+			opts.indent_size = $('#tabsize').val();
+			opts.indent_char = opts.indent_size == 1 ? '\t' : ' ';
+			opts.indent_inner_html = $('#indent-inner-html').prop('checked');
+            opts.extra_liners = [];
+
+			if(looks_like_html(source)){
+				output = html_beautify(source, opts);
+			} else {
+				output = source;
+			}
+			if(the.editor){
+				the.editor.setValue(output);
+			} else{
+				$('#source').val(output);
+			}
+			the.beautify_in_progress = false;
+        }
+
+        function looks_like_html(source) {
+            // <foo> - looks like html
+            var trimmed = source.replace(/^[ \t\n\r]+/, '');
+            return trimmed && (trimmed.substring(0, 1) === '<');
+        }
+        
+        $(document).ready(function(){
+            $(document).on("click", ".gear-btn.open-it", function(){
+               $(".settings").animate({
+                    left: 0
+                });
+               $(".gear-btn").toggleClass("open-it close-it");
+            });
+            
+            $(document).on("click", ".gear-btn.close-it, .close-btn", function(){
+               $(".settings").animate({
+                    left: "-275px"
+                });
+               $(".gear-btn").toggleClass("open-it close-it");
+            });
+      
+            // HTML copy to clipboard
+			new Clipboard('#copyCode', {
+				text: function(trigger) {
+					$("#copyAlert").fadeIn("fast").delay(300).queue(function() {
+						$(this).fadeOut("fast");
+						$(this).dequeue();
+					});  
+					return the.editor.getValue();
+				}
+			});
+        });
+    </script>
+	<!--Google Analytics-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script>	<!--End:Google Analytics-->
+</head>
+<body>
+	
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">                    
+					<div class="header">
+                    	<h1><span>HTML</span> Formatter &amp; Beautifier</h1>
+                        <p class="subheading">An elegant and easy to use HTML formatter tool that's not only beautifies your HTML code but also correct errors if it has any.</p>
+						<div class="ad-wrapper">
+							<div class="ad-label">Advertisements</div>
+							<div class="ad-box">
+								<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Responsive Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:block;width:100%;height:90px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4302666817"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>							</div>
+						</div>
+                    </div>
+					<form action="https://www.tutorialrepublic.com/html-formatter.php#result" method="post" id="main" enctype="multipart/form-data">
+                        <div>
+                            <div class="title">Paste your HTML code here</div>
+                            <textarea rows="10" class="form-control" id="code"></textarea>
+							<input type="hidden" id="htmlstr" name="htmlstr" />
+                            <input type="hidden" id="repair" name="repair" />
+                        </div>
+                        <div class="action">
+                            <button type="button" class="btn btn-default" data-repair="0">Format HTML</button>
+                            <button type="button" class="btn btn-default" data-repair="1">Repair and Format HTML</button>
+                        </div>
+                        <div class="alert alert-danger text-center fade in " style="display: none;">
+                            <a class="close">&times;</a>
+                            Sorry, we're unable to process your request. Currently the maximum size for the input HTML string is limited to 500 kilo bytes.
+                        </div>
+                        <div class="settings">
+                            <button type="button" class="btn btn-lg gear-btn open-it"><span class="glyphicon glyphicon-cog"></span></button>
+                            <div class="box">            
+                                <div class="box-inner">
+                                    <label>Indent With</label>
+                                    <select name="tabsize" id="tabsize" class="form-control tabsize">
+                                        <option value="1">Tab character</option>
+                                        <option value="2">2 spaces</option>
+                                        <option value="3">3 spaces</option>
+                                        <option value="4">4 spaces</option>
+                                        <option value="8">8 spaces</option>
+                                    </select>                                    
+                                    <label for="indent-inner-html" class="checkbox-inline align-label"><input class="checkbox" type="checkbox" id="indent-inner-html"> Indent <a href="html-reference/html-head-tag.html" target="_blank">&lt;head&gt;</a> and <a href="html-reference/html-body-tag.html" target="_blank">&lt;body&gt;</a> sections</label>
+                                    <input type="button" class="btn btn-default close-btn" onclick="store_settings_to_cookie();" value="Save">
+                                </div>
+                            </div>                            
+                        </div>
+                                                <script>
+                            var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                mode: "text/html",
+                                tabMode: "indent",
+                                styleActiveLine: true,
+                                lineNumbers: true,
+                                lineWrapping: true
+                            });
+                            
+                            $(document).ready(function(){
+                                $(".action .btn").click(function(){
+                                    var inputCode = editor.getValue();                                    
+                                    if(inputCode.length) {
+                                        var repair = $(this).attr("data-repair");
+                                        if(repair == 0 || repair == 1){                                            
+                                            var inputArr = [inputCode];
+                                            var blobObj = new Blob(inputArr, {type : 'text/html'});
+                                            if(blobObj.size < 524288){
+                                                $("#htmlstr").val($.base64Encode(inputCode));
+												$("#repair").val(repair);
+                                                $("form#main").submit();                                   
+                                            } else{
+                                                $(".alert").removeClass("hide").addClass("show");
+                                            }
+                                        }
+                                    } else {
+                                        editor.focus();
+                                    }
+                                });
+                                $(document).on("click", ".alert .close", function(){
+                                   $(".alert").removeClass("show").addClass("hide"); 
+                                });
+                            });
+                        </script>
+                    </form>
+                </div>
+            </div>
+			<div class="footer">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="copyright-notice ">Version 1.0, &nbsp;Copyright &copy; 2019 Tutorial Republic.</p>
+						<ul class="list-inline">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about-us.html">About Us</a></li>
+							<li><a href="terms-of-use.html">Terms of Use</a></li>
+							<li><a href="privacy-policy.html">Privacy Policy</a></li>
+							<li><a href="contact-us.html">Report Error</a></li>
+						</ul>
+						<!-- Social widget -->
+												<p class="social-link">Share it with  
+							<a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fhtml-formatter.php" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
+							<a id="twitter-share-btn" href="https://twitter.com/share?text=Online+HTML+Formatter+and+Beautifier+Tool+-+&amp;url=https://www.tutorialrepublic.com%2Fhtml-formatter.php" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>, 
+							<a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Fhtml-formatter.php" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Google +</a>. Please give us a 
+							<a id="facebook-like-btn" href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">Like</a>, if you find it helpful.
+						</p>
+						<!-- End:Social widget -->
+					</div>
+				</div>
+			</div>
+        </div>        
+    </div>
+    
+    
+	<script>
+        $(document).ready(function(){
+
+            read_settings_from_cookie();
+
+            var default_text = "";
+			if($('#source').is(":visible")){
+				var textArea = $('#source')[0];
+				if (the.use_codemirror && typeof CodeMirror !== 'undefined') {
+					the.editor = CodeMirror.fromTextArea(textArea, {
+							mode: "text/html",
+							tabMode: "indent",
+							styleActiveLine: true,
+							lineNumbers: true,
+							lineWrapping: true,
+							readOnly: true
+						});
+					the.editor.focus();
+				}				
+				beautify();
+			}
+        });
+    </script>
+</body>
+
+
+<!-- Mirrored from www.tutorialrepublic.com/html-formatter.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:17:50 GMT -->
+</html>

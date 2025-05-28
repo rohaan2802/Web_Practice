@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/basic.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.tutorialrepublic.com/javascript-examples.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:13:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<!-- InstanceBeginEditable name="doctitle" -->
+    <title>JavaScript Examples - Tutorial Republic</title>
+    <meta name="description" content="An extensive collection of JavaScript examples covering topics like data types, conditional statements, loops, functions, objects, DOM, math, data and time, etc. to help you understand how JavaScript is used to add interactivity to the web pages." />
+    <!-- InstanceEndEditable -->
+    	<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="fb:admins" content="100001054961582" />
+<meta property="fb:app_id" content="1404574483159557" />
+<meta property="og:image" content="lib/images/signature.png" />
+<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+<style>
+html,body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,img{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+html,body{min-height:100%}
+p{margin:0 0 12px}
+ol,ul{margin:0 0 12px}
+a,a:active,a:visited{outline:none;color:#1db79f;text-decoration:none}
+a code{color:inherit}
+a img{border:none;outline:none}
+code{color:#000}
+table{border-collapse:collapse;border-spacing:0}
+table td{vertical-align:top}
+body{min-width:1300px;color:#414141;background:#fafafa;font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.7}
+input,select,textarea,button,div,span,a{box-sizing:border-box}
+h1,h2,h3,h4{color:#262626;font-weight:500;margin:20px 0 10px;line-height:1.5;font-weight:600}
+h1{font-size:34px;margin-top:17px}
+h2{font-size:28px}
+h3{font-size:22px}
+.space{margin-bottom:25px!important}
+.break{margin-bottom:15px!important}
+.text-center{text-align:center!important}
+.scroll{height:195px;overflow-y:scroll}
+.scroll.large{height:245px}
+.scroll.xlarge{height:290px}
+.scroll.xxlarge{height:340px}
+sup{font-size:13px}
+pre{background:none;border-radius:0}
+.leaderboard{padding-top:8px;position:relative}
+.ad-container{height:90px;overflow:hidden}
+.intro-image img{display:block;padding:10px 0 25px;max-width:100%}
+.clearfix::after{content:".";display:block;height:0;clear:both;visibility:hidden}
+code,.code,.syntax,.green-box,.sky-box,.gray-box,.pink-box,.red-box,.at-rule,.codebox ul,.console-output{font-size:16px;font-family:Consolas,Monaco,Courier,monospace}
+p code,table.data td:last-child code,.content ul li code,code.mark{padding:2px 4px;color:#333;background-color:#f1f1f1;border-radius:4px}
+p code a,table.data td:last-child code a, .content ul li code a{padding:2px 0;background:#fff;margin:0 -4px;font-size:16px}
+.console-output{margin:15px 0}
+hr{border:none;border-bottom:1px solid #e7e9ed;height:1px;margin:30px 0}
+.summary,.topic{border:1px solid #eaeaea;border-width:1px 0;margin:20px 0;padding:10px 0;color:#8e9aa6;line-height:1.5}
+h2.section-title span{display:inline-block;border-bottom:4px solid #c9d7e0;padding:0 50px 12px 0}
+.wrapper{width:1300px;padding:0 15px;margin:0 auto}
+.header{background:#23384e;padding:16px 0}
+input.search{background:#fff;border:0 none;color:#807E7E;float:left;height:38px;line-height:26px;font-size:14px;margin:0 0 0 12px;outline:medium none;padding:6px 14px;width:500px;border-radius:2px;box-shadow:0 0 1px rgba(0,0,0,0.6);font-family:inherit}
+.search-btn{color:rgba(0,0,0,.6);background:#ebebeb;border:none;outline:none;cursor:pointer;float:left;height:38px;line-height:46px;width:44px;display:block;margin-left:-2px;border-radius:0 2px 2px 0;box-shadow:0 0 1px rgba(0,0,0,0.7)}
+.logo{width:304px}
+.logo img{height:44px;margin:-3px 0;display:block}
+.site-search{float:left;margin-left:100px}
+.menu{background-color:#f5f5f5;box-shadow:0 1px 1px rgba(0,0,0,.15);position:relative;z-index:9}
+.menu a{color:#666;display:inline-block;padding:0 10px;text-decoration:none;font-size:14px;font-weight:600;height:48px;line-height:48px}
+.menu a:first-child{margin-left:-10px}
+.menu a.tool-link{float:right;display:inline-block;border-radius:30px;line-height:28px;position:relative;height:auto;top:9px;padding:0 12px;color:#1ebba3;border:1px double #1ebba3}
+.fl,.logo{float:left}
+.leftcolumn{width:240px;float:left;font-size:16px;color:#4f4f4f}
+.centercolumn{width:850px;float:left}
+.content{background:#fff;padding:20px 40px;border:1px solid #dedede;border-top:none;border-radius:1px}
+.sidebar{float:left;padding-top:28px;width:160px;margin-left:20px;position:relative}
+.leftcolumn .segment{margin:16px 0 12px;position:relative;font-size:18px;font-weight:600;display:inline-block;line-height:normal}
+.leftcolumn a{color:#4f4f4f;font-size:16px;line-height:26px;display:block;border-bottom:1px solid transparent}
+.leftcolumn ul{list-style:none;padding:0}
+.segment,.chapters,.chapters a,.toggle-tree-menu{float:left;clear:both}
+ul.tree-menu li.tree{margin-left:-12px;float:left;width:100%}
+ul.tree-menu li a,ul.tree-menu li code{color:#4f4f4f;font-size:15.4px}
+ul.chapters.tree-menu li a{font-size:16px}
+h1 code,h2 code,h3 code{font:inherit}
+.color-box{margin:15px 0;padding-left:20px}
+.note-box,.warning-box,.tip-box{padding:8px 8px 3px 26px}
+.info-tab{float:left;margin-left:-23px}
+.content ul li{margin-top:7px}
+.extra{padding-top:5px}
+.green-box,.sky-box,.gray-box,.red-box,.pink-box{color:#000;margin-top:15px;padding:10px;background-color:#f6f8fa;border:1px solid #d7e2ec}
+.example{background:#f4f5f6;padding:3px;margin:15px 0}
+.codebox{background:#fff;border:1px solid #ddd}
+.codebox-title{height:41px;padding-left:12px;border-bottom:1px solid #ddd;background:#f5f5f5}
+.codebox-title h4{margin:0;font-size:18px;line-height:38px;float:left;display:inline;font-weight:500}
+a.try-btn,a.download-btn{width:140px;height:40px;color:#333;font-size:15px;line-height:41px;font-weight:600;text-align:center;text-decoration:none;float:right;display:block;border-left:1px solid #ddd;background:rgba(27,31,35,0.08);box-sizing:border-box;font-family:Arial,sans-serif}
+a.try-btn span{font-size:18px;line-height:normal}
+.hide,.code-style,.box-size,.bottom-link,.footer,.code-style,.snippets,.report-error,.badge,.social,.ad-label,.mobile-only{display:none}
+.skyscraper{width:160px;height:600px;overflow:hidden;margin-bottom:20px;background:#ebecf0}
+.bottom-ad{margin-top:46px;padding:24px;position:relative;background:url(lib/images/smooth-line.png) no-repeat center #f9f9f9}
+.rectangle-left,.rectangle-right{min-width:336px;min-height:280px;overflow:hidden}
+.fr,a.previous-page,a.next-page,.topic-nav{float:right}
+a.previous-page,a.next-page{width:32px;height:32px;line-height:30px}
+.shadow{background:#F7F8F9;padding:3px;margin:10px 0}
+.syntax{color:#2f4959;padding:13px 18px;background:#F9F9FA;border:1px solid #ddd;font-size:15px}
+.codebox ul{font-size:14px;padding:7px;list-style:decimal inside none}
+.codebox ul.lead-zero,.codebox ul.lead-double-zero{list-style-type:decimal-leading-zero}
+.codebox ul li{padding:0 9px;color:#AFAFAF;background-image:none;margin:0}
+.codebox ul pre,.codebox ul li,.codebox ul li code{line-height:1.6;vertical-align:top}
+.codebox ul pre,.codebox ul code{width:90%;font-size:16px;color:#222;display:inline-block;padding-left:10px;border-left:3px solid #6CE26C;white-space:pre-wrap;word-break:normal}
+.codebox ul.lead-double-zero li{text-align:right}
+.codebox ul.lead-double-zero li pre{text-align:left}
+.codebox ul.sql.single-line pre{line-height:26px}
+.content .codebox ul li code{color:#222;padding:0 0 0 10px}
+.preview-box{padding:15px;text-align:center;cursor:pointer;overflow:hidden;background:#FFF;border:1px solid #e6e6e6}
+.preview-box a,.preview-box img{display:block;margin:0 auto}
+.topic a:first-of-type{margin-left:2px}
+.topic-nav{padding-right:5px;color:#d0d0d0}
+.topic-nav a{padding:0 15px;margin:0 0 0 5px;position:relative;display:inline-block}
+.topic-nav a::after{font-size:24px;position:absolute;line-height:normal;top:-6px}
+.topic-nav a:first-child{margin:0 5px 0 0}
+.topic-nav a:first-child::after{content:'\00AB';left:-5px}
+.topic-nav a:last-child::after{content:'\00BB';right:-5px}
+.download-box{text-align:center;padding:20px 0;margin:20px 0 10px}
+.output-box{border-color:#d4d4d4;border-style:solid;border-width:1px 0;padding:5px 15px;overflow:hidden;background:#fff;margin:10px 0}
+.demo-box{margin-top:15px}
+.subhead{border-bottom:3px solid #DCE3EB;margin-bottom:15px;padding-bottom:10px}
+table.data,table.description{width:100%;font-size:92%}
+table.data th{color:#000;padding:8px 7px;text-align:left;font-size:15px;background:#F8F8F8}
+table.data td{color:#484848;padding:5px 7px;background:#fff}
+table.data th,table.data td{vertical-align:top;border:1px solid #DCE3EB}
+table.data tr.section th,table.data td.section{font-size:15px;background:#f0f4f7}
+table.description th{width:150px;padding:7px;vertical-align: middle}
+table.no-wrap tr td:first-child{white-space:nowrap}
+.overview{padding-right:202px}
+.overview .intro-image{float:right;margin-right:-202px;text-align:right}
+.overview .intro-image + p{padding-top:0}
+.support{background:#F8F8F8;border:1px solid #ccc;color:#2F4959;padding:15px}
+.support table td:first-child{width:200px;padding:0 25px 0 10px;border-right:1px dashed #D0D0D0}
+.support h2{color:#2F4959;font-size:16px;padding:0 0 0 30px;margin-top:0}
+.support ul{margin-left:10px}
+.support ul li{margin-top:4px}
+h1 sup{background:#ec0000;border-radius:3px;padding:5px 10px;font-size:15px;color:#fff;position:relative;top:5px}
+@media screen and (max-width: 1280px) {
+body{min-width:1260px}
+.wrapper{width:1260px}
+.leftcolumn{width:230px}
+.centercolumn{width:820px}
+}
+@media screen and (max-width: 800px) {
+body{min-width:100%;max-width:100%;padding-top:46px}
+.wrapper{width:100%;padding:0}
+.header{height:46px;padding:5px 0;position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
+.logo{width:auto;display:block;padding:6px 0 0 60px;position:absolute;left:0;z-index:100}
+.logo img{height:30px}
+.menu{width:100%;padding-left:12px;padding-right:12px;overflow-x:auto;white-space:nowrap}
+.centercolumn{width:100%;float:none}
+.content{padding:10px;border-width:0 0 1px 0}
+.sidebar{margin: 25px auto 0}
+.skyscraper{display:inline-block}
+.shadow,.example{max-width:100%;overflow-x:auto}
+.codebox-title{position:relative}
+.codebox.multi-style-mode ul{padding-top:7px;margin-top:36px;border-top:1px solid #ddd}
+.codebox ul,.codebox ul.scroll{overflow-x:auto}
+.rectangle-left,.rectangle-right{float:none;display:inline-block;margin:10px auto;background:#EDEEF2}
+.leftcolumn,.footer,.header .social,.header .site-search,.overview .intro-image,.toggle-tree-menu,.code-style,.support table td:first-child,ul.tree-menu code.shorthand,.menu a.tool-link,.backdrop{display:none}
+.summary,.topic{padding:5px 0;margin:10px 0}
+.leftcolumn,.centercolumn,.sidebar{float:none}
+.header,.menu,.container,.footer,.appeal-text{width:100%;box-sizing:border-box}
+.centercolumn{width:100%}
+.content img{max-width:100%;height:auto}
+.codebox ul li{width:614px}
+.codebox ul.scroll li{width:597px}
+.codebox ul,.codebox ul.scroll{overflow-x:auto}
+a.try-btn,a.download-btn{width:130px}
+.bottom-ad{height:auto;background:none;padding:30px 0 0;margin:40px 0 0;text-align:center;position:relative}
+.native-unit{margin-bottom:30px}
+.overview{padding-right:0}
+.scroll-pane{overflow-x:auto}
+table.data{min-width:480px}
+table.data pre{display:inline;white-space:normal}
+table tr th,table tr td{width:auto!important}
+.support h2,.support ul{padding-left:0}
+p.topic{vertical-align:top}
+p.topic > a{word-wrap:break-word;display:inline-block}
+.example-list ul li,ul.faq-list li{padding-bottom:3px}
+.preview-box{padding:6px}
+.topic-nav{float:none;display:block;padding:6px 0 0 5px}
+.codebox.multi-style-mode ul{padding-top:7px;margin-top:34px;border-top:1px solid #ccc}
+.content pre{max-width:100%;overflow:hidden}
+.shadow,.content pre.console-output{max-width:100%;overflow-x:auto}
+ul.tree-menu li.tree{margin-left:0}
+.support ul{margin-left:20px}
+.leaderboard{margin:20px 0}
+h1{font-size:28px}
+h2{font-size:24px}
+h3{font-size:20px}
+}
+@media screen and (min-width: 801px) {
+.site-search,.leftcolumn,.social{display:block!important}
+.backdrop{display:none!important}
+}</style>    
+    <!-- InstanceBeginEditable name="head" -->
+	<style>
+	.example-list a{color:#4f4f4f}
+	.example-list a:hover{color:#222;text-decoration:underline}
+	</style>
+    <!-- InstanceEndEditable -->
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script></head>
+<body>
+    <!--Header-->
+    
+<div class="header">
+    <div class="wrapper clearfix">
+        <button type="button" class="open-menu mobile-only"><i class="icon-menu"></i></button>
+        <div class="logo">
+            <a href="index.html"><img src="lib/images/logo.svg" alt="TutorialRepublic" /></a>
+        </div>
+        <div class="site-search">
+            <form action="https://www.google.com/search" method="get" target="_blank" class="clearfix">
+                <input type="hidden" value="www.tutorialrepublic.com" name="sitesearch" />
+                <input type="text" name="q" placeholder="Search topics, tutorials, questions and answers..." id="searchInput" class="search" />
+                <button type="submit" class="search-btn"><span class="icon-search"></span></button>
+            </form>
+        </div>
+        <div class="social">                
+            <a href="https://www.facebook.com/tutorialrepublic" target="_blank" title="Join us on Facebook"><i class="icon-facebook"></i></a>
+            <a href="https://twitter.com/tutrepublic" target="_blank" title="Follow us on Twitter"><i class="icon-twitter"></i></a>
+            <a href="contact-us.html" target="_blank" title="Send us an Email"><i class="icon-mail"></i></a>
+        </div>
+        <button type="button" class="open-search mobile-only">
+            <i class="icon-search"></i>
+        </button>
+    </div>    
+</div>
+<div class="menu">
+    <div class="wrapper">
+        <a href="index.html" title="Home Page">HOME</a>
+        <a href="html-tutorial/index.html" title="HTML Tutorial">HTML5</a>            
+        <a href="css-tutorial/index.html" title="CSS Tutorial">CSS3</a>
+        <a href="javascript-tutorial/index.html" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="jquery-tutorial/index.html" title="jQuery Tutorial">JQUERY</a>
+        <a href="twitter-bootstrap-tutorial/index.html" title="Bootstrap Tutorial">BOOTSTRAP4</a>
+        <a href="php-tutorial/index.html" title="PHP Tutorial">PHP7</a> 
+        <a href="sql-tutorial/index.html" title="SQL Tutorial">SQL</a>
+        <a href="references.html" title="Web References">REFERENCES</a>
+        <a href="practice-examples.html" title="Practice Examples and Demos">EXAMPLES</a>
+        <a href="faq.html" title="Frequently Asked Questions and Answers">FAQ</a>
+        <a href="snippets/gallery.html" title="Bootstrap Code Snippets" target="_blank">SNIPPETS</a>
+        <a href="codelab.html" class="tool-link" target="_blank">Online HTML Editor</a>
+    </div>        
+</div>    <!--End:Header-->
+    <div class="wrapper clearfix">
+        <div class="leftcolumn" id="myNav">
+		
+        <div class="segment"><span>WEB</span> TUTORIALS</div>
+<div class="chapters">
+    <a href="html-tutorial/index.html">HTML Tutorial</a>    
+    <a href="css-tutorial/index.html">CSS Tutorial</a>
+	<a href="javascript-tutorial/index.html">JavaScript Tutorial</a>
+	<a href="jquery-tutorial/index.html">jQuery Tutorial</a>
+    <a href="twitter-bootstrap-tutorial/index.html">Bootstrap Tutorial</a>
+	<a href="php-tutorial/index.html">PHP Tutorial</a>
+	<a href="sql-tutorial/index.html">SQL Tutorial</a>
+</div>
+<div class="segment"><span>PRACTICE</span>&thinsp;EXAMPLES</div>
+<div class="chapters">
+    <a href="html-examples.html">HTML Examples</a>
+    <a href="css-examples.html">CSS Examples</a>
+	<a href="javascript-examples.html">JavaScript Examples</a>
+	<a href="jquery-examples.html">jQuery Examples</a>
+    <a href="twitter-bootstrap-examples.html">Bootstrap Examples</a>
+	<a href="php-examples.html">PHP Examples</a>
+</div>
+<div class="segment"><span>HTML</span> REFERENCES</div>
+<div class="chapters">
+    <a href="html-reference/html5-tags.html">HTML Tags/Elements</a>
+	<a href="html-reference/html5-global-attributes.html">HTML Global Attributes</a>
+    <a href="html-reference/html5-event-attributes.html">HTML Event Attributes</a>             
+    <a href="html-reference/html-color-picker.html">HTML Color Picker</a>
+    <a href="html-reference/html-language-codes.html">HTML Language Codes</a>
+    <a href="html-reference/html-character-entities.html">HTML Character Entities</a>
+    <a href="html-reference/http-status-codes.html">HTTP Status Codes</a>
+</div>
+<div class="segment"><span>CSS</span> REFERENCES</div>
+<div class="chapters">
+    <a href="css-reference/css-at-rules.html">CSS At-rules</a>
+    <a href="css-reference/css3-properties.html">CSS Properties</a>
+	<a href="css-reference/css-animatable-properties.html">CSS Animatable Properties</a>
+    <a href="css-reference/css-color-values.html">CSS Color Values</a>
+    <a href="css-reference/css-color-names.html">CSS Color Names</a>
+    <a href="css-reference/css-web-safe-fonts.html">CSS Web Safe Fonts</a>
+    <a href="css-reference/css-aural-properties.html">CSS Aural Properties</a>
+</div>
+<div class="segment"><span>PHP</span> REFERENCES</div>
+<div class="chapters">
+	<a href="php-reference/php-string-functions.html">PHP String Functions</a>
+    <a href="php-reference/php-array-functions.html">PHP Array Functions</a>
+    <a href="php-reference/php-file-system-functions.html">PHP File System Functions</a>
+    <a href="php-reference/php-date-and-time-functions.html">PHP Date/Time Functions</a>
+    <a href="php-reference/php-calendar-functions.html">PHP Calendar Functions</a>
+    <a href="php-reference/php-mysqli-functions.html">PHP MySQLi Functions</a>
+    <a href="php-reference/php-filters.html">PHP Filters</a>
+    <a href="php-reference/php-error-levels.html">PHP Error Levels</a>
+</div>        
+                </div>
+        <div class="centercolumn">
+            <!--Text Content-->
+            <div class="content">
+                <div class="leaderboard">
+                    
+<div class="ad-label">Advertisements</div>
+<div class="ad-container">
+    <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <!-- Responsive Leaderboard -->
+    <ins class="adsbygoogle"
+            style="display:inline-block;max-width:728px;width:100%;height:90px"
+            data-ad-client="ca-pub-9107540490929984"
+            data-ad-slot="4302666817"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>                </div>
+                <!-- InstanceBeginEditable name="main_content" -->
+                <a href="css-examples.html" class="previous-page" title="Go to Previous Page"></a>
+                <a href="jquery-examples.html" class="next-page" title="Go to Next Page"></a>
+                <h1>JavaScript <span>Examples</span></h1>
+                <p class="summary">This section contains an extensive collection of practice examples demonstrating the various techniques and features of the JavaScript language in real action.</p>
+                <div class="example-list">
+                    <h2>JavaScript Basic</h2>
+                    <ul>
+						<li><a href="codelabc65c.html?topic=javascript&amp;file=embed-javascript-code-in-an-html-file" target="_blank">JavaScript "Hello World!" application</a></li>
+                        <li><a href="codelabc65c.html?topic=javascript&amp;file=embed-javascript-code-in-an-html-file" target="_blank">Embedding JavaScript code in an HTML file</a></li>
+						<li><a href="codelab1413.html?topic=javascript&amp;file=call-an-external-javascript-file-in-a-html-document" target="_blank">Calling an external JavaScript file in a HTML document</a></li>
+						<li><a href="codelab9ae9.html?topic=javascript&amp;file=insert-javascript-code-inside-html-tag" target="_blank">Insert JavaScript code inside HTML tag</a></li>
+						<li><a href="codelab9718.html?topic=javascript&amp;file=case-sensitivity" target="_blank">Case sensitivity in JavaScript</a></li>
+						<li><a href="codelab30d2.html?topic=javascript&amp;file=single-line-comment" target="_blank">JavaScript Single line comments</a></li>
+						<li><a href="codelabee4a.html?topic=javascript&amp;file=multi-line-comment" target="_blank">JavaScript Multi line comments</a></li>
+						<li><a href="codelabc225.html?topic=javascript&amp;file=create-variables" target="_blank">Creating variables in JavaScript</a></li>
+						<li><a href="codelab7ae4.html?topic=javascript&amp;file=declare-variables" target="_blank">Declaring variables in JavaScript</a></li>
+						<li><a href="codelabd5fb.html?topic=javascript&amp;file=declare-multiple-variables" target="_blank">Declaring multiple variables in at once JavaScript</a></li>
+                    </ul>
+                    <h2>JavaScript Generating Output</h2>
+					<ul>
+						<li><a href="codelabe35c.html?topic=javascript&amp;file=write-into-the-browser-console" target="_blank">Writing into the browser console</a></li>
+						<li><a href="codelab71ee.html?topic=javascript&amp;file=write-into-an-alert-dialog-box" target="_blank">Writing into an alert dialog box</a></li>
+						<li><a href="codelab7993.html?topic=javascript&amp;file=write-into-the-browser-window" target="_blank">Writing into the browser window</a></li>
+						<li><a href="codelabcde5.html?topic=javascript&amp;file=problem-with-document-write-method" target="_blank">Problem with <code>document.write()</code> method</a></li>
+						<li><a href="codelabbd8a.html?topic=javascript&amp;file=write-into-an-html-element" target="_blank">Writing into an HTML element</a></li>
+					</ul>
+					<h2>JavaScript Data Types</h2>
+					<ul>
+						<li><a href="codelabdec9.html?topic=javascript&amp;file=string-data-type" target="_blank">String data type</a></li>
+						<li><a href="codelab8c87.html?topic=javascript&amp;file=number-data-type" target="_blank">Number data type</a></li>
+						<li><a href="codelabd188.html?topic=javascript&amp;file=infinity" target="_blank">Representing Infinity value</a></li>
+						<li><a href="codelabf4fe.html?topic=javascript&amp;file=not-a-number" target="_blank">Representing <em>Not-a-Number</em> value</a></li>
+						<li><a href="codelabc04a.html?topic=javascript&amp;file=boolean-data-type" target="_blank">Boolean data type</a></li>						
+						<li><a href="codelabc1b6.html?topic=javascript&amp;file=undefined-data-type" target="_blank">Undefined data type</a></li>
+						<li><a href="codelab2c06.html?topic=javascript&amp;file=null-data-type" target="_blank">Null data type</a></li>
+						<li><a href="codelabef55.html?topic=javascript&amp;file=object-data-type" target="_blank">Object data type</a></li>
+						<li><a href="codelab8c5e.html?topic=javascript&amp;file=object-properties-names-without-quotes" target="_blank">Object properties names without quotes</a></li>
+						<li><a href="codelab7622.html?topic=javascript&amp;file=array-data-type" target="_blank">Array data type</a></li>
+						<li><a href="codelabb287.html?topic=javascript&amp;file=function-data-type" target="_blank">Function data type</a></li>
+						<li><a href="codelabeae6.html?topic=javascript&amp;file=function-passed-as-argument-to-other-function" target="_blank">Passing a function as argument to other function</a></li>	
+						<li><a href="codelab5fb3.html?topic=javascript&amp;file=typeof-operator" target="_blank">The <code>typeof</code> operator</a></li>
+					</ul>
+					<h2>JavaScript Operators</h2>
+					<ul>
+						<li><a href="codelabd63e.html?topic=javascript&amp;file=arithmetic-operators" target="_blank">Arithmetic operators</a></li>
+						<li><a href="codelabd176.html?topic=javascript&amp;file=assignment-operators" target="_blank">Assignment operators</a></li>
+						<li><a href="codelab141d.html?topic=javascript&amp;file=string-operators" target="_blank">String operators</a></li>
+						<li><a href="codelabf63e.html?topic=javascript&amp;file=increment-decrement-operators" target="_blank">Increment decrement operators</a></li>
+						<li><a href="codelab719a.html?topic=javascript&amp;file=logical-operators" target="_blank">Logical operators</a></li>
+						<li><a href="codelabb134.html?topic=javascript&amp;file=comparison-operators" target="_blank">Comparison operators</a></li>
+					</ul>
+					<h2>JavaScript Events</h2>
+					<ul>
+						<li><a href="codelab443d.html?topic=javascript&amp;file=attaching-event-handlers-inline" target="_blank">Attaching event handlers inline</a></li>
+						<li><a href="codelabbdd3.html?topic=javascript&amp;file=attaching-event-handlers-in-an-external-file" target="_blank">Attaching event handlers in an external file</a></li>
+						<li><a href="codelab457a.html?topic=javascript&amp;file=handling-the-click-event" target="_blank">Handling the click event</a></li>
+						<li><a href="codelab8cb5.html?topic=javascript&amp;file=handling-the-contextmenu-event" target="_blank">Handling the contextmenu event</a></li>
+						<li><a href="codelabdee8.html?topic=javascript&amp;file=handling-the-mouseover-event" target="_blank">Handling the mouseover event</a></li>
+						<li><a href="codelab9b15.html?topic=javascript&amp;file=handling-the-mouseout-event" target="_blank">Handling the mouseout event</a></li>
+						<li><a href="codelab15db.html?topic=javascript&amp;file=handling-the-keydown-event" target="_blank">Handling the keydown event</a></li>
+						<li><a href="codelabc74b.html?topic=javascript&amp;file=handling-the-keyup-event" target="_blank">Handling the keyup event</a></li>
+						<li><a href="codelab434a.html?topic=javascript&amp;file=handling-the-keypress-event" target="_blank">Handling the keypress event</a></li>
+						<li><a href="codelab7337.html?topic=javascript&amp;file=handling-the-focus-event" target="_blank">Handling the focus event</a></li>
+						<li><a href="codelabfb2b.html?topic=javascript&amp;file=handling-the-blur-event" target="_blank">Handling the blur event</a></li>
+						<li><a href="codelabb0a7.html?topic=javascript&amp;file=handling-the-change-event" target="_blank">Handling the change event</a></li>
+						<li><a href="codelab4eee.html?topic=javascript&amp;file=handling-the-submit-event" target="_blank">Handling the submit event</a></li>
+						<li><a href="codelab987a.html?topic=javascript&amp;file=handling-the-load-event" target="_blank">Handling the load event</a></li>
+						<li><a href="codelab2899.html?topic=javascript&amp;file=handling-the-unload-event" target="_blank">Handling the unload event</a></li>
+						<li><a href="codelabd984.html?topic=javascript&amp;file=handling-the-resize-event" target="_blank">Handling the resize event</a></li>
+					</ul>
+					<h2>JavaScript Strings</h2>
+					<ul>
+						<li><a href="codelab60ec.html?topic=javascript&amp;file=create-strings" target="_blank">Creating strings in JavaScript</a></li>
+						<li><a href="codelabff2e.html?topic=javascript&amp;file=using-quotes-inside-a-string" target="_blank">Using quotes inside a string</a></li>
+						<li><a href="codelab8a7a.html?topic=javascript&amp;file=escaping-quotes-inside-a-string" target="_blank">Escaping quotes inside a string</a></li>
+						<li><a href="codelabe0b3.html?topic=javascript&amp;file=escape-sequences" target="_blank">Using escape sequences</a></li>
+						<li><a href="codelabe806.html?topic=javascript&amp;file=get-the-length-of-a-string" target="_blank">Get the length of a string</a></li>
+						<li><a href="codelab6c01.html?topic=javascript&amp;file=find-the-position-a-substring-within-a-string" target="_blank">Find the position a substring within a string</a></li>
+						<li><a href="codelab8260.html?topic=javascript&amp;file=find-the-position-of-last-occurrence-of-a-substring-within-a-string" target="_blank">Find the position of last occurrence of a substring within a string</a></li>
+						<li><a href="codelab0ae7.html?topic=javascript&amp;file=find-the-position-of-a-substring-within-a-string-from-specific-index" target="_blank">Find the position of a substring within a string from specific index</a></li>
+						<li><a href="codelabb5fc.html?topic=javascript&amp;file=search-text-or-pattern-inside-a-string" target="_blank">Search text or pattern inside a string</a></li>
+						<li><a href="codelabb3dc.html?topic=javascript&amp;file=slice-out-a-portion-of-a-string" target="_blank">Slice out a portion of a string</a></li>
+						<li><a href="codelabc399.html?topic=javascript&amp;file=slice-strings-using-negative-indexes" target="_blank">Slice strings using negative indexes</a></li>
+						<li><a href="codelab2417.html?topic=javascript&amp;file=extract-substring-from-a-string" target="_blank">Extract substring from a string</a></li>
+						<li><a href="codelabf111.html?topic=javascript&amp;file=extract-fixed-number-of-characters-from-a-string" target="_blank">Extract fixed number of characters from a string</a></li>
+						<li><a href="codelab9b48.html?topic=javascript&amp;file=replace-part-of-string-with-another-string" target="_blank">Replace part of string with another string</a></li>
+						<li><a href="codelab2a86.html?topic=javascript&amp;file=find-and-replace-text-in-a-string-case-insensitively" target="_blank">Find and replace text in a string case insensitively</a></li>
+						<li><a href="codelabe5a8.html?topic=javascript&amp;file=replace-all-occurrences-of-a-substring-in-a-string" target="_blank">Replace all occurrences of a substring in a string</a></li>
+						<li><a href="codelabb493.html?topic=javascript&amp;file=convert-a-string-to-uppercase-characters" target="_blank">Convert a string to uppercase characters</a></li>
+						<li><a href="codelab3c01.html?topic=javascript&amp;file=convert-a-string-to-lowercase-characters" target="_blank">Convert a string to lowercase characters</a></li>
+						<li><a href="codelab3f5a.html?topic=javascript&amp;file=join-two-or-more-strings" target="_blank">Join two or more strings</a></li>
+						<li><a href="codelab09f2.html?topic=javascript&amp;file=extract-a-single-character-from-a-string" target="_blank">Extract a single character from a string</a></li>
+						<li><a href="codelabe356.html?topic=javascript&amp;file=extract-a-single-character-from-a-string-using-square-brackets" target="_blank">Extract a single character from a string using square brackets</a></li>
+						<li><a href="codelab5dcb.html?topic=javascript&amp;file=split-a-string-into-an-array" target="_blank">Split a string into an array</a></li>
+						<li><a href="codelab4d9a.html?topic=javascript&amp;file=split-a-string-into-an-array-of-characters" target="_blank">Split a string into an array of characters</a></li>
+					</ul>
+					<h2>JavaScript Numbers</h2>
+					<ul>
+						<li><a href="codelab21dd.html?topic=javascript&amp;file=numbers" target="_blank">Representing numbers in JavaScript</a></li>
+						<li><a href="codelabf2c8.html?topic=javascript&amp;file=representing-numbers-in-exponential-notation" target="_blank">Representing numbers in exponential notation</a></li>
+						<li><a href="codelabae27.html?topic=javascript&amp;file=representing-numbers-in-hexadecimal-notation" target="_blank">Representing numbers in hexadecimal notation</a></li>
+						<li><a href="codelabfa9f.html?topic=javascript&amp;file=adding-numbers-and-strings" target="_blank">Adding numbers and strings</a></li>
+						<li><a href="codelab3fc3.html?topic=javascript&amp;file=automatic-conversion-of-numeric-strings-to-numbers" target="_blank">Automatic conversion of numeric strings to numbers</a></li>
+						<li><a href="codelab5b70.html?topic=javascript&amp;file=performing-mathematical-operation-on-non-numeric-values" target="_blank">Performing mathematical operation on non numeric values</a></li>
+						<li><a href="codelabf229.html?topic=javascript&amp;file=adding-floating-point-numbers" target="_blank">Adding floating point numbers</a></li>
+						<li><a href="codelabadbd.html?topic=javascript&amp;file=fixing-roundoff-error" target="_blank">Fixing roundoff error</a></li>
+						<li><a href="codelabcd1f.html?topic=javascript&amp;file=precision-problem-with-integers" target="_blank">Precision problem with integers</a></li>
+						<li><a href="codelabb426.html?topic=javascript&amp;file=parse-integers-from-strings" target="_blank">Parse integers from strings</a></li>
+						<li><a href="codelabf9d9.html?topic=javascript&amp;file=parse-floating-point-numbers-from-strings" target="_blank">Parse floating point numbers from strings</a></li>
+						<li><a href="codelab82c5.html?topic=javascript&amp;file=convert-numbers-to-strings" target="_blank">Convert numbers to strings</a></li>
+						<li><a href="codelab56f8.html?topic=javascript&amp;file=format-a-number-in-exponential-notation" target="_blank">Format a number in exponential notation</a></li>
+						<li><a href="codelabe383.html?topic=javascript&amp;file=format-numbers-to-fixed-decimal-places" target="_blank">Format numbers to fixed decimal places</a></li>
+						<li><a href="codelab2db9.html?topic=javascript&amp;file=format-numbers-with-precision" target="_blank">Format numbers with precision</a></li>
+						<li><a href="codelab7772.html?topic=javascript&amp;file=largest-and-smallest-possible-pumbers" target="_blank">Largest and smallest possible pumbers</a></li>
+					</ul>
+					<h2>JavaScript If...Else and Switch Statements</h2>
+					<ul>
+						<li><a href="codelab7917.html?topic=javascript&amp;file=if-statement" target="_blank">JavaScript if statement</a></li>
+						<li><a href="codelab187c.html?topic=javascript&amp;file=if-else-statement" target="_blank">JavaScript if...else statement</a></li>
+						<li><a href="codelabf887.html?topic=javascript&amp;file=if-elseif-else-statement" target="_blank">JavaScript if...elseif...else statement</a></li>						
+						<li><a href="codelabcdad.html?topic=javascript&amp;file=switch-case-statement" target="_blank">JavaScript switch...case statement</a></li>
+						<li><a href="codelab8a6d.html?topic=javascript&amp;file=switch-case-statement-with-default-clause-on-top" target="_blank">JavaScript switch...case statement with default clause on top</a></li>
+						<li><a href="codelabe131.html?topic=javascript&amp;file=combine-multiple-cases-in-a-switch-case-statement" target="_blank">Combine multiple cases in a switch case statement</a></li>
+						<li><a href="codelabc6a2.html?topic=javascript&amp;file=typical-conditional-statement" target="_blank">Typical conditional statement</a></li>
+						<li><a href="codelab0285.html?topic=javascript&amp;file=ternary-operator" target="_blank">Ternary operator</a></li>
+					</ul>
+					<h2>JavaScript Arrays</h2>
+					<ul>
+						<li><a href="codelab6a9f.html?topic=javascript&amp;file=storing-single-values" target="_blank">Storing single value in a variable</a></li>
+						<li><a href="codelab2076.html?topic=javascript&amp;file=creating-arrays" target="_blank">Creating arrays in JavaScript</a></li>
+						<li><a href="codelab6a4d.html?topic=javascript&amp;file=access-individual-elements-of-an-array" target="_blank">Access individual elements of an array</a></li>
+						<li><a href="codelab2bc5.html?topic=javascript&amp;file=get-the-length-of-an-array" target="_blank">Get the length of an array</a></li>
+						<li><a href="codelab5e74.html?topic=javascript&amp;file=loop-through-an-array-using-for-loop" target="_blank">Loop through an array using for loop</a></li>
+						<li><a href="codelabe815.html?topic=javascript&amp;file=loop-through-an-array-using-for-of-loop" target="_blank">Loop through an array using for of loop</a></li>
+						<li><a href="codelaba789.html?topic=javascript&amp;file=loop-through-an-array-using-for-in-loop" target="_blank">Loop through an array using for in loop</a></li>
+						<li><a href="codelab5de4.html?topic=javascript&amp;file=add-a-new-element-at-the-end-of-an-array" target="_blank">Add a new element at the end of an array</a></li>
+						<li><a href="codelab5ac6.html?topic=javascript&amp;file=add-a-new-element-at-the-beginning-of-an-array" target="_blank">Add a new element at the beginning of an array</a></li>
+						<li><a href="codelaba6f8.html?topic=javascript&amp;file=add-multiple-elements-to-an-array-at-once" target="_blank">Add multiple elements to an array at once</a></li>
+						<li><a href="codelab6994.html?topic=javascript&amp;file=remove-the-last-element-from-an-array" target="_blank">Remove the last element from an array</a></li>
+						<li><a href="codelaba057.html?topic=javascript&amp;file=remove-the-first-element-from-an-array" target="_blank">Remove the first element from an array</a></li>
+						<li><a href="codelab5bcf.html?topic=javascript&amp;file=add-or-remove-array-elements-at-any-index" target="_blank">Add or remove array elements at any index</a></li>
+						<li><a href="codelab1c89.html?topic=javascript&amp;file=join-all-elements-of-an-array-into-a-string" target="_blank">Join all elements of an array into a string</a></li>
+						<li><a href="codelabe481.html?topic=javascript&amp;file=convert-an-array-into-a-comma-separated-string" target="_blank">Convert an array into a comma separated string</a></li>
+						<li><a href="codelab2c6a.html?topic=javascript&amp;file=extract-out-a-portion-of-an-array" target="_blank">Extract out a portion of an array</a></li>
+						<li><a href="codelabf297.html?topic=javascript&amp;file=extract-all-elements-from-an-array-beyond-specific-index" target="_blank">Extract all elements from an array beyond specific index</a></li>
+						<li><a href="codelab0e9c.html?topic=javascript&amp;file=merge-two-arrays" target="_blank">Merge two arrays together into a single array</a></li>
+						<li><a href="codelabd575.html?topic=javascript&amp;file=merge-multiple-arrays" target="_blank">Merge multiple arrays into a single array</a></li>
+						<li><a href="codelab5df9.html?topic=javascript&amp;file=search-an-array-for-a-specific-value" target="_blank">Search an array for a specific value</a></li>
+						<li><a href="codelaba6f6.html?topic=javascript&amp;file=search-an-array-for-a-specific-value-beyond-certain-index" target="_blank">Search an array for a specific value beyond certain index</a></li>
+						<li><a href="codelab2c51.html?topic=javascript&amp;file=find-whether-an-array-includes-a-certain-value" target="_blank">Find whether an array includes a certain value</a></li>
+						<li><a href="codelab6806.html?topic=javascript&amp;file=search-an-array-based-on-certain-condition" target="_blank">Search an array based on certain condition</a></li>
+						<li><a href="codelab0e70.html?topic=javascript&amp;file=search-an-array-based-on-certain-condition-and-find-index" target="_blank">Search an array based on certain condition and find index</a></li>
+						<li><a href="codelabdc84.html?topic=javascript&amp;file=filter-an-array" target="_blank">Filter an array in JavaScript</a></li>
+					</ul>
+					<h2>JavaScript Sorting Arrays</h2>
+					<ul>
+						<li><a href="codelab3d09.html?topic=javascript&amp;file=sort-an-array-alphabetically" target="_blank">Sort an array alphabetically in JavaScript</a></li>
+						<li><a href="codelabb1ee.html?topic=javascript&amp;file=reverse-the-order-of-an-array" target="_blank">Reverse the order of an array</a></li>
+						<li><a href="codelabb62d.html?topic=javascript&amp;file=sort-a-numeric-array" target="_blank">Sort a numeric array in JavaScript</a></li>
+						<li><a href="codelab6707.html?topic=javascript&amp;file=sort-a-numeric-array-correctly-using-compare-function" target="_blank">Sort a numeric array correctly using compare function</a></li>
+						<li><a href="codelabe6eb.html?topic=javascript&amp;file=find-the-maximum-and-minimum-value-in-an-array" target="_blank">Find the maximum and minimum value in an array</a></li>
+						<li><a href="codelabe538.html?topic=javascript&amp;file=sort-an-array-of-objects" target="_blank">Sort an array of objects</a></li>
+					</ul>
+					<h2>JavaScript Loops</h2>
+					<ul>
+						<li><a href="codelabb7d8.html?topic=javascript&amp;file=while-loop" target="_blank">JavaScript while loop</a></li>
+						<li><a href="codelabcd86.html?topic=javascript&amp;file=do-while-loop" target="_blank">JavaScript do...while loop</a></li>
+						<li><a href="codelabdd60.html?topic=javascript&amp;file=for-loop" target="_blank">JavaScript for loop</a></li>
+						<li><a href="codelab8f21.html?topic=javascript&amp;file=iterate-over-an-array-using-for-loop" target="_blank">Iterate over an array using for loop</a></li>
+						<li><a href="codelabbd43.html?topic=javascript&amp;file=for-in-loop" target="_blank">JavaScript for...in loop</a></li>
+						<li><a href="codelab5710.html?topic=javascript&amp;file=iterate-over-an-array-using-for-in-loop" target="_blank">Iterate over an array using for in loop</a></li>
+					</ul>
+					<h2>JavaScript Functions</h2>
+					<ul>
+						<li><a href="codelab5e68.html?topic=javascript&amp;file=define-and-call-a-function" target="_blank">Define and call a function in JavaScript</a></li>
+						<li><a href="codelab71cc.html?topic=javascript&amp;file=add-parameters-to-a-function" target="_blank">Add parameters to a function</a></li>
+						<li><a href="codelab850d.html?topic=javascript&amp;file=pass-arguments-to-a-function" target="_blank">Pass arguments to a function</a></li>
+						<li><a href="codelab3d9a.html?topic=javascript&amp;file=return-a-value-from-a-function" target="_blank">Return a value from a function</a></li>
+						<li><a href="codelab60c3.html?topic=javascript&amp;file=return-multiple-values-from-a-function" target="_blank">Return multiple values from a function</a></li>
+						<li><a href="codelab825b.html?topic=javascript&amp;file=function-expression" target="_blank">JavaScript function expression</a></li>
+						<li><a href="codelab2a5f.html?topic=javascript&amp;file=assign-a-function-to-a-variable" target="_blank">Assign a function to a variable</a></li>
+						<li><a href="codelab4e5c.html?topic=javascript&amp;file=function-declaration-vs-function-expression" target="_blank">JavaScript function declaration vs function expression</a></li>
+						<li><a href="codelab4001.html?topic=javascript&amp;file=local-variable" target="_blank">JavaScript local variable</a></li>
+						<li><a href="codelab83c2.html?topic=javascript&amp;file=global-variable" target="_blank">JavaScript global variable</a></li>
+					</ul>
+					<h2>JavaScript Objects</h2>
+					<ul>
+						<li><a href="codelab6588.html?topic=javascript&amp;file=creating-objects" target="_blank">Creating objects in JavaScript</a></li>
+						<li><a href="codelabd074.html?topic=javascript&amp;file=quoting-property-names-of-an-object" target="_blank">Quoting property names of an object</a></li>
+						<li><a href="codelab5001.html?topic=javascript&amp;file=get-properties-values-of-an-object" target="_blank">Get properties values of an object</a></li>
+						<li><a href="codelaba00a.html?topic=javascript&amp;file=access-properties-of-an-object-using-bracket-notation" target="_blank">Access properties of an object using bracket notation</a></li>
+						<li><a href="codelab05ce.html?topic=javascript&amp;file=dynamically-access-object-properties-using-variables" target="_blank">Dynamically access object properties using variables</a></li>
+						<li><a href="codelabe7ba.html?topic=javascript&amp;file=loop-through-an-object" target="_blank">Loop through an object in JavaScript</a></li>
+						<li><a href="codelab3150.html?topic=javascript&amp;file=set-the-properties-of-an-object" target="_blank">Set the properties of an object</a></li>
+						<li><a href="codelabea8b.html?topic=javascript&amp;file=remove-properties-from-an-object" target="_blank">Remove properties from an object</a></li>
+						<li><a href="codelabbdbf.html?topic=javascript&amp;file=call-the-methods-of-an-object" target="_blank">Call the methods of an object</a></li>
+						<li><a href="codelabc564-2.html?topic=javascript&amp;file=copy-by-value" target="_blank">JavaScript copy by value</a></li>
+						<li><a href="codelaba73d.html?topic=javascript&amp;file=copy-by-reference" target="_blank">JavaScript copy by reference</a></li>
+					</ul>
+					<h2>JavaScript DOM Selectors</h2>
+					<ul>
+						<li><a href="codelab01a4.html?topic=javascript&amp;file=select-html-head-and-body-elements" target="_blank">Select HTML head and body elements</a></li>
+						<li><a href="codelab8d81.html?topic=javascript&amp;file=access-body-element-from-different-location" target="_blank">Access body element from different location</a></li>
+						<li><a href="codelabfd91.html?topic=javascript&amp;file=select-an-element-by-its-id-attribute" target="_blank">Select an element by its id attribute</a></li>
+						<li><a href="codelabb9a8.html?topic=javascript&amp;file=select-elements-by-class-name" target="_blank">Select elements by class name</a></li>
+						<li><a href="codelabfc58.html?topic=javascript&amp;file=select-elements-by-tag-name" target="_blank">Select elements by tag name</a></li>
+						<li><a href="codelabaae6.html?topic=javascript&amp;file=select-elements-with-css-selectors" target="_blank">Select elements with css selectors</a></li>
+					</ul>
+					<h2>JavaScript DOM Styling</h2>
+					<ul>
+						<li><a href="codelabdebb.html?topic=javascript&amp;file=add-inline-styles-to-an-element" target="_blank">Add inline styles to an element</a></li>
+						<li><a href="codelaba8d2.html?topic=javascript&amp;file=get-style-information-from-an-element" target="_blank">Get style information from an element</a></li>
+						<li><a href="codelabb9ef.html?topic=javascript&amp;file=get-computed-style-information-from-an-element" target="_blank">Get computed style information from an element</a></li>
+						<li><a href="codelab2a97.html?topic=javascript&amp;file=add-or-replace-css-classes-on-an-element" target="_blank">Add or replace css classes on an element</a></li>
+						<li><a href="codelab1976.html?topic=javascript&amp;file=add-or-remove-css-classes-on-an-element-using-classlist" target="_blank">Add or remove css classes on an element using classlist</a></li>
+					</ul>
+					<h2>JavaScript DOM Get Set Attributes</h2>
+					<ul>
+						<li><a href="codelab27a4.html?topic=javascript&amp;file=get-the-value-of-an-attribute" target="_blank">Get the value of an attribute</a></li>
+						<li><a href="codelab692c.html?topic=javascript&amp;file=set-an-attribute-on-an-element" target="_blank">Set an attribute on an element</a></li>
+						<li><a href="codelab5b9f.html?topic=javascript&amp;file=remove-an-attribute-from-an-element" target="_blank">Remove an attribute from an element</a></li>
+						<li><a href="codelaba9cc.html?topic=javascript&amp;file=change-the-value-of-an-attribute" target="_blank">Change the value of an attribute</a></li>
+					</ul>
+					<h2>JavaScript DOM Manipulation</h2>
+					<ul>
+						<li><a href="codelabd36d.html?topic=javascript&amp;file=insert-new-element-into-the-dom" target="_blank">Insert new element into the DOM</a></li>
+						<li><a href="codelabf148.html?topic=javascript&amp;file=insert-new-element-at-the-beginning" target="_blank">Insert new element at the beginning</a></li>
+						<li><a href="codelab6be5.html?topic=javascript&amp;file=get-set-inner-html-of-an-element" target="_blank">Get set inner HTML of an element</a></li>
+						<li><a href="codelab95ac.html?topic=javascript&amp;file=insert-html-without-replacing-the-existing-content" target="_blank">Insert HTML without replacing the existing content</a></li>
+						<li><a href="codelab903e.html?topic=javascript&amp;file=remove-an-element-from-the-dom" target="_blank">Remove an element from the DOM</a></li>
+						<li><a href="codelabb1c3.html?topic=javascript&amp;file=remove-child-element-without-knowing-its-parent" target="_blank">Remove child element without knowing its parent</a></li>
+						<li><a href="codelab3784.html?topic=javascript&amp;file=replace-an-element-with-another-element-in-the-dom" target="_blank">Replace an element with another element in the DOM</a></li>
+					</ul>
+					<h2>JavaScript DOM Navigation</h2>
+					<ul>
+						<li><a href="codelab5077.html?topic=javascript&amp;file=get-first-and-last-child-nodes" target="_blank">Get first and last child nodes</a></li>
+						<li><a href="codelabec4d.html?topic=javascript&amp;file=get-only-element-child-nodes" target="_blank">Get only element child nodes</a></li>
+						<li><a href="codelab197a.html?topic=javascript&amp;file=get-all-child-nodes" target="_blank">Get all child nodes</a></li>
+						<li><a href="codelab6db9.html?topic=javascript&amp;file=get-all-element-child-nodes" target="_blank">Get all element child nodes</a></li>
+						<li><a href="codelabd406.html?topic=javascript&amp;file=get-parent-node" target="_blank">Get parent node</a></li>
+						<li><a href="codelab9d77.html?topic=javascript&amp;file=get-only-parent-element-node" target="_blank">Get only parent element node</a></li>
+						<li><a href="codelab6c21.html?topic=javascript&amp;file=get-previous-and-next-node" target="_blank">Get previous and next node</a></li>
+						<li><a href="codelab4bfa.html?topic=javascript&amp;file=get-previous-and-next-sibling-element" target="_blank">Get previous and next sibling element</a></li>
+					</ul>
+					<h2>JavaScript Window</h2>
+					<ul>
+						<li><a href="codelab8aa3.html?topic=javascript&amp;file=get-browser-viewport-dimensions" target="_blank">Get browser viewport dimensions</a></li>
+						<li><a href="codelabcbae.html?topic=javascript&amp;file=get-width-and-height-of-the-browser-viewport-excluding-scrollbars" target="_blank">Get width and height of the browser viewport excluding scrollbars</a></li>
+						<li><a href="codelabe08a.html?topic=javascript&amp;file=get-screen-resolution" target="_blank">Get screen resolution</a></li>
+						<li><a href="codelabe968.html?topic=javascript&amp;file=get-available-width-and-height-of-the-screen" target="_blank">Get available width and height of the screen</a></li>
+						<li><a href="codelaba6df.html?topic=javascript&amp;file=get-color-depth-of-the-screen" target="_blank">Get color depth of the screen</a></li>
+						<li><a href="codelab13eb.html?topic=javascript&amp;file=get-pixel-depth-of-the-screen" target="_blank">Get pixel depth of the screen</a></li>
+					</ul>
+					<h2>JavaScript Window Location</h2>
+					<ul>
+						<li><a href="codelabc518.html?topic=javascript&amp;file=get-current-url" target="_blank">Get the current url</a></li>
+						<li><a href="codelab0e6d.html?topic=javascript&amp;file=get-different-parts-of-a-url" target="_blank">Get the different parts of a url</a></li>
+						<li><a href="codelab1d4f.html?topic=javascript&amp;file=load-another-resource-from-a-url" target="_blank">Load another resource from a url</a></li>
+						<li><a href="codelab222a.html?topic=javascript&amp;file=replace-current-url-with-a-new-url" target="_blank">Replace current url with a new url</a></li>
+						<li><a href="codelab042a.html?topic=javascript&amp;file=load-new-document-in-the-window" target="_blank">Load new document in the window</a></li>
+						<li><a href="codelabff32.html?topic=javascript&amp;file=reload-a-page-dynamically" target="_blank">Reload a page dynamically</a></li>
+					</ul>
+					<h2>JavaScript Dialog Boxes</h2>
+					<ul>
+						<li><a href="codelabdbf4-2.html?topic=javascript&amp;file=alert-popup-box" target="_blank">Alert popup box</a></li>
+						<li><a href="codelab37b6.html?topic=javascript&amp;file=confirm-popup-box" target="_blank">Confirm popup box</a></li>
+						<li><a href="codelab4e30.html?topic=javascript&amp;file=prompt-popup-box" target="_blank">Prompt popup box</a></li>
+					</ul>
+					<h2>JavaScript Timers</h2>
+					<ul>
+						<li><a href="codelab1845.html?topic=javascript&amp;file=execute-a-function-after-some-time" target="_blank">Execute a function after some time</a></li>
+						<li><a href="codelab78e6.html?topic=javascript&amp;file=execute-a-function-at-regular-intervals" target="_blank">Execute a function at regular intervals</a></li>
+						<li><a href="codelab9214.html?topic=javascript&amp;file=cancel-a-timer-with-cleartimeout" target="_blank">Cancel a timer with cleartimeout</a></li>
+						<li><a href="codelabaeda.html?topic=javascript&amp;file=cancel-a-timer-with-clearinterval" target="_blank">Cancel a timer with clearinterval</a></li>
+					</ul>
+					<h2>JavaScript Date and Time</h2>
+					<ul>
+						<li><a href="codelabd624.html?topic=javascript&amp;file=create-a-date-object" target="_blank">Create a date object in JavaScript</a></li>
+						<li><a href="codelaba3f0.html?topic=javascript&amp;file=passing-parameters-to-the-date-object" target="_blank">Passing parameters to the date object</a></li>
+						<li><a href="codelab4f74.html?topic=javascript&amp;file=construct-a-date-object-by-passing-a-date-string" target="_blank">Construct a date object by passing a date string</a></li>
+						<li><a href="codelab1472.html?topic=javascript&amp;file=define-a-date-object-by-passing-the-number-of-milliseconds" target="_blank">Define a date object by passing the number of milliseconds</a></li>
+						<li><a href="codelab238e.html?topic=javascript&amp;file=get-the-current-date-and-time" target="_blank">Get the current date and time in JavaScript</a></li>
+						<li><a href="codelab603e.html?topic=javascript&amp;file=generate-date-strings" target="_blank">Generate date strings in JavaScript</a></li>
+						<li><a href="codelabba41.html?topic=javascript&amp;file=generate-time-strings" target="_blank">Generate time strings in JavaScript</a></li>
+						<li><a href="codelabf167.html?topic=javascript&amp;file=get-year-month-and-day-from-a-date-object" target="_blank">Get year month and day from a date object</a></li>
+						<li><a href="codelabec6e.html?topic=javascript&amp;file=get-hours-minutes-and-seconds-from-a-date-object" target="_blank">Get hours minutes and seconds from a date object</a></li>
+						<li><a href="codelab9c6c.html?topic=javascript&amp;file=set-the-year-value-of-a-date-object" target="_blank">Set the year value of a date object</a></li>
+						<li><a href="codelabc326.html?topic=javascript&amp;file=set-the-month-value-of-a-date-object" target="_blank">Set the month value of a date object</a></li>
+						<li><a href="codelabb6b8.html?topic=javascript&amp;file=specify-the-month-value-outside-of-the-range" target="_blank">Specify the month value outside of the range</a></li>
+						<li><a href="codelab020e.html?topic=javascript&amp;file=set-the-date-value-of-a-date-object" target="_blank">Set the date value of a date object</a></li>
+						<li><a href="codelab49aa.html?topic=javascript&amp;file=specify-the-date-value-outside-of-the-range" target="_blank">Specify the date value outside of the range</a></li>
+						<li><a href="codelab2225.html?topic=javascript&amp;file=set-the-hours-minutes-and-seconds-values-of-a-date-object" target="_blank">Set the hours minutes and seconds values of a date object</a></li>
+					</ul>
+					<h2>JavaScript Math Operations</h2>
+					<ul>
+						<li><a href="codelabd777.html?topic=javascript&amp;file=pi-property" target="_blank">Representing PI (&pi;) in JavaScript</a></li>
+						<li><a href="codelab73eb.html?topic=javascript&amp;file=get-the-absolute-value-of-a-number" target="_blank">Get the absolute value of a number</a></li>
+						<li><a href="codelab0973.html?topic=javascript&amp;file=generate-a-random-integer" target="_blank">Generate a random integer</a></li>
+						<li><a href="codelaba21a.html?topic=javascript&amp;file=calculate-the-square-root-of-a-number" target="_blank">Calculate the square root of a number</a></li>
+						<li><a href="codelaba81c.html?topic=javascript&amp;file=round-a-number-up" target="_blank">Round a number up in JavaScript</a></li>
+						<li><a href="codelab09c1.html?topic=javascript&amp;file=round-a-number-down" target="_blank">Round a number down in JavaScript</a></li>
+						<li><a href="codelab72d7.html?topic=javascript&amp;file=round-a-number-to-the-nearest-integer" target="_blank">Round a number to the nearest integer</a></li>
+						<li><a href="codelabf65f.html?topic=javascript&amp;file=find-the-largest-and-smallest-numbers-in-a-set" target="_blank">Find the largest and smallest numbers in a set</a></li>
+						<li><a href="codelabadcb.html?topic=javascript&amp;file=find-the-maximum-and-minimum-values-in-an-array" target="_blank">Find the maximum and minimum values in an array</a></li>
+						<li><a href="codelaba937.html?topic=javascript&amp;file=pass-an-array-to-max-and-min-methods-using-spread-operator" target="_blank">Pass an array to max and min methods using spread operator</a></li>
+						<li><a href="codelabac60.html?topic=javascript&amp;file=raise-a-number-to-a-certain-power" target="_blank">Raise a number to a certain power</a></li>
+						<li><a href="codelab1832.html?topic=javascript&amp;file=trigonometric-operations" target="_blank">Perform trigonometric operations in JavaScript</a></li>
+					</ul>
+					<h2>JavaScript Type Conversions</h2>
+					<ul>
+						<li><a href="codelab95d4.html?topic=javascript&amp;file=automatic-data-type-conversions" target="_blank">Automatic data type conversions</a></li>
+						<li><a href="codelaba8e3.html?topic=javascript&amp;file=convert-a-numeric-string-to-number" target="_blank">Convert a numeric string to number</a></li>
+						<li><a href="codelab06e8.html?topic=javascript&amp;file=convert-values-to-numbers" target="_blank">Convert values to numbers</a></li>
+						<li><a href="codelab98df.html?topic=javascript&amp;file=convert-a-boolean-value-to-string" target="_blank">Convert a boolean value to string</a></li>
+						<li><a href="codelab0eaf.html?topic=javascript&amp;file=convert-values-to-strings" target="_blank">Convert values to strings</a></li>
+						<li><a href="codelab093f.html?topic=javascript&amp;file=convert-a-number-to-string" target="_blank">Convert a number to string</a></li>
+						<li><a href="codelab8c78.html?topic=javascript&amp;file=convert-values-to-boolean" target="_blank">Convert values to boolean</a></li>
+						<li><a href="codelab0861.html?topic=javascript&amp;file=automatic-object-to-primitive-data-type-conversions" target="_blank">Automatic object to primitive data type conversions</a></li>
+						<li><a href="codelab15fb.html?topic=javascript&amp;file=convert-objects-to-primitive-data-types-manually" target="_blank">Convert objects to primitive data types manually</a></li>
+						<li><a href="codelab952c.html?topic=javascript&amp;file=perform-data-type-conversions-using-operators" target="_blank">Perform data type conversions using operators</a></li>
+					</ul>
+					<h2>JavaScript Event Listeners</h2>
+					<ul>
+						<li><a href="codelab71e4.html?topic=javascript&amp;file=assigning-multiple-event-handlers-on-a-single-event" target="_blank">Assigning multiple event handlers on a single event</a></li>
+						<li><a href="codelab986b.html?topic=javascript&amp;file=assigning-multiple-event-listeners-on-a-single-event" target="_blank">Assigning multiple event listeners on a single event</a></li>
+						<li><a href="codelabddc2.html?topic=javascript&amp;file=attaching-different-event-listeners-to-different-event-types" target="_blank">Attaching different event listeners to different event types</a></li>
+						<li><a href="codelab9718-2.html?topic=javascript&amp;file=adding-event-listener-to-the-window-resize-event" target="_blank">Adding event listener to the window resize event</a></li>
+						<li><a href="codelab64ae.html?topic=javascript&amp;file=removing-an-event-listener" target="_blank">Removing an event listener</a></li>
+					</ul>
+					<h2>JavaScript Event Propagation</h2>
+					<ul>
+						<li><a href="codelab4f21.html?topic=javascript&amp;file=event-capturing" target="_blank">Event capturing mechanism</a></li>
+						<li><a href="codelabf292.html?topic=javascript&amp;file=event-bubbling" target="_blank">Event bubbling mechanism</a></li>
+						<li><a href="codelabfc70.html?topic=javascript&amp;file=get-the-event-target" target="_blank">Get the event target</a></li>
+						<li><a href="codelab602e.html?topic=javascript&amp;file=event-propagation" target="_blank">Event propagation in JavaScript</a></li>
+						<li><a href="codelab314e.html?topic=javascript&amp;file=stop-event-propagation" target="_blank">Stop event propagation</a></li>
+						<li><a href="codelab079d.html?topic=javascript&amp;file=stop-immediate-propagation-of-an-event" target="_blank">Stop immediate propagation of an event</a></li>
+						<li><a href="codelabc305.html?topic=javascript&amp;file=prevent-default-actions" target="_blank">Prevent default actions with JavaScript</a></li>
+					</ul>
+					<h2>JavaScript Borrowing Methods</h2>
+					<ul>
+						<li><a href="codelab7263.html?topic=javascript&amp;file=call-methods" target="_blank">Call methods from other object</a></li>
+						<li><a href="codelab7912.html?topic=javascript&amp;file=apply-methods" target="_blank">Apply methods of another object</a></li>
+						<li><a href="codelabb31b.html?topic=javascript&amp;file=apply-built-in-methods" target="_blank">Apply built in methods</a></li>
+						<li><a href="codelab5662.html?topic=javascript&amp;file=using-spread-operator-instead-of-apply-method" target="_blank">Using spread operator instead of apply method</a></li>
+						<li><a href="codelab64b0.html?topic=javascript&amp;file=find-max-or-min-value-in-an-array-using-reduce-method" target="_blank">Find max or min value in an array using reduce method</a></li>
+					</ul>
+					<h2>JavaScript Hoisting</h2>
+					<ul>
+						<li><a href="codelab87eb.html?topic=javascript&amp;file=function-hoisting" target="_blank">Function hoisting in JavaScript</a></li>
+						<li><a href="codelabb8b2.html?topic=javascript&amp;file=using-a-variable-before-it-is-declared" target="_blank">Using a variable before it is declared</a></li>
+						<li><a href="codelabb215.html?topic=javascript&amp;file=using-a-variable-before-it-is-initialized" target="_blank">Using a variable before it is initialized</a></li>
+						<li><a href="codelabd981.html?topic=javascript&amp;file=variable-hoisting" target="_blank">Variable hoisting in JavaScript</a></li>
+					</ul>
+					<h2>JavaScript Strict Mode</h2>
+					<ul>
+						<li><a href="codelab1727-2.html?topic=javascript&amp;file=enable-strict-mode" target="_blank">Enable strict mode in JavaScript</a></li>
+						<li><a href="codelab598c.html?topic=javascript&amp;file=enable-strict-mode-inside-the-function" target="_blank">Enable strict mode inside the function</a></li>
+						<li><a href="codelab9f0f.html?topic=javascript&amp;file=cannot-assign-to-undeclared-variable-in-strict-mode" target="_blank">Cannot assign to undeclared variable in strict mode</a></li>
+						<li><a href="codelab2eb1.html?topic=javascript&amp;file=cannot-delete-a-variable-in-strict-mode" target="_blank">Cannot delete a variable in strict mode</a></li>
+						<li><a href="codelab0025.html?topic=javascript&amp;file=cannot-delete-a-function-in-strict-mode" target="_blank">Cannot delete a function in strict mode</a></li>
+						<li><a href="codelabc7b6.html?topic=javascript&amp;file=duplicate-parameter-name-not-allowed-in-strict-mode" target="_blank">Duplicate parameter name not allowed in strict mode</a></li>
+						<li><a href="codelabcb5d.html?topic=javascript&amp;file=eval-cannot-alter-scope-in-strict-mode" target="_blank">Eval cannot alter scope in strict mode</a></li>
+						<li><a href="codelab2441.html?topic=javascript&amp;file=eval-and-arguments-cannot-be-used-as-identifier-in-strict-mode" target="_blank">Eval and arguments cannot be used as identifier in strict mode</a></li>
+						<li><a href="codelabc48c.html?topic=javascript&amp;file=strict-mode-code-may-not-contain-with-statements" target="_blank">Strict mode code may not contain with statements</a></li>
+						<li><a href="codelab55ed.html?topic=javascript&amp;file=cannot-assign-to-read-only-property-of-object-in-strict-mode" target="_blank">Cannot assign to read only property of object in strict mode</a></li>
+						<li><a href="codelab9e21.html?topic=javascript&amp;file=cannot-add-property-to-a-non-extensible-object-in-strict-mode" target="_blank">Cannot add property to a non extensible object in strict mode</a></li>
+						<li><a href="codelab51f1.html?topic=javascript&amp;file=octal-literals-are-not-allowed-in-strict-mode" target="_blank">Octal literals are not allowed in strict mode</a></li>
+					</ul>
+					<h2>JavaScript JSON Parsing</h2>
+					<ul>
+						<li><a href="codelab1ec9.html?topic=javascript&amp;file=json-object" target="_blank">JSON object data structure</a></li>
+						<li><a href="codelab6f98.html?topic=javascript&amp;file=json-array" target="_blank">JSON array data structure</a></li>
+						<li><a href="codelab50bc.html?topic=javascript&amp;file=convert-json-string-to-js-object-and-access-individual-values" target="_blank">Convert JSON string to JavaScript object and access individual values</a></li>
+						<li><a href="codelabd3fe.html?topic=javascript&amp;file=parse-nested-json-data" target="_blank">Parse nested JSON data in JavaScript</a></li>
+						<li><a href="codelabab6c.html?topic=javascript&amp;file=convert-js-object-to-json-string" target="_blank">Convert JavaScript object to JSON string</a></li>
+						<li><a href="codelaba582.html?topic=javascript&amp;file=convert-js-array-to-json-string" target="_blank">Convert JavaScript array to JSON string</a></li>
+					</ul>
+					<h2>JavaScript ES6 Features</h2>
+					<ul>
+						<li><a href="codelab2b9f.html?topic=javascript&amp;file=es6-let-keyword" target="_blank">ES6 let keyword</a></li>
+						<li><a href="codelab37a0.html?topic=javascript&amp;file=es6-const-keyword" target="_blank">ES6 const keyword</a></li>
+						<li><a href="codelab6b29.html?topic=javascript&amp;file=es6-constants-are-not-truly-immutable" target="_blank">ES6 constants are not truly immutable</a></li>
+						<li><a href="codelab71ab.html?topic=javascript&amp;file=es6-for-of-loop" target="_blank">ES6 for...of loop</a></li>
+						<li><a href="codelab4729.html?topic=javascript&amp;file=es6-template-literals" target="_blank">ES6 template literals</a></li>
+						<li><a href="codelabc960.html?topic=javascript&amp;file=creating-multi-line-strings-in-older-versions" target="_blank">Creating multi line strings in older versions</a></li>
+						<li><a href="codelab8b18.html?topic=javascript&amp;file=es6-function-with-default-parameter-values" target="_blank">ES6 function with default parameter values</a></li>
+						<li><a href="codelabd9f6.html?topic=javascript&amp;file=setting-default-values-for-function-parameters-in-older-versions" target="_blank">Setting default values for function parameters in older versions</a></li>
+						<li><a href="codelab89c1.html?topic=javascript&amp;file=es6-arrow-functions" target="_blank">ES6 arrow functions</a></li>
+						<li><a href="codelabf6f1.html?topic=javascript&amp;file=es6-arrow-function-variations" target="_blank">ES6 arrow function variations</a></li>
+						<li><a href="codelab7c51.html?topic=javascript&amp;file=this-keyword-value-inside-a-simple-function" target="_blank">The <code>this</code> keyword value inside a simple function</a></li>
+						<li><a href="codelabaec0.html?topic=javascript&amp;file=this-keyword-value-inside-an-arrow-function" target="_blank">The <code>this</code> keyword value inside an arrow function</a></li>
+						<li><a href="codelab21c8.html?topic=javascript&amp;file=es6-classes" target="_blank">ES6 class declaration</a></li>
+						<li><a href="codelab0d9a.html?topic=javascript&amp;file=es6-modules" target="_blank">ES6 module system</a></li>
+						<li><a href="codelab6987.html?topic=javascript&amp;file=es6-rest-parameter" target="_blank">ES6 rest parameter</a></li>
+						<li><a href="codelabc836.html?topic=javascript&amp;file=es6-get-extra-function-arguments-with-rest-parameter" target="_blank">ES6 get extra function arguments with rest parameter</a></li>
+						<li><a href="codelab7387.html?topic=javascript&amp;file=es6-spread-operator" target="_blank">ES6 spread operator</a></li>
+						<li><a href="codelab0a3d.html?topic=javascript&amp;file=es6-insert-array-elements-into-another-array-using-spread-operator" target="_blank">ES6 insert array elements into another array using spread operator</a></li>
+						<li><a href="codelab4a76.html?topic=javascript&amp;file=accessing-individual-array-elements-in-older-versions" target="_blank">Accessing individual array elements in older versions</a></li>
+						<li><a href="codelab1282.html?topic=javascript&amp;file=es6-array-destructuring-assignment" target="_blank">ES6 array destructuring assignment</a></li>
+						<li><a href="codelab9b73.html?topic=javascript&amp;file=es6-using-rest-operator-in-array-destructuring-assignment" target="_blank">ES6 using rest operator in array destructuring assignment</a></li>
+						<li><a href="codelabc37d.html?topic=javascript&amp;file=accessing-object-property-values-in-older-versions" target="_blank">Accessing object property values in older versions</a></li>
+						<li><a href="codelab40b0.html?topic=javascript&amp;file=es6-object-destructuring-assignment" target="_blank">ES6 object destructuring assignment</a></li>
+					</ul>
+				</div>
+                <!--Bottom Navigation-->
+                <div class="bottom-link clearfix">
+                    <a href="css-examples.html" class="previous-page-bottom">Previous Page</a>
+                    <a href="jquery-examples.html" class="next-page-bottom">Next Page</a>
+                </div>
+                <!--End:Bottom Navigation--> 
+                <!-- InstanceEndEditable -->
+                <!--Bottom Ads-->
+                <div class="bottom-ad clearfix">
+                    <div class="ad-label">Advertisements</div>
+
+<!--Rectangle Left-->
+<div class="rectangle-left fl">
+    
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Large Rectangle Left -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="8162953958"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<!--End:Rectangle Left-->
+
+
+<!--Rectangle Right-->
+<div class="rectangle-right fr">
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Large Rectangle Right -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="3324015654"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<!--End:Rectangle Right-->                </div>
+                <!--End:Bottom Ads-->
+            </div>
+            <!--End:Text Content-->
+            <!--Feedback Form-->
+			<div class="snippets">
+	<a href="snippets/gallery.html" target="_blank">
+    	<img src="lib/images/bootstrap-code-snippets.png" alt="Bootstrap UI Design Templates" />
+	</a>
+</div>
+
+<div class="report-error" id="feedback">
+    <div class="contact-form clearfix">
+        <div class="close"><span class="icon-close"></span></div>
+        <form id="feedback-form">
+            <h3>Your Feedback:</h3>
+            <div class="clearfix">
+                <div class="name fl"><label>Your Name (optional) <input type="text" name="user-name" id="user-name" /></label></div>
+                <div class="email fr"><label>Your E-mail (optional) <input type="text" name="user-email" id="user-email" /></label></div>
+            </div>
+            <div><label>Page address <input type="text" name="page-url" id="page-url" class="disabled" disabled="disabled" /></label></div>
+            <div><label>Description <textarea name="description" id="description" rows="6"></textarea></label></div>
+            <p id="feedback-error">We would love to hear from you, please drop us a line.</p>
+            <div><button type="button" class="action-btn" onclick="sendFeedback()"><span class="icon-send"></span> Send</button></div>
+        </form>
+        <div id="response"></div>
+    </div>           
+</div>            <!--End:Feedback Form-->
+        </div>        
+        <div class="sidebar">
+            <div class="ad-label">Advertisements</div>
+
+<div class="skyscraper primary">
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Premium Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4376141825"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+        </div>
+    </div>
+    <!--Footer-->
+	<!--Footer-->
+<div class="footer">
+    <div class="appeal">
+        <div class="wrapper">
+            <p>Is this website helpful to you? Please give us a
+            <a href="like.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">like</a>,
+            or share your <a href="#feedback" class="feedback">feedback</a><em> to help us improve</em>.
+            Connect with us on <a href="https://www.facebook.com/tutorialrepublic" target="_blank">Facebook</a> and <a href="https://twitter.com/tutrepublic" target="_blank">Twitter</a> for the latest updates.</p>               
+        </div>
+    </div>
+    <div class="footer-inner">
+        <div class="wrapper clearfix">                
+            <div class="link-box">
+                <h4>About Us</h4>
+                <div class="clearfix">
+                    <a href="about-us.html">Our Story</a>                    
+                    <a href="terms-of-use.html">Terms of Use</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>                    
+                </div>
+            </div>
+            <div class="link-box">
+                <h4>Contact</h4>
+                <div class="clearfix">
+                    <a href="contact-us.html">Contact Us</a>                    
+                    <a href="#feedback" class="feedback">Report Error</a>
+                    <a href="advertise-with-us.html">Advertise</a>                    
+                </div>
+            </div>
+            <div class="tool-box">
+                <h4>Interactive Tools</h4>
+                <div class="tools-list clearfix" id="tools">
+                    <a href="faq/what-is-the-maximum-length-of-title-and-meta-description-tag.html">Title &amp; Meta Length Calculator</a>                           
+                    <a href="html-formatter.html" target="_blank">HTML Formatter</a>                        
+                    <a href="twitter-bootstrap-button-generator.html" target="_blank">Bootstrap Button Generator</a>
+                    <a href="html-reference/html-color-picker.html">HTML Color Picker</a>
+                    <a href="codelab1284.html?topic=sql&amp;file=select-all" target="_blank">SQL Playground</a>
+                    <a href="codelab07f7.html?topic=html&amp;file=hello-world" target="_blank">HTML Editor</a>                    
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="lib/images/logo.svg" alt="TutorialRepublic" />
+            </div>
+        </div>
+    </div>           
+        <div class="bottom-strip">
+        <div class="wrapper">
+            <div class="notice">Copyright &copy; 2019 Tutorial Republic. All Rights Reserved.</div>
+            <div class="social-media">
+                <em>Share This:</em>
+                <a href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fjavascript-examples.php" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" title="Facebook"><i class="icon-facebook"></i></a>
+                <a href="#" id="tweet-btn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" title="Twitter"><i class="icon-twitter"></i></a>
+                <a href="#" id="email-btn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;" rel="noreferrer" title="Gmail"><i class="icon-mail"></i></a>
+            </div>
+        </div>            
+    </div>
+    <script>
+        var title = document.title.replace('- Tutorial Republic', '');
+        document.getElementById('tweet-btn').href = 'https://twitter.com/share?text=' + title + '- &url=https://www.tutorialrepublic.com%2Fjavascript-examples.php';
+        document.getElementById('email-btn').href = 'https://mail.google.com/mail/?view=cm&fs=1&su=' + title + '&body=https://www.tutorialrepublic.com%2Fjavascript-examples.php';
+    </script>
+</div>
+<!--End:Footer-->
+    
+<div class="backdrop mobile-only"></div>
+
+<!-- TutorialRepublic base script -->
+<script>
+// Adding CSS files
+[
+	'/lib/styles/extended-3.7.css',
+	'lib/icomoon/style.css'
+].forEach(function(href) {
+	var link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.href = href;
+	(document.getElementsByTagName('head')[0]).appendChild(link);
+});
+
+// Adding JS files
+[
+	'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+	'lib/js/prism.js',
+	'lib/js/default-2.9.min.js'
+].forEach(function(src) {
+	var script = document.createElement('script');
+	script.async = false; // important
+	script.src = src;
+	(document.getElementsByTagName('body')[0]).appendChild(script);
+});
+</script>
+
+
+    <!--End:Footer-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.tutorialrepublic.com/javascript-examples.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 12:14:40 GMT -->
+</html>
