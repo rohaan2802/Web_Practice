@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+@font-face{
+    font-family: regular;
+    src: url('../fonts/Sriracha-Regular.ttf');
+}
+.area{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.container{
+    width: 80%;
+    margin: 50px auto;
+    height: 465px;
+    background-color: aquamarine;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px #9f9f9f;
+    position: relative;
+}
+.container > img{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border-radius: 50%;
+    width: 120px;
+    box-shadow: 5px 5px 7px lightslategray;
+}
+.container > h1{
+    color: #ffc145;
+    text-align: center;
+    font-family: regular;
+    font-size: 40px;
+    padding-top: 30px;
+}
+.container > p{
+    text-align: justify;
+    padding-left: 20px;
+}
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+.btn > a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid red;
+    border-radius: 7px;
+}
+.hire{
+    padding-top: 80px;
+    text-align: center;
+}
+.button > a{
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(red, yellow);
+    padding: 30px 80px;
+    border-radius: 10px;
+    font-size: 30px;
+    box-shadow: 5px 5px 7px gray;
+}
+.text{
+    margin-top: 40px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #5b5f97;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.count{
+    padding: 10px 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 19px;
+}
